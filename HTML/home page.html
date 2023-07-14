@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<header>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="icon" href="../Imagenes/leaf.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
-<body class="bg-gray-100">
-    <header class="black">
+    <header class="bg-green-100">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between">
-                <a href="../Imagenes/Logoplanetwise.png"><img src="../Imagenes/Logoplanetwise.png" width="300px"> </a>
+                <a href=""><img src="../Imagenes/Planetwise.png" width="300px"> </a>
                
     <style>
         .dropdown {
@@ -34,9 +33,9 @@
             display: block;
         }
     </style>
-</head>
+
 <div class="dropdown inline-block relative">
-    <button class=" border-solid border-4 block px-4 py-2 text-gray-800 transition ease-in-out delay-150 bg-green-500 hover:-translate-y-1 hover:scale-110 hover:bg-green-800 duration-300 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+    <button class=" border-solid border-4 block px-4 py-2 text-gray-800 transition ease-in-out delay-150 bg-green-500 hover:-translate-y-1 hover:scale-110 hover:bg-green-600 duration-300 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
         Reduccion de emisiones</button>
     <ul class="dropdown-menu bg-white shadow-md">
 
@@ -73,67 +72,100 @@
     </script>
         </div>
     </header>
+    <body class="bg-gray-100">
 
-   
+    <br>
 
-  
-<body class="bg-gray-100">
-    <div class="container mx-auto py-12">
-        <div class="max-w-lg mx-auto">
-            <div class="relative">
-                <img src="../Imagenes/fondo registro.png" alt="Slide 1" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md">
-                <img src="../Imagenes/fondor.png" alt="Slide 2" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md opacity-0">
-                <img src="../Imagenes/registro2.png" alt="Slide 3" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md opacity-0">
-            </div>
-            <div class="flex justify-center mt-4">
-                <button id="prevBtn" class="bg-blue-500 text-white px-4 py-2 mr-2 rounded-md">Previous</button>
-                <button id="nextBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md">Next</button>
-            </div>
-        </div>
+    <h1 class="font-sans text-base px-10 "><strong> Noticias</strong></h1>
+    <br>
+    <!--Eclipse-->
+    <div class=" flex inline-block ">
+    <div class=" h-64 relative w-1/3 left-20 rounded-xl">
+        <br>
+        <h1 class="px-5 text-3xl font-sans"><b>¡Eclipse lunar visibe en todo el mundo!</b></h1>
+        <p class="px-5 text-lg pt-2">El proximos mes se verá un eclipse lunar, el cual será visible en todo el mundo, pero, ¿qué es un eclipse
+            lunar?
+        </p>
+        <button class="relative bg-red-400 left-5 top-2 rounded-lg p-3 hover:bg-red-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Saber más:</button>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll(".slide");
-            const prevBtn = document.getElementById("prevBtn");
-            const nextBtn = document.getElementById("nextBtn");
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                slides.forEach((slide, idx) => {
-                    if (idx === index) {
-                        slide.style.opacity = 1;
-                    } else {
-                        slide.style.opacity = 0;
-                    }
-                });
-            }
-
-            function goToPrevSlide() {
-                currentIndex--;
-                if (currentIndex < 0) {
-                    currentIndex = slides.length - 1;
-                }
-                showSlide(currentIndex);
-            }
-
-            function goToNextSlide() {
-                currentIndex++;
-                if (currentIndex >= slides.length) {
-                    currentIndex = 0;
-                }
-                showSlide(currentIndex);
-            }
-
-            prevBtn.addEventListener("click", goToPrevSlide);
-            nextBtn.addEventListener("click", goToNextSlide);
-
-            showSlide(currentIndex);
-        });
-    </script>
-
-
-</footer>
+    <div class= "flex-auto">
+        <img class="w-76 h-64 relative left-80 rounded-3xl hover:shadow-xl" src="../Imagenes/eclipseluna.jpg" alt="">
+    </div>
+  </div>
+  <h1 class="text-center text-2xl font-sans relative p-10"><b>Otras noticias</b></h1>
+  <br>
+  <br>
+      <!--Slider-->
+      
+    <!--//Slider-->
+  <br>
+  <br>
+  <!--Reducción de emisiones-->
+  <div class=" flex inline-block ">
+    <div class=" h-64 relative w-1/2 left-20 rounded-xl">
+        <br>
+        <h1 class="px-5 text-3xl font-sans"><b>¿Qués es la reducción de emisiones?</b></h1>
+        <p class="px-5 text-lg pt-2">La reducción de emisiones se refiere a la disminución de la cantidad de gases de efecto invernadero liberados a la atmósfera por actividades humanas. Los gases de efecto invernadero, como el dióxido de carbono (CO2), el metano (CH4) y el óxido nitroso (N2O), atrapan el calor del sol en la atmósfera y contribuyen al cambio climático.
+        </p>
+        <button class="relative bg-blue-400 left-5 top-2 rounded-lg p-3 hover:bg-blue-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Ver detalles:</button>
+    </div>
+    <div class= "flex-auto">
+        <img class="w-76 h-64 relative left-40 rounded-3xl hover:shadow-xl" src="../Imagenes/reducciondeemisiones.webp" alt="">
+    </div>
+  </div>
+  <br>
+  <br>
+  <!--¿Conoces los tipos de contaminación?-->
+  <div class=" flex inline-block pt-20">
+    <div class= "flex-auto">
+        <img class="w-76 h-64 relative left-20 rounded-3xl hover:shadow-xl" src="../Imagenes/Tipos-de-contaminacion.jpg" alt="">
+    </div>
+    <div class=" h-64 relative w-2/4 rounded-xl right-10">
+        <br>
+        <h1 class="px-5 text-3xl font-sans"><b>¿Conoces los tipos de contaminación?</b></h1>
+        <p class="px-5 text-lg pt-2">La contaminación es la presencia en el ambiente de sustancias o agentes físicos que tienen efectos dañinos o perjudiciales para la salud humana, la vida silvestre, los ecosistemas y el medio ambiente en general.
+        </p>
+        <button class="relative bg-green-400 left-5 top-2 rounded-lg p-3 hover:bg-green-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Ve el apartado:</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <!--Eduación ambiental-->
+  <div class="bg-gray-200 p-5">
+    <h1 class="text-center text-2xl font-sans relative p-5"><b>Educación ambiental</b></h1>
+    <p class="relative left-80 w-1/2">Un proceso educativo que tiene como objetivo sensibilizar, informar y formar a las personas sobre la importancia del medio ambiente y los problemas ambientales, con el fin de fomentar su participación activa en la conservación y protección del medio ambiente.</p>
+    <br>
+    <br>
+    <!--Semilla del mañana-->
+    <div class=" flex inline-block p-10 bg-white rounded-3xl">
+        <div class= "flex-auto">
+            <img class="w-76 h-64 relative left-20 rounded-3xl hover:shadow-xl" src="../Imagenes//crecimiento-plantas.jpg" alt="">
+        </div>
+        <div class=" h-64 relative w-2/4 rounded-xl right-10">
+            <br>
+            <h1 class="px-5 text-3xl font-sans"><b>Una semilla para el mañana.</b></h1>
+            <p class="px-5 text-lg pt-2"><i>"Si supiera que el mundo se acaba mañana, yo, hoy todavía plantaría un árbol"</i></p>
+            <p class="px-5 text-lg pt-2"><i>Martin L. King</i></p>
+        </div>
+      </div>
+  </div>
 </body>
+<br>
+<footer class="pt-30">
+    <div>
+        <center> <img class="h-24 w-24" src="../Imagenes/leaf.png" alt="PlanetWiseLogo"></center>
+        <center><div class=" flex inline-block pt-10 place-content-center "> 
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Home</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">About us</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Solutions</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Cases</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Blog</h4></b></a>
+         </div></center>
+         <center><a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank"><img class="rounded-full w-14 h-14 relative top-5" src="../Imagenes/facebook-gris.png" alt="Facebook Page" ></a></center>
+         <h4 class=" pt-10 font-sans text-amber-400 text-center">Crea-J 2023</h4>
+         <br>
+    </div>
+</footer>
+
 
 </html>
