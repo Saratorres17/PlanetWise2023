@@ -1,5 +1,10 @@
 {
   "devDependencies": {
+<<<<<<< Updated upstream
+=======
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.26",
+>>>>>>> Stashed changes
     "tailwindcss": "^3.3.3"
   }
 }

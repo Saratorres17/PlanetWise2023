@@ -532,6 +532,7 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+<<<<<<< Updated upstream
 }
 
 .container {
@@ -1254,4 +1255,6 @@ video {
   .motion-reduce\:hover\:transform-none:hover {
     transform: none;
   }
+=======
+>>>>>>> Stashed changes
 }
