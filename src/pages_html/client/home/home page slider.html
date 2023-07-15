@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="black">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between">
+                <a href="/dist/images/Logoplanetwise.png"><img src="/dist/images/Logoplanetwise.png" width="300px"> </a>
+               
+    <style>
+        .dropdown {
+            position: relative ;
+             left: -80vh;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<div class="dropdown inline-block relative">
+    <button class=" border-solid border-4 block px-4 py-2 text-gray-800 transition ease-in-out delay-150 bg-green-500 hover:-translate-y-1 hover:scale-110 hover:bg-green-800 duration-300 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+        Reduccion de emisiones</button>
+    <ul class="dropdown-menu bg-white shadow-md">
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">1. Energias renovables.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">2. Gestion de residuos.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">3. Captura y almacenamiento de carbono.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">4. Reduccion de residuos.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">5. Reciclaje.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">6. Compostaje.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">7. Energia a partir de residuos.</a></li>
+
+        <li><a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">8. Gestion de residuos peligrosos.</a></li>
+    </ul>
+    </div>
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.querySelector(".dropdown");
+
+            dropdown.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+
+            document.addEventListener("click", function () {
+                dropdown.querySelector(".dropdown-menu").style.display = "none";
+            });
+        });
+    </script>
+        </div>
+    </header>
+
+   
+
+  
+<body class="bg-gray-100">
+    <div class="container mx-auto py-12">
+        <div class="flex justify-center mt-4">
+            <button id="prevBtn" class="bg-blue-500 text-white px-4 py-2 mr-2 rounded-md z-10">Previous</button>
+            <button id="nextBtn" class="bg-blue-500 text-white px-4 py-2 rounded-md z-10">Next</button>
+        </div>
+        <div class="max-w-lg mx-auto">
+            <div class="relative">
+                <img src="/dist/images/fondo registro.png" alt="Slide 1" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md">
+                <img src="/dist/images/fondor.png" alt="Slide 2" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md opacity-0">
+                <img src="/dist/images/registro2.png" alt="Slide 3" class="slide absolute w-full h-auto object-cover rounded-lg shadow-md opacity-0">
+            </div>
+           
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".slide");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, idx) => {
+                    if (idx === index) {
+                        slide.style.opacity = 1;
+                    } else {
+                        slide.style.opacity = 0;
+                    }
+                });
+            }
+
+            function goToPrevSlide() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = slides.length - 1;
+                }
+                showSlide(currentIndex);
+            }
+
+            function goToNextSlide() {
+                currentIndex++;
+                if (currentIndex >= slides.length) {
+                    currentIndex = 0;
+                }
+                showSlide(currentIndex);
+            }
+
+            prevBtn.addEventListener("click", goToPrevSlide);
+            nextBtn.addEventListener("click", goToNextSlide);
+
+            showSlide(currentIndex);
+        });
+    </script>
+
+
+</footer>
+</body>
+
+</html>
