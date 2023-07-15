@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'redHat': ['"Red Hat Display"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
