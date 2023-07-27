@@ -1,5 +1,5 @@
 <?php
-include "./functions/conexion.php";
+include "../functions/conexion.php";
 
 if (!empty($_POST["registrar"])) {
     $nombre = $_POST["nombre"];
