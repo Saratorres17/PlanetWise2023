@@ -43,13 +43,13 @@ if (isset($_POST["submit"])) {
 
 <body>
   <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-    PHP Complete CRUD Application
+    PlanetWise CRUD
   </nav>
 
   <div class="container">
     <div class="text-center mb-4">
-      <h3>Edit User Information</h3>
-      <p class="text-muted">Click update after changing any information</p>
+      <h3>Editar información de usuario</h3>
+      <p class="text-muted">Haga clic en actualizar después de cambiar cualquier información</p>
     </div>
 
     <?php
@@ -62,12 +62,12 @@ if (isset($_POST["submit"])) {
       <form action="" method="post" style="width:50vw; min-width:300px;">
         <div class="row mb-3">
           <div class="col">
-            <label class="form-label">First Name:</label>
+            <label class="form-label">Primer nombre:</label>
             <input type="text" class="form-control" name="first_name" value="<?php echo $row['first_name'] ?>">
           </div>
 
           <div class="col">
-            <label class="form-label">Last Name:</label>
+            <label class="form-label">Último nombre:</label>
             <input type="text" class="form-control" name="last_name" value="<?php echo $row['last_name'] ?>">
           </div>
         </div>
@@ -80,16 +80,16 @@ if (isset($_POST["submit"])) {
         <div class="form-group mb-3">
           <label>Gender:</label>
           &nbsp;
-          <input type="radio" class="form-check-input" name="gender" id="male" value="male" <?php echo ($row["gender"] == 'male') ? "checked" : ""; ?>>
-          <label for="male" class="form-input-label">Male</label>
+          <input type="radio" class="form-check-input" name="gender" id="male" value="Masculino" <?php echo ($row["gender"] == 'male') ? "checked" : ""; ?>>
+          <label for="male" class="form-input-label">Masculino</label>
           &nbsp;
-          <input type="radio" class="form-check-input" name="gender" id="female" value="female" <?php echo ($row["gender"] == 'female') ? "checked" : ""; ?>>
-          <label for="female" class="form-input-label">Female</label>
+          <input type="radio" class="form-check-input" name="gender" id="female" value="Femenino" <?php echo ($row["gender"] == 'female') ? "checked" : ""; ?>>
+          <label for="female" class="form-input-label">Femenino</label>
         </div>
 
         <div>
-          <button type="submit" class="btn btn-success" name="submit">Update</button>
-          <a href="index.php" class="btn btn-danger">Cancel</a>
+          <button type="submit" class="btn btn-success" name="submit">Actualizar</button>
+          <a href="index.php" class="btn btn-danger">Cancelar</a>
         </div>
       </form>
     </div>

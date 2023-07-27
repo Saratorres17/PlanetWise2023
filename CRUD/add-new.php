@@ -73,10 +73,10 @@ if (isset($_POST["submit"])) {
             <div class="form-group mb-3">
                <label>Género:</label>
                &nbsp;
-               <input type="radio" class="form-check-input" name="gender" id="male" value="male">
+               <input type="radio" class="form-check-input" name="gender" id="male" value="Masculino">
                <label for="male" class="form-input-label">Masculino</label>
                &nbsp;
-               <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+               <input type="radio" class="form-check-input" name="gender" id="female" value="Femenino">
                <label for="female" class="form-input-label">Femenino</label>
             </div>
 
