@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/dist/images/leaf.png">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Uso sostenible de los recursos naturales.</title>
+</head>
+    <header>
+        <header class="bg-green-100">
+            <div class="container mx-auto px-4">
+                <nav class="flex items-center justify-between">
+                    <a href=""><img  src="/dist/images/PlanetWise.png" width="300px" alt="Logo PlanetWise"> </a>
+                   
+        <style>
+            .dropdown {
+                position: relative ;
+                 left: -80vh;
+            }
+    
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 10;
+            }
+    
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+        </style>
+    
+    <div class="dropdown inline-block relative">
+        <button class=" border-solid border-4 block px-4 py-2 text-gray-800 transition ease-in-out delay-150 bg-green-500 hover:scale-110 hover:bg-green-600 duration-200 transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ...">
+            Uso sostenible de los recursos</button>
+        <ul class="dropdown-menu bg-white shadow-md">
+    
+            <li><a href="/src/pages_html/client/topics/Tema-4.1.html" class="block px-4 py-1 text-gray-800 hover:bg-gray-200 text-sm">1. Gestión forestal sostenible.</a></li>
+            <hr>
+            <li><a href="../topics/Tema-4.2.html" class="block px-4 py-1 text-gray-800 hover:bg-gray-200 text-sm">2. Agricultura sostenible.</a></li>
+            <hr>
+            <li><a href="../topics/Tema-4.3.html" class="block px-4 py-1 text-gray-800 hover:bg-gray-200 text-sm">3. Uso sostenible de recursos hídricos:</a></li>
+            <hr>
+            <li><a href="../topics/Tema-4.4.html" class="block px-4 py-1 text-gray-800 hover:bg-gray-200 text-sm">4. Energía sostenible.</a></li>
+            <hr>
+            <li><a href="../topics/Tema-4.5.html" class=" block px-4 py-1 text-gray-800 hover:bg-gray-200 text-sm">5. Uso sostenible de recursos minerales.</a></li>
+
+        </div>
+      
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const dropdown = document.querySelector(".dropdown");
+    
+                dropdown.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+    
+                document.addEventListener("click", function () {
+                    dropdown.querySelector(".dropdown-menu").style.display = "none";
+                });
+            });
+        </script>
+            </div>
+        </header>
+
+    </header>
+    <body class="bg-gray-100">
+    <br>
+    <!--Parte de izquierda nav-->
+<div class="absolute w-1/3 bg-gray-200 left-2/3 border-3 border-neutral-50">
+    <b><h1 class="font-sans px-10 text-center text-2xl decoration-8 ">Contaminación del suelo:</h1></b>
+    <br>
+    <p class="relative text-center w-11/12 left-4 text-base">La contaminación del suelo es una degradación de la calidad del suelo asociada a la presencia de sustancias químicas.</p>
+    <br>
+    <center><img class="w-96 h-56 relative rounded-3xl" src="/dist/images/Contaminacióndesuelo.jpg" alt="Contaminacióndesuelo"></center>
+    <center><button class=" w-52 relative bg-yellow-200  top-2 rounded-lg p-2 hover:bg-yellow-300 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Informarme más:</button></center>
+    <br>
+    <br>
+    <b><h1 class="font-sans text-2xl px-10 text-center decoration-8 ">Imágenes:</h1></b>
+    <br>
+    <!---->
+    <br>
+    <div class="left-2 relative grid grid-cols-3 gap-4">
+        <img class="h-28 w-32 rounded-3xl" src="/dist/images/crecimiento-plantas.jpg" alt="Crecimiento de plantas">
+        <img class="h-20 w-32 rounded-3xl" src="/dist/images/eclipseluna.jpg" alt="Eclipse lunar">
+        <img class="h-28 w-32 rounded-3xl" src="/dist/images/reducciondeemisiones.webp" alt="Reduccióndeemisiones">
+        <img class="h-28 w-32 rounded-3xl" src="/dist/images/fondor.png" alt="Fondo1">
+        <img class="h-24 w-48 rounded-3xl" src="/dist/images/fondo registro.png" alt="Fondo2">
+        <img class="h-h-28 w-32 rounded-3xl" src="/dist/images/Agua.webp" alt="Agua">
+    </div>
+    <br>
+    <b><h1 class="font-sans text-2xl px-10 text-center decoration-8 ">Contaminación del agua:</h1></b>
+    <br>
+    <p class="relative text-center w-11/12 left-4 text-base">La contaminación hídrica o la contaminación del agua es una modificación de esta, que la vuelve impropia o peligrosa para el consumo, la industria, la agricultura, la pesca y las actividades, así como para los animales.</p>
+    <br>
+    <center><img class="w-80 h-52 relative rounded-3xl" src="/dist/images/Agua.webp" alt="Contaminacióndeagua"></center>
+    <center><button class=" w-52 relative bg-red-300  top-2 rounded-lg p-2 hover:bg-red-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Saber más:</button></center>
+    <br>
+    <br>
+    <!---->
+    <br>
+    <b><h1 class="font-sans text-2xl px-10 text-center rounded-3xl bg-blue-200 decoration-8 ">¡Héchale un vistazo a las publicaciones!</h1></b>
+    <br>
+    <p class="relative text-center w-11/12 left-4 text-base">¡Ven y comparte tus experiencias uaidando al medio ambiente, sube tus propias imágenes y comenta tus experiencias utilizando PlanetWise!.</p>
+    <br>
+    <center><img class="w-80 h-52 relative rounded-3xl" src="/dist/images/Bolg.jpg" alt="Blog"></center>
+    <center><button class=" w-52 relative bg-blue-200  top-2 rounded-lg p-2 hover:bg-blue-400 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Acceder al blog:</button></center>
+    <br>
+    <!---->
+    <br>
+    <b><h1 class="font-sans text-2xl px-10 text-center decoration-8 ">Deforestación...¿Me afecta?</h1></b>
+    <br>
+    <p class="relative text-center w-11/12 left-4 text-base">La deforestación o desforestación es un proceso provocado por la acción de los humanos, en el que se destruye o agota la superficie forestal, generalmente con el objetivo de destinar el suelo a otra actividad.</p>
+    <br>
+    <center><img class="w-80 h-52 relative rounded-3xl" src="/dist/images/deforestación.jpg" alt="Deforestación"></center>
+    <center><button class=" w-52 relative bg-green-300  top-2 rounded-lg p-2 hover:bg-green-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Acceder al blog:</button></center>
+    <br>
+</div>
+    <!--Parte contenido-->
+<div class="w-8/12">
+    <h1 id="tema" class=" px-10 text-center decoration-8 "><strong>Uso sostenible de los recursos naturales.</strong></h1>
+       <style>
+        #tema{
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 4rem;
+            color: rgb(40, 80, 40);
+            
+        }
+        #tema:hover{
+            color: rgb(43, 136, 43);  
+            transition: .5s; 
+        }
+       </style>
+    <br>
+    <div class="relative flex pt-20">
+        <div class= "flex-auto ">
+            <!--Pon una imagen relacionada con el texto-->
+            <img class="w-80 h-62 relative left-10 top-20 rounded-3xl hover:shadow-xl" src="/dist/images/recursos-sostenibilidad T4.0.jpg" alt="Cmabio climático">
+            <br>
+            <div class="absolute top-20">
+               <div class="bg-green-300 rounded-full top-3 left-10 w-20 h-20 absolute"></div>
+               <div class="bg-yellow-200 rounded-full top-8 left-2 w-20 h-20 absolute"></div>
+               <div class="bg-blue-400 rounded-full top-4 left-20 w-20 h-20 absolute"></div>
+           </div>
+        </div>
+        <div class=" h-full relative w-2/4 rounded-xl right-10">
+            <br>
+            <h1 class="px-5 text-3xl font-sans"><b>¿Qué es el uso sostenible?
+            </b></h1>
+            <p class="px-5 text-lg pt-2 relative">
+                En ecología, sostenibilidad o sustentabilidad describe cómo los sistemas biológicos se mantienen productivos con el transcurso del tiempo. Se refiere al equilibrio de una especie con los recursos de su entorno. Por extensión se aplica a la explotación de un recurso por debajo del límite de renovación de estos.
+            </p>
+        </div>
+      </div>
+      <br>
+      <!--Desglose del tema-->
+      <div class="bg-gray-200 p-5">
+        <h1 class="text-center text-2xl font-sans relative p-5"><b>Saber más hacerca de el desarrollo sustentable:</b></h1>
+        <p class="relative  w-11/12 left-14 text-base">
+            El desarrollo sustentable es sinónimo de sostenible y es un término acuñado desde el informe de Brundtland de 1987, redactado por la ONU, por la Doctora Gro Harlem Brundtland, y que se llamó originalmente "Nuestro Futuro Común". La frase que resume Desarrollo Sustentable en el informe es el siguiente: Satisfacer las necesidades de las generaciones presentes sin comprometer las posibilidades de las del futuro para atender sus propias necesidades. Los tres pilares que se relacionan en el desarrollo sostenible son: la economía, el medio ambiente y la sociedad. La finalidad de su relación es que exista un desarrollo económico y social respetuoso con el medio ambiente.
+            <br>
+            <br>
+            El principio de sostenibilidad está basado en varios conceptos: La ciencia de la sostenibilidad y la ciencia ambiental forman las bases de la estructura analítica y filosófica, mientras que los datos se coleccionan por medio de medidas de sostenibilidad. Después se usan estos datos para formular planes de políticas de sostenibilidad.
+            <br>
+            <br>
+            La puesta en práctica del desarrollo sostenible tiene como fundamento ciertos valores y principios éticos. La Carta de la Tierra presenta una articulación extensa e integral de los valores y principios relacionados con la sostenibilidad.
+        </p>
+        <br>
+        <!--Cambiar imagen-->
+        <div class=" flex  p-10 bg-white rounded-3xl">
+            <div class= "flex-auto">
+
+                <img class="w-80 h-56 relative left-0 top-20 rounded-3xl hover:shadow-xl" src="/dist/images/Sustentabilidad T4.0.jpeg" alt="sostenibilidad">
+                <br>
+                <br>
+                <img class="w-80 h-56 relative left-0 top-20 rounded-3xl hover:shadow-xl" src="/dist/images//sostenible T4.0.webp" alt="CSostenible">
+                <br>
+            </div>
+            <div class=" h-full relative w-2/4 rounded-xl right-10">
+                <br>
+                <h1 class="px-5 text-3xl font-sans"><b>¿Cómo puedo ser más sustentable?</b></h1>
+                <p class="px-5 text-base pt-2">
+                    <li class="px-5 text-base pt-1"><b>Utiliza iluminación LED en casa o empresa: </b>Si dispones de grandes ventanales también puedes aprovechar las horas de luz natural y consultar la posibilidad de instalar placas fotovoltaicas para convertir la luz del sol en energía.</li>
+                    <li class="px-5 text-base pt-1"><b>Evita utilizar materiales que no sean reciclables: </b>Separa los residuos, fomenta el reciclaje, los envases retornables y el material reciclado, como el papel para oficina o el aprovechamiento de materiales para crear objetos artesanales tipo.</li>
+                    <li class="px-5 text-base pt-1"><b>Promueve la movilidad sostenible: </b>¿Podrías financiar el transporte público para los empleados de tu empresa o facilitar el alquiler de bicicletas? Con este ejemplo podemos inspirar a otros ciudadanos anónimos, para que elijan también un transporte no contaminante. Así contribuimos todos en la lucha contra el cambio climático.</li>
+                </p>
+            </div>
+          </div>
+      </div>
+      <!---->
+      <div class="bg-white p-5 rounded-3xl">
+      <div class="bg-green-100 rounded-3xl">
+      <center><iframe class="p-5" width="690" height="445" src="https://www.youtube.com/embed/I4wj61hScUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+    </div>
+</div>
+</div>
+</body>
+<br>
+<br>
+<footer>
+    <div class="relative">
+        <center> <img class="h-24 w-24" src="/dist/images/leaf.png" alt="PlanetWiseLogo"></center>
+        <center><div class=" flex pt-10 place-content-center "> 
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Home</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">About us</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Solutions</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Cases</h4></b></a>
+         <a href=""><b><h4 class="pl-10 pr-10 font-sans text-base">Blog</h4></b></a>
+         </div></center>
+         <center><a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank"><img class="rounded-full w-14 h-14 relative top-5" src="/dist/images/facebook-gris.png" alt="Facebook Page" ></a></center>
+         <h4 class=" pt-10 font-sans text-amber-400 text-center">Crea-J 2023</h4>
+         <br>
+    </div>
+</footer>
+</html>
