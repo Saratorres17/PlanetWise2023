@@ -1,13 +1,27 @@
 <?php
-include "db_conn.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "planetwise";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+  die("Conexión falida: " . mysqli_connect_error());
+}
+// echo "Connected successfully";
+
 
 if (isset($_POST["submit"])) {
    $first_name = $_POST['first_name'];
    $last_name = $_POST['last_name'];
    $email = $_POST['email'];
+   $contra = $_POST['contra'];
    $gender = $_POST['gender'];
 
-   $sql = "INSERT INTO `crud`(`id`, `first_name`, `last_name`, `email`, `gender`) VALUES (NULL,'$first_name','$last_name','$email','$gender')";
+   $sql = "INSERT INTO `crud`(`id`, `first_name`, `last_name`, `email`,`contra`, `gender`) VALUES (NULL,'$first_name','$last_name','$email', '$contra','$gender')";
 
    $result = mysqli_query($conn, $sql);
 
@@ -42,7 +56,7 @@ if (isset($_POST["submit"])) {
 
 <body>
    <nav class="navbar navbar-light justify-content-center fs-3 mb-5" style="background-color: #00ff5573;">
-      PlanetWise CRUD
+      <a href="">PlanetWise CRUD</a>
    </nav>
 
    <div class="container">
@@ -67,11 +81,11 @@ if (isset($_POST["submit"])) {
 
             <div class="mb-3">
                <label class="form-label">Email:</label>
-               <input type="email" class="form-control" name="email" placeholder="name@example.com">
+               <input type="email" class="form-control" name="email" placeholder="nombre@ejemplo.com">
             </div>
             <div class="mb-3">
-               <label class="form-label">contra:</label>
-               <input type="email" class="form-control" name="email" placeholder="name@example.com">
+               <label class="form-label">Contraseña:</label>
+               <input type="password" class="form-control" name="contra" placeholder="Contraseña">
             </div>
 
             <div class="form-group mb-3">
