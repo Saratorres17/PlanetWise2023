@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../Imagenes/leaf.png">
         <link href="/dist/output.css" rel="stylesheet">
@@ -9,24 +9,24 @@
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="icon" href="/dist/images/leaf.png">
+        <title>Reducción de emisiones.</title>
     </head>
     <header>
         <body class="h-screen  font-sans">
     
-            <nav class="bg-white text-black">
+            <nav class="bg-white text-black" id="sexo">
                 <div class="max-w-7xl flex justify-between items-center mx-auto relative">
-                    <a href="/">
-                         <img src="/dist/images/Logoplanetwise.png" class="w-49 hover:border-b border-white" alt="Logo" width="300px">
-                    </a>
+                      <a href="/home/index.html"><img src="/dist/images/Logoplanetwise.png" class="w-49 hover:border-b border-white" alt="Logo" width="300px">
+                      </a>
         
-                    <ul class="flex font-semibold">
-        
-                        <li><a href="../src/pages_html/client/topics/Tema 1.1.html" class="menu-item">Reducción de emisiones</a></li>
+                    <ul class="flex font-semibold">                   
+                        <li><a href="/src/pages_html/client/topics/Reducción de emisiones 1.0/Redución de emisiones 1.0.html" class="menu-item">Reducción de emisiones</a></li>             
                         <li class="group">
                             <a href="" class="menu-item group-hover:border-white">Diversidad de temas</a>
                             <!-- MEGA MENU CONTENT -->
-                            <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
-                                <ul class="p-2 border-r-2 border-gray-400">
+                            <div class="grid grid-cols-4 w-full  p-5 absolute top-full left-0 bg-white mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
+                                <ul class="p-2 border-r-2">
                                     <li><a href="" class="mega-sub-item-title">Tipos de contaminacion
                                     </a></li>
                                     <li><a href="" class="mega-sub-item">Contaminacion del aire</a></li>
@@ -85,6 +85,7 @@
                          
                                 </ul>
         
+        
                                 
                                 <img src="https://img.freepik.com/foto-gratis/hermosa-foto-montanas-bosques-suiza_181624-20988.jpg?w=1380&t=st=1689824752~exp=1689825352~hmac=28a6b7a6e8f64bf82648f8bf415da79d6733716f24f1bf1a70a321c368ef23f3" alt="">
         
@@ -99,7 +100,6 @@
                         <li class="group relative">
                             <a href="" class="menu-item group-hover:border-white">Biodiversidad
                             </a>
-        
                             <ul class="absolute left-0 bg-white w-max mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
                                 <li><a href="" class="menu-sub-item">Especies en peligro de extinción y conservación
                                 </a></li>
@@ -113,25 +113,19 @@
                                     
                                     <a href="" class="menu-sub-item">Programas de conservación  y leyes de especies emblemáticas</a>
                                     <ul class="sub-dropdown-content absolute left-full top-full bg-white w-max opacity-0 invisible transition-all duration-500">
-                                        <li><a href="" class="menu-sub-item"> Causas y consecuencias de la pérdida de biodiversidad
-                                        </a></li>
-                                        <li><a href="" class="menu-sub-item">Conservación de especies en peligro de extinción
-                                        </a></li>
-                                        <li class="sub-dropdown relative">
+                                       
         
                                 
                                     </ul>
                                 </li>
                                 <li class="sub-dropdown relative">
-                                    <a href="" class="menu-sub-item"> Estrategias de restauración de ecosistemas y corredores biológicos</a>
+                                   
                                     <ul class="sub-dropdown-content absolute left-full top-full bg-white opacity-0 invisible transition-all duration-500">
-                                        <li><a href="" class="menu-sub-item"> Importancia de la conectividad ecológica para la conservación</a></li>
+                                       
                             
                                         
                                     </ul>
                                 </li>
-                                <li><a href="" class="menu-sub-item"></a></li>
-                                <li><a href="" class="menu-sub-item"></a></li>
                             </ul>
                         </li>
                         <li><a href="/pruebahome/blog.html" class="menu-item">BLOG</a></li>
@@ -153,7 +147,7 @@
             }
         
                 .hero {
-                  background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b'); /* Ruta de imagen de fondo */
+                  background-image: url('https://img.freepik.com/foto-gratis/hombre-cuidando-su-granja-close-up_23-2148580028.jpg?w=740&t=st=1690255897~exp=1690256497~hmac=da148c410489d15cbc04a296be2c7bf001448ced507fbf705ba981616bfcb2f2'); /* Ruta de imagen de fondo */
                   background-size: cover;
                     background-position: center;
                     height: 900px;
@@ -239,29 +233,16 @@
               </style>
             </head>
             
-                   
-        <style>
-            .dropdown {
-                position: relative ;
-                 left: -80vh;
-            }
-    
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 10;
-            }
-    
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-        </style>
-    
-        <div class="w-8/12">
-        <br><br>
-        
+            <body class="bg-gray-100">
+            
+              <section class="hero relative">
+                <div class="overlay absolute inset-0"></div>
+                <div class="hero-content">
+                  <h2 class="hero-title">Reducción de emisiones.</h2>
+                  <p class="hero-subtitle">Reducción de emisiones.</p>
+                 
+                </div>
+              </section>
     </header>
 
     <body class="bg-gray-100">
@@ -324,9 +305,6 @@
 </div>
     <!--Parte derecha-->
 <div class="w-8/12">
-    <h1 class="font-sans text-base px-10 text-center decoration-8 "><strong>Reducción de emisiones</strong></h1>
-
-    <br>
     <div class="relative flex pt-20">
         <div class= "flex-auto ">
             <!--Pon una imagen relacionada con el texto-->
@@ -337,7 +315,7 @@
         </div>
         <div class=" h-full relative w-2/4 rounded-xl right-10">
             <br>
-            <h1 class="px-5 text-3xl font-sans"><b>¿Qué es la reducción de emisiones?
+            <h1 class="px-5 text-xl font-sans"><b>¿Qué es la reducción de emisiones?
             </b></h1>
             <p class="px-5 text-lg pt-2 relative">La reducción de emisiones se refiere a la disminución de la cantidad de gases de efecto invernadero y otras sustancias contaminantes liberadas a la atmósfera como resultado de las actividades humanas. El objetivo es mitigar el cambio climático y sus efectos negativos.
             </p>
@@ -346,8 +324,6 @@
       <br>
       <!--Desglose del tema-->
       <div class="bg-gray-200 p-5">
-        <h1 class="text-center text-2xl font-sans relative p-5"><b> Desglose del tema
-        </b></h1>
         <p class="relative text-left w-11/12 left-14 text-base">
             La reducción de emisiones se puede desglosar en diferentes aspectos clave que abordan las causas y soluciones para reducir las emisiones de gases de efecto invernadero.
             <br><br>A continuación, se presenta un desglose detallado:<br><br>
@@ -381,7 +357,9 @@
         <!--Cambiar imagen-->
         <div class=" flex p-10 bg-white rounded-3xl">
             <div class= "flex-auto">
-                <img class="w-80 h-56 relative left-3 rounded-3xl hover:shadow-xl" src="/dist/images/Curiosidades reducción de emisiones.jpg" alt="">
+                <br>
+                <br>
+                <img class="w-80 h-56 relative right-4 rounded-3xl hover:shadow-xl" src="/dist/images/Curiosidades reducción de emisiones.jpg" alt="">
             </div>
             <div class=" h-full relative w-2/4 rounded-xl right-10">
                 <br>
