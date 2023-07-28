@@ -7,7 +7,8 @@ if (!empty($_POST["registrar"])) {
     $genero = $_POST["genero"];
     $fechana = $_POST["fecha_nacimiento"];
     $password = $_POST["contraseña"];
-    $sql = "INSERT INTO `registro del usuario`(`Nombre`, `Apellido`, `Genero`, `Fecha de nacimiento`, `Contraseña`) VALUES ('$nombre', '$apellido','$genero','$fechana','$password')";
+    $email = $_POST['email'];
+    $sql = "INSERT INTO `registro del usuario`(`Nombre`, `Apellido`,'email', `Genero`, `Fecha de nacimiento`, `Contraseña`) VALUES ('$nombre', '$apellido','$email','$genero','$fechana','$password')";
     mysqli_query($conn, $sql);
   }
 
@@ -67,8 +68,10 @@ if (!empty($_POST["loginsubmit"])) {
             <input type="text" name="nombre" placeholder="Nombre:">
             <input type="text" name="apellido" placeholder="Apellido:">
             <input type="text" name="genero" placeholder="Genero:">
+            <input type="text" name="email" placeholder="email">
              <input type="text" name="fecha_nacimiento" placeholder="Fecha de nacimiento:">
              <input type="password" name="contraseña" placeholder="Contraseña:">
+
              <input type="submit" name="registrar" value="Registrarse">
         </form>
     </div>
