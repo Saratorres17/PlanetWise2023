@@ -100,7 +100,7 @@ if (isset($_POST["submit"])) {
 
             <div>
                <button type="submit" class="btn btn-success" name="submit">Guardar</button>
-               <a href="index.php" class="btn btn-danger">Cancelar</a>
+               <a href="../home/index.html" class="btn btn-danger">Cancelar</a>
             </div>
          </form>
       </div>
