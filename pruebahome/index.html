@@ -12,131 +12,82 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="h-screen  font-sans">
+<body class="h-screen  font-sans bg-white">
+ <Nav >
+        <!-- Navbar -->
+        <nav class="flex justify-around py-4 bg-white/80
+             shadow-md w-full
+            fixed top-0 left-0 right-0 z-10">
 
-    <nav class="bg-white text-black">
-        <div class="max-w-7xl flex justify-between items-center mx-auto relative">
-            <a href="/pruebahome/index.html">
-                 <a href="/pruebahome/index.html"><img src="/dist/images/Logoplanetwise.png" class="w-49 hover:border-b border-white" alt="Logo" width="300px"></a>
-            </a>
+            <!-- Logo Container -->
+            <div class="flex items-center">
+                <!-- Logo -->
+                <a href="/pruebahome/index.html" class="cursor-pointer">
+                    <h3 class="text-2xl font-medium text-black">
+                       PlanetWise</h3>
+                </a>
+            </div>
 
-            <ul class="flex font-semibold">
+            <!-- Links Section -->
+            <div class="items-center hidden space-x-8 lg:flex">
+                <a class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300">
+                   Pagina principal
+                </a>
+
+               
+                <a class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300">
+                    Datos curiosos
+                </a>
+
                 
-              
-                <li><a href="/src/pages_html/client/topics/Reducción de emisiones.html" class="menu-item">Reducción de emisiones</a></li>              
-                <li class="group">
-                    <a href="" class="menu-item group-hover:border-white">Diversidad de temas</a>
-                    <!-- MEGA MENU CONTENT -->
-                    <div class="grid grid-cols-4 w-full p-5 absolute top-full left-0 bg-white mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
-                        <ul class="p-2 border-r-2">
-                            <li><a href="" class="mega-sub-item-title">Tipos de contaminacion
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion del aire</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion del agua</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion del suelo</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion acustica</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion luminica</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion termica</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion quimica</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion hidirica</a></li>
-                            <li><a href="" class="mega-sub-item">Contaminacion por productos quimicos y desechos en El Salvador </a></li>
-                            <li><a href="" class="mega-sub-item">Escasez de agua potable y acceso desigual a recursos hidricos en El salvador</a></li>
-                            <li><a href="" class="mega-sub-item"></a>Impacto de la contaminación del agua en los ecosistemas acuáticos en El salvador</li>
 
-                        </ul>
-                        <ul class="p-2   border-r-2">
-                            <li><a href="/src/pages_html/client/topics/Conservación de biodiversidad.html" class="mega-sub-item-title">Conservación de biodiversidad 
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Importancia de la biodiversidad</a></li>
-                            <li><a href="" class="mega-sub-item">Áreas protegidas y conservación in situ</a></li>
-                            <li><a href="" class="mega-sub-item">Especies en peligro de extinción y conservación ex situ:</a></li>
-                            <li><a href="" class="mega-sub-item">Conservación de hábitats y ecosistemas</a></li>
-                            <li><a href="" class="mega-sub-item">Restauración ecológica en El Salvador</a></li>
-                            <li><a href="" class="mega-sub-item">Cambio climático y conservación de la biodiversidad</a></li>
-                            <li><a href="" class="mega-sub-item">Pérdida de hábitat y fragmentación en El Salvador</a></li>
-                            <li><a href="" class="mega-sub-item">Deforestación y degradación del bosque</a></li>
-                            <li><a href="" class="mega-sub-item">Fragmentación de hábitats y sus efectos en la diversidad biológica.</a></li>
-                            <li><a href="" class="mega-sub-item">Importancia de la conectividad ecológica para la conservación.
-                            </a></li>
+                <a href="/pruebahome/blog.html" class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300">
+                    Blog
+                </a>
 
-                        </ul>
-                        <ul class="p-2 border-r-2">
-                            <li><a href="" class="mega-sub-item-title">Uso sostenible de recursos naturales
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Gestión forestal sostenible
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Agricultura sostenible</a></li>
-                            <li><a href="" class="mega-sub-item">Uso sostenible de recursos hídricos</a></li>
-                            <li><a href="" class="mega-sub-item">Uso sostenible de recursos minerales</a></li>
-                            <li><a href="" class="mega-sub-item">Energía sostenible</a></li>
-                        </ul>
-                        <ul class="p-2 border-r-2">
-                            <li><a href="" class="mega-sub-item-title">Cambio climático</a></li>
-                            <li><a href="" class="mega-sub-item">Efecto invernadero y aumento de la temperatura global
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Derretimiento de los casquetes polares y el nivel del mar
-                            </a></li>
-                            <li><a href="" class="mega-sub-item">Impacto en los ecosistemas y la biodiversidad</a></li>
-                            <li><a href="" class="mega-sub-item">Emisiones de gases contaminantes y su impacto en la salud humana</a></li>
-                            <li><a href="" class="mega-sub-item">Políticas y medidas para reducir la contaminación atmosférica</a></li>
-                 
-                        </ul>
+                <a href="/pruebahome/sobre nosotros.html" class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300">
+                    Sobre nosotros
+                </a>
+            </div>
 
-                        
-                        <img src="https://img.freepik.com/foto-gratis/hermosa-foto-montanas-bosques-suiza_181624-20988.jpg?w=1380&t=st=1689824752~exp=1689825352~hmac=28a6b7a6e8f64bf82648f8bf415da79d6733716f24f1bf1a70a321c368ef23f3" alt="">
+            <!-- Icon Menu Section -->
+            <div class="flex items-center space-x-5">
+                <!-- Register -->
+              <a href=""  class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300">
 
-                        <img src="https://img.freepik.com/foto-gratis/flying-frog-closeup-hermosa-rana-arboricola-flor-roja-animal-closeup-rhacophorus-reinwardtii_488145-81.jpg?w=1380&t=st=1689824455~exp=1689825055~hmac=6e8ccc081789902a402575d557667a1f69505e0daada02bb552933f4121bec80" alt="">
+                  <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
+                    </svg> Registro</a>
 
-                        <img src="https://img.freepik.com/foto-gratis/disparo-enfoque-selectivo-hermosa-cebra-campo-cubierto-hierba-verde_181624-5968.jpg?w=1380&t=st=1689824506~exp=1689825106~hmac=2e0fa48094fc7523a03e7e13003bd59adc680d948137adc14f4cd783363f00f2" alt="">
+                <!-- Login -->
+                <a class="flex text-gray-600 hover:text-white
+                    cursor-pointer transition-colors duration-300
+                    font-semibold ">
 
-                        <img src="https://img.freepik.com/foto-gratis/rio-montanas-orilla-rocosa-pirineos_1398-5036.jpg?w=1380&t=st=1689824815~exp=1689825415~hmac=5bd3cae44a43d63ce5db1bd559b8572747ee74c30ff18a10467a10d75363f4a5" alt="">
-                    </div>
-                    <!-- END  MENU CONTENT -->
-                </li>
-                <li class="group relative">
-                    <a href="" class="menu-item group-hover:border-white">Biodiversidad
-                    </a>
-                    <ul class="absolute left-0 bg-white w-max mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-0 transition-all duration-500">
-                        <li><a href="" class="menu-sub-item">Especies en peligro de extinción y conservación
-                        </a></li>
+                    <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
+                    </svg>
 
-
-                        <li><a href="" class="menu-sub-item">Lista de especies amenazadas en El Salvador.
-                        </a></li>
-                        <li class="sub-dropdown relative">
-                            <a href="" class="menu-sub-item">Factores que ponen en riesgo a las especies </a>
-                            <a href="" class="menu-sub-item">Técnicas de reproducción y reintroducción de especies en peligro. </a>
-                            
-                            <a href="" class="menu-sub-item">Programas de conservación  y leyes de especies emblemáticas</a>
-                            <ul class="sub-dropdown-content absolute left-full top-full bg-white w-max opacity-0 invisible transition-all duration-500">
-                                <li><a href="" class="menu-sub-item"> Causas y consecuencias de la pérdida de biodiversidad
-                                </a></li>
-                                <li><a href="" class="menu-sub-item">Conservación de especies en peligro de extinción
-                                </a></li>
-                                <li class="sub-dropdown relative">
-
-                        
-                            </ul>
-                        </li>
-                        <li class="sub-dropdown relative">
-                            <a href="" class="menu-sub-item"> Estrategias de restauración de ecosistemas y corredores biológicos</a>
-                            <ul class="sub-dropdown-content absolute left-full top-full bg-white opacity-0 invisible transition-all duration-500">
-                                <li><a href="" class="menu-sub-item"> Importancia de la conectividad ecológica para la conservación</a></li>
-                    
-                                
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="/pruebahome/blog.html" class="menu-item">BLOG</a></li>
-                <li><a href="/pruebahome/sobre nosotros.html" class="menu-item">ABOUT</a></li>
-            </ul>
-            <ul class="flex font-semibold">
-                <li><a href="/src/pages_html/client/forms/Formularios.html" class="menu-item -right-10" >Inicio de sesion</a></li>
-                <li><a href="/src/pages_html/client/forms/Formularios.html" class="menu-item">Registro</a></li>
-            </ul>
-        </div>
-    </nav>
+                    Inicio de sesion
+                </a>
+            </div>
+            
+        </nav>
+   <!-- fin de nav-->
+    </div>
+ </Nav>
+ 
     <style>
         nav {
         position: relative;
@@ -242,88 +193,137 @@
           <p class="hero-subtitle">¡Conocer la biodiversidad nos da el poder de cuidarlo!</p>
          
         </div>
-      </section>
-    
-     
-      <div class="container mx-auto py-8 px-4">
-    
-        <!-- lo que podra editar el administrador -->
-        <h1 class="text-2xl md:text-4xl font-sans text-center mb-8"><b>¡Novedades de la biodiversidad!</b></h1>
-    
-        <div class="flex flex-col md:flex-row mb-8">
-          <div class="md:w-1/2">
-            <div class="h-16 relative rounded-3xl">
-              <br>
-              <h1 class="px-5 text-3xl font-sans"><b>¡Eclipse lunar visible en todo el mundo!</b></h1>
-              <p class="px-5 text-lg pt-2">El próximo mes se verá un eclipse lunar, el cual será visible en todo el mundo, pero, ¿qué es un eclipse lunar?</p>
-              <button class="relative bg-red-400 left-5 top-2 rounded-lg p-3 hover:bg-red-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Saber más</button>
+      </section><br> <br>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="max-h-96 md:h-screen">
+            <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://img.freepik.com/foto-gratis/hermosa-foto-luna-roja-cielo-nocturno-negro_181624-29392.jpg?w=1380&t=st=1690678348~exp=1690678948~hmac=672c5bfdb4e89840bf382180c5c3cb43a12a1532d078806cefff622fdb245000" alt="">
+          </div>
+          <div class="flex bg-gray-100 p-10">
+            <div class=" mt-40 h-20">
+              
+              <h1 class="text-3xl uppercase">Así fue el eclipse lunar total que pudo verse en América Latina</h1>
+              <p class="font-semibold mb-5">BBC NEWS MUNDO</p>
+              <p>En un eclipse lunar total, toda la Luna cae dentro de la parte más oscura de la sombra de la Tierra, llamada umbra, explica la NASA en su sitio web.</p>
+             
             </div>
           </div>
-            <!-- lo que podra editar el administrador -->
-          <div class="md:w-1/1.5 mt-40 md:mt-10" >
-            <img class="w-full h-64 rounded-2xl hover:shadow-xl" src="/dist/images/eclipseluna.jpg" alt="Imagen de Eclipse Lunar" > 
-          </div>
-        </div>
-    
-        <h1 class="text-2xl md:text-4xl font-sans text-center mb-8"><b>Otras noticias</b></h1>
-    <!-- Reducción de emisiones -->
-    <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w- px-3 md:px-0">
-          <div class="h- relative rounded-xl">
-            <br>
-            <h1 class="px-5 text-3xl font-sans"><b>¿Qué es la reducción de emisiones?</b></h1>
-            <p class="px-5 text-lg pt-2">La reducción de emisiones se refiere a la disminución de la cantidad de gases de efecto invernadero liberados a la atmósfera por actividades humanas. Los gases de efecto invernadero, como el dióxido de carbono (CO2), el metano (CH4) y el óxido nitroso (N2O), atrapan el calor del sol en la atmósfera y contribuyen al cambio climático.</p>
-            <button class="relative bg-blue-400 left-5 top-2 rounded-lg p-3 hover:bg-blue-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Ver detalles</button>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 mt-1 md:mt-0">
-          <img class="w-full h-64 rounded-3xl hover:shadow-xl" src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="">
         </div>
       </div>
-      <br>
-      <br>
-      
-      <!-- ¿Conoces los tipos de contaminación? -->
-      <div class="flex flex-col md:flex-row pt-10">
-        <div class="w-full md:w-1/3 px-8 md:px-35">
-          <img class="w-full h-64 rounded-3xl hover:shadow-xl" src="https://img.freepik.com/foto-gratis/hombre-recogiendo-botellas-plastico-esparcidas-suelo_1268-20056.jpg?w=1480&t=st=1689909565~exp=1689910165~hmac=7abb34898f5f2148d6ef33fb3422e0617ca074a28d893d49516d1fbe48f15733" alt="">
-        </div>
-        <div class="w-full md:w-1/2 px-4 md:px-0 mt-4 md:mt-0">
-          <br>
-          <h1 class="px-5 text-3xl font-sans"><b>¿Conoces los tipos de contaminación?</b></h1>
-          <p class="px-5 text-lg pt-2">La contaminación es la presencia en el ambiente de sustancias o agentes físicos que tienen efectos dañinos o perjudiciales para la salud humana, la vida silvestre, los ecosistemas y el medio ambiente en general.</p>
-          <button class="relative bg-green-400 left-5 top-2 rounded-lg p-3 hover:bg-green-500 border-2 border-gray-300 hover:border-black shadow-lg hover:shadow-xl">Ver el apartado</button>
-        </div>
       </div>
       <br>
-      <br>
+      <br><br><br><br>
+     
+       <!-- cards-->
+      <div class="py-16 bg-gradient-to-br from-green-50 to-cyan-100">  
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div class="mb-12 space-y-2 text-center">
+              <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl">Temas de interes</h2></div>
       
-      <!-- Educación ambiental -->
-      <div class="bg-gray-200 p-5">
-        <h1 class="text-center text-2xl font-sans relative p-5"><b>Educación ambiental</b></h1>
-        <p class="relative mx-auto max-w-lg">Un proceso educativo que tiene como objetivo sensibilizar, informar y formar a las personas sobre la importancia del medio ambiente y los problemas ambientales, con el fin de fomentar su participación activa en la conservación y protección del medio ambiente.</p>
-        <br>
-        <br>
-      
-        <!-- Semilla del mañana -->
-        <div class="flex flex-col md:flex-row p-10 bg-white rounded-3xl">
-          <div class="w-full md:w-1/3 px-4 md:px-0">
-            <img class="w-full h-64 rounded-3xl hover:shadow-xl" src="/dist/images/crecimiento-plantas.jpg" alt="">
-          </div>
-          <div class="w-full md:w-1/3 px-4 md:px-0 mt-4 md:mt-0">
-            <br>
-            <h1 class="px-5 text-3xl font-sans"><b>Una semilla para el mañana.</b></h1>
-            <p class="px-5 text-lg pt-2"><i>"Si supiera que el mundo se acaba mañana, yo, hoy todavía plantaría un árbol"</i></p>
-            <p class="px-5 text-lg pt-2"><i>Martin L. King</i></p>
-          </div>
+            <div class="grid gap-12 lg:grid-cols-2">
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://img.freepik.com/foto-gratis/collage-concepto-cambio-climatico_23-2149129761.jpg?w=1380&t=st=1690677086~exp=1690677686~hmac=7a6aba91ca1e51681bffe8db06c4a65afdc44462de5c61041d3485f3ad92f11e" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900">Tipos de contaminacion</h4>
+                      <p class="text-gray-600"> la actividad humana ha generado diversas formas de contaminación que impactan negativamente en el aire, el agua, el suelo y la biodiversidad.</p>
+                    </div>
+                    <a href="" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900">Reduccion de emisiones</h4>
+                      <p class="text-gray-600">Estas emisiones, conocidas como gases de efecto invernadero (GEI) y contaminantes atmosféricos, están asociadas con el cambio climático y la contaminación del aire, lo que tiene efectos negativos en el medio ambiente y la salud humana.</p>
+                    </div>
+                    <a href="/src/pages_html/client/topics/Reducción de emisiones 1.0/Captura y almacenamiento del carbono 1.3.html" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
+  <!-- cards-->
+      <div class="py-16 bg-gradient-to-br from-green-50 to-cyan-100">  
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div class="mb-12 space-y-2 text-center">
+              <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2></div>
       
-        <!-- Otras secciones de noticias -->
-    
+            <div class="grid gap-12 lg:grid-cols-2">
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://img.freepik.com/foto-gratis/enfoque-selectivo-pieris-mannii-hojas-verdes-campo-luz-sol_181624-37661.jpg?w=1380&t=st=1690688727~exp=1690689327~hmac=0b0729da44ed8510e36ab9fe11d3c9c67be035049395c94e7c32e8b51b3f7aaa" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900">Conservación de biodiversidad 
+                      </h4>
+                      <p class="text-gray-600"> Protección y preservación de la variedad de formas de vida en la Tierra, incluyendo todas las especies de plantas, animales, hongos y microorganismos, así como los ecosistemas naturales en los que habitan.</p>
+                    </div>
+                    <a href="/src/pages_html/client/topics/Conservación de biodiversidad.html" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900">Uso sostenible de recursos naturales
+                      </h4>
+                      <p class="text-gray-600">El uso sostenible de recursos naturales es una estrategia que busca aprovechar los recursos del planeta de manera responsable y equitativa, garantizando su disponibilidad a largo plazo sin comprometer la capacidad de las generaciones futuras para satisfacer sus necesidades.</p>
+                    </div>
+                    <a href="/src/pages_html/client/topics/Reducción de emisiones 1.0/Captura y almacenamiento del carbono 1.3.html" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
-      <br>
-    
+
+  <!-- cards-->
+      <div class="py-16 bg-gradient-to-br from-green-50 to-cyan-100">  
+        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div class="mb-12 space-y-2 text-center">
+              <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2></div>
+      
+            <div class="grid gap-12 lg:grid-cols-2">
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://img.freepik.com/foto-gratis/gran-trozo-hielo-lago-congelado-jokursarlon_181624-15310.jpg?w=1380&t=st=1690689089~exp=1690689689~hmac=ff3faad91a6a1da8050b6314f5a15b84ec8eef645398a1bed20b0f9bbc42c99c" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900"> Cambio climático</h4>
+                      <p class="text-gray-600">Caracterizado por aumentos significativos de la temperatura promedio global. Esta transformación es atribuida a actividades humanas que han liberado grandes cantidades de gases de efecto invernadero (GEI) a la atmósfera, principalmente debido a la quema de combustibles fósiles, la deforestación y la agricultura intensiva.</p>
+                    </div>
+                    <a href="/src/pages_html/client/topics/Cambio climático 5.0/Cambio climático 5.0.html" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+                <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+                <div class="sm:w-7/12 pl-0 p-5">
+                  <div class="space-y-2">
+                    <div class="space-y-4">
+                      <h4 class="text-2xl font-semibold text-cyan-900">Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.
+                      </h4>
+                      <p class="text-gray-600">En El Salvador, existen diversas instituciones y leyes que respaldan el cuidado del medio ambiente y la conservación de los recursos naturales.</p>
+                    </div>
+                    <a href="................" class="block w-max text-cyan-600">Leer mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+            
+      
+        
     <br>
       <footer class="pt-10 pb-10 bg-gray-200">
         <div class="w-screen flex justify-center">
@@ -349,8 +349,7 @@
           <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
         </div>
       </footer>
-    
-    
+      
 </body>
 
 </html>
