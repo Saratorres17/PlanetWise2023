@@ -48,13 +48,74 @@
 
                             <div class="mb-4">
                             
-                                <input type="file" name="foto" id="foto" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                              </div>
-                              <div class="mb-4">
-                                <label for="vista-previa" class="block text-gray-700 font-bold mb-2">Vista previa:</label>
-                                <img id="vista-previa" class="h-48 w-auto">
-                              </div>
+                                            
+                           <!-- funcion de la foto -->
+                           <div class="p-4"> 
+                            <form>
+                                <div class="border-4 border-dashed border-gray-300 rounded-lg p-8">
+                                    <label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:</label>
+                                    <input type="file" id="foto" name="foto" class="hidden" accept="image/*">
 
+                                    <div id="preview" class="mt-4">
+                                        <p class="text-gray-500">Vista previa de la foto</p>
+                                        <div id="imagePreview"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    
+                        <script>
+                            const fotoInput = document.getElementById('foto');
+                            const previewDiv = document.getElementById('preview');
+                            const imagePreviewDiv = document.getElementById('imagePreview');
+                    
+                            fotoInput.addEventListener('change', handleFileSelect, false);
+                    
+                            previewDiv.addEventListener('dragover', handleDragOver, false);
+                            previewDiv.addEventListener('dragleave', handleDragLeave, false);
+                            previewDiv.addEventListener('drop', handleFileSelect, false);
+                    
+                            function handleDragOver(event) {
+                                event.preventDefault();
+                                previewDiv.classList.add('border-blue-500');
+                            }
+                    
+                            function handleDragLeave(event) {
+                                event.preventDefault();
+                                previewDiv.classList.remove('border-blue-500');
+                            }
+                    
+                            function handleFileSelect(event) {
+                                event.preventDefault();
+                                previewDiv.classList.remove('border-blue-500');
+                    
+                                const file = event.type === 'drop' ? event.dataTransfer.files[0] : fotoInput.files[0];
+                                if (!file || !file.type.startsWith('image/')) {
+                                    alert('Por favor, selecciona un archivo de imagen válido.');
+                                    return;
+                                }
+                    
+                                const reader = new FileReader();
+                                reader.onload = function(e) {
+                                    const img = document.createElement('img');
+                                    img.src = e.target.result;
+                                    img.classList.add('max-w-full', 'mt-4');
+                                    imagePreviewDiv.innerHTML = '';
+                                    imagePreviewDiv.appendChild(img);
+                    
+                                    const deleteBtn = document.createElement('button');
+                                    deleteBtn.innerText = 'Eliminar Foto';
+                                    deleteBtn.classList.add('mt-2', 'px-2', 'py-1', 'bg-red-500', 'text-white', 'rounded');
+                                    deleteBtn.addEventListener('click', function() {
+                                        imagePreviewDiv.innerHTML = '';
+                                    });
+                                    imagePreviewDiv.appendChild(deleteBtn);
+                                }
+                                reader.readAsDataURL(file);
+                            }
+                        </script>
+                                <!-- funcion de la foto -->
+                               
                               <div class="mt-6">
                                 <button
                                     class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-500 rounded-md hover:bg-green-300 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
