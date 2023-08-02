@@ -71,7 +71,7 @@ if (isset($_POST["submit"])) {
             </div>
             <div class="mb-3">
                <label class="form-label">contra:</label>
-               <input type="email" class="form-control" name="email" placeholder="name@example.com">
+               <input type="text" class="form-control" name="email" placeholder="name@example.com">
             </div>
 
             <div class="form-group mb-3">
