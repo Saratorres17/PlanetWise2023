@@ -10,16 +10,15 @@
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <title>Especies en peligro de extincion y conservacion ex situ e in situ</title>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
 
     <body class="h-screen  font-sans">
     
         <Nav >
             <!-- Navbar -->
-            <nav class="flex justify-around py-4 bg-white/80
-                 shadow-md w-full
-                fixed top-0 left-0 right-0 z-10">
-    
+            <nav class="flex justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
                 <!-- Logo Container -->
                 <div class="flex items-center">
                     <!-- Logo -->
@@ -81,6 +80,10 @@
     
                         Inicio de sesion
                     </a>
+                    <button class="switch" id="switch">
+                      <span><i class="fas fa-sun"></i></span>
+                      <span><i class="fas fa-moon"></i></span>
+                    </button>
                 </div>
                 
             </nav>
@@ -190,7 +193,6 @@
         <div class="hero-content">
           <h2 class="hero-title">Especies en peligro de extincion y conservacion ex situ e in situ.</h2>
           
-         
         </div>
       </section>
   </header>
@@ -217,14 +219,14 @@
             </div>
         </article>
   
-        <article class="flex flex-col shadow my-4">
+        <article class="bg-white flex flex-col justify-start p-6">
             <!-- Article Image -->
             
             <p class="text-3xl font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Algunas de las razones y objetivos principales de la conservación ex situ son:
             </p> 
             <a href="#" class="hover:opacity-75">
               <img  class="block w-full h-full" src="https://animalesenpeligrodeextincion.eu/wp-content/uploads/image015-1024x576.jpg">
-          </a>
+          </a><br>
               
           <p> La conservación ex situ proporciona un refugio seguro para las especies en peligro de extinción, evitando su desaparición mientras se abordan las amenazas que enfrentan en la naturaleza. <br><br>
 
@@ -236,10 +238,6 @@
 
             </a>
             <div class="bg-white flex flex-col justify-start p-6">
-                <a href="#" class="pb-6"><br><br>
-  
-              
-  
                   
             </div>
         </article>
@@ -370,5 +368,7 @@
     <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
   </div>
 </footer>
+    <!--SCRIPT PARA EL MODO NOCTURNO-->
+    <script src="/src/js/main.js"></script>
 </body>
 </html>

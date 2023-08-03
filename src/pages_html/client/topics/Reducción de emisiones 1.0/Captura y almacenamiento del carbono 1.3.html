@@ -10,16 +10,15 @@
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <title>Captura y almacenamiento del carbono </title>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
 
     <body class="h-screen  font-sans">
-    
-        <Nav >
+
             <!-- Navbar -->
-            <nav class="flex justify-around py-4 bg-white/80
-                 shadow-md w-full
-                fixed top-0 left-0 right-0 z-10">
-    
+            <nav class="flex justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
+  
                 <!-- Logo Container -->
                 <div class="flex items-center">
                     <!-- Logo -->
@@ -81,6 +80,10 @@
     
                         Inicio de sesion
                     </a>
+                    <button class="switch" id="switch">
+                      <span><i class="fas fa-sun"></i></span>
+                      <span><i class="fas fa-moon"></i></span>
+                    </button>
                 </div>
                 
             </nav>
@@ -223,12 +226,11 @@
   
         <article class="flex flex-col shadow my-4">
             <!-- Article Image -->
-            <p class="text-3xl font-bold hover:text-gray-700 pb-4 flex justify-center items-center">¿Cómo se captura el CO2 en los procesos de combustión?</p> 
+            <p class="text-3xl text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">¿Cómo se captura el CO2 en los procesos de combustión?</p> 
   
             <a href="#" class="hover:opacity-75 flex justify-center items-center ">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/9m46-j6dLFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              
-            </a>
+            </a><br>
             <div class="bg-white flex flex-col justify-start p-6">
                 <a href="#" class="pb-6"><br><br>
   
@@ -360,6 +362,8 @@
     <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
   </div>
 </footer>
+      <!--SCRIPT PARA EL MODO NOCTURNO-->
+      <script src="/src/js/main.js"></script>
 </body>
 
 </html>

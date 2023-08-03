@@ -9,17 +9,17 @@
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <title>Planificación urbana sostenible</title>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">    
     </head>
     <header>
         <body class="h-screen  font-sans">
     
             <body class="h-screen  font-sans">
-    
-                <Nav >
+
                     <!-- Navbar -->
-                    <nav class="flex justify-around py-4 bg-white/80
-                         shadow-md w-full
-                        fixed top-0 left-0 right-0 z-10">
+                    <nav class="flex justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
             
                         <!-- Logo Container -->
                         <div class="flex items-center">
@@ -82,8 +82,11 @@
             
                                 Inicio de sesion
                             </a>
+                            <button class="switch" id="switch">
+                              <span><i class="fas fa-sun"></i></span>
+                              <span><i class="fas fa-moon"></i></span>
+                            </button>
                         </div>
-                        
                     </nav>
                <!-- fin de nav-->
                 </div>
@@ -203,7 +206,7 @@
           
                 <article class="flex flex-col shadow my-4">
                     <!-- Article Image -->
-                    <a href="#" class="hover:opacity-75">
+                    <a href="#" class="hover:opacity-75 bg-white">
                         <img src="https://img.freepik.com/vector-gratis/concepto-ecologia-papel_23-2148421257.jpg?w=826&t=st=1690911905~exp=1690912505~hmac=e0b13c37b1a732a5dd150691af8804c14f44617688cdc813851ad9e8f505cd56">
                     </a>
                     <div class="bg-white flex flex-col justify-start p-6">
@@ -219,12 +222,12 @@
           
                 <article class="flex flex-col shadow my-4">
                     <!-- Article Image -->
-                    <p class="text-3xl font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p> 
+                    <p class="text-3xl text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p> 
           
                     <a href="#" class="hover:opacity-75 flex justify-center items-center ">
           
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/s6j02MmY9ZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </a>
+                    </a><br>
                     <div class="bg-white flex flex-col justify-start p-6">
                        
                        
@@ -348,6 +351,8 @@
             </aside>
           
           </div>
+      <!--SCRIPT PARA EL MODO NOCTURNO-->
+      <script src="/src/js/main.js"></script>
 </body>
 <br>
 <br>
