@@ -6,6 +6,8 @@
     <link rel="icon" href="/dist/images/leaf.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
     <title>Cambio climático.</title>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
 </head>
 <body>
     <body>
@@ -19,9 +21,10 @@
          <!-- Logo Container -->
          <div class="flex items-center">
              <!-- Logo -->
-             <a href="/pruebahome/index.html" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
-              PlanetWise
-            </a>
+             <a href="/pruebahome/index.html" class="cursor-pointer">
+                 <h3 class="text-2xl font-medium text-black">
+                    PlanetWise</h3>
+             </a>
          </div>
     
          <!-- Links Section -->
@@ -77,8 +80,11 @@
     
                  Inicio de sesion
              </a>
+             <button class="switch" id="switch">
+                <span><i class="fas fa-sun"></i></span>
+                <span><i class="fas fa-moon"></i></span>
+             </button>
          </div>
-         
      </nav>
     <!-- fin de nav-->
     </div>
@@ -200,7 +206,7 @@
                       <img src="/dist/images/cambio-climatico T5.1.webp">
                   </a>
                   <div class="bg-white flex flex-col justify-start p-6">
-              
+
                       <a href="#" class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es el cambio climático?</a>
                                                          
                       <a href="#" class="pb-6">El cambio climático hace referencia a los cambios a largo plazo de las temperaturas y los patrones climáticos. Estos cambios pueden ser naturales, pero desde el siglo XIX, las actividades humanas han sido el principal motor del cambio climático, debido principalmente a la quema de combustibles fósiles, como el carbón, el petróleo y el gas, lo que produce gases que atrapan el calor.
@@ -320,6 +326,8 @@
               </div>
           </aside>  
       </div>
+      <!--SCRIPT PARA EL MODO NOCTURNO-->
+      <script src="/src/js/main.js"></script>
 </body>
 <!--Footer-->
 <footer class="pt-10 pb-10">
