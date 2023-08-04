@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/dist/images/leaf.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-    <title>Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.</title>
+    <title>Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador</title>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
 </head>
 <body>
     <body>
@@ -19,10 +21,9 @@
          <!-- Logo Container -->
          <div class="flex items-center">
              <!-- Logo -->
-             <a href="/pruebahome/index.html" class="cursor-pointer">
-                 <h3 class="text-2xl font-medium text-black">
-                    PlanetWise</h3>
-             </a>
+             <a href="/pruebahome/index.html" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+              PlanetWise
+            </a>
          </div>
     
          <!-- Links Section -->
@@ -78,6 +79,10 @@
     
                  Inicio de sesion
              </a>
+            <button class="switch" id="switch">
+              <span><i class="fas fa-sun"></i></span>
+              <span><i class="fas fa-moon"></i></span>
+            </button>
          </div>
          
      </nav>
@@ -224,12 +229,12 @@
     
               <article class="flex flex-col shadow my-4">
                   <!-- Article Image -->
-                  <p class="text-3xl font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p> 
+                  <p class="text-3xl text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p> 
     
                   <a href="#" class="hover:opacity-75 flex justify-center items-center ">
     
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/qGi6Ubo6_oc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </a>
+                  </a><br>
                   <div class="bg-white flex flex-col justify-start p-6">
                      
                      
@@ -343,9 +348,11 @@
               </div>    
           </aside>    
       </div>
+          <!--SCRIPT PARA EL MODO NOCTURNO-->
+          <script src="/src/js/main.js"></script>
     </body>
     <!--Footer-->
-<footer class="pt-10 pb-10 bg-gray-200">
+<footer class="pt-10 pb-10">
   <div class="w-screen flex justify-center">
       <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
   </div>

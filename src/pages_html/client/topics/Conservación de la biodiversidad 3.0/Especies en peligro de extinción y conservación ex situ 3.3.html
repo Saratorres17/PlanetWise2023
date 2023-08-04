@@ -9,23 +9,21 @@
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-        <title>Especies en peligro de extincion y conservacion ex situ</title>
+        <title>Especies en peligro de extincion y conservacion ex situ e in situ</title>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
 
     <body class="h-screen  font-sans">
     
         <Nav >
             <!-- Navbar -->
-            <nav class="flex justify-around py-4 bg-white/80
-                 shadow-md w-full
-                fixed top-0 left-0 right-0 z-10">
-    
+            <nav class="flex justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
                 <!-- Logo Container -->
                 <div class="flex items-center">
                     <!-- Logo -->
-                    <a href="/pruebahome/index.html" class="cursor-pointer">
-                        <h3 class="text-2xl font-medium text-black">
-                           PlanetWise</h3>
+                    <a href="/pruebahome/index.html" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+                      PlanetWise
                     </a>
                 </div>
     
@@ -82,6 +80,10 @@
     
                         Inicio de sesion
                     </a>
+                    <button class="switch" id="switch">
+                      <span><i class="fas fa-sun"></i></span>
+                      <span><i class="fas fa-moon"></i></span>
+                    </button>
                 </div>
                 
             </nav>
@@ -189,9 +191,8 @@
       <section class="hero relative">
         <div class="overlay absolute inset-0"></div>
         <div class="hero-content">
-          <h2 class="hero-title">Especies en peligro de extincion y conservacion ex situ</h2>
+          <h2 class="hero-title">Especies en peligro de extincion y conservacion ex situ e in situ.</h2>
           
-         
         </div>
       </section>
   </header>
@@ -218,14 +219,14 @@
             </div>
         </article>
   
-        <article class="flex flex-col shadow my-4">
+        <article class="bg-white flex flex-col justify-start p-6">
             <!-- Article Image -->
             
             <p class="text-3xl font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Algunas de las razones y objetivos principales de la conservación ex situ son:
             </p> 
             <a href="#" class="hover:opacity-75">
               <img  class="block w-full h-full" src="https://animalesenpeligrodeextincion.eu/wp-content/uploads/image015-1024x576.jpg">
-          </a>
+          </a><br>
               
           <p> La conservación ex situ proporciona un refugio seguro para las especies en peligro de extinción, evitando su desaparición mientras se abordan las amenazas que enfrentan en la naturaleza. <br><br>
 
@@ -237,10 +238,6 @@
 
             </a>
             <div class="bg-white flex flex-col justify-start p-6">
-                <a href="#" class="pb-6"><br><br>
-  
-              
-  
                   
             </div>
         </article>
@@ -303,7 +300,7 @@
   
         
         <div class="w-full bg-white shadow flex flex-col my-4 p-6">
-            <p class="text-xl font-semibold pb-5">Especies en peligro de extinción y conservación ex situ.</p>
+            <p class="text-xl font-semibold pb-5">Especies en peligro de extinción y conservación ex situ e in situ.</p>
             <p class="pb-2">Las especies en peligro de extinción son aquellas que enfrentan un alto riesgo de desaparecer de manera irreversible de la Tierra. Estas especies se encuentran en una situación crítica debido a diversas amenazas, como la destrucción del hábitat, la caza ilegal, la introducción de especies invasoras, la contaminación y el cambio climático. </p>
             <a href="/src/pages_html/client/topics/Conservación de la biodiversidad 3.0/Especies en peligro de extinción y conservación ex situ 3.3.html" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                 Leer mas 
@@ -348,7 +345,7 @@
     </aside>  
   </div>
 <!--Footer-->
-<footer class="pt-10 pb-10 bg-gray-200">
+<footer class="pt-10 pb-10">
   <div class="w-screen flex justify-center">
       <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
   </div>
@@ -371,5 +368,7 @@
     <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
   </div>
 </footer>
+    <!--SCRIPT PARA EL MODO NOCTURNO-->
+    <script src="/src/js/main.js"></script>
 </body>
 </html>
