@@ -1,3 +1,7 @@
+<?php
+include("controlador_login.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +16,18 @@
  <body class="bg-no-repeat bg-cover" style="background-image: url(https://img.freepik.com/foto-gratis/nubes-espesas-sobre-paisaje-tierras-cultivo-vacas-pastando_493961-463.jpg?w=1380&t=st=1690777652~exp=1690778252~hmac=846627cbebfc8f5248248c664883eed7a733b15ba31b404f47902faa2c292422);"  >
 	<div class="flex justify-center items-center h-screen ">
         <div class="bg-white p-8 rounded-md shadow-md flex flex-col items-center space-y-6">
-            <div class="w-32 h-32 rounded-full overflow-hidden">
-                <!-- Aquí puedes colocar la URL de la imagen de perfil del usuario -->
-                <img src="https://media.istockphoto.com/id/472236694/es/foto/jirafa-cara.jpg?s=612x612&w=0&k=20&c=BhcMHWFMGbeb7SNKYbNhkuXTuCFBR8VPQB8FzXFN6aE=" alt="Imagen de usuario" class="w-full h-full object-cover">
-            </div>
+            
             <h2 class="text-xl font-semibold">Iniciar Sesión</h2>
-            <form class="flex flex-col space-y-4 w-64">
-                <input type="text" placeholder="Nombre de usuario" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <input type="password" placeholder="Contraseña" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+            <form class="flex flex-col space-y-4 w-64" method="post" action="">
+                <input type="text" name="firstName" placeholder="Nombre de usuario" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <input type="password" name="Contraseña" placeholder="Contraseña" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
                 <button type="submit" class="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300">Iniciar Sesión</button>
-				<div class="flex justify-between mb-2">
-                                   
-					<center><a href="/pruebahome/index.html" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
-				</div>
             </form>
+            <div class="flex justify-between mb-2">
+                <center><a href="/pruebahome/index.html" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
+            </div>
+        </div>
+    </div>
  </body>
 </html>
+
