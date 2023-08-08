@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 06-08-2023 a las 05:23:52
+-- Tiempo de generación: 08-08-2023 a las 04:43:46
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -39,16 +39,23 @@ CREATE TABLE `datoscuriosos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `registroinformación`
+-- Estructura de tabla para la tabla `registroinformacion1`
 --
 
-CREATE TABLE `registroinformación` (
+CREATE TABLE `registroinformacion1` (
   `id` int NOT NULL,
-  `Titulo` varchar(500) NOT NULL,
-  `Descripcion` varchar(500) NOT NULL,
-  `Informacion` varchar(5000) NOT NULL,
-  `Foto` varchar(100) NOT NULL
+  `titulo` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `descripcion` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `informacion` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `foto_path` varchar(6000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `registroinformacion1`
+--
+
+INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`) VALUES
+(3, 'El festival de las hojas de color', 'hojitas de color', 'las hojas de color en el año......', 'C:\\Users\\sarat\\OneDrive\\Escritorio\\PlanetWise2023\\src\\php\\functions/assets/Captura de pantalla 2023-04-12 205935.png');
 
 -- --------------------------------------------------------
 
@@ -85,9 +92,9 @@ ALTER TABLE `datoscuriosos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `registroinformación`
+-- Indices de la tabla `registroinformacion1`
 --
-ALTER TABLE `registroinformación`
+ALTER TABLE `registroinformacion1`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -107,10 +114,10 @@ ALTER TABLE `datoscuriosos`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `registroinformación`
+-- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
-ALTER TABLE `registroinformación`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `registroinformacion1`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`
