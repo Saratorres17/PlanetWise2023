@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -27,12 +29,13 @@ module.exports = {
           'gray': '#8492a6',
           'gray-light': '#d3dce6',
         },
-        
-            },
+
+            'xsm': '450px',
+         },
       fontFamily: {
         'redHat': ['"Red Hat Display"', 'sans-serif'],
       },
     },
   },
   plugins: [],
-}
+  }
