@@ -32,12 +32,12 @@ div .goog-te-combo{
   color: #000000;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 10px;
+  -o-border-radius: 10px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 10px;
 }
 
 /* Cambia el tamaño y mueve la parte azul del traductor*/
@@ -53,10 +53,9 @@ div .goog-te-combo{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   color: #000000;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-o-border-radius: 10px;
+  -moz-o-border-radius: 10px;
+  -ms-o-border-radius: 10px;
 }
 
 /* Hace invisible la imagen de "Google" */
@@ -163,12 +162,12 @@ nav .enlaces a:hover {
   right: unset;
   border-radius: 100px;
   -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -o-transition: .3s ease all;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
   -moz-transition: .3s ease all;
   -ms-transition: .3s ease all;
-  -o-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 .switch.active {
