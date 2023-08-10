@@ -30,6 +30,7 @@ module.exports = {
           'gray-light': '#d3dce6',
         },
 
+            'xsm': '450px',
          },
       fontFamily: {
         'redHat': ['"Red Hat Display"', 'sans-serif'],
