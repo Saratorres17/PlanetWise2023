@@ -9,93 +9,120 @@
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
+    <link rel="stylesheet" href="/src/scroll.css">
 
     <title>perfil del usuario</title>
 </head>
 <body>
-               <!-- Navbar -->
-               <nav class="flex justify-around py-4 bg-white/80
-               shadow-md w-full
-              fixed top-0 left-0 right-0 z-10">
-       
-              <!-- Logo Container -->
-              <div class="flex items-center">
-                  <!-- Logo -->
-                  <a href="/pruebahome/index.html" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
-                    PlanetWise
-                  </a>
-              </div>
-       
-              <!-- Links Section -->
-              <div class="items-center hidden space-x-8 lg:flex">
-                  <a href="/pruebahome/index.html" class="flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
-                    Pagina principal
-                  </a>
-       
-                 
-                  <a href="/pruebahome/Curiosidades.html" class="flex text-gray-600 hover:text-white
-                  cursor-pointer transition-colors duration-300">
-                  Datos curiosos
-              </a>
-       
-                  
-       
-                  <a href="/pruebahome/blog.html" class="flex text-gray-600 hover:text-white
-                      cursor-pointer transition-colors duration-300">
-                      Blog
-                  </a>
-       
-                  <a href="/pruebahome/sobre nosotros.html" class="flex text-gray-600 hover:text-white
-                      cursor-pointer transition-colors duration-300">
-                      Sobre nosotros
-                  </a>
-              </div>
-       
-              <!-- Icon Menu Section -->
-              <div class="flex items-center space-x-5">
-                  <!-- Register -->
-                <a href=""  class="flex text-gray-600 hover:text-white
-                      cursor-pointer transition-colors duration-300">
-       
-                    <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
-                          viewBox="0 0 24 24">
-                          <path
-                              d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
-                      </svg> Registro</a>
-       
-                  <!-- Login -->
-                  <a class="flex text-gray-600 hover:text-white
-                      cursor-pointer transition-colors duration-300
-                      font-semibold ">
-       
-                      <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
-                          viewBox="0 0 24 24">
-                          <path
-                              d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
-                      </svg>
-       
-                      Inicio de sesion
-                  </a>
-              </div>
-              
-          </nav>
+  <!DOCTYPE html>
+  <html lang="es">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="icon" href="/dist/images/leaf.png">
+          <link href="/dist/output.css" rel="stylesheet">
+          <link rel="stylesheet" href="/src/scroll.css">
+          <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+          <title>Blog</title>
+          <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+          <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
+      </head>
+      <header>
+  <body class="h-screen font-sans cursor-default">
+  
+    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+      function googleTranslateElementInit(){
+        new google.translate.TranslateElement(
+          {pageLanguage: "es"}, "google_translate_element"
+        );
+      }
+    </script>
+    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+    <!-- Navbar -->
+      <nav class="flex justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
+  
+           <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+            <div id="google_translate_element"></div>
+            <!--FIN DEL TRADUCTOR-->
+  
+         <!-- Logo Container -->
+         <div class="flex items-center">
+             <!-- Logo -->
+             <a href="/pruebahome/index.html" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+                PlanetWise
+             </a>
+         </div>
+  
+         <!-- Links Section -->
+         <div class="items-center hidden space-x-8 lg:flex">
+             <a href="/pruebahome/index.html" class="flex text-gray-600 hover:text-white
+                cursor-pointer transition-colors duration-300">
+                Pagina principal
+             </a>
+  
+            
+             <a href="/pruebahome/Curiosidades.html" class="flex text-gray-600 hover:text-white
+             cursor-pointer transition-colors duration-300">
+             Datos curiosos
+         </a>
+  
+             
+  
+             <a href="/pruebahome/blog.html" class="flex text-gray-600 hover:text-white
+                 cursor-pointer transition-colors duration-300">
+                 Blog
+             </a>
+  
+             <a href="/pruebahome/sobre nosotros.html" class="flex text-gray-600 hover:text-white
+                 cursor-pointer transition-colors duration-300">
+                 Sobre nosotros
+             </a>
+         </div>
+  
+         <!-- Icon Menu Section -->
+         <div class="flex items-center space-x-5">
+             <!-- Register -->
+           <a href="/pruebahome/registro de usuario.html"  class="flex text-gray-600 hover:text-white
+                 cursor-pointer transition-colors duration-300">
+  
+               <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                     viewBox="0 0 24 24">
+                     <path
+                         d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
+                 </svg> Registro</a>
+  
+             <!-- Login -->
+             <a href="/pruebahome/inicio de sesion usu.html" class="flex text-gray-600 hover:text-white
+                 cursor-pointer transition-colors duration-300
+                 font-semibold ">
+  
+                 <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24"
+                     viewBox="0 0 24 24">
+                     <path
+                         d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
+                 </svg>
+  
+                 Inicio de sesion
+             </a>
+             <button class="switch" id="switch">
+              <span><i class="fas fa-sun"></i></span>
+              <span><i class="fas fa-moon"></i></span>
+            </button>
+         </div>     
+  </nav>
        <!-- fin de nav-->
     <main class="profile-page">
-<<<<<<< Updated upstream
-        <section class="relative block h-500-px">
-          <div class=" absolute top-0 w-full h-full bg-center bg-cover" style="
-                  background-image: url('https://img.freepik.com/foto-gratis/primer-plano-hojas-amarillas-rama-fondo-borroso-azul_181624-2238.jpg?w=1380&t=st=1690779432~exp=1690780032~hmac=03d6447265c0889689bdac1cb7410c5f5aa568cee2c38b9e97d838ca43e23f71');
-                ">
-            <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
-=======
         <section class="relative h-72">
           <div class="relative top-48 left-5 rounded-xl bg-center"
           style="background-image: url('/dist/images/colorido.jpg');">
             <span id="blackOverlay" class="w-full h-full absolute opacity-80 bg-black">
             </span>
->>>>>>> Stashed changes
           </div>
           <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
             <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
@@ -106,22 +133,12 @@
         
         <section class="relative py-16">
           <div class="container mx-auto px-4">
-<<<<<<< Updated upstream
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-              <div class="px-6">
-                <div class="flex flex-wrap justify-center">
-                  <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                    <div class="relative">
-                      <img  src="https://img.freepik.com/foto-gratis/empresaria-confiada-sonriente-que-presenta-brazos-cruzados_1262-20950.jpg?w=1060&t=st=1690779624~exp=1690780224~hmac=845ac8e61a64d53b593cebca76c42b87db0a8a1f05073716891e04683a73358f" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" alt="foto">
-                    </div>
-=======
 
             <div class="relative flex min-w-0 break-words bg-white bg-opacity-10 text-gray-500 w-full mb-6 shadow-xl rounded-2xl flex-col -mt-64 justify-start p-6">
               <div class="px-6"><br>
                 <div class="flex justify-center bg-white bg-opacity-10 rounded-2xl">
                   <div class="lg:order-2 flex justify-center items-center">
                     <img src="https://worldswimsuit.com/wp-content/uploads/2020/05/Ana-de-Armas-blog.png" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
->>>>>>> Stashed changes
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div class="py-6 px-3 mt-32 sm:mt-0">
@@ -249,6 +266,8 @@
       </footer>
         </section>
       </main>
+            <!--SCRIPT PARA EL MODO NOCTURNO-->
+            <script src="/src/js/main.js"></script>
 </body>
 <!--Footer-->
 <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
