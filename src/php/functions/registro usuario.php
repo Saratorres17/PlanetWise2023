@@ -88,13 +88,14 @@ include("controlador_register.php");
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="password">
 									Contraseña
 								</label>
-								<input name="password" class="w-full px-2 py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+								<input name="password" class=" px-5 py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none w-32  focus:shadow-outline" id="password" type="password" placeholder="******************" />
 							</div>
+							<img src="../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-36 mt-9 z-10 hover:opacity-50" id="Eye">
 							<div class="md:ml-2">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
 									Confirma tu contraseña
 								</label>
-								<input name="c_password" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="c_password" type="password" placeholder="******************" />
+								<input name="c_password" class="w-32 px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="c_password" type="password" placeholder="******************" />
 							</div>
 						</div>
 						<div class="mb-6 text-center">
@@ -166,6 +167,8 @@ include("controlador_register.php");
 			reader.readAsDataURL(file);
 		}
 	</script>
+	<!--ojito-->
+		<link rel="stylesheet" href="../../js/ojito.js">
 </body>
 
 </html>
