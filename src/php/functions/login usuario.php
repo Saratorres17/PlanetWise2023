@@ -13,7 +13,7 @@ include("controlador_login.php");
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
     <title>inicio de sesion</title>
 </head>
- <body class="bg-no-repeat bg-cover" style="background-image: url(https://img.freepik.com/foto-gratis/nubes-espesas-sobre-paisaje-tierras-cultivo-vacas-pastando_493961-463.jpg?w=1380&t=st=1690777652~exp=1690778252~hmac=846627cbebfc8f5248248c664883eed7a733b15ba31b404f47902faa2c292422);"  >
+ <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);"  >
 	<div class="flex justify-center items-center h-screen ">
         <div class="bg-white p-8 rounded-md shadow-md flex flex-col items-center space-y-6">
             
@@ -24,7 +24,7 @@ include("controlador_login.php");
                 <button type="submit" class="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300">Iniciar Sesión</button>
             </form>
             <div class="flex justify-between mb-2">
-                <center><a href="/pruebahome/index.html" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
+                <center><a href="../../../pruebahome/index.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
             </div>
         </div>
     </div>

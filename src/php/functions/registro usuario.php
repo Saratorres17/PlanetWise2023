@@ -11,11 +11,11 @@ include("controlador_register.php");
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
 	<title>Registro de usuario</title>
 </head>
-<body class="bg-no-repeat bg-cover" style="background-image: url(https://img.freepik.com/vector-gratis/onda-curvas-estilo-linea-movimiento-fluido-fondo-fondo_1017-43381.jpg?w=1380&t=st=1690774878~exp=1690775478~hmac=60ac1d80e544496888fb53f733b4d954dc8014b4310af59d46134dd4640037e9);">
+<body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/fondo-ondas-color-azul_23-2147618318.avif);">
 	<div class="container mx-auto">
 		<div class="flex justify-center px-6 my-12">
 			<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-    style="background-image: url('https://img.freepik.com/foto-gratis/manada-jirafas-sabana_155003-6490.jpg?w=740&t=st=1690770126~exp=1690770726~hmac=a70b4c2fc0b8533e1d4817d30696d05e2a2d5d23cc7dc251454b019d883b636f')"
+    style="background-image: url('../../../../../dist/images/jirafa.jpg')"
 ></div>
 			<div class="w-full xl:w-3/4 lg:w-11/12 flex">
 				<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
@@ -94,7 +94,7 @@ include("controlador_register.php");
 							</a>
 						</div>
 						<div class="flex justify-between mb-2">
-							<center><a href="/pruebahome/index.html" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
+							<center><a href="../../../pruebahome/index.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
 						</div>
 					</form>
 				</div>
