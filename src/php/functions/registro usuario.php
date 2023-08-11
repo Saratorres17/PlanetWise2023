@@ -9,9 +9,24 @@ include("controlador_register.php");
 	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
 	<link rel="icon" href="/dist/images/leaf.png">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
+	<link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
 	<title>Registro de usuario</title>
 </head>
-<body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/fondo-ondas-color-azul_23-2147618318.avif);">
+<body class="bg-no-repeat bg-cover bg-fixed" style="background-image: url(../../../../../dist/images/ondas.jpg);">
+  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit(){
+      new google.translate.TranslateElement(
+        {pageLanguage: "es"}, "google_translate_element"
+      );
+    }
+  </script>
+  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+
+          <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+          <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+        <!--FIN DEL TRADUCTOR-->
 	<div class="container mx-auto">
 		<div class="flex justify-center px-6 my-12">
 			<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
@@ -89,7 +104,7 @@ include("controlador_register.php");
 						</div>
 						<hr class="mb-6 border-t" />
 						<div class="text-center">
-							<a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="../../../src/php/functions">
+							<a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="../../../src/php/functions/login usuario.php">
 								Ya tienes una cuenta? Ingresa!
 							</a>
 						</div>

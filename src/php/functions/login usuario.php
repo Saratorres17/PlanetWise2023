@@ -11,9 +11,24 @@ include("controlador_login.php");
      rel="stylesheet">
      <link rel="icon" href="/dist/images/leaf.png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
+     <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
     <title>inicio de sesion</title>
 </head>
  <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);"  >
+  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit(){
+      new google.translate.TranslateElement(
+        {pageLanguage: "es"}, "google_translate_element"
+      );
+    }
+  </script>
+  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+
+          <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+          <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+        <!--FIN DEL TRADUCTOR-->
 	<div class="flex justify-center items-center h-screen ">
         <div class="bg-white p-8 rounded-md shadow-md flex flex-col items-center space-y-6">
             
