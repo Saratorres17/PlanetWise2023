@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="icon" href="/dist/images/leaf.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <title>Confirmación de Eliminación de publicacion</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-blue-100">
+  <div class="max-w-md bg-white p-6 rounded shadow-md">
+    <h2 class="text-lg font-semibold mb-4">Eliminar publicacion</h2>
+    <p class="mb-4">¿Estás seguro de que deseas eliminar a esta publicacion?</p>
+    <div class="flex justify-end">
+      <button class="mr-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600" onclick="mostrarModal()">Eliminar</button>
+      <a href="/src/php/admin/Dasboard adm.php"><button class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancelar</button></a>
+    </div>
+    <div class="flex justify-between mb-2">
+      <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline ">Regresar</a>
+   </div>
+  </div>
+  
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden">
+    <div class="bg-white p-6 rounded shadow-md">
+      <p class="mb-4">La publicaccion ha sido eliminado.</p>
+      <a href="/src/php/admin/Dasboard adm.php"><button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Cerrar</button></a>
+    </div>
+  </div>
+
+  <script>
+    function mostrarModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function cerrarModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
