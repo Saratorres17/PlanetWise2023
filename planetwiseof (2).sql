@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 08-08-2023 a las 04:43:46
+-- Tiempo de generación: 11-08-2023 a las 05:40:20
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -24,6 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `administrador`
+--
+
+CREATE TABLE `administrador` (
+  `id` int NOT NULL,
+  `Nombre` varchar(100) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `foto` varchar(6000) NOT NULL,
+  `contraseña` varchar(100) NOT NULL,
+  `id datos curioso` int NOT NULL,
+  `id noticias destacadas` int NOT NULL,
+  `id registroinfo` int NOT NULL,
+  `id usu` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `datoscuriosos`
 --
 
@@ -34,6 +52,21 @@ CREATE TABLE `datoscuriosos` (
   `fechapub` date NOT NULL,
   `fuente` varchar(100) NOT NULL,
   `imagen` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `noticias destacadas`
+--
+
+CREATE TABLE `noticias destacadas` (
+  `id` int NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `fuente` varchar(100) NOT NULL,
+  `subtitulo` varchar(100) NOT NULL,
+  `Descripcion` varchar(100) NOT NULL,
+  `foto` varchar(6000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -50,13 +83,6 @@ CREATE TABLE `registroinformacion1` (
   `foto_path` varchar(6000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `registroinformacion1`
---
-
-INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`) VALUES
-(3, 'El festival de las hojas de color', 'hojitas de color', 'las hojas de color en el año......', 'C:\\Users\\sarat\\OneDrive\\Escritorio\\PlanetWise2023\\src\\php\\functions/assets/Captura de pantalla 2023-04-12 205935.png');
-
 -- --------------------------------------------------------
 
 --
@@ -71,24 +97,34 @@ CREATE TABLE `registrousuario` (
   `interests` varchar(4000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `gender` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `foto_path` varchar(6000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `contraseña` varchar(12) NOT NULL
+  `contraseña` varchar(12) NOT NULL,
+  `id p` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `registrousuario`
---
-
-INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
-(18, 'Adrian', 'rojas', 'adrian.rojas@gmail.com', 'me gusta la alisson', 'Masculino', 'C:\\Users\\sarat\\OneDrive\\Escritorio\\PlanetWise2023\\src\\php\\functions/assets/adrian infiel.jpg', 'teamoalison');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
+-- Indices de la tabla `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_datoscuriosos` (`id datos curioso`),
+  ADD KEY `fk_noticias` (`id noticias destacadas`),
+  ADD KEY `fk_publicaciones2` (`id registroinfo`),
+  ADD KEY `fk_usuario` (`id usu`);
+
+--
 -- Indices de la tabla `datoscuriosos`
 --
 ALTER TABLE `datoscuriosos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `noticias destacadas`
+--
+ALTER TABLE `noticias destacadas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -101,16 +137,29 @@ ALTER TABLE `registroinformacion1`
 -- Indices de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_publicaciones` (`id p`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
+-- AUTO_INCREMENT de la tabla `administrador`
+--
+ALTER TABLE `administrador`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `datoscuriosos`
 --
 ALTER TABLE `datoscuriosos`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `noticias destacadas`
+--
+ALTER TABLE `noticias destacadas`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
@@ -123,7 +172,26 @@ ALTER TABLE `registroinformacion1`
 -- AUTO_INCREMENT de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `administrador`
+--
+ALTER TABLE `administrador`
+  ADD CONSTRAINT `fk_datoscuriosos` FOREIGN KEY (`id datos curioso`) REFERENCES `datoscuriosos` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_noticias` FOREIGN KEY (`id noticias destacadas`) REFERENCES `noticias destacadas` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_publicaciones2` FOREIGN KEY (`id registroinfo`) REFERENCES `registroinformacion1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`id usu`) REFERENCES `registrousuario` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Filtros para la tabla `registrousuario`
+--
+ALTER TABLE `registrousuario`
+  ADD CONSTRAINT `fk_publicaciones` FOREIGN KEY (`id p`) REFERENCES `registroinformacion1` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
