@@ -39,7 +39,7 @@
                     <!-- Logo Container -->
                     <div class="flex items-center">
                       <!-- Logo -->
-                      <a href="../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+                      <a href="../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600" >
                         PlanetWise
                       </a>
                   </div>

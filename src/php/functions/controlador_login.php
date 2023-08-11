@@ -13,15 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db = new DatabaseConnection();
     $conn = $db->getConnection();
 
-    // Create a user object and attempt login
+    
     $user = new User($conn);
     $user_data = $user->login($username, $password);
 
     if ($user_data) {
-        // Successful login, store user data in the session if needed
         $_SESSION['user_id'] = $user_data['id'];
         $_SESSION['username'] = $user_data['username'];
-        // Redirect to a dashboard or home page
         header('Location: /pruebahome/index.html');
         exit();
     } else {

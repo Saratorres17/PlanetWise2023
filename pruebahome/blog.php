@@ -111,7 +111,7 @@
                 Descubre cómo tu elección diaria puede marcar la diferencia en la lucha contra el cambio climático.
               </p>
               <div class=" inline-block shadow mt-5">
-                  <a href="/pruebahome/registro de informacion, blog.html" class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra tu informacion</a>
+                  <a href="/src/php/functions/registro de infotrmacion-blog.php" class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra tu informacion</a>
               </div>
           </div>
           <div class="lg:relative">
