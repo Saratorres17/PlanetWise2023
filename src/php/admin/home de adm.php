@@ -9,7 +9,7 @@
 </head>
 <style>
     .bg-image {
-        background-image: url('https://img.freepik.com/foto-gratis/elefante-caminando-carretera_181624-23124.jpg?w=1380&t=st=1691637955~exp=1691638555~hmac=fa9dff39a9640c4439b5c939618fff90101d5c216a3a59f8b6800cd0f6a147b4'); /* Ruta de la imagen de fondo */
+        background-image: url('/dist/images/fondoamd.png'); /* Ruta de la imagen de fondo */
         background-size: cover;
         background-position: center;
     }

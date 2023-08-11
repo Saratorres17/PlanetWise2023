@@ -45,7 +45,7 @@
           Una pagina web adonde podras conocer la biodiversidad!
           </p>
           <div class="flex flex-row  items-center space-x-3 mt-5">
-           <a href="/pruebahome/index.html"> <button type="button"
+           <a href="/pruebahome/index.php"> <button type="button"
             class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">Infórmate más</button></a>
             </div>
         </div>
