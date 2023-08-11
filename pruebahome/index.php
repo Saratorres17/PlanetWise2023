@@ -330,6 +330,7 @@
         </div>
       </div>       
     <br>
+    <!--footer-->
       <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
         <div class="w-screen flex justify-center">
             <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
@@ -337,10 +338,9 @@
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row justify-center items-center">
             <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-              <a href="/pruebahome/index.html" class="text-base px-4 py-2">Home</a>
-              <a href="/pruebahome/sobre nosotros.html" class="text-base px-4 py-2">sobre nosotros</a>
-              <a href="#" class="text-base px-4 py-2">Translator</a>
-              <a href="/pruebahome/blog.html" class="text-base px-4 py-2">Blog</a>
+              <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
+              <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
+              <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
             </div>
           </div>
         </div>
@@ -354,7 +354,6 @@
         </div>
       </footer>
       <!--SCRIPT PARA EL MODO NOCTURNO-->
-      <script src="/src/js/main.js"></script>
-       
+      <script src="/src/js/main.js"></script>     
 </body>
 </html>

@@ -89,7 +89,7 @@ include("controlador_register.php");
 						</div>
 						<hr class="mb-6 border-t" />
 						<div class="text-center">
-							<a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="/pruebahome/inicio de sesion usu.html">
+							<a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="../../../src/php/functions">
 								Ya tienes una cuenta? Ingresa!
 							</a>
 						</div>

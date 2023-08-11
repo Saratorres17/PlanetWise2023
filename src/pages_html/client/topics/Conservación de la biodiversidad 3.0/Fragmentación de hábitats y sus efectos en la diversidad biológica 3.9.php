@@ -379,30 +379,29 @@
           </div>  
       </aside>  
     </div><br><br>
-<!--Footer-->
-<footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
-  <div class="w-screen flex justify-center">
-      <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
-  </div>
-  <div class="container mx-auto">
-    <div class="flex flex-col md:flex-row justify-center items-center">
-      <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-        <a href="/pruebahome/index.html" class="text-base px-4 py-2">Home</a>
-        <a href="/pruebahome/sobre nosotros.html" class="text-base px-4 py-2">sobre nosotros</a>
-        <a href="#" class="text-base px-4 py-2">Translator</a>
-        <a href="/pruebahome/blog.html" class="text-base px-4 py-2">Blog</a>
-      </div>
-    </div>
-  </div>
-  <div class="container mx-auto mt-4">
-    <div class="flex justify-center items-center">
-      <a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank">
-        <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
-      </a>
-    </div>
-    <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
-  </div>
-</footer>
+    <!--footer-->
+    <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
+        <div class="w-screen flex justify-center">
+            <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
+        </div>
+        <div class="container mx-auto">
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
+              <a href="../../../../../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
+              <a href="../../../../../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
+              <a href="../../../../../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto mt-4">
+          <div class="flex justify-center items-center">
+            <a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank">
+              <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
+            </a>
+          </div>
+          <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
+        </div>
+      </footer>
     <!--SCRIPT PARA EL MODO NOCTURNO-->
     <script src="/src/js/main.js"></script>
 </body>
