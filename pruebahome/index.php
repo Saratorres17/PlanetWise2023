@@ -34,7 +34,7 @@
 
 <!-- Navbar -->
 
-      <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10 ">
+      <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
 
         <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
         <div class="md:relative md:left-5-4" id="google_translate_element"></div>
@@ -203,7 +203,7 @@
         <div class="hero-content">
           <h2 class="hero-title">Bienvenido a PlanetWise</h2>
           <p class="hero-subtitle">¡Conocer la biodiversidad nos da el poder de cuidarlo!</p>
-         <!--Fin header-->
+          <!--Fin header-->
         </div>
       </section><br> <br>
       <div class="scroll container mx-auto">
@@ -211,7 +211,7 @@
           <div class="max-h-96 md:h-screen">
             <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
           </div>
-          <div class="shadow-xl flex bg-gray-200 bg-opacity-40 p-10 mt-5 mb-12 rounded-r-xl">
+          <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl">
             <div class="mt-4 h-20">
               
               <h1 class="text-3xl uppercase font-serif cursor-default">Así fue el eclipse lunar total que pudo verse en América Latina</h1>
@@ -227,15 +227,15 @@
       <br><br><br><br>
      
       <!-- cards-->
-      <div class="py-10 bg-gradient-to-br to-cyan-100">  
+      <div class="py-10">  
         <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
             <div class="mb-12 space-y-2 text-center">
               <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Temas de interes</h2>
             </div>
             <br><br><br>
             <div  class="grid gap-12 lg:grid-cols-2">
-              <div  class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
-                <img src="/dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+              <div  class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
+                <img src="../dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
                     <div class="space-y-4">
@@ -246,7 +246,7 @@
                   </div>
                 </div>
               </div>
-              <div  class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+              <div  class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
                 <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
@@ -268,8 +268,8 @@
               <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2></div>
       
             <div class="grid gap-12 lg:grid-cols-2">
-              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
-                <img src="/dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
+                <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
                     <div class="space-y-4">
@@ -281,7 +281,7 @@
                   </div>
                 </div>
               </div>
-              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
                 <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
@@ -305,8 +305,8 @@
               <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2></div>
       
             <div class="grid gap-12 lg:grid-cols-2">
-              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
-                <img src="/dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
+                <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
                     <div class="space-y-4">
@@ -317,7 +317,7 @@
                   </div>
                 </div>
               </div>
-              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-xl hover:rounded-2xl">
+              <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
                 <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
                 <div class="sm:w-7/12 pl-0 p-5">
                   <div class="space-y-2">
@@ -335,9 +335,9 @@
       </div>       
     <br>
     <!--footer-->
-      <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
+      <footer class="degradado-footer pt-10 pb-10">
         <div class="w-screen flex justify-center">
-            <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
+            <img class="h-20 w-20"  src="../dist/images/leaf.png" alt="PlanetWise Logo">
         </div>
         <div class="container mx-auto">
           <div class="flex flex-col md:flex-row justify-center items-center">

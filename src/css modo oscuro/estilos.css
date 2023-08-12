@@ -11,7 +11,11 @@ body {
 }
 
 body.dark {
-  background: #0b111d;
+  background: #001500;
+}
+
+.degradado-footer {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(44, 150, 44, 0.178));
 }
 
 /* INICIO DE EL ESTILO DE EL TRADUCTOR */
@@ -28,7 +32,7 @@ div .skiptranslate.goog-te-gadget span a{
 
 /* Cambia el estilo del boton para seleccionar el idioma */
 div .goog-te-combo{
-  background-color: #cccccca4;
+  background-color: #cccccca6;
   color: #000000;
   font-weight: bold;
   cursor: pointer;
@@ -49,7 +53,6 @@ div .goog-te-combo{
 
 /* Cambia el estilo de la lista de idiomas del menú del traductor */
 .goog-te-combo option{
-  background-color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   color: #000000;
@@ -65,6 +68,41 @@ a img{
 
 /* FIN DE EL DISEÑO DE EL TRADUCTOR */
 
+body.dark nav {
+  background: rgb(25, 68, 45);
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark nav a {
+  color: #C8C8C8;
+}
+
+body.dark nav a:hover {
+  color: #FEFEFE;
+}
+
+nav .logotipo {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav .enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .enlaces a {
+  margin-right: 40px;
+}
+
+nav .enlaces a:hover {
+  color: #707070;
+}
 
 a {
   color: #413a8b;
@@ -102,44 +140,8 @@ nav {
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
-body.dark nav {
-  background: #222222;
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-}
-
-body.dark nav a {
-  color: #C8C8C8;
-}
-
-body.dark nav a:hover {
-  color: #FEFEFE;
-}
-
-nav .logotipo {
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
-}
-
-nav .enlaces {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .enlaces a {
-  margin-right: 40px;
-}
-
-nav .enlaces a:hover {
-  color: #707070;
-}
-
 .switch {
-  background: #343D5B;
+  background: #244424;
   border-radius: 1000px;
   border: none;
   position: relative;
@@ -171,7 +173,7 @@ nav .enlaces a:hover {
 }
 
 .switch.active {
-  background: orange;
+  background: rgb(160, 229, 164);
   color: #000;
 }
 
