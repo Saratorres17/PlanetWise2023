@@ -20,9 +20,13 @@
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
-    function googleTranslateElementInit(){
+    function googleTranslateElementInit() {
       new google.translate.TranslateElement(
-        {pageLanguage: "es"}, "google_translate_element"
+        {
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
       );
     }
   </script>
@@ -112,7 +116,7 @@
           background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b'); /* Ruta de imagen de fondo */
             background-size: cover;
             background-position: center;
-            height: 650px;
+            height: 900px;
             position: relative;
             z-index: 1;
             filter: none;
