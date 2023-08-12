@@ -35,7 +35,23 @@ include("controlador_login.php");
             <h2 class="text-xl font-semibold">Iniciar Sesión</h2>
             <form class="flex flex-col space-y-4 w-64" method="post" action="">
                 <input type="text" name="firstName" placeholder="Nombre de usuario" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <input type="password" name="Contraseña" placeholder="Contraseña" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <input type="password" name="Contraseña" placeholder="Contraseña" id="password" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <img src="../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 ml-0 z-10 hover:opacity-50" id="Eye">
+									<!--ojito-->
+	                          <script>
+								var eye = document.getElementById('Eye');
+                                var input = document.getElementById('password')
+                                eye.addEventListener("click", function() {
+                                if(input.type == "password"){
+                                    input.type = "text"
+                                    eye.style.opacity=0.8
+                                }else{
+                                    input.type = "password"
+                                    eye.style.opacity=0.5
+                                }
+
+                               });
+                               </script>
                 <button type="submit" class="bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300">Iniciar Sesión</button>
             </form>
             <div class="flex justify-between mb-2">

@@ -91,6 +91,21 @@ include("controlador_register.php");
 								<input name="password" class=" px-5 py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none w-32  focus:shadow-outline" id="password" type="password" placeholder="******************" />
 							</div>
 							<img src="../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-36 mt-9 z-10 hover:opacity-50" id="Eye">
+									<!--ojito-->
+	                          <script>
+								var eye = document.getElementById('Eye');
+                                var input = document.getElementById('password')
+                                eye.addEventListener("click", function() {
+                                if(input.type == "password"){
+                                    input.type = "text"
+                                    eye.style.opacity=0.8
+                                }else{
+                                    input.type = "password"
+                                    eye.style.opacity=0.2
+                                }
+
+                               });
+                              </script>
 							<div class="md:ml-2">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
 									Confirma tu contraseña
@@ -167,8 +182,6 @@ include("controlador_register.php");
 			reader.readAsDataURL(file);
 		}
 	</script>
-	<!--ojito-->
-		<link rel="stylesheet" href="../../js/ojito.js">
 </body>
 
 </html>
