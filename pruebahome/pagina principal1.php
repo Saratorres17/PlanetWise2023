@@ -5,9 +5,11 @@
     <link rel="icon" href="/dist/images/leaf.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>pagina principal</title>
 </head>
 <body>
+  
     <link
     crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
@@ -30,7 +32,28 @@
       background-color:rgb(14 211 207);
     }
   </style>
+  
   <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(/dist/images/bosque.jpg);">
+
+    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+
+        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+        <div class="md:relative md:left-5-4 z-10" id="google_translate_element"></div>
+        <!--FIN DEL TRADUCTOR-->
+  
     <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>
     <div>
     <div class="min-h-screen flex justify-center">
@@ -42,7 +65,7 @@
           </h2>
   
           <p class="mt-4 text-gray-300">
-          Una pagina web adonde podras conocer la biodiversidad!
+          ¡Una pagina web adonde podras conocer la biodiversidad!
           </p>
           <div class="flex flex-row  items-center space-x-3 mt-5">
            <a href="/pruebahome/index.php"> <button type="button"
