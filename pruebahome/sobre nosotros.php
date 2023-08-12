@@ -195,7 +195,7 @@ visibility: hidden; /* Oculta el slider cuando el menú se sombree */
 <body>
   <div class="relative">
     <div class="sticky top-0 flex h-screen items-center justify-center">
-      <img alt="" src="/dist/images/fkamingos.jpg" class="h-full w-full object-cover" />
+      <img alt="" src="../dist/images/fkamingos.jpg" class="h-full w-full object-cover" />
       <div class="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-2xl">
         <h2 class="text-6xl font-bold text-white" >Misión</h2>
         <p class="font-sans text-xl text-white">Educar y concientizar a las personas sobre la importancia de cuidar la naturaleza y los animales, promoviendo prácticas sostenibles y responsables que contribuyan a la conservación del medio ambiente y la biodiversidad.</p>
@@ -210,7 +210,7 @@ visibility: hidden; /* Oculta el slider cuando el menú se sombree */
       </div>
     </div>
     <div class="sticky top-0 flex h-screen items-center justify-center">
-      <img alt="" src="/dist/images/mataralla.jpg" class="h-full w-full object-cover" />
+      <img alt="" src="../dist/images/mataralla.jpg" class="h-full w-full object-cover" />
       <div class="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-10xl">
         <h2 class="text-6xl font-bold text-white">Valores</h2><br>
         <p class="font-sans text-xl text-white">Responsabilidad: Tomar conciencia de nuestro impacto en el medio ambiente y asumir la responsabilidad de nuestras acciones para minimizar ese impacto y promover prácticas sostenibles.</p><br>
@@ -223,7 +223,7 @@ visibility: hidden; /* Oculta el slider cuando el menú se sombree */
         <script src="/src/js/main.js"></script>
 
     <!--footer-->
-    <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
+    <footer class="degradado-footer pt-10 pb-10">
         <div class="w-screen flex justify-center">
             <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
         </div>
