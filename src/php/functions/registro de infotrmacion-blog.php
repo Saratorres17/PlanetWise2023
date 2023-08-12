@@ -76,7 +76,7 @@ include("controlador_registro-blog.php");
                                     </button>
                                     <div class="flex justify-between mb-2">
 
-                                        <center><a href="/pruebahome/index.html" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
+                                        <center><a href="../../../pruebahome/index.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
                                     </div>
                                 </div>
                         </form>
