@@ -111,11 +111,11 @@
                 Descubre cómo tu elección diaria puede marcar la diferencia en la lucha contra el cambio climático.
               </p>
               <div class=" inline-block shadow mt-5">
-                  <a href="/src/php/functions/registro de infotrmacion-blog.php" class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra tu informacion</a>
+                  <a href="../src/php/functions/registro de infotrmacion-blog.php" class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra tu informacion</a>
               </div>
           </div>
           <div class="lg:relative">
-              <img class="lg:absolute lg:inset-0 h-60 w-full lg:h-full object-cover object-center rounded-l-full" src="/dist/images/familia cuidando.jpeg" alt="Woman workcation on the beach">
+              <img class="lg:absolute lg:inset-0 h-60 w-full lg:h-full object-cover object-center rounded-l-full" src="../dist/images/familia cuidando.jpeg" alt="Woman workcation on the beach">
           </div>
       </div>
   </div> 
@@ -217,7 +217,7 @@
       </main><br><br>
 
     <!--footer-->
-    <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
+    <footer class="degradado-footer pt-10 pb-10">
         <div class="w-screen flex justify-center">
             <img class="h-20 w-20"  src="/dist/images/leaf.png" alt="PlanetWise Logo">
         </div>

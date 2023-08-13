@@ -69,7 +69,7 @@
             <!-- Icon Menu Section -->
             <div class="flex items-center space-x-5">
                 <!-- Register -->
-              <li><a href="/src/php/functions/registro usuario.php"  class="relative left-5 flex text-gray-600 hover:text-white
+              <li><a href="../src/php/functions/registro usuario.php"  class="relative left-5 flex text-gray-600 hover:text-white
                     cursor-pointer transition-colors duration-300">
 
                   <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg"
