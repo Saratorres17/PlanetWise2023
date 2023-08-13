@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>pagina principal</title>
 </head>
-<body class="cursor-default bg-black">
+<body background="../dist/images/bosquechachi.jpg" class="cursor-default bg-no-repeat bg-cover bg-black">
   
     <link
     crossorigin="anonymous"
@@ -33,7 +33,7 @@
     }
   </style>
   
-  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(../dist/images/bosque.jpg);">
+  <div class="bg-no-repeat bg-cover bg-center relative">
 
     <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -54,7 +54,7 @@
         <div class="md:relative md:left-5-4 z-20 top-14 " id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
   
-    <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>
+    <div class="absolute inset-0 z-0"></div>
     <div>
     <div class="min-h-screen flex justify-center">
   
