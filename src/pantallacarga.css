@@ -33,4 +33,6 @@
       transform: rotate(360deg);
     }
   }
-  
+  .oculto{
+    overflow: hidden;
+  }

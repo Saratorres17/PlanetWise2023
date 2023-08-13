@@ -14,7 +14,8 @@ include("controlador_login.php");
      <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
     <title>inicio de sesion</title>
 </head>
- <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);"  >
+ <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);">
+
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -33,14 +34,15 @@ include("controlador_login.php");
           <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
           <div class="md:relative md:left-5-4" id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
+
 	<div class="flex justify-center items-center h-screen ">
         <div class="bg-white p-8 rounded-md shadow-md flex flex-col items-center space-y-6">
             
             <h2 class="text-xl font-semibold">Iniciar Sesión</h2>
             <form class="flex flex-col space-y-4 w-64" method="post" action="">
-                <input type="text" name="firstName" placeholder="Nombre de usuario" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <input type="password" name="Contraseña" placeholder="Contraseña" id="password" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <img src="../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 ml-0 z-10 hover:opacity-50" id="Eye">
+                <input type="text" name="firstName" placeholder="Nombre de usuario" required class=" p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <input type="password" name="Contraseña" placeholder="Contraseña" id="password" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-52 ">
+                <img src="../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 z-10 hover:opacity-50 left-56 bottom-12" id="Eye">
 									<!--ojito-->
 	                          <script>
 								var eye = document.getElementById('Eye');
