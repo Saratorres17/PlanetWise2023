@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#onload').fadeOut();
+    var onload = $('#onload'); 
+    onload.fadeOut();
     $('body').removeClass('oculto');
-    alert('Página lista!');
 });

@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../src/pantallacarga.css">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	  <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
 </head>
 <body class="h-screen font-sans cursor-default oculto">
@@ -368,8 +368,10 @@
           <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
         </div>
       </footer>  
-                <!--SCRIPT PARA EL MODO NOCTURNO-->
-                <script src="/src/js/main.js"></script> 
-    <script> src="../src/js/load.js" </script>
+          <!--SCRIPT PARA EL MODO NOCTURNO-->
+             <script src="/src/js/main.js"></script> 
+             <!--Script de la página de carga-->
+             <script src="../src/js/load.js"></script>
+
 </body>
 </html>

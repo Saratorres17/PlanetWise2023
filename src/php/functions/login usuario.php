@@ -29,10 +29,9 @@ include("controlador_login.php");
       );
     }
   </script>
-  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
-          <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-          <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+        <div class="md:relative md:left-5-4 z-20 top-14 " id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
 
 	<div class="flex justify-center items-center h-screen ">
@@ -40,8 +39,8 @@ include("controlador_login.php");
             
             <h2 class="text-xl font-semibold">Iniciar Sesión</h2>
             <form class="flex flex-col space-y-4 w-64" method="post" action="">
-                <input type="text" name="firstName" placeholder="Nombre de usuario" required class=" p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                <input type="password" name="Contraseña" placeholder="Contraseña" id="password" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-52 ">
+                <input type="text" name="firstName" placeholder="Nombre de usuario" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                <input type="password" name="Contraseña" placeholder="Contraseña" id="password" required class="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 ">
                 <img src="../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 z-10 hover:opacity-50 left-56 bottom-12" id="Eye">
 									<!--ojito-->
 	                          <script>

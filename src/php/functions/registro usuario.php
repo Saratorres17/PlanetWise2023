@@ -16,17 +16,21 @@ include("controlador_register.php");
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
-    function googleTranslateElementInit(){
+    function googleTranslateElementInit() {
       new google.translate.TranslateElement(
-        {pageLanguage: "es"}, "google_translate_element"
+        {
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
       );
     }
   </script>
-  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
-          <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-          <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+        <div class="md:relative md:left-5-4 z-20 top-12 " id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
+
 	<div class="container mx-auto">
 		<div class="flex justify-center px-6 my-12">
 			<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
