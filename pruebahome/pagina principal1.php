@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/dist/images/leaf.png">
+    <link rel="icon" href="../dist/images/leaf.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>pagina principal</title>
 </head>
-<body>
+<body class="cursor-default bg-black">
   
     <link
     crossorigin="anonymous"
@@ -26,14 +26,14 @@
       overflow: hidden;
     }
     .swiper-pagination-bullet{
-      background-color:rgb(14 211 207);
+      background-color: rgb(14, 211, 207);
     }
     .swiper-pagination-bullet-active{
-      background-color:rgb(14 211 207);
+      background-color: rgb(14, 211, 207);
     }
   </style>
   
-  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(/dist/images/bosque.jpg);">
+  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(../dist/images/bosque.jpg);">
 
     <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -51,7 +51,7 @@
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
         <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-        <div class="md:relative md:left-5-4 z-10" id="google_translate_element"></div>
+        <div class="md:relative md:left-5-4 z-20 top-14 " id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
   
     <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>

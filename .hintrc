@@ -32,6 +32,12 @@
         "document-title": "off",
         "frame-title": "off"
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
     ]
   }
 }

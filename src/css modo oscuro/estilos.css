@@ -23,6 +23,9 @@ body.dark {
 /* Quita el texto (Con la tecnologia de) */
 div .skiptranslate.goog-te-gadget, .goog-te-combo .dark{
   font-size: 0%;
+  margin-left: 5%;
+  margin-top: -2.5%;
+  background-size: cover;
 }
 
 /* Quita el texto (Traductor de google) */
