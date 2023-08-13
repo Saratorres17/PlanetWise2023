@@ -105,7 +105,7 @@
               <div class="">
                   <div class="relative">
                 <img
-                  src="https://img.freepik.com/foto-gratis/imagen-dos-monos-abrazados-ramas-arboles-selva_181624-5820.jpg?w=1380&t=st=1690674920~exp=1690675520~hmac=0a5eef8a87a74e3f3e0461e051fbb95c90e90943275d7b1adc21332b30fbd3fe"
+                  src="https://static.nationalgeographic.es/files/styles/image_3200/public/01-golden-snub-nosed-monkey-minden_00455438.webp?w=1450&h=816"
                   alt="aji"
                   class="object-cover w-full mx-auto rounded-t-2xl h-60"
                 />
@@ -128,7 +128,7 @@
               <div class="">
                  <div class="relative">
                 <img
-                  src="https://img.freepik.com/foto-gratis/bebe-naja-sputtrix-serpiente-sobre-musgo-posicion-lista-atacar-bebe-naja-sputtrix-serpiente-closeup-naja-serpiente_488145-2394.jpg?w=1380&t=st=1690675045~exp=1690675645~hmac=8d840f42fda68cb580dc71057c0fc043137ac0852c5d39cff2708856a754e446"
+                  src="https://humanidades.com/wp-content/uploads/2017/03/serpiente-azul-1-e1564541782147.jpg"
                   alt="aji"
                   class="object-cover w-full mx-auto rounded-t-2xl h-60"/>
                 <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
