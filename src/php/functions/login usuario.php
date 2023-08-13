@@ -12,9 +12,21 @@ include("controlador_login.php");
      <link rel="icon" href="/dist/images/leaf.png">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
      <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
+     <link rel="stylesheet" href="../../pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>inicio de sesion</title>
 </head>
  <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);">
+
+      <!--Pantalla de carga-->
+      <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
 
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -64,6 +76,8 @@ include("controlador_login.php");
             </div>
         </div>
     </div>
+           <!--Script de la página de carga-->
+           <script src="../../js/load.js"></script> 
  </body>
 </html>
 

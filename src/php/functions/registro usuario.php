@@ -10,10 +10,23 @@ include("controlador_register.php");
 	<link rel="icon" href="/dist/images/leaf.png">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
 	<link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
+	<link rel="stylesheet" href="../../../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<title>Registro de usuario</title>
 </head>
-<body class="bg-no-repeat bg-cover bg-fixed" style="background-image: url(../../../../../dist/images/ondas.jpg);">
-  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+<body class="bg-no-repeat oculto bg-cover bg-fixed" style="background-image: url(../../../../../dist/images/ondas.jpg);">
+  
+     <!--Pantalla de carga-->
+     <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+
+<!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     function googleTranslateElementInit() {
@@ -186,6 +199,8 @@ include("controlador_register.php");
 			reader.readAsDataURL(file);
 		}
 	</script>
+       <!--Script de la página de carga-->
+	   <script src="../../js/load.js"></script> 
 </body>
 
 </html>

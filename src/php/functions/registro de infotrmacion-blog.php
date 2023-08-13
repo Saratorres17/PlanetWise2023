@@ -11,9 +11,38 @@ include("controlador_registro-blog.php");
     <link rel="icon" href="/dist/images/leaf.png">
     <title>Formulario para registro de informacion</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../../css modo oscuro/estilos.css">
 </head>
 
-<body>
+<body class="oculto"
+     <!--Pantalla de carga-->
+     <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+
+        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+        <div class="md:relative md:left-5-4 z-20 top-14 " id="google_translate_element"></div>
+        <!--FIN DEL TRADUCTOR-->
     <div class="bg-white dark:bg-gray-900">
         <div class="flex justify-center h-screen">
             <div class="hidden bg-cover lg:block lg:w-2/3" style="background-image: url(https://img.freepik.com/foto-gratis/grupo-voluntarios-recogiendo-basura_23-2147807246.jpg?w=1380&t=st=1690575288~exp=1690575888~hmac=67dc785ca467cee499418bdd34c34a4e754e902d4d3dfd6450c3914fec21f94d)">
@@ -30,6 +59,7 @@ include("controlador_registro-blog.php");
             <div class="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
                 <div class="flex-1">
                     <div class="text-center">
+                        <br><br>
                         <h2 class="text-4xl font-bold text-center text-gray-700 dark:text-white">Registra la informacion!</h2>
                     </div>
 
@@ -76,7 +106,7 @@ include("controlador_registro-blog.php");
                                     </button>
                                     <div class="flex justify-between mb-2">
 
-                                        <center><a href="../../../pruebahome/index.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
+                                        <center><a href="../../../pruebahome/blog.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a></center>
                                     </div>
                                 </div>
                         </form>
@@ -85,7 +115,6 @@ include("controlador_registro-blog.php");
             </div>
         </div>
     </div>
-</body>
 <script>
     const fotoInput = document.getElementById('foto');
     const previewDiv = document.getElementById('preview');
@@ -136,5 +165,7 @@ include("controlador_registro-blog.php");
         reader.readAsDataURL(file);
     }
 </script>
-
+       <!--Script de la página de carga-->
+       <script src="../../js/load.js"></script>
+</body>
 </html>
