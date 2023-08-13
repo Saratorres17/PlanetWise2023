@@ -9,15 +9,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
+        <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <title>Especies en peligro de extincion y conservacion ex situ e in situ</title>
-        <meta charset = "UTF-8">
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
 
-<body class="cursor-default h-screen  font-sans">
+<body class="cursor-default h-screen  font-sans oculto">
 
+     <!--Pantalla de carga-->
+     <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+
+<header>
  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -374,5 +386,8 @@
       </footer>
     <!--SCRIPT PARA EL MODO NOCTURNO-->
     <script src="/src/js/main.js"></script>
+
+       <!--Script de la página de carga-->
+       <script src="../../../../../src/js/load.js"></script>     
 </body>
 </html>

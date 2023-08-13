@@ -8,30 +8,24 @@
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
     <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     <link rel="stylesheet" href="/src/scroll.css">
-
     <title>perfil del usuario</title>
 </head>
-<body>
-  <!DOCTYPE html>
-  <html lang="es">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="icon" href="/dist/images/leaf.png">
-          <link href="/dist/output.css" rel="stylesheet">
-          <link rel="stylesheet" href="/src/scroll.css">
-          <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-          <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-          <title>Blog</title>
-          <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-          <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
-      </head>
-      <header>
-  <body class="h-screen font-sans cursor-default">
-  
+  <body class="h-screen font-sans cursor-default oculto">
+         <!--Pantalla de carga-->
+  <div class=" flex justify-center items-center h-full z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+  <header>
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -113,7 +107,7 @@
             <img class="w-5 h-5 lg:hidden xs:visible" src="/dist/images/hambur.png" alt="menú de hamburguesa">
           </nav>
 <!-- fin de nav-->
-       <!-- fin de nav-->
+  </header>
     <main class="profile-page">
         <section class="relative h-72">
           <div class="relative top-48 left-5 rounded-xl bg-center"
@@ -263,9 +257,7 @@
       </footer>
         </section>
       </main>
-            <!--SCRIPT PARA EL MODO NOCTURNO-->
-            <script src="/src/js/main.js"></script>
-</body>
+
     <!--footer-->
     <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
         <div class="w-screen flex justify-center">
@@ -289,4 +281,9 @@
           <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
         </div>
       </footer>
+         <!--SCRIPT PARA EL MODO NOCTURNO-->
+         <script src="/src/js/main.js"></script>
+             <!--Script de la página de carga-->
+             <script src="../src/js/load.js"></script>         
+</body>
 </html>

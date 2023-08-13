@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/dist/images/leaf.png">
         <link href="/dist/output.css" rel="stylesheet">
@@ -9,12 +9,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <title>Blog</title>
+        <link rel="stylesheet" href="../src/pantallacarga.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	      <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     </head>
-    <header>
-<body class="h-screen font-sans cursor-default">
 
+<body class="h-screen font-sans cursor-default oculto">
+
+  <!--Pantalla de carga-->
+  <div class=" flex justify-center items-center h-full" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+<header>
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -96,6 +108,7 @@
             <img class="w-5 h-5 lg:hidden xs:visible" src="/dist/images/hambur.png" alt="menú de hamburguesa">
           </nav>
 <!-- fin de nav-->
+  </header>
 
 <br><br><br><br>
         
@@ -241,5 +254,8 @@
       </footer>
             <!--SCRIPT PARA EL MODO NOCTURNO-->
             <script src="/src/js/main.js"></script>
+
+             <!--Script de la página de carga-->
+             <script src="../src/js/load.js"></script>            
 </body>
 </html>

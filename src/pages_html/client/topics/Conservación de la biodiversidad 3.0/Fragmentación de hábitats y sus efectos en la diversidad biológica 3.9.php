@@ -12,12 +12,26 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <link rel="icon" href="/dist/images/leaf.png">
         <title>Fragmentación de hábitats y sus efectos en la diversidad bilógica</title>
-        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
-    <header>
+
 <body class="h-screen font-sans cursor-default">
+
+     <!--Pantalla de carga-->
+     <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+
+
+<header>
  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -206,7 +220,6 @@
                 </div>
               </section>
     </header>
-
     <br>
     <div class="container mx-auto flex flex-wrap py-6">
 
@@ -404,5 +417,7 @@
       </footer>
     <!--SCRIPT PARA EL MODO NOCTURNO-->
     <script src="/src/js/main.js"></script>
+           <!--Script de la página de carga-->
+           <script src="../../../../../src/js/load.js"></script> 
 </body>
 </html>

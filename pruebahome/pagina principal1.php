@@ -5,11 +5,13 @@
     <link rel="icon" href="../dist/images/leaf.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>pagina principal</title>
 </head>
-<body background="../dist/images/bosquechachi.jpg" class="cursor-default bg-no-repeat bg-cover bg-black">
-  
+<body background="../dist/images/bosquechachi.jpg" class="oculto cursor-default bg-no-repeat bg-cover bg-black">
+
     <link
     crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
@@ -34,6 +36,16 @@
   </style>
   
   <div class="bg-no-repeat bg-cover bg-center relative">
+
+       <!--Pantalla de carga-->
+       <div class=" flex justify-center items-center h-full z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
 
     <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -186,5 +198,7 @@
       })
     })
   </script>
+    <!--Script de la página de carga-->
+      <script src="../src/js/load.js"></script>  
 </body>
 </html>

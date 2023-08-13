@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="/src/scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
     <title>Impacto del cambio climático en los ecosistemas y la biodiversidad</title>
-    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
 </head>
-<body class="cursor-default">
+<body class="cursor-default oculto">
+
+<div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
   
+<header>
  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -192,8 +203,6 @@
     </style>
     </head>
     
-    <body class="bg-gray-100">
-    
     <section class="hero relative">
       <div class="overlay absolute inset-0"></div>
       <div class="hero-content">
@@ -202,6 +211,7 @@
        
       </div>
     </section><br> <br>
+    </header>
       <div class="container mx-auto flex flex-wrap py-6">
     
           <!-- Posts Section -->
@@ -382,5 +392,7 @@
           <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
         </div>
       </footer>
+             <!--Script de la página de carga-->
+             <script src="../../../../../src/js/load.js"></script>       
 </body>
 </html>

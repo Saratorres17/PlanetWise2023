@@ -13,10 +13,23 @@
         <title>Gestión forestal sostenible</title>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
+        <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
 
-<body class="h-screen font-sans cursor-default">
+<body class="h-screen font-sans cursor-default oculto">
 
+     <!--Pantalla de carga-->
+     <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
+
+<header>
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -194,7 +207,6 @@
           font-size: 1.2rem;
         }
       </style>
-    </head>
     
       <section class="hero relative">
         <div class="overlay absolute inset-0"></div>
@@ -281,12 +293,7 @@
             <a href="../Usos sostenible de los recursos naturales 4.0/Gestión forestal sostenible 4.1.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                 Leer mas 
             </a>
-        </div>
-  
-       
-    </head>
-           
-        
+            </div>    
   
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
             <p class="text-xl font-semibold pb-5 scroll">Diversidad</p>
@@ -337,5 +344,7 @@
       </footer>
       <!--SCRIPT PARA EL MODO NOCTURNO-->
       <script src="/src/js/main.js"></script>
+       <!--Script de la página de carga-->
+       <script src="../../../../../src/js/load.js"></script>       
 </body>
 </html>
