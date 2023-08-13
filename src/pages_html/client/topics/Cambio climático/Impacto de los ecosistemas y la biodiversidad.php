@@ -27,9 +27,13 @@
  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
-    function googleTranslateElementInit(){
+    function googleTranslateElementInit() {
       new google.translate.TranslateElement(
-        {pageLanguage: "es"}, "google_translate_element"
+        {
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
       );
     }
   </script>
