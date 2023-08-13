@@ -51,7 +51,7 @@
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
         <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-        <div class="md:relative md:left-5-4 z-20 top-14 " id="google_translate_element"></div>
+        <div class="md:relative md:left-5-4 z-20 top-5 " id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
   
     <div class="absolute inset-0 z-0"></div>
