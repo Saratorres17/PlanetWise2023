@@ -61,7 +61,7 @@ function validarCampo($campo)
 function guardarImagen()
 {
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === 0) {
-        $target_dir = __DIR__ . "/assets/"; // Ruta relativa al directorio de destino
+        $target_dir = IMAGE_BASE_PATH; // Ruta relativa al directorio de destino
         $target_file = $target_dir . basename($_FILES["foto"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

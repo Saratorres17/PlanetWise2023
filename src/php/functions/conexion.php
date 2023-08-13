@@ -1,10 +1,12 @@
 <?php
+define('IMAGE_BASE_PATH', '../../php/functions/');
 class DatabaseConnection {
     private $host = "localhost";
     private $db_name = "planetwiseof";
     private $username = "root";
     private $password = "";
     private $conn;
+    
 
     public function __construct() {
         try {
