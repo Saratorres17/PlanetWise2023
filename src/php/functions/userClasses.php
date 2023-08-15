@@ -18,7 +18,7 @@ class User
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Add any other user-related methods here as needed
+    
 }
 
 ?>

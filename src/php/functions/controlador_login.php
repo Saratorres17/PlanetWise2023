@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user_data) {
         $_SESSION['user_id'] = $user_data['id'];
-        $_SESSION['username'] = $user_data['firstName'];
-        $_SESSION['foto_path'] = $user_data['foto_path'];
+        $_SESSION['firstName'] = $user_data['firstName'];
+        $_SESSION['photo_path'] = $user_data['foto_path'];
         $_SESSION['gustos'] = $user_data['interests'];
         $_SESSION['correo'] = $user_data['email'];
 
