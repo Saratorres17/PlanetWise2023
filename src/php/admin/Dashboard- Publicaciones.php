@@ -1,3 +1,23 @@
+<?php
+include("../functions/conexion.php");
+include("../functions/adminClasses.php"); 
+
+session_start();
+
+// Crear una instancia de DatabaseConnection
+$database = new DatabaseConnection();
+$pdo = $database->getConnection();
+
+// Consulta para obtener los datos de los usuarios
+$query = "SELECT * FROM registrousuario";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,23 +30,22 @@
 </head>
 
 <body class="bg-gray-100">
-
-    <div class="flex">
+<div class="flex">
+    <!-- Sidebar -->
+    <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
+      <div class="flex items-center mb-8">
+        <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
+        <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
+      </div>
+      <ul class="space-y-2">
+        <li><a href="/src/php/admin/Dasboard adm.php" class="block py-2 px-4 hover:bg-gray-700">Usuarios</a></li>
+        <li><a href="/src/php/admin/Dashboard- Publicaciones.php" class="block py-2 px-4 hover:bg-gray-700">Publicaciones</a></li>
+        <li><a href="/src/php/admin/curiosidades1.php" class="block py-2 px-4 hover:bg-gray-700">Datos curiosos</a></li>
+        <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700">Cerrar sesion</a></li>
         <!-- Sidebar -->
-        <div class="bg-gray-800 text-white w-1/5 py-4 px-6 min-h-screen bg-sidebar-image">
-                <div class="flex items-center mb-8">
-                    <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
-                    <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
-                </div>
-                <ul class="space-y-2">
-                    <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Usuarios</a></li>
-                    <li><a href="/src/php/admin/Dashboard- Publicaciones.php" class="block py-2 px-4 hover:bg-gray-700">Publicaciones</a></li>
-                    <li><a href="/src/php/admin/curiosidades1.php" class="block py-2 px-4 hover:bg-gray-700">Datos curiosos</a></li>
-                    <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700">Cerrar sesion</a></li>
-                    <!-- Sidebar -->
-                </ul>
-                
-            </div>
+      </ul>
+    </div>
+         <div class="ml-72">
         <!-- cards adm -->
         <div class="scroll bg-white-200 bg-opacity-70">
             <main class="py-12 md:px-20 sm:px-14 px-6">
@@ -301,6 +320,7 @@
 
         </div>
     </div> <!-- cards adm -->
+    </div>
 </body>
 
 </html>

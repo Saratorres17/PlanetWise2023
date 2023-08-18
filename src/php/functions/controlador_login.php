@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['firstName'] = $user_data['firstName'];
         $_SESSION['photo_path'] = $user_data['foto_path'];
         $_SESSION['gustos'] = $user_data['interests'];
+        $_SESSION['gender'] = $user_data['gender'];
         $_SESSION['correo'] = $user_data['email'];
 
 

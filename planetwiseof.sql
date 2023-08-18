@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 18-08-2023 a las 04:14:51
+-- Tiempo de generación: 18-08-2023 a las 17:56:32
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -63,7 +63,7 @@ CREATE TABLE `datoscuriosos` (
 INSERT INTO `datoscuriosos` (`id`, `titulo`, `fuente`, `foto_path`, `informacion`) VALUES
 (9, 'El festival de las hojas de color', 'k', '../../php/functions/Captura de pantalla 2023-03-11 232536.png', 'las hojas de color en el año......'),
 (10, 'fff', 'popp', '../../php/functions/Captura de pantalla 2023-03-11 232414.png', 'WAZAAAAAAX2222'),
-(11, 'dsasfsdf', 'wazaaaaaaa', '../../php/functions/Captura de pantalla 2023-03-11 203036.png', 'kkkkkkkkkkkkkkkkkk');
+(12, 'ddddddddd', 'ssssssssss', '../../php/functions/cotuza.png', 'ssssssssss');
 
 -- --------------------------------------------------------
 
@@ -124,7 +124,7 @@ CREATE TABLE `registrousuario` (
 --
 
 INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
-(64, 'Sara', 'hnuyjkujybh', 'OLA@gmail.com', 'kolade koala1515', 'Masculino', '../../php/functions/Captura.PNG', 'ola12345');
+(66, 'tommy', 'nu;ez', 'tommy@gmail.com', 'matelover', 'Masculino', '../../php/functions/jj.jpg', 'matelover100');
 
 --
 -- Índices para tablas volcadas
@@ -174,7 +174,7 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `datoscuriosos`
 --
 ALTER TABLE `datoscuriosos`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `noticias destacadas`
@@ -192,7 +192,7 @@ ALTER TABLE `registroinformacion1`
 -- AUTO_INCREMENT de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
