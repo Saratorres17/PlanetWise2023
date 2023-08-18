@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo '<strong class="font-bold">¡Registro exitoso!</strong>';
             echo '<span class="block sm:inline">El registro se ha realizado correctamente.</span>';
             echo '</div>';
+            header("Location: login usuario.php");
         }
 
     } catch (PDOException $e) {

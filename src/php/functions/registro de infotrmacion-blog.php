@@ -16,13 +16,13 @@ include("controlador_registro-blog.php");
     <link rel="stylesheet" href="../../css modo oscuro/estilos.css">
 </head>
 
-<body class="oculto"
+<body class="oculto">
      <!--Pantalla de carga-->
      <div class=" flex justify-center items-center h-screen z-10" id="onload">
      <div class="lds-ring">
         <div></div>
         <div></div>
-        <div></div>
+        <div></div
         <div></div>
      </div>
 </div>

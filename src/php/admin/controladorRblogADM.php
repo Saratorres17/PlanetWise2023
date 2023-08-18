@@ -1,5 +1,4 @@
 <?php
-include("conexion.php"); // Incluye la clase de conexión
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -8,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
         $titulo = validarCampo($_POST["titulo"]);
-        $descripcion = validarCampo($_POST["descripcion"]);
         $informacion = validarCampo($_POST["informacion"]);
+        $fuente = validarCampo($_POST["fuente"]);
 
-        if (empty($titulo) || empty($descripcion) || empty($informacion) || empty($_FILES["foto"]["name"])) {
-            echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
+        if (empty($titulo) || empty($fuente)|| empty($informacion) || empty($_FILES["foto"]["name"])) {
+            echo '<div class="fixed top-0 left-0 z-10 w-full bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded" role="alert"">';
             echo '<strong class="font-bold">¡Error!</strong>';
             echo '<span class="block sm:inline"> Por favor, completa todos los campos obligatorios.</span>';
             echo '</div>';
@@ -25,16 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 echo '<span class="block sm:inline"> Hubo un problema al subir la imagen.</span>';
                 echo '</div>';
             } else {
-                $query = "INSERT INTO registroinformacion1 (titulo, descripcion, informacion, foto_path)
-                      VALUES (:titulo, :descripcion, :informacion, :foto_path)";
+                $query = "INSERT INTO datoscuriosos (titulo, fuente, foto_path, informacion)
+                      VALUES (:titulo, :fuente, :foto_path, :informacion)";
                 $statement = $conexion->prepare($query);
                 $statement->bindParam(":titulo", $titulo);
-                $statement->bindParam(":descripcion", $descripcion);
-                $statement->bindParam(":informacion", $informacion);
+                $statement->bindParam(":fuente", $fuente);
                 $statement->bindParam(":foto_path", $foto_path);
+                $statement->bindParam(":informacion", $informacion);
                 $statement->execute();
 
-                echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
+                echo '<div class="fixed top-0 left-0 z-10 w-full bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded" role="alert">';
                 echo '<strong class="font-bold">¡Registro exitoso!</strong>';
                 echo '<span class="block sm:inline">El registro se ha realizado correctamente.</span>';
                 echo '</div>';

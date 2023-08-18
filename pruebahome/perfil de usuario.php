@@ -7,7 +7,6 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="es">
-<<<<<<< Updated upstream
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/dist/images/leaf.png">
@@ -48,7 +47,6 @@ session_start();
     }
   </script>
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-=======
 
 <head>
   <meta charset="UTF-8">
@@ -68,7 +66,6 @@ session_start();
 <body>
   <!DOCTYPE html>
   <html lang="es">
->>>>>>> Stashed changes
 
   <head>
     <meta charset="UTF-8">
@@ -150,7 +147,6 @@ session_start();
                   <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
                 </svg>
 
-<<<<<<< Updated upstream
                     Inicio de sesion
                 </a></li>
               </div>
@@ -164,7 +160,6 @@ session_start();
 <!-- fin de nav-->
   </header>
     <main class="profile-page">
-=======
                 Inicio de sesion
               </a></li>
           </div>
@@ -178,7 +173,6 @@ session_start();
       <!-- fin de nav-->
       <!-- fin de nav-->
       <main class="profile-page">
->>>>>>> Stashed changes
         <section class="relative h-72">
           <div class="relative top-48 left-5 rounded-xl bg-center" style="background-image: url('/dist/images/colorido.jpg');">
             <span id="blackOverlay" class="w-full h-full absolute opacity-80 bg-black">
@@ -327,13 +321,10 @@ session_start();
           </footer>
         </section>
       </main>
-<<<<<<< Updated upstream
 
-=======
       <!--SCRIPT PARA EL MODO NOCTURNO-->
       <script src="/src/js/main.js"></script>
     </body>
->>>>>>> Stashed changes
     <!--footer-->
     <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
       <div class="w-screen flex justify-center">
@@ -354,18 +345,14 @@ session_start();
             <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
           </a>
         </div>
-<<<<<<< Updated upstream
       </footer>
          <!--SCRIPT PARA EL MODO NOCTURNO-->
          <script src="/src/js/main.js"></script>
              <!--Script de la página de carga-->
              <script src="../src/js/load.js"></script>         
 </body>
-</html>
-=======
         <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
       </div>
     </footer>
 
   </html>
->>>>>>> Stashed changes
