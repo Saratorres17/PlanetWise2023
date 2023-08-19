@@ -1,6 +1,9 @@
 <?php
 include("conexion.php"); // Incluye la clase de conexión
 
+session_start();
+
+$usuario_id = $_SESSION["user_id"];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $db = new DatabaseConnection();
@@ -25,9 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 echo '<span class="block sm:inline"> Hubo un problema al subir la imagen.</span>';
                 echo '</div>';
             } else {
-                $query = "INSERT INTO registroinformacion1 (titulo, descripcion, informacion, foto_path)
-                      VALUES (:titulo, :descripcion, :informacion, :foto_path)";
+                $query = "INSERT INTO registroinformacion1 (usuarioId, fecha_registro, titulo, descripcion, informacion, foto_path) VALUES (:usuarioId, CURRENT_TIMESTAMP, :titulo, :descripcion, :informacion, :foto_path)";
+
                 $statement = $conexion->prepare($query);
+                $statement->bindParam(":usuarioId", $usuario_id);
                 $statement->bindParam(":titulo", $titulo);
                 $statement->bindParam(":descripcion", $descripcion);
                 $statement->bindParam(":informacion", $informacion);

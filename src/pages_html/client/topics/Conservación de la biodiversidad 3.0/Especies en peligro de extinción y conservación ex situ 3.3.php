@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["user_id"])){
+  header("location: /pruebahome/pag-restriccion.php");  
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>

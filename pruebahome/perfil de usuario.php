@@ -3,6 +3,19 @@ include("../src/php/functions/conexion.php");
 include("../src/php/functions/adminClasses.php");
 
 session_start();
+
+// Crear una instancia de DatabaseConnection
+$database = new DatabaseConnection();
+$pdo = $database->getConnection();
+
+
+$usuario_id = $_SESSION["user_id"];
+// Consulta para obtener los datos de los usuarios
+$query = "SELECT * FROM registroinformacion1 where usuarioId = $usuario_id";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -224,7 +237,7 @@ session_start();
               <div class="px-6"><br>
                 <div class="flex justify-center bg-white bg-opacity-10 rounded-2xl">
                   <div class="lg:order-2 flex justify-center items-center">
-                    <img src="<?php echo $_SESSION['photo_path'];?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
+                    <img src="<?php echo IMAGE_BASE_PATH . $_SESSION['photo_path']; ?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div class="py-6 px-3 mt-32 sm:mt-0">
@@ -273,76 +286,21 @@ session_start();
               <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"></h1>
 
               <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
 
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                      How to use sticky note for problem solving
-                    </p>
+                <?php var_dump($publicaciones); die();
+                foreach ($publicaciones as $miPublicaciones) :  ?>
+                  <div class="lg:flex scroll">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $miPublicaciones["foto_path"]?>" alt="imgPublicacion">
 
-                    <span class="text-sm dark:text-gray-300">On: 20 October 2019</span>
+                    <div class="flex flex-col justify-between py-6 lg:mx-6">
+                      <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
+                        <?php echo $miPublicaciones["titulo"] ?>
+                      </p>
+
+                      <span class="text-sm dark:text-gray-300">On: <?php echo $miPublicaciones["fecha_registro"]  ?></span>
+                    </div>
                   </div>
-                </div>
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold  hover:underline dark:text-white ">
-                      How to use sticky note for problem solving
-                    </p>
-
-                    <span class="text-sm dark:text-gray-300">On: 20 October 2019</span>
-                  </div>
-                </div>
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p class="text-xl font-semibold hover:underline dark:text-white ">
-                      Morning routine to boost your mood
-                    </p>
-
-                    <span class="text-sm dark:text-gray-300">On: 25 November 2020</span>
-                  </div>
-                </div>
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80" alt="">
-
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                      All the features you want to know
-                    </p>
-
-                    <span class="text-sm dark:text-gray-300">On: 30 September 2020</span>
-                  </div>
-                </div>
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1484&q=80" alt="">
-
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                      Minimal workspace for your inspirations
-                    </p>
-
-                    <span class="text-sm text-gray-500 dark:text-gray-300">On: 13 October 2019</span>
-                  </div>
-                </div>
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                      What do you want to know about Blockchane
-                    </p>
-                    <span class="text-sm dark:text-gray-300">On: 20 October 2019</span>
-                  </div>
-                </div>
+                <?php endforeach; ?>
                 <p></p>
               </div>
             </div>

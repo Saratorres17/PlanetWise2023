@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 18-08-2023 a las 17:56:32
+-- Tiempo de generación: 19-08-2023 a las 03:10:34
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -91,16 +91,17 @@ CREATE TABLE `registroinformacion1` (
   `titulo` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `descripcion` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `informacion` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `foto_path` varchar(6000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `foto_path` varchar(6000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `usuarioId` int NOT NULL,
+  `fecha_registro` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `registroinformacion1`
 --
 
-INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`) VALUES
-(4, 'WAZAAAAAAAAAAAAA', 'KOKAKOLA', 'WAZAAAAAAX2222', 'C:\\Users\\sarat\\OneDrive\\Escritorio\\PlanetWise2023\\src\\php\\functions/assets/Captura de pantalla 2023-03-05 113200.png'),
-(5, 'El festival de las hojas de color', '444444444444444', 'WAZAAAAAAX2222', '../../php/functions/Captura de pantalla 2022-09-04 202117.png');
+INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`, `usuarioId`, `fecha_registro`) VALUES
+(7, 'WAZAAAAAAAAAAAAA', 'AL FIN FUNCIONOOOOOOOOOOOOOOO', 'las hojas de color en el año......', '../../php/functions/Captura de pantalla 2022-08-30 121540.png', 69, '2023-08-19 02:41:55');
 
 -- --------------------------------------------------------
 
@@ -124,7 +125,8 @@ CREATE TABLE `registrousuario` (
 --
 
 INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
-(66, 'tommy', 'nu;ez', 'tommy@gmail.com', 'matelover', 'Masculino', '../../php/functions/jj.jpg', 'matelover100');
+(68, 'LACTES', 'l', 'OLA@gmail.com', 'lola', 'Femenino', '../../php/functions/Captura.PNG', 'waza1212'),
+(69, 'carlos', 'l', 'adrian.rojas@gmail.com', 'kolade koala1515', 'Masculino', '../../php/functions/cap21.png', 'waza1414');
 
 --
 -- Índices para tablas volcadas
@@ -152,7 +154,8 @@ ALTER TABLE `noticias destacadas`
 -- Indices de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_usuarios` (`usuarioId`);
 
 --
 -- Indices de la tabla `registrousuario`
@@ -186,13 +189,23 @@ ALTER TABLE `noticias destacadas`
 -- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `registroinformacion1`
+--
+ALTER TABLE `registroinformacion1`
+  ADD CONSTRAINT `fk_usuarios` FOREIGN KEY (`usuarioId`) REFERENCES `registrousuario` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

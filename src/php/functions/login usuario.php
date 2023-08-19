@@ -13,6 +13,15 @@ include("controlador_login.php");
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
   <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
   <title>inicio de sesion</title>
+  <script type="text/javascript">
+    function noRegresar() {
+      window.history.forward()
+    };
+    setTimeout("noRegresar()", 0);
+    window.onunload = function() {
+      null
+    };
+  </script>
 </head>
 
 <body class="bg-no-repeat bg-cover" style="background-image: url(../../../../../dist/images/paisajenatural.jpeg);">
