@@ -1,7 +1,7 @@
 <?php
 include('../src\php\functions\conexion.php');
 include("../src/php/functions/adminClasses.php");
-
+include("../src/php/admin/controladorRblogADM.php");
 session_start();
 
 // Crear una instancia de DatabaseConnection
@@ -10,9 +10,9 @@ $pdo = $database->getConnection();
 
 // Consulta para obtener los datos de los usuarios
 $query = "SELECT * FROM datoscuriosos";
-$stmt = $pdo->prepare($query);
-$stmt->execute();
-$datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt1 = $pdo->prepare($query);
+$stmt1->execute();
+$datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -37,15 +37,6 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <body class="h-screen  font-sans bg-white cursor-default oculto">
 
-  <!--Pantalla de carga-->
-  <div class=" flex justify-center items-center h-full z-10" id="onload">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
 
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -74,7 +65,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
       </div>
@@ -97,7 +88,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class=" relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -175,11 +166,6 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             Datos curiosos
           </a></li>
 
-        <li><a href="../../../../../pruebahome/blog.php" class="flex text-gray-600 hover:text-white
-                       cursor-pointer transition-colors duration-300">
-            Blog
-          </a></li>
-
         <li><a href="../../../../../pruebahome/sobre nosotros.php" class="flex text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
             Sobre nosotros
           </a></li>
@@ -212,127 +198,58 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php } ?>
   </nav>
 
-  <body>
-    <br><br><br>
-    <?php foreach ($datoscuriosos as $datos) : ?>
-      <div class="hidden mx-auto px-4 py-4 max-w-xl my-auto">
-        <div class="md:shadow-xl rounded-lg mb-6 ">
-          <div class="md:flex-shrink-0">
-            <img src="<?php echo $datos['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
-          </div>
-          <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
-            <p class="font-normal">
-              <b class="font-serif text-lg"><?php echo $datos['titulo'] ?></b> <br>
-              <?php echo $datos['informacion'] ?>
-            </p>
-          </div>
+
+
+  <br><br><br>
+
+  <div class="hidden mx-auto px-4 py-4 max-w-xl my-auto">
+    <?php foreach ($datoscuriosos1 as $datoss) : ?>
+      <div class="md:shadow-xl rounded-lg mb-6 ">
+        <div class="md:flex-shrink-0">
+          <img src="<?php echo $datoss['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
+        </div>
+        <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
+          <p class="font-normal">
+            <b class="font-serif text-lg"><?php echo $datoss['titulo'] ?></b> <br>
+            <?php echo $datoss['informacion'] ?>
+          </p>
         </div>
       </div>
-      <br><br>
     <?php endforeach; ?>
+  </div>
 
-    <div class="scroll mx-auto px-4 py-4 max-w-xl my-auto">
-      <div class="md:shadow-xl rounded-lg mb-6 ">
+  <br><br>
 
-        <div class="md:flex-shrink-0">
 
-          <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/7086.600x450.jpg?w=1600&h=900" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
-        </div>
-
-        <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
-          <p class="font-normal text-lg">
-            <b class="font-serif">Botellas contaminantes.</b> <br>
-            Desde su llegada en 1973, las botellas de un solo uso han sido unas de las principales causas de contaminación por plástico, puesto que su empleo —sobre todo en la industria refresquera— ha incrementado de forma excesiva.
-          </p>
+  <br><br>
+  <!--footer-->
+  <footer class="degradado-footer pt-10 pb-10">
+    <div class="w-screen flex justify-center">
+      <img class="h-20 w-20" src="/dist/images/leaf.png" alt="PlanetWise Logo">
+    </div>
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
+          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
+          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
+          <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
         </div>
       </div>
     </div>
-    <br><br>
-    <div class="scroll mx-auto px-4 py-4 max-w-xl my-auto">
-      <div class="md:shadow-xl rounded-lg mb-6 ">
-
-        <div class="md:flex-shrink-0">
-
-          <img src="<?php echo $datos['foto_path'] ?>" alt="Continete de pl[astico]" class="object-cover h-full w-full rounded-lg rounded-b-none">
-        </div>
-
-        <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
-          <p class="font-normal">
-            <b class="font-serif  text-lg">Nuevo continente flotante.</b> <br>
-            Existe una isla de contaminación plástica flotando a la deriva en el Océano Pacífico, con 1.6 millones de km2 y unas 80,000 toneladas de plástico. Lo preocupante es que no deja de expandirse, sus 1.8 billones de plásticos que la conforman están matando a miles de especies que habitan o recorren de California a Hawái. <br><br>
-
-            Se cree que este montículo se originó principalmente por los desechos que provienen de Asia, y su magnitud es tal que, Charles Moore, un capitán y oceanógrafo estadounidense, quien fue el primero en descubrirlo en 1997, tardó 7 días en rodearlo.
-          </p>
-        </div>
+    <div class="container mx-auto mt-4">
+      <div class="flex justify-center items-center">
+        <a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank">
+          <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
+        </a>
       </div>
+      <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
     </div>
-    <br><br>
-    <div class="scroll mx-auto px-4 py-4 max-w-xl my-auto">
-      <div class="md:shadow-xl rounded-lg mb-6 ">
+  </footer>
+  <!--SCRIPT PARA EL MODO NOCTURNO-->
+  <script src="/src/js/main.js"></script>
 
-        <div class="md:flex-shrink-0">
-
-          <img src="https://www.expoknews.com/wp-content/uploads/2022/08/tratado-1024x768.jpg" alt="tratado" class="object-cover h-full w-full rounded-lg rounded-b-none">
-        </div>
-
-        <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
-          <p class="font-normal">
-            <b class="font-serif text-lg">Un tratado histórico contra el plástico</b> <br>
-            La preocupación que ha generado el cambio climático así como el estado de nuestro planeta, ha sumado a sus propósitos la lucha contra la contaminación plástica. En este sentido, en 2022 la Asamblea de las Naciones Unidas para el Medio Ambiente, aprobó la elaboración de un tratado vinculante que limite los desechos plásticos y su impacto.
-            <br><br>
-            Con esta iniciativa firmada por 175 países, el organismo internacional buscará diseñar una estrategia que ayude a gestionar, administrar y modificar el ciclo de vida de los plásticos, además de actuar legalmente contra aquellas naciones que contaminan de esta forma.
-          </p>
-        </div>
-      </div>
-    </div>
-    <br><br>
-    <div class="scroll mx-auto px-4 py-4 max-w-xl my-auto">
-      <div class="md:shadow-xl rounded-lg mb-6 ">
-
-        <div class="md:flex-shrink-0">
-
-          <img src="https://www.expoknews.com/wp-content/uploads/2022/08/mares-plasticos-1024x682.jpg" alt="Continete de pl[astico]" class="object-cover h-full w-full rounded-lg rounded-b-none">
-        </div>
-
-        <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
-          <p class="font-normal">
-            <b class="font-serif text-lg">Nuevo continente flotante.</b> <br>
-            Existe una isla de contaminación plástica flotando a la deriva en el Océano Pacífico, con 1.6 millones de km2 y unas 80,000 toneladas de plástico. Lo preocupante es que no deja de expandirse, sus 1.8 billones de plásticos que la conforman están matando a miles de especies que habitan o recorren de California a Hawái. <br><br>
-
-            Se cree que este montículo se originó principalmente por los desechos que provienen de Asia, y su magnitud es tal que, Charles Moore, un capitán y oceanógrafo estadounidense, quien fue el primero en descubrirlo en 1997, tardó 7 días en rodearlo.
-          </p>
-        </div>
-      </div>
-    </div>
-    <br><br>
-    <!--footer-->
-    <footer class="bg-gradient-to-t from-gray-800 pt-10 pb-10">
-      <div class="w-screen flex justify-center">
-        <img class="h-20 w-20" src="/dist/images/leaf.png" alt="PlanetWise Logo">
-      </div>
-      <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-center items-center">
-          <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-            <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
-            <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
-            <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
-          </div>
-        </div>
-      </div>
-      <div class="container mx-auto mt-4">
-        <div class="flex justify-center items-center">
-          <a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank">
-            <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
-          </a>
-        </div>
-        <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
-      </div>
-    </footer>
-    <!--SCRIPT PARA EL MODO NOCTURNO-->
-    <script src="/src/js/main.js"></script>
-
-    <!--Script de la página de carga-->
-    <script src="../src/js/load.js"></script>
-  </body>
+  <!--Script de la página de carga-->
+  <script src="../src/js/load.js"></script>
+</body>
 
 </html>

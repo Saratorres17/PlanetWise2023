@@ -29,7 +29,7 @@
                     PlanetWise
                 </a>
             </div>
-            <ul class="flex xsm:hidden md:items-center md:static space-x-8"><!--No se si borrarlo-->
+            <ul class="flex xsm:hidden md:items-center md:static space-x-8">
 
                 <!-- Links Section -->
 

@@ -4,23 +4,25 @@ include("../src/php/functions/adminClasses.php");
 
 session_start();
 
-// Crear una instancia de DatabaseConnection
-$database = new DatabaseConnection();
-$pdo = $database->getConnection();
+// crear variable con el numero del id del usuario
 
 
-$usuario_id = $_SESSION["user_id"];
-// Consulta para obtener los datos de los usuarios
-$query = "SELECT * FROM registroinformacion1 where usuarioId = $usuario_id";
-$stmt = $pdo->prepare($query);
-$stmt->execute();
-$publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// // Crear una instancia de DatabaseConnection
+// $database = new DatabaseConnection();
+// $pdo = $database->getConnection();
+
+
+// $usuario_id = $_SESSION["user_id"];
+// // Consulta para obtener los datos de los usuarios
+// $query = "SELECT * FROM registroinformacion1 where usuarioId = $usuario_id";
+// $stmt = $pdo->prepare($query);
+// $stmt->execute();
+// $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/dist/images/leaf.png">
@@ -219,14 +221,9 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <!-- fin de nav-->
       <main class="profile-page">
         <section class="relative h-72">
-          <div class="relative top-48 left-5 rounded-xl bg-center" style="background-image: url('/dist/images/colorido.jpg');">
+          <div class="relative top-48 left-5 rounded-xl bg-center">
             <span id="blackOverlay" class="w-full h-full absolute opacity-80 bg-black">
             </span>
-          </div>
-          <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
-            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-              <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
           </div>
         </section>
 
@@ -241,9 +238,9 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div class="py-6 px-3 mt-32 sm:mt-0">
-                      <button class="bg-green-500 active:bg-green-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
-                        Editar informacion
-                      </button>
+                      <a href="../src/php/functions/editUser.php?id=<?= $_SESSION["user_id"] ?>"><button class="bg-green-500 active:bg-green-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+                          Editar informacion
+                        </button></a>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-1">
@@ -287,20 +284,16 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
               <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
 
-                <?php var_dump($publicaciones); die();
-                foreach ($publicaciones as $miPublicaciones) :  ?>
-                  <div class="lg:flex scroll">
-                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $miPublicaciones["foto_path"]?>" alt="imgPublicacion">
 
-                    <div class="flex flex-col justify-between py-6 lg:mx-6">
-                      <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                        <?php echo $miPublicaciones["titulo"] ?>
-                      </p>
-
-                      <span class="text-sm dark:text-gray-300">On: <?php echo $miPublicaciones["fecha_registro"]  ?></span>
-                    </div>
+                <div class="lg:flex scroll">
+                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $miPublicaciones["foto_path"] ?>" alt="imgPublicacion">
+                  <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
+                      holaaaaaaaaaaaaaaa
+                    </p>
+                    <span class="text-sm dark:text-gray-300">On: hoy</span>
                   </div>
-                <?php endforeach; ?>
+                </div>
                 <p></p>
               </div>
             </div>

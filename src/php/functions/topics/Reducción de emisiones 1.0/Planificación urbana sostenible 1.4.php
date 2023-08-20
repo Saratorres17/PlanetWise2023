@@ -1,11 +1,12 @@
 <?php
 // Inclusión de 'conexion.php'
-include('../src\php\functions\conexion.php');
+include("../../conexion.php");
 
 // Inclusión de 'userClasses.php' en una ruta con espacios
-include('../src\php\functions\userClasses.php');
+include('../..\..\functions\userClasses.php');
 
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -14,20 +15,31 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página principal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" href="/dist/images/leaf.png">
+  <link href="/dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="/src/scroll.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
+  <link rel="stylesheet" href="/src/tailwind.min.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <title>Planificación urbana sostenible</title>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../src/pantallacarga.css">
+  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
+  <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
 </head>
 
-<body class="h-screen font-sans cursor-default">
+<body class="h-screen  font-sans oculto">
+
+  <!--Pantalla de carga-->
+  <div class=" flex justify-center items-center h-screen z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -56,7 +68,7 @@ session_start();
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
       </div>
@@ -79,7 +91,7 @@ session_start();
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class=" relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -188,8 +200,6 @@ session_start();
 
     <?php } ?>
   </nav>
-
-
   <style>
     nav {
       position: relative;
@@ -203,7 +213,7 @@ session_start();
     }
 
     .hero {
-      background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b');
+      background-image: url('https://img.freepik.com/foto-gratis/investigadores-busca-fuentes-energia-alternativas_23-2149311492.jpg?w=740&t=st=1690908752~exp=1690909352~hmac=2b57f148366cd25559b51a9ea7a0fa54d91e790aeeac91422aa11d265bad9f8b');
       /* Ruta de imagen de fondo */
       background-size: cover;
       background-position: center;
@@ -293,146 +303,163 @@ session_start();
   <section class="hero relative">
     <div class="overlay absolute inset-0"></div>
     <div class="hero-content">
-      <h2 class="hero-title">Bienvenido a PlanetWise</h2>
-      <p class="hero-subtitle">¡Conocer la biodiversidad nos da el poder de cuidarlo!</p>
-      <!--Fin header-->
+      <h2 class="hero-title">Planificacion urbana sostenible</h2>
+
+
     </div>
-  </section><br> <br><br>
-  <div class="scroll container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="max-h-96 md:h-screen">
-        <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
-      </div>
-      <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl">
-        <div class="mt-4 h-20">
+  </section>
+  </header>
 
-          <h1 class="text-3xl uppercase font-serif cursor-default">Así fue el eclipse lunar total que pudo verse en América Latina</h1>
-          <p class="font-semibold mb-5 text-red-800 hover:text-red-600 cursor-default">BBC NEWS MUNDO</p>
-          <p class="cursor-default">En un eclipse lunar total, toda la Luna cae dentro de la parte más oscura de la sombra de la Tierra, llamada umbra, explica la NASA en su sitio web.</p>
+  <div class="container mx-auto flex flex-wrap py-6">
+
+    <!-- Posts Section -->
+    <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+
+      <article class="flex flex-col my-4">
+        <!-- Article Image -->
+        <a href="#" class="hover:opacity-75 bg-white">
+          <img class="scroll" src="https://img.freepik.com/vector-gratis/concepto-ecologia-papel_23-2148421257.jpg?w=826&t=st=1690911905~exp=1690912505~hmac=e0b13c37b1a732a5dd150691af8804c14f44617688cdc813851ad9e8f505cd56">
+        </a>
+        <div class="bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-2xl flex flex-col justify-start p-6 scroll">
+
+          <p class="scroll text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la Planificación urbana sostenible?</p>
+
+          <p class="pb-6">Se refiere a un enfoque de diseño y desarrollo de áreas urbanas que busca crear entornos urbanos equitativos, saludables, eficientes y respetuosos con el medio ambiente. El objetivo principal de la planificación urbana sostenible es lograr un equilibrio entre las necesidades sociales, económicas y ambientales de una comunidad, tanto en el presente como en el futuro.</p>
+        </div>
+      </article>
+
+      <article class="flex flex-col my-4">
+        <!-- Article Image -->
+        <p class="scroll text-3xl text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p>
+
+        <p class="hover:opacity-75 flex justify-center items-center ">
+
+          <iframe class="scroll" width="560" height="315" src="https://www.youtube.com/embed/s6j02MmY9ZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </p><br>
+        <div class="bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-2xl flex flex-col justify-start p-6 scroll">
+
+          <p class="pb-6">La planificación urbana sostenible implica una serie de elementos y enfoques que se centran en el diseño y desarrollo de áreas urbanas de manera equilibrada y respetuosa con el medio ambiente. <br>
+            A continuación, se presenta un desglose detallado de los aspectos clave de la planificación urbana sostenible:</a><br>
+
+            <li>1- Uso eficiente del suelo
+              Compactación urbana: Se busca minimizar la expansión urbana descontrolada y promover la densificación de las áreas urbanas existentes, evitando la fragmentación del territorio y la pérdida de tierras agrícolas o naturales.</li><br><br>
+
+            <li>2- Movilidad sostenible:
+              Transporte activo: Se promueve el uso de medios de transporte no motorizados, como caminar y andar en bicicleta, mediante la creación de infraestructuras adecuadas, la conexión de redes peatonales y ciclistas, y la implementación de políticas de seguridad vial. </li><br><br>
+
+            <li>3- Eficiencia energética y energías renovables:
+              Diseño sostenible de edificios: Se promueve la eficiencia energética en la construcción, la utilización de materiales sostenibles, la optimización del rendimiento térmico y la incorporación de tecnologías de energías renovables, como paneles solares o sistemas de climatización eficientes. <br>
+
+              Infraestructuras energéticas sostenibles: Se fomenta la implementación de redes de distribución de energía eficientes, la generación descentralizada de energía renovable y la utilización de sistemas de almacenamiento de energía para maximizar la eficiencia y minimizar las emisiones.</li><br><br>
+
+            <li>4- Conservación de recursos naturales:
+              Espacios verdes y biodiversidad: Se promueve la creación y conservación de áreas verdes, parques y corredores ecológicos para mejorar la calidad del aire, proporcionar espacios de recreación y hábitats para la fauna y flora, y mitigar el impacto del cambio climático. <br>
+
+              Gestión sostenible del agua: Se implementan estrategias para la captación, el almacenamiento y la reutilización del agua, como la instalación de sistemas de recogida de aguas pluviales, la utilización de técnicas de drenaje sostenible y la promoción de la eficiencia en el consumo de agua.</li>
+          </p><br><br>
 
         </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <br>
-  <br><br><br><br>
+      </article>
 
-  <!-- cards-->
-  <div class="py-10">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Temas de interes</h2>
-      </div>
-      <br><br><br>
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Tipos de contaminacion</h4>
-                <p class="text-gray-900"> la actividad humana ha generado diversas formas de contaminación que impactan negativamente en el aire, el agua, el suelo y la biodiversidad.</p>
-              </div>
-              <a href="../src/php/functions/topics/Contaminacion/Contaminacion1.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Reduccion de emisiones</h4>
-                <p class="text-gray-900">Estas emisiones, conocidas como gases de efecto invernadero (GEI) y contaminantes atmosféricos, están asociadas con el cambio climático y la contaminación del aire, lo que tiene efectos negativos en el medio ambiente y la salud humana.</p>
-              </div>
-              <a href="../src/php/functions/topics/Reducción de emisiones 1.0/Redución de emisiones 1.0.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
+      <article class="flex flex-col my-4 scroll">
+        <!-- Article Image -->
+        <p class="hover:opacity-75 ">
+          <img class="rounded-t-2xl w-full" src="https://img.freepik.com/vector-gratis/concepto-ecologia-papel_23-2148417810.jpg?w=740&t=st=1690912420~exp=1690913020~hmac=927e317ba0ffd31ef0100a21ecabcbd87c981a3c948813093a771d0b00e92f6d">
+        </p>
+        <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
 
-      </div>
-    </div>
-  </div>
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
+          <p class="text-3xl font-bold hover:text-gray-700 pb-4">Curiosidades sobre la Planificación urbana sostenible</p>
+
+          <p class="px-5 text-lg pt-2">
+            <li>Barcelona, en España, ha implementado proyectos de "supermanzanas", donde se restringe el tráfico de automóviles en áreas específicas para crear espacios peatonales y fomentar la vida comunitaria. Esto ha mejorado la calidad del aire, reducido el ruido y promovido la interacción social.</li><br>
+            <li>El concepto de planificación urbana sostenible se remonta a la década de 1970, cuando se comenzaron a reconocer los impactos negativos del desarrollo urbano no sostenible en el medio ambiente y la calidad de vida.</li><br>
+            <li>Algunas ciudades están implementando técnicas de infraestructura verde, como techos verdes y pavimentos permeables, para mejorar la gestión del agua, reducir el efecto de isla de calor y promover la biodiversidad en entornos urbanos.</li>
+          </p>
+        </div>
+      </article>
+
+
+    </section>
+
+    <!-- Sidebar Section -->
+    <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Gestión de residuos peligrosos.
+        </p>
+        <p class="pb-2">
+          La reducción de residuos peligrosos es una estrategia crucial para proteger el medio ambiente y la salud humana. Los residuos peligrosos son aquellos que pueden representar un riesgo significativo para la salud, el ecosistema y la vida silvestre debido a sus características tóxicas, corrosivas, inflamables o reactivas.</p>
+        <a href="../Reducción de emisiones 1.0/Gestión de residuos peligrosos 1.9.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+          Leer mas
+        </a>
       </div>
 
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Conservación de biodiversidad
-                </h4>
-                <p class="text-gray-900"> Protección y preservación de la variedad de formas de vida en la Tierra, incluyendo todas las especies de plantas, animales, hongos y microorganismos, así como los ecosistemas naturales en los que habitan.</p>
-              </div>
-              <a href="../src/php/functions/topics/Conservación de la biodiversidad 3.0/Especies en peligro de extinción y conservación ex situ 3.3.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Uso sostenible de recursos naturales
-                </h4>
-                <p class="text-gray-900">El uso sostenible de recursos naturales es una estrategia que busca aprovechar los recursos del planeta de manera responsable y equitativa, garantizando su disponibilidad a largo plazo sin comprometer la capacidad de las generaciones futuras para satisfacer sus necesidades.</p>
-              </div>
-              <a href="../src/php/functions/topics/Usos sostenible de los recursos naturales 4.0/Agricultura sostenible 4.2.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Planificacion urbana sostenible.</p>
+        <p class="pb-2">Es una disciplina que busca diseñar y gestionar las ciudades de manera eficiente, equitativa y respetuosa con el medio ambiente, con el objetivo de mejorar la calidad de vida de sus habitantes y preservar los recursos naturales para las generaciones futuras.</p>
+        <a href="../Reducción de emisiones 1.0/Planificación urbana sostenible 1.4.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+          Leer mas
+        </a>
       </div>
 
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800"> Cambio climático</h4>
-                <p class="text-gray-900">Caracterizado por aumentos significativos de la temperatura promedio global. Esta transformación es atribuida a actividades humanas que han liberado grandes cantidades de gases de efecto invernadero (GEI) a la atmósfera, principalmente debido a la quema de combustibles fósiles, la deforestación y la agricultura intensiva.</p>
-              </div>
-              <a href="/src/php/functions/topics/Cambio climático/Cambio climático.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.
-                </h4>
-                <p class="text-gray-900">En El Salvador, existen diversas instituciones y leyes que respaldan el cuidado del medio ambiente y la conservación de los recursos naturales.</p>
-              </div>
-              <a href="../src/php/functions/topics/Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Instituciones no gubernamentales que velan por el medio ambiente en El Salvador.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
+
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Energias renovables.</p>
+        <p class="pb-2">Las energías renovables son fuentes de energía que se obtienen a partir de recursos naturales que son virtualmente inagotables o se renuevan a una tasa más rápida de lo que se consumen. </p>
+        <a href="../Reducción de emisiones 1.0/Energías renovables 1.1.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+          Leer mas
+        </a>
+      </div>
+
+
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Compostaje.</p>
+        <p class="pb-2">El compostaje es un proceso natural de descomposición de materia orgánica, como restos de alimentos, residuos de jardín, hojas caídas, cáscaras de huevo, papel y otros materiales biodegradables.</p>
+        <a href="../Reducción de emisiones 1.0/Compostaje 1.7.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+          Leer mas
+        </a>
+      </div>
+
+
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Captura y almacenamiento del carbono.</p>
+        <p class="pb-2">
+          La Captura y Almacenamiento del Carbono, conocido como CAC o CCS (Carbon Capture and Storage, en inglés), es una estrategia que tiene como objetivo reducir las emisiones de dióxido de carbono (CO2) y otros gases de efecto invernadero producidos por la quema de combustibles fósiles y otras actividades industriales.</p>
+        <a href="../Reducción de emisiones 1.0/Captura y almacenamiento del carbono 1.3.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+          Leer mas
+        </a>
+      </div>
+
+      <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+        <p class="text-xl font-semibold pb-5">Diversidad.</p>
+        <div class="grid grid-cols-3 gap-3">
+          <img class="hover:opacity-75 h-50" src="https://img.freepik.com/foto-gratis/disparo-enfoque-selectivo-colibri-vuelo_181624-56855.jpg?w=826&t=st=1690858682~exp=1690859282~hmac=6015319e298a11a02addf4e9bddd42b6e724839f05f735e037f1c68f84198ff8">
+          <img class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/lindo-mascota-collage-aislado_23-2150007407.jpg?w=826&t=st=1690858697~exp=1690859297~hmac=3e274404b00a2286a6c3d02f4fcbeca92beac47cbf13d260703b6bae01eb6df4">
+
+          <img class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/tucan-multicolor-posado-rama-ia-generativa_188544-8020.jpg?w=826&t=st=1690858831~exp=1690859431~hmac=941c90819497d401bc6f946ed36677f1e710ca316570e594e215677af35ea3dd">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/elefante-parque-nacional-amboseli-kenia-africa_181624-22024.jpg?w=996&t=st=1690859150~exp=1690859750~hmac=9616a553f96a383c848c4694def166d6cd4d966a5c153e142125e0ddfad9bbb8">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/serpiente-piton-arbol-verde-rama-lista-atacar-serpiente-chondropython-viridis-closeup-fondo-negro_488145-1162.jpg?w=1380&t=st=1690859215~exp=1690859815~hmac=375e9b9296f77ec12329659ee6bdfc39503c4f85a29bd18a67a346429d2f1e58">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tortuga-estimulada-africana-hierba_167946-113.jpg?w=1380&t=st=1690859250~exp=1690859850~hmac=aae400813e92b0da7ddb9081877f1e377a1a4a770771fc11d329eee0198c3ad8">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/dos-jirafas-macho-al-atardecer-kruger-np-sudafrica_181624-33921.jpg?w=1380&t=st=1690859296~exp=1690859896~hmac=16a0536b7d0b20fe2ae1f75da11b57439c1df5f5c21addac25cae1a6f71d434d">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tiro-enfoque-superficial-madre-cebra-su-bebe-pie-carretera_181624-19806.jpg?w=1380&t=st=1690859333~exp=1690859933~hmac=ce0a44366afbfa2f62dd867f4f4ed7b0f370d19c62307cbe0a8c61587405f0b0">
+
+          <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/vibrante-pez-leon-nada-colorido-arrecife-coral-generado-ia_188544-36953.jpg?w=1380&t=st=1690859361~exp=1690859961~hmac=67910d9ff79b1bf394975f9ba8521ec5b413d27f94574075719875d63b0b3c78">
         </div>
       </div>
-    </div>
-  </div>
-  <br>
-  <!--footer-->
-  <footer class="degradado-footer pt-10 pb-10">
+    </aside>
+  </div><br><br>
+  <!--SCRIPT PARA EL MODO NOCTURNO-->
+  <script src="/src/js/main.js"></script>
+    <!--footer-->
+    <footer class="degradado-footer pt-10 pb-10">
     <div class="w-screen flex justify-center">
-      <img class="h-20 w-20" src="../dist/images/leaf.png" alt="PlanetWise Logo">
+      <img class="h-20 w-20" src="/dist/images/leaf.png" alt="PlanetWise Logo">
     </div>
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
@@ -452,8 +479,8 @@ session_start();
       <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
     </div>
   </footer>
-  <!--SCRIPT PARA EL MODO NOCTURNO-->
-  <script src="/src/js/main.js"></script>
+  <!--Script de la página de carga-->
+  <script src="../../../../../src/js/load.js"></script>
 </body>
 
 </html>

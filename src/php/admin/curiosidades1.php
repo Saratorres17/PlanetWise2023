@@ -31,7 +31,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="flex">
     <!-- Sidebar -->
-    <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
+    <div class="fixed bg-gray-800 text-white w-96 py-10 px-6 h-screen bg-sidebar-image">
       <div class="flex items-center mb-8">
         <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
         <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
@@ -66,14 +66,13 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       <g id="Dribbble-Light-Preview" transform="translate(-59.000000, -400.000000)" fill="#000000">
                         <g id="icons" transform="translate(56.000000, 160.000000)">
                           <path d="M3,260 L24,260 L24,258.010742 L3,258.010742 L3,260 Z M13.3341,254.032226 L9.3,254.032226 L9.3,249.950269 L19.63095,240 L24,244.115775 L13.3341,254.032226 Z" id="edit_fill-[#1480]">
-
                           </path>
                         </g>
                       </g>
                     </g>
                   </svg>
 
-                  <a href="../functions/deleteItem.php?id=<?php echo $datos['id']?>">
+                  <a href="../functions/deleteItem.php?id=<?php echo $datos['id'] ?>">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="60px" viewBox="0 0 76 76" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve">
                       <path fill="#000000" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 25.3333,23.75L 50.6667,23.75C 51.5411,23.75 51.8541,27.3125 51.8541,27.3125L 24.1458,27.3125C 24.1458,27.3125 24.4589,23.75 25.3333,23.75 Z M 35.625,19.7917L 40.375,19.7917C 40.8122,19.7917 41.9583,20.9378 41.9583,21.375C 41.9583,21.8122 40.8122,22.9584 40.375,22.9584L 35.625,22.9584C 35.1878,22.9584 34.0416,21.8122 34.0416,21.375C 34.0416,20.9378 35.1878,19.7917 35.625,19.7917 Z M 27.7083,28.5L 48.2916,28.5C 49.1661,28.5 49.875,29.2089 49.875,30.0834L 48.2916,53.8334C 48.2916,54.7078 47.5828,55.4167 46.7083,55.4167L 29.2917,55.4167C 28.4172,55.4167 27.7083,54.7078 27.7083,53.8334L 26.125,30.0834C 26.125,29.2089 26.8339,28.5 27.7083,28.5 Z M 30.0833,31.6667L 30.4792,52.25L 33.25,52.25L 32.8542,31.6667L 30.0833,31.6667 Z M 36.4167,31.6667L 36.4167,52.25L 39.5833,52.25L 39.5833,31.6667L 36.4167,31.6667 Z M 43.1458,31.6667L 42.75,52.25L 45.5208,52.25L 45.9167,31.6667L 43.1458,31.6667 Z " />
                     </svg></a>

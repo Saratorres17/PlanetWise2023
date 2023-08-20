@@ -1,34 +1,45 @@
 <?php
 // Inclusión de 'conexion.php'
-include('../src\php\functions\conexion.php');
+include("../../conexion.php");
 
 // Inclusión de 'userClasses.php' en una ruta con espacios
-include('../src\php\functions\userClasses.php');
-
+include('../..\..\functions\userClasses.php');
 session_start();
-?>
 
+if(!isset($_SESSION["firstName"])){
+  header("location: ../pruebahome\pag-restriccion.php");  
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/dist/images/leaf.png">
+        <link rel="stylesheet" href="/src/scroll.css">
+        <link href="/dist/output.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
+        <link rel="stylesheet" href="/src/tailwind.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <title>Gestión forestal sostenible</title>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
+        <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página principal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="/dist/images/leaf.png">
-  <link rel="stylesheet" href="/src/scroll.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../src/pantallacarga.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
-</head>
+<body class="h-screen font-sans cursor-default oculto">
 
-<body class="h-screen font-sans cursor-default">
-
+    <!--Pantalla de carga-->
+  <div class=" flex justify-center items-center h-screen z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -56,7 +67,7 @@ session_start();
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
       </div>
@@ -79,7 +90,7 @@ session_start();
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class=" relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -157,6 +168,11 @@ session_start();
             Datos curiosos
           </a></li>
 
+        <li><a href="../../../../../pruebahome/blog.php" class="flex text-gray-600 hover:text-white
+                       cursor-pointer transition-colors duration-300">
+            Blog
+          </a></li>
+
         <li><a href="../../../../../pruebahome/sobre nosotros.php" class="flex text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
             Sobre nosotros
           </a></li>
@@ -189,250 +205,216 @@ session_start();
     <?php } ?>
   </nav>
 
-
-  <style>
-    nav {
-      position: relative;
-      z-index: 2;
-      /* Asegura que el menú aparezca encima del slider */
+     <style>
+        nav {
+        position: relative;
+        z-index: 2; /* Asegura que el menú aparezca encima del slider */}
+  
+        nav:hover + .hero {
+        visibility: hidden; /* Oculta el slider cuando el menú se sombree */
     }
-
-    nav:hover+.hero {
-      visibility: hidden;
-      /* Oculta el slider cuando el menú se sombree */
-    }
-
-    .hero {
-      background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b');
-      /* Ruta de imagen de fondo */
-      background-size: cover;
-      background-position: center;
-      height: 900px;
-      position: relative;
-      z-index: 1;
-      filter: none;
-      /* Restablecer el filtro de desenfoque por defecto */
-      transition: filter 0.3s ease-in-out;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      height: 100%;
-    }
-
-    .menu-item:hover~.hero,
-    .menu-item:focus~.hero,
-    .menu-item:active~.hero {
-      background: rgba(255, 252, 252, 0);
-      /* Cambiar el fondo a un color con transparencia para simular el desenfoque */
-    }
-
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      text-align: center;
-      color: rgb(255, 255, 255);
-      padding: 2rem;
-    }
-
-    .hero-title {
-      font-size: 4rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .hero-subtitle {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta-button {
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      background-color: #3182ce;
-      color: white;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #2c5282;
-    }
-
-    .feature {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .feature-icon {
-      font-size: 4rem;
-      color: #3182ce;
-    }
-
-    .feature-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-description {
-      font-size: 1.2rem;
-    }
-  </style>
-
-  <section class="hero relative">
-    <div class="overlay absolute inset-0"></div>
-    <div class="hero-content">
-      <h2 class="hero-title">Bienvenido a PlanetWise</h2>
-      <p class="hero-subtitle">¡Conocer la biodiversidad nos da el poder de cuidarlo!</p>
-      <!--Fin header-->
-    </div>
-  </section><br> <br><br>
-  <div class="scroll container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="max-h-96 md:h-screen">
-        <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
-      </div>
-      <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl">
-        <div class="mt-4 h-20">
-
-          <h1 class="text-3xl uppercase font-serif cursor-default">Así fue el eclipse lunar total que pudo verse en América Latina</h1>
-          <p class="font-semibold mb-5 text-red-800 hover:text-red-600 cursor-default">BBC NEWS MUNDO</p>
-          <p class="cursor-default">En un eclipse lunar total, toda la Luna cae dentro de la parte más oscura de la sombra de la Tierra, llamada umbra, explica la NASA en su sitio web.</p>
-
+  
+        .hero {
+          background-image: url('/dist/images/forestación.jpg'); /* Ruta de imagen de fondo */
+          background-size: cover;
+            background-position: center;
+            height: 900px;
+            position: relative;
+            z-index: 1;
+            filter: none;
+            /* Restablecer el filtro de desenfoque por defecto */
+            transition: filter 0.3s ease-in-out;
+        }
+    
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.5);
+          height: 100%;
+        }
+        .menu-item:hover ~ .hero,
+        .menu-item:focus ~ .hero,
+        .menu-item:active ~ .hero {
+            background: rgba(255, 252, 252, 0);
+            /* Cambiar el fondo a un color con transparencia para simular el desenfoque */
+        }
+  
+  
+        .hero-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          text-align: center;
+          color: rgb(255, 255, 255);
+          padding: 2rem;
+        }
+    
+        .hero-title {
+          font-size: 4rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+    
+        .hero-subtitle {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+    
+        .cta-button {
+          padding: 1rem 2rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          background-color: #3182ce;
+          color: white;
+          border-radius: 0.5rem;
+          transition: background-color 0.3s;
+        }
+    
+        .cta-button:hover {
+          background-color: #2c5282;
+        }
+    
+        .feature {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 4rem 2rem;
+        }
+    
+        .feature-icon {
+          font-size: 4rem;
+          color: #3182ce;
+        }
+    
+        .feature-title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
+    
+        .feature-description {
+          font-size: 1.2rem;
+        }
+      </style>
+    
+      <section class="hero relative">
+        <div class="overlay absolute inset-0"></div>
+        <div class="hero-content">
+          <h2 class="hero-title">Gestión forestal sostenible</h2>
+          
+         
         </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <br>
-  <br><br><br><br>
+      </section>
+  </header>
+  <div class="container mx-auto flex flex-wrap py-6">
 
-  <!-- cards-->
-  <div class="py-10">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Temas de interes</h2>
-      </div>
-      <br><br><br>
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Tipos de contaminacion</h4>
-                <p class="text-gray-900"> la actividad humana ha generado diversas formas de contaminación que impactan negativamente en el aire, el agua, el suelo y la biodiversidad.</p>
-              </div>
-              <a href="../src/php/functions/topics/Contaminacion/Contaminacion1.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
+    <!-- Posts Section -->
+    <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+  
+        <article class="flex flex-col shadow my-4">
+            <!-- Article Image -->
+            <a href="#" class="hover:opacity-90">
+                <img  class="rounded-t-2xl w-full h-full" src="https://img.freepik.com/foto-gratis/arboleda-verano_1398-333.jpg?w=740&t=st=1690952102~exp=1690952702~hmac=10c7cf245facaab32b94d084b03d78d0661a00b0b9d940704b79c03b112bc7db">
+            </a>
+            <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6 scroll">
+        
+                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la Gestión forestal sostenible?</p>
+                                                   
+                <p class="pb-6">La gestión forestal sostenible es un enfoque que busca equilibrar la utilización de los recursos forestales con la conservación y protección de los ecosistemas forestales a lo largo del tiempo. Se trata de un conjunto de prácticas y políticas que aseguran que la explotación de los recursos forestales se realice de manera responsable y respetuosa con el medio ambiente, las comunidades locales y las generaciones futuras.
+
+                
+                    La aplicación de estos métodos, analizada por el entomólogo Jan van der Blom, responsable de agroecología de la Asociación de Organizaciones de Productores de Frutas y Hortalizas de Andalucía, en un artículo publicado en 2017, nos cuenta una historia de agricultura sostenible. Una que habla de sostenibilidad medioambiental, pero también social y, sobre todo, económica.</p>
+                     
+                    <p>Lo forestal, aunque sea complicado de definir, es un concepto físico extremadamente real. En el caso español tan real como que ocupa más de la mitad del territorio, un total de 27.664.673,77 ha (MARM, 2011), lo que supone el 54,82% del territorio nacional. Así, la gestión forestal será aquella que se realice sobre más de la mitad del territorio hispano. Y que además es la mitad que alberga mayores valores naturales y aporta más servicios ambientales (fijación de CO2, estabilización de suelos y laderas, producción de agua de calidad, mantenimiento de biodiversidad, etc.) al conjunto de los ciudadanos.</p><br><br>
+
+                    <p>En la actualidad contamos con un nuevo concepto , la gestión forestal sostenible. De acuerdo a la conferencia ministerial de Helsinki realizada en 1993, se puede definir gestión forestal sostenible como “la organización, administración y uso de los bosques y montes de forma e intensidad que permita mantener su biodiversidad, productividad, vitalidad, potencialidad y capacidad de regeneración, para atender, ahora y en un futuro, las funciones ecológicas, económicas y sociales relevantes a escala local, nacional y global, y sin producir daños a otros ecosistemas”. <br><br>
+
+                      Junto a esta cabe citar la definición de las Naciones Unidas, que la define como “un concepto dinámico en evolución que tiene por objetivo mantener y aumentar el valor económico, social y medioambiental de todos los tipos de bosques, en beneficio de las generaciones presentes y futuras. Consta de siete puntos característicos: (i) extensión de los recursos forestales; (ii) diversidad biológica forestal; (iii) salud y vitalidad de los bosques; (iv) funciones productivas de los recursos forestales; (v) funciones de protección de los recursos forestales; (vi) funciones socioeconómicas de los bosques. <br><br>
+                      
+                      Es decir, la gestión forestal que cumpla con estos objetivos permitirá la conservación de las especies amenazadas. Por tanto, la gestión forestal debe permitir el mantenimiento y la recuperación de las especies amenazadas.</p>
+  
+               
             </div>
-          </div>
-        </div>
-        <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Reduccion de emisiones</h4>
-                <p class="text-gray-900">Estas emisiones, conocidas como gases de efecto invernadero (GEI) y contaminantes atmosféricos, están asociadas con el cambio climático y la contaminación del aire, lo que tiene efectos negativos en el medio ambiente y la salud humana.</p>
-              </div>
-              <a href="../src/php/functions/topics/Reducción de emisiones 1.0/Redución de emisiones 1.0.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
+        </article><br>
+  
+        <article class="flex flex-col my-4">
+            <!-- Article Image -->
+            <p class="text-3xl scroll font-bold hover:text-gray-700 text-gray-400 pb-4 flex justify-center items-center">Consejos para llevar a cabo una mejor gestión forestal sostenible:
+            </p>
+            <a class="hover:opacity-75">
+              <img class="scroll rounded-t-2xl w-full h-full" src="https://ecoinventos.com/wp-content/uploads/2019/03/Gestion-forestal-sostenible.jpg">
+          </a>
+              
+          
+            </a>
+            <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6 scroll">
+                <p class="pb-6"><br>
+  
+              <p>1. Desarrolla un plan detallado que incluya objetivos claros, estrategias de manejo, cronogramas y metas a corto y largo plazo. La planificación adecuada te ayudará a optimizar el uso de los recursos y a tomar decisiones informadas.</p><br><br>
 
-      </div>
-    </div>
-  </div>
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
-      </div>
+              <p>2. Realiza un seguimiento regular del estado de los bosques y los ecosistemas que administras. El monitoreo te permitirá identificar posibles problemas, como plagas, enfermedades o incendios, y tomar medidas preventivas o correctivas a tiempo.</p><br><br>
+              <p>3. Prioriza la protección y conservación de la biodiversidad. Fomenta la regeneración natural de especies nativas y evita la introducción de especies exóticas que puedan ser invasivas.</p><br><br>
+  
+              <p>4. Fomenta la educación ambiental y la divulgación de información sobre la importancia de la gestión forestal sostenible. Sensibilizar a la sociedad sobre el valor de los bosques puede generar un mayor apoyo a las prácticas de manejo responsable.</p><br><br>
+                  
+            </div>
+        </article>
+  
+    </section>
+  
+    <!-- Sidebar Section -->
+    <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+  
+        <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
+            <p class="text-xl font-semibold pb-5 scroll">Agricultura sostenible
+            </p>
+            <p class="pb-2">La agricultura sostenible promueve la participación activa de las comunidades locales y las pequeñas explotaciones agrícolas, fomentando la producción de alimentos a nivel local y la distribución justa de los beneficios económicos.
+               </p>
+            <a href="../Usos sostenible de los recursos naturales 4.0/Agricultura sostenible 4.2.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+                Leer mas 
+            </a>
+        </div>
+  
+        
+        <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
+            <p class="text-xl font-semibold pb-5 scroll">Gestión forestal sostenible</p>
+            <p class="pb-2">La gestión forestal es el proceso de planificación, manejo y conservación de los recursos forestales de manera sostenible y responsable. Implica tomar decisiones informadas para garantizar la utilización adecuada de los bosques y los recursos que proporcionan, al mismo tiempo que se protege la biodiversidad y se conserva la salud y la funcionalidad de los ecosistemas forestales. </p>
+            <a href="../Usos sostenible de los recursos naturales 4.0/Gestión forestal sostenible 4.1.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+                Leer mas 
+            </a>
+            </div>    
+  
+        <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
+            <p class="text-xl font-semibold pb-5 scroll">Diversidad</p>
+            <div class="grid grid-cols-3 gap-3">
+                <img class="hover:opacity-75 h-50" src="https://img.freepik.com/foto-gratis/disparo-enfoque-selectivo-colibri-vuelo_181624-56855.jpg?w=826&t=st=1690858682~exp=1690859282~hmac=6015319e298a11a02addf4e9bddd42b6e724839f05f735e037f1c68f84198ff8">
+                <img class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/lindo-mascota-collage-aislado_23-2150007407.jpg?w=826&t=st=1690858697~exp=1690859297~hmac=3e274404b00a2286a6c3d02f4fcbeca92beac47cbf13d260703b6bae01eb6df4">
+                
+                <img class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/tucan-multicolor-posado-rama-ia-generativa_188544-8020.jpg?w=826&t=st=1690858831~exp=1690859431~hmac=941c90819497d401bc6f946ed36677f1e710ca316570e594e215677af35ea3dd">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/elefante-parque-nacional-amboseli-kenia-africa_181624-22024.jpg?w=996&t=st=1690859150~exp=1690859750~hmac=9616a553f96a383c848c4694def166d6cd4d966a5c153e142125e0ddfad9bbb8">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/serpiente-piton-arbol-verde-rama-lista-atacar-serpiente-chondropython-viridis-closeup-fondo-negro_488145-1162.jpg?w=1380&t=st=1690859215~exp=1690859815~hmac=375e9b9296f77ec12329659ee6bdfc39503c4f85a29bd18a67a346429d2f1e58">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tortuga-estimulada-africana-hierba_167946-113.jpg?w=1380&t=st=1690859250~exp=1690859850~hmac=aae400813e92b0da7ddb9081877f1e377a1a4a770771fc11d329eee0198c3ad8">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/dos-jirafas-macho-al-atardecer-kruger-np-sudafrica_181624-33921.jpg?w=1380&t=st=1690859296~exp=1690859896~hmac=16a0536b7d0b20fe2ae1f75da11b57439c1df5f5c21addac25cae1a6f71d434d">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tiro-enfoque-superficial-madre-cebra-su-bebe-pie-carretera_181624-19806.jpg?w=1380&t=st=1690859333~exp=1690859933~hmac=ce0a44366afbfa2f62dd867f4f4ed7b0f370d19c62307cbe0a8c61587405f0b0">
+  
+                <img class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/vibrante-pez-leon-nada-colorido-arrecife-coral-generado-ia_188544-36953.jpg?w=1380&t=st=1690859361~exp=1690859961~hmac=67910d9ff79b1bf394975f9ba8521ec5b413d27f94574075719875d63b0b3c78">
+            </div>           
+        </div>  
+    </aside> 
+  </div><br><br>
 
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Conservación de biodiversidad
-                </h4>
-                <p class="text-gray-900"> Protección y preservación de la variedad de formas de vida en la Tierra, incluyendo todas las especies de plantas, animales, hongos y microorganismos, así como los ecosistemas naturales en los que habitan.</p>
-              </div>
-              <a href="../src/php/functions/topics/Conservación de la biodiversidad 3.0/Especies en peligro de extinción y conservación ex situ 3.3.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Uso sostenible de recursos naturales
-                </h4>
-                <p class="text-gray-900">El uso sostenible de recursos naturales es una estrategia que busca aprovechar los recursos del planeta de manera responsable y equitativa, garantizando su disponibilidad a largo plazo sin comprometer la capacidad de las generaciones futuras para satisfacer sus necesidades.</p>
-              </div>
-              <a href="../src/php/functions/topics/Usos sostenible de los recursos naturales 4.0/Agricultura sostenible 4.2.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
-      </div>
-
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800"> Cambio climático</h4>
-                <p class="text-gray-900">Caracterizado por aumentos significativos de la temperatura promedio global. Esta transformación es atribuida a actividades humanas que han liberado grandes cantidades de gases de efecto invernadero (GEI) a la atmósfera, principalmente debido a la quema de combustibles fósiles, la deforestación y la agricultura intensiva.</p>
-              </div>
-              <a href="/src/php/functions/topics/Cambio climático/Cambio climático.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.
-                </h4>
-                <p class="text-gray-900">En El Salvador, existen diversas instituciones y leyes que respaldan el cuidado del medio ambiente y la conservación de los recursos naturales.</p>
-              </div>
-              <a href="../src/php/functions/topics/Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Instituciones no gubernamentales que velan por el medio ambiente en El Salvador.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <!--footer-->
-  <footer class="degradado-footer pt-10 pb-10">
+       <!--footer-->
+       <footer class="degradado-footer pt-10 pb-10">
     <div class="w-screen flex justify-center">
-      <img class="h-20 w-20" src="../dist/images/leaf.png" alt="PlanetWise Logo">
+      <img class="h-20 w-20" src="/dist/images/leaf.png" alt="PlanetWise Logo">
     </div>
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
@@ -452,8 +434,9 @@ session_start();
       <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
     </div>
   </footer>
-  <!--SCRIPT PARA EL MODO NOCTURNO-->
-  <script src="/src/js/main.js"></script>
+      <!--SCRIPT PARA EL MODO NOCTURNO-->
+      <script src="/src/js/main.js"></script>
+       <!--Script de la página de carga-->
+       <script src="../../../../../src/js/load.js"></script>       
 </body>
-
 </html>

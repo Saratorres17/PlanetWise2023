@@ -4,7 +4,7 @@ session_start();
 
 session_destroy();
 
-header('Location: /pruebahome/pagina principal1.php');
+header('Location: /pruebahome/PaginaPrincipal.php');
 
 exit;
 ?>

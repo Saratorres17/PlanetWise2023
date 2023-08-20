@@ -1,36 +1,43 @@
 <?php
 // Inclusión de 'conexion.php'
-include('../src\php\functions\conexion.php');
+include("../../conexion.php");
 
 // Inclusión de 'userClasses.php' en una ruta con espacios
-include('../src\php\functions\userClasses.php');
-
+include('../..\..\functions\userClasses.php');
 session_start();
-?>
 
+if(!isset($_SESSION["firstName"])){
+  header("location: ../pruebahome\pag-restriccion.php");  
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página principal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="/dist/images/leaf.png">
-  <link rel="stylesheet" href="/src/scroll.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../src/pantallacarga.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/dist/images/leaf.png">
+    <link rel="stylesheet" href="/src/scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <title>Ley del Medio Ambiente de El Salvador</title>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
+    <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+<body class="cursor-default oculto">
 
-<body class="h-screen font-sans cursor-default">
+    <!--Pantalla de carga-->
+    <div class=" flex justify-center items-center h-screen z-10" id="onload">
+     <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     </div>
+</div>
 
-  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -56,7 +63,7 @@ session_start();
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
       </div>
@@ -79,7 +86,7 @@ session_start();
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class=" relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -188,251 +195,218 @@ session_start();
 
     <?php } ?>
   </nav>
-
-
-  <style>
-    nav {
+    <style>
+      nav {
       position: relative;
-      z-index: 2;
-      /* Asegura que el menú aparezca encima del slider */
+      z-index: 2; /* Asegura que el menú aparezca encima del slider */}
+    
+      nav:hover + .hero {
+      visibility: hidden; /* Oculta el slider cuando el menú se sombree */
     }
-
-    nav:hover+.hero {
-      visibility: hidden;
-      /* Oculta el slider cuando el menú se sombree */
-    }
-
-    .hero {
-      background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b');
-      /* Ruta de imagen de fondo */
-      background-size: cover;
-      background-position: center;
-      height: 900px;
-      position: relative;
-      z-index: 1;
-      filter: none;
-      /* Restablecer el filtro de desenfoque por defecto */
-      transition: filter 0.3s ease-in-out;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      height: 100%;
-    }
-
-    .menu-item:hover~.hero,
-    .menu-item:focus~.hero,
-    .menu-item:active~.hero {
-      background: rgba(255, 252, 252, 0);
-      /* Cambiar el fondo a un color con transparencia para simular el desenfoque */
-    }
-
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      text-align: center;
-      color: rgb(255, 255, 255);
-      padding: 2rem;
-    }
-
-    .hero-title {
-      font-size: 4rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .hero-subtitle {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta-button {
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      background-color: #3182ce;
-      color: white;
-      border-radius: 0.5rem;
-      transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #2c5282;
-    }
-
-    .feature {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .feature-icon {
-      font-size: 4rem;
-      color: #3182ce;
-    }
-
-    .feature-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-description {
-      font-size: 1.2rem;
-    }
-  </style>
-
-  <section class="hero relative">
-    <div class="overlay absolute inset-0"></div>
-    <div class="hero-content">
-      <h2 class="hero-title">Bienvenido a PlanetWise</h2>
-      <p class="hero-subtitle">¡Conocer la biodiversidad nos da el poder de cuidarlo!</p>
-      <!--Fin header-->
-    </div>
-  </section><br> <br><br>
-  <div class="scroll container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2">
-      <div class="max-h-96 md:h-screen">
-        <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
+    
+      .hero {
+        background-image: url('/dist/images/cañalesSv.jpg'); /* Ruta de imagen de fondo */
+        background-size: cover;
+          background-position: center;
+          height: 900px;
+          position: relative;
+          z-index: 1;
+          filter: none;
+          /* Restablecer el filtro de desenfoque por defecto */
+          transition: filter 0.3s ease-in-out;
+      }
+    
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+      }
+      .menu-item:hover ~ .hero,
+      .menu-item:focus ~ .hero,
+      .menu-item:active ~ .hero {
+          background: rgba(255, 252, 252, 0);
+          /* Cambiar el fondo a un color con transparencia para simular el desenfoque */
+      }
+    
+    
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 2rem;
+      }
+    
+      .hero-title {
+        font-size: 4rem;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    
+      .hero-subtitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    
+      .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #3182ce;
+        color: white;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s;
+      }
+    
+      .cta-button:hover {
+        background-color: #2c5282;
+      }
+    
+      .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+    
+      .feature-icon {
+        font-size: 4rem;
+        color: #3182ce;
+      }
+    
+      .feature-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    
+      .feature-description {
+        font-size: 1.2rem;
+      }
+    </style>
+    <section class="hero relative">
+      <div class="overlay absolute inset-0"></div>
+      <div class="hero-content">
+        <h2 class="hero-title">Ley del Medio Ambiente El Salvador.</h2>
+        <p class="hero-subtitle"></p>
+       
       </div>
-      <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl">
-        <div class="mt-4 h-20">
+    </section><br> <br>
+    </header>
+      <div class="container mx-auto flex flex-wrap py-6">
+    
+          <!-- Posts Section -->
+          <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+    
+              <article class="flex flex-col my-4 scroll">
+                  <!-- Article Image -->
+                  <a href="#" class="hover:opacity-75">
+                    <center><img  alt="" src="/dist/images/LeydelMA.png"></center>  
+                  </a>
+                  <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-2xl flex flex-col justify-start p-6 scroll">
+              
+                      <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la Ley del Medio Ambiente?</p>
+                                                         
+                      <p class="pb-6"> La Ley del Medio Ambiente promulgadaen 1998, tiene por objeto desarrollar las disposiciones de la Constitución de la
+                        República relativas a la protección, conservación y recuperación ambiental;
+                        busca, además, asegurar el uso sostenible de los recursos naturales que permitan mejorar la calidad de vida de las
+                        presentes y futuras generaciones; normar
+                        la gestión ambiental, pública y privada y
+                        la protección ambiental como obligación básica del Estado, los municipios y
+                        los habitantes en general; así como asegurar la aplicación de los tratados o
+                        convenios internacionales suscritos por El
+                        Salvador en esta materia.<br>
+                      </p>
+          
+                    </a>       
+                  </div>
+              </article><br>
+    
+              <article class=" flex flex-col my-4">
+                  <!-- Article Image -->
+                  <p class="scroll text-3xl text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Datos curiosos</p> 
+    
+                  <a href="#" class="hover:opacity-75 flex justify-center items-center ">
+                    <iframe class="scroll" width="560" height="315" src="https://www.youtube.com/embed/z-TJ9BaCjwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </a><br><br>
 
-          <h1 class="text-3xl uppercase font-serif cursor-default">Así fue el eclipse lunar total que pudo verse en América Latina</h1>
-          <p class="font-semibold mb-5 text-red-800 hover:text-red-600 cursor-default">BBC NEWS MUNDO</p>
-          <p class="cursor-default">En un eclipse lunar total, toda la Luna cae dentro de la parte más oscura de la sombra de la Tierra, llamada umbra, explica la NASA en su sitio web.</p>
+                  <div class="bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-2xl flex flex-col justify-start items-center p-6 scroll">
+                     
+                      <p href="/dist/images/Ley del medio ambiente.pdf" class="pb-6 scroll">
+                        <b class="text-3xl">Ley del Medio Ambiente.</p></b>
+                        <iframe class="scroll" src="/dist/images/Ley del medio ambiente.pdf" frameborder="0"  height="600" width="700"></iframe>
+                  </div>
+              </article>
 
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <br>
-  <br><br><br><br>
-
-  <!-- cards-->
-  <div class="py-10">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Temas de interes</h2>
-      </div>
-      <br><br><br>
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Tipos de contaminacion</h4>
-                <p class="text-gray-900"> la actividad humana ha generado diversas formas de contaminación que impactan negativamente en el aire, el agua, el suelo y la biodiversidad.</p>
+          </section>
+    
+          <!-- Sidebar Section -->
+          <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
+    
+          <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+                  <p class="text-xl font-semibold pb-5">Ministerio del Medio Ambiente y Recursos Naturales.
+                  </p>
+                  <p class="pb-2">El Ministerio de Medio Ambiente es la entidad principal que vela por el bienestar del medio ambiente en El Salvadar. Conozcalo un poco m</p>
+                  <a href="../Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Ministerio del medio ambinete.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+                      Leer mas 
+                  </a>
               </div>
-              <a href="../src/php/functions/topics/Contaminacion/Contaminacion1.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Reduccion de emisiones</h4>
-                <p class="text-gray-900">Estas emisiones, conocidas como gases de efecto invernadero (GEI) y contaminantes atmosféricos, están asociadas con el cambio climático y la contaminación del aire, lo que tiene efectos negativos en el medio ambiente y la salud humana.</p>
+    
+              
+              <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+                  <p class="text-xl font-semibold pb-5">Ley del Medio Ambiente de El Salvador.</p>
+                  <p class="pb-2">La ley del Medio Ambiente es un conjunto de acciones y procedimientos que aseguran que las actividades, obras o proyectos que tengan un impacto ambiental negativo en el ambiente o en la calidad de vida de la población.</p>
+                  <a href="../Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Ley del medio ambiente.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+                   Leer mas
+                  </a>
               </div>
-              <a href="../src/php/functions/topics/Reducción de emisiones 1.0/Redución de emisiones 1.0.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
+    
+    
+              
+              <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+                  <p class="text-xl font-semibold pb-5">Instituciones no gubernamentales que velan por el medio ambiente en El Salvador.</p>
+                  <p class="pb-2">Aunque cualquier organización privada es, en sentido estricto, una organización no gubernamental, el término ONG, u oenegé, se utiliza para identificar a organizaciones que no son parte de las esferas gubernamentales o empresas, cuyo fin fundamental es el bien social.</p>
+                  <a href="../Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Instituciones no gubernamentales que velan por el medio ambiente en El Salvador.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
+                      Leer mas 
+                  </a>
+              </div>
+    
+              <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
+                  <p class="text-xl font-semibold pb-5">Diversidad</p>
+                  <div class="grid grid-cols-3 gap-3">
+                      <img alt="" class="hover:opacity-75 h-50" src="https://img.freepik.com/foto-gratis/disparo-enfoque-selectivo-colibri-vuelo_181624-56855.jpg?w=826&t=st=1690858682~exp=1690859282~hmac=6015319e298a11a02addf4e9bddd42b6e724839f05f735e037f1c68f84198ff8">
+                      <img alt="" class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/lindo-mascota-collage-aislado_23-2150007407.jpg?w=826&t=st=1690858697~exp=1690859297~hmac=3e274404b00a2286a6c3d02f4fcbeca92beac47cbf13d260703b6bae01eb6df4">
+                      
+                      <img alt="" class="hover:opacity-75" src="https://img.freepik.com/foto-gratis/tucan-multicolor-posado-rama-ia-generativa_188544-8020.jpg?w=826&t=st=1690858831~exp=1690859431~hmac=941c90819497d401bc6f946ed36677f1e710ca316570e594e215677af35ea3dd">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/elefante-parque-nacional-amboseli-kenia-africa_181624-22024.jpg?w=996&t=st=1690859150~exp=1690859750~hmac=9616a553f96a383c848c4694def166d6cd4d966a5c153e142125e0ddfad9bbb8">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/serpiente-piton-arbol-verde-rama-lista-atacar-serpiente-chondropython-viridis-closeup-fondo-negro_488145-1162.jpg?w=1380&t=st=1690859215~exp=1690859815~hmac=375e9b9296f77ec12329659ee6bdfc39503c4f85a29bd18a67a346429d2f1e58">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tortuga-estimulada-africana-hierba_167946-113.jpg?w=1380&t=st=1690859250~exp=1690859850~hmac=aae400813e92b0da7ddb9081877f1e377a1a4a770771fc11d329eee0198c3ad8">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/dos-jirafas-macho-al-atardecer-kruger-np-sudafrica_181624-33921.jpg?w=1380&t=st=1690859296~exp=1690859896~hmac=16a0536b7d0b20fe2ae1f75da11b57439c1df5f5c21addac25cae1a6f71d434d">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/tiro-enfoque-superficial-madre-cebra-su-bebe-pie-carretera_181624-19806.jpg?w=1380&t=st=1690859333~exp=1690859933~hmac=ce0a44366afbfa2f62dd867f4f4ed7b0f370d19c62307cbe0a8c61587405f0b0">
+    
+                      <img alt="" class="hover:opacity-75 h-full" src="https://img.freepik.com/foto-gratis/vibrante-pez-leon-nada-colorido-arrecife-coral-generado-ia_188544-36953.jpg?w=1380&t=st=1690859361~exp=1690859961~hmac=67910d9ff79b1bf394975f9ba8521ec5b413d27f94574075719875d63b0b3c78">
+                  </div>                  
+              </div>   
+          </aside>    
+      </div><br><br>
+          <!--SCRIPT PARA EL MODO NOCTURNO-->
+          <script src="/src/js/main.js"></script>
 
-      </div>
-    </div>
-  </div>
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
-      </div>
-
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Conservación de biodiversidad
-                </h4>
-                <p class="text-gray-900"> Protección y preservación de la variedad de formas de vida en la Tierra, incluyendo todas las especies de plantas, animales, hongos y microorganismos, así como los ecosistemas naturales en los que habitan.</p>
-              </div>
-              <a href="../src/php/functions/topics/Conservación de la biodiversidad 3.0/Especies en peligro de extinción y conservación ex situ 3.3.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Uso sostenible de recursos naturales
-                </h4>
-                <p class="text-gray-900">El uso sostenible de recursos naturales es una estrategia que busca aprovechar los recursos del planeta de manera responsable y equitativa, garantizando su disponibilidad a largo plazo sin comprometer la capacidad de las generaciones futuras para satisfacer sus necesidades.</p>
-              </div>
-              <a href="../src/php/functions/topics/Usos sostenible de los recursos naturales 4.0/Agricultura sostenible 4.2.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- cards-->
-  <div class="py-10 bg-gradient-to-br to-cyan-100">
-    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl"></h2>
-      </div>
-
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800"> Cambio climático</h4>
-                <p class="text-gray-900">Caracterizado por aumentos significativos de la temperatura promedio global. Esta transformación es atribuida a actividades humanas que han liberado grandes cantidades de gases de efecto invernadero (GEI) a la atmósfera, principalmente debido a la quema de combustibles fósiles, la deforestación y la agricultura intensiva.</p>
-              </div>
-              <a href="/src/php/functions/topics/Cambio climático/Cambio climático.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
-          <div class="sm:w-7/12 pl-0 p-5">
-            <div class="space-y-2">
-              <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.
-                </h4>
-                <p class="text-gray-900">En El Salvador, existen diversas instituciones y leyes que respaldan el cuidado del medio ambiente y la conservación de los recursos naturales.</p>
-              </div>
-              <a href="../src/php/functions/topics/Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador/Instituciones no gubernamentales que velan por el medio ambiente en El Salvador.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <!--footer-->
-  <footer class="degradado-footer pt-10 pb-10">
+    <!--footer-->
+    <footer class="degradado-footer pt-10 pb-10">
     <div class="w-screen flex justify-center">
-      <img class="h-20 w-20" src="../dist/images/leaf.png" alt="PlanetWise Logo">
+      <img class="h-20 w-20" src="/dist/images/leaf.png" alt="PlanetWise Logo">
     </div>
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
@@ -452,8 +426,7 @@ session_start();
       <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
     </div>
   </footer>
-  <!--SCRIPT PARA EL MODO NOCTURNO-->
-  <script src="/src/js/main.js"></script>
+     <!--Script de la página de carga-->
+     <script src="../../../../../src/js/load.js"></script>       
 </body>
-
 </html>
