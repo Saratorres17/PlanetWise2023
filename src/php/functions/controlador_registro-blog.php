@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $conexion = $db->getConnection();
 
     try {
+        
         $titulo = validarCampo($_POST["titulo"]);
         $descripcion = validarCampo($_POST["descripcion"]);
         $informacion = validarCampo($_POST["informacion"]);

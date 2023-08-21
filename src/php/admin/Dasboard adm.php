@@ -1,6 +1,6 @@
 <?php
 include("../functions/conexion.php");
-include("../functions/adminClasses.php"); 
+include("../functions/adminClasses.php");
 
 session_start();
 
@@ -44,7 +44,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700">Cerrar sesion</a></li>
                     <!-- Sidebar -->
                 </ul>
-                
+
             </div>
 
             <!-- Main Content -->
@@ -74,8 +74,10 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td class="py-2 px-4"><?php echo $usuario['gender']; ?></td>
                                 <td class="py-2 px-4"><img src="<?php echo IMAGE_BASE_PATH . $usuario['foto_path']; ?>" alt="User" class="w-8 h-8 rounded-full"></td><br>
                                 <td class="py-2 px-4">
-                                    <a class="text-red-600 hover:text-red-800" href="../functions/deleteUser.php?id=<?php echo $usuario['id']?>">Eliminar</a>
-                                    <a class="text-blue-600 hover:text-blue-800" href="/src/php/admin/reporte_para_usu.php?id=<?php echo $usuario['id']; ?>">Notificacion</a>
+                                <td class="py-2 px-4">
+                                    <a class="text-red-600 hover:text-red-800" href="../functions/deleteUser.php?id=<?php echo $usuario['id'] ?>">Eliminar</a>
+                                    <a class="text-blue-600 hover:text-blue-800" href="/src/php/admin/reporte%20para%20usu.php?id=<?php echo $usuario['id']; ?>">Notificacion</a>
+                                </td>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -86,4 +88,5 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
 </body>
+
 </html>

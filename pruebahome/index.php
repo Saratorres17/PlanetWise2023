@@ -191,16 +191,6 @@ session_start();
 
 
   <style>
-    nav {
-      position: relative;
-      z-index: 2;
-      /* Asegura que el menú aparezca encima del slider */
-    }
-
-    nav:hover+.hero {
-      visibility: hidden;
-      /* Oculta el slider cuando el menú se sombree */
-    }
 
     .hero {
       background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-hoja-verde_501050-120.jpg?w=740&t=st=1689357103~exp=1689357703~hmac=fafecf6086e736132360c11f5779e58cec5d9ff373e98b6e2b72a84ab957d95b');
@@ -301,7 +291,7 @@ session_start();
   <div class="scroll container mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="max-h-96 md:h-screen">
-        <img class="w-30 h-50 object-cover object-top rounded-3xl" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
+        <img class="w-30 h-50 object-cover object-top rounded-3xl " src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
       </div>
       <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl">
         <div class="mt-4 h-20">
