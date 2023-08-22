@@ -256,7 +256,7 @@ $reporte = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <span class="absolute top-2 right-2 cursor-pointer" id="closeModal">&times;</span>
                     <p class="text-lg font-semibold">¡Notificación!</p>
                     <?php foreach ($reporte as $notificacions) : ?>
-                    <p><?php echo $notificacions['id'] . " " . $notificacions['reporte']?></p>
+                    <p class="w-24 mb-3 border-b-2"><?php echo $notificacions['id'] . " " . $notificacions['reporte']?></p>
                     <?php  endforeach ;?>
                     </div>
                    </div>
