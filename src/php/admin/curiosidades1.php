@@ -61,16 +61,18 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </p>
                 <div class="flex">
                   <br>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="60px" viewBox="0 -0.5 21 21" version="1.1" class="__web-inspector-hide-shortcut__">
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Dribbble-Light-Preview" transform="translate(-59.000000, -400.000000)" fill="#000000">
-                        <g id="icons" transform="translate(56.000000, 160.000000)">
-                          <path d="M3,260 L24,260 L24,258.010742 L3,258.010742 L3,260 Z M13.3341,254.032226 L9.3,254.032226 L9.3,249.950269 L19.63095,240 L24,244.115775 L13.3341,254.032226 Z" id="edit_fill-[#1480]">
-                          </path>
+                  <a href="../functions/editCuriosidad.php?id=<?php echo $datos['id'] ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="60px" viewBox="0 -0.5 21 21" version="1.1" class="__web-inspector-hide-shortcut__">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-59.000000, -400.000000)" fill="#000000">
+                          <g id="icons" transform="translate(56.000000, 160.000000)">
+                            <path d="M3,260 L24,260 L24,258.010742 L3,258.010742 L3,260 Z M13.3341,254.032226 L9.3,254.032226 L9.3,249.950269 L19.63095,240 L24,244.115775 L13.3341,254.032226 Z" id="edit_fill-[#1480]">
+                            </path>
+                          </g>
                         </g>
                       </g>
-                    </g>
-                  </svg>
+                    </svg>
+                  </a>
 
                   <a href="../functions/deleteItem.php?id=<?php echo $datos['id'] ?>">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="60px" viewBox="0 0 76 76" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve">

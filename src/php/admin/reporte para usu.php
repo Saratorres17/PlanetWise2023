@@ -2,6 +2,7 @@
 include("../functions/conexion.php");
 session_start();
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id_usuario = $_POST['id_usuario'];
     $reporte = $_POST['reporte'];
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
 
     if ($stmt->execute()) {
-        header("Location: /src/php/admin/Dasboard adm.php"); // Redirige de vuelta a la página de usuarios
+        header("Location: /src/php/admin/Dasboard adm.php");
         exit();
     } else {
         echo "Error al enviar el reporte.";

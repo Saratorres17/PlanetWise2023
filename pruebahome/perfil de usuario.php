@@ -7,17 +7,17 @@ session_start();
 // crear variable con el numero del id del usuario
 
 
-// // Crear una instancia de DatabaseConnection
-// $database = new DatabaseConnection();
-// $pdo = $database->getConnection();
+// Crear una instancia de DatabaseConnection
+$database = new DatabaseConnection();
+$pdo = $database->getConnection();
 
 
-// $usuario_id = $_SESSION["user_id"];
-// // Consulta para obtener los datos de los usuarios
-// $query = "SELECT * FROM registroinformacion1 where usuarioId = $usuario_id";
-// $stmt = $pdo->prepare($query);
-// $stmt->execute();
-// $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$usuario_id = $_SESSION["user_id"];
+// Consulta para obtener los datos de los usuarios
+$query = "SELECT * FROM notificaciones where id_usuario = $usuario_id";
+$stmt = $pdo->prepare($query);
+$stmt->execute();
+$reporte = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -255,7 +255,9 @@ session_start();
                    <div class="bg-white p-8 rounded shadow-lg">
                     <span class="absolute top-2 right-2 cursor-pointer" id="closeModal">&times;</span>
                     <p class="text-lg font-semibold">¡Notificación!</p>
-                    <p>Has hecho clic en el SVG.</p>
+                    <?php foreach ($reporte as $notificacions) : ?>
+                    <p><?php echo $notificacions['id'] . " " . $notificacions['reporte']?></p>
+                    <?php  endforeach ;?>
                     </div>
                    </div>
                    <script> document.getElementById("modal-trigger").addEventListener("click", function() {
