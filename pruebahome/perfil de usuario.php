@@ -241,7 +241,7 @@ $miPublicaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
               <div class="px-6"><br>
                 <div class="flex justify-center bg-white bg-opacity-10 rounded-2xl">
                   <div class="lg:order-2 flex justify-center items-center">
-                    <img src="<?php echo IMAGE_BASE_PATH . $_SESSION['photo_path']; ?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
+                    <img src="<?php echo "http://localhost/src/php/functions/" . $_SESSION['photo_path']; ?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div class="py-6 px-3 mt-32 sm:mt-0 ml-32" style="display: flex; align-items: center">
@@ -326,7 +326,7 @@ $miPublicaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
               <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
                 <?php foreach ($miPublicaciones as $Publicaciones) : ?>
                   <div class="lg:flex scroll">
-                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $Publicaciones["foto_path"] ?>" alt="imgPublicacion">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo "http://localhost/src/php/functions/". $Publicaciones["foto_path"] ?>" alt="imgPublicacion">
                     <div class="flex flex-col justify-between py-6 lg:mx-6">
                       <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $Publicaciones["id"] ?>"><p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
                         <?php echo $Publicaciones["titulo"] ?>

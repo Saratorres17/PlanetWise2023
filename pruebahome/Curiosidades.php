@@ -206,7 +206,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($datoscuriosos1 as $datoss) : ?>
       <div class="md:shadow-xl rounded-lg mb-6 ">
         <div class="md:flex-shrink-0">
-          <img src="<?php echo $datoss['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
+          <img src="<?php echo "http://localhost/src/php/functions/" . $datoss['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
         </div>
         <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
           <p class="font-normal">
@@ -214,6 +214,14 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
             <?php echo $datoss['informacion'] ?>
           </p>
         </div>
+        
+  <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
+          <p class="font-normal">
+            <b class="font-serif text-xs"><?php echo $datoss['fuente'] ?></b> <br>
+
+          </p>
+        </div>
+
       </div>
     <?php endforeach; ?>
   </div>

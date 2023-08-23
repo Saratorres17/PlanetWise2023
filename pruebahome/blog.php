@@ -239,7 +239,7 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <?php foreach ($publicaciones as $publicacion) : ?>
       <div class="">
-        <img src="https://img.freepik.com/foto-gratis/pollito-alimentacion-nino-tiro-completo_23-2149147879.jpg?w=360&t=st=1690494162~exp=1690494762~hmac=2a5ec1630405d13d58210f5631b518a9adba70cef59487af08e9ad54bc5e7fa3" alt="">
+        <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']; ?>" alt="">
         <div>
           <p><?php echo $publicacion['usuarioId'] ?></p>
           <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2"><?php echo $publicacion['titulo'] ?></h1>

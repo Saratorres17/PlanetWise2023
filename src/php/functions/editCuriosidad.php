@@ -78,7 +78,7 @@ function guardarImagen()
             $uploadOk = 0;
         }
 
-        if ($_FILES["foto"]["size"] > 500000) {
+        if ($_FILES["foto"]["size"] > 1000000) {
             $uploadOk = 0;
         }
 

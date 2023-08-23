@@ -72,7 +72,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td class="py-2 px-4"><?php echo $usuario['email']; ?></td>
                                 <td class="py-2 px-4"><?php echo $usuario['interests']; ?></td>
                                 <td class="py-2 px-4"><?php echo $usuario['gender']; ?></td>
-                                <td class="py-2 px-4"><img src="<?php echo IMAGE_BASE_PATH . $usuario['foto_path']; ?>" alt="User" class="w-8 h-8 rounded-full"></td><br>
+                                <td class="py-2 px-4"><img src="<?php echo "http://localhost/src/php/functions/" . $usuario['foto_path']; ?>" alt="User" class="w-8 h-8 rounded-full"></td><br>
                                 <td class="py-2 px-4">
                                 <td class="py-2 px-4">
                                     <a class="text-red-600 hover:text-red-800" href="../functions/deleteUser.php?id=<?php echo $usuario['id'] ?>">Eliminar</a>
