@@ -19,10 +19,17 @@ $stmt = $pdo->prepare($query);
 $stmt->execute();
 $reporte = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Consulta para obtener las publicaciones del usuario
+$query2 = "SELECT * FROM registroinformacion1 where usuarioId = $usuario_id";
+$stmt2 = $pdo->prepare($query2);
+$stmt2->execute();
+$miPublicaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/dist/images/leaf.png">
@@ -237,43 +244,45 @@ $reporte = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <img src="<?php echo IMAGE_BASE_PATH . $_SESSION['photo_path']; ?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36">
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-                  <div class="py-6 px-3 mt-32 sm:mt-0 ml-32" style="display: flex; align-items: center">
+                    <div class="py-6 px-3 mt-32 sm:mt-0 ml-32" style="display: flex; align-items: center">
                       <a href="../src/php/functions/editUser.php?id=<?= $_SESSION["user_id"] ?>"><button class="bg-green-500 active:bg-green-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
                           Editar informacion
                         </button></a>
 
-                        <svg id="modal-trigger" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="-5 0 48 48" class="cursor-pointer">">
+                      <svg id="modal-trigger" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="-5 0 48 48" class="cursor-pointer">">
                         <g id="Group_11" data-name="Group 11" transform="translate(-256 -89)">
-                        <path id="Path_12" data-name="Path 12" d="M275,113h9v-2a8.024,8.024,0,0,0-8-8h-1Z" fill="#7d50f9"/>
-                        <path id="Path_13" data-name="Path 13" d="M294,129a4,4,0,0,1-4-4V110.5c0-6.315-4.85-11.617-11.369-13.083a5,5,0,1,0-7.251.012C264.855,98.947,260,104.447,260,111v14a4,4,0,0,1-4,4v2h12.08a6.991,6.991,0,0,0,13.84,0H294ZM275,91a2.993,2.993,0,0,1,1,5.816V94h-2v2.816A2.993,2.993,0,0,1,275,91Zm0,44a5.009,5.009,0,0,1-4.9-4h2.083a2.982,2.982,0,0,0,5.632,0H279.9A5.009,5.009,0,0,1,275,135Zm-14.532-6A5.976,5.976,0,0,0,262,125V111c0-6.617,5.832-12,13-12s13,5.159,13,11.5V125a5.976,5.976,0,0,0,1.532,4Z" fill="#303033"/>
-                       </g>
+                          <path id="Path_12" data-name="Path 12" d="M275,113h9v-2a8.024,8.024,0,0,0-8-8h-1Z" fill="#7d50f9" />
+                          <path id="Path_13" data-name="Path 13" d="M294,129a4,4,0,0,1-4-4V110.5c0-6.315-4.85-11.617-11.369-13.083a5,5,0,1,0-7.251.012C264.855,98.947,260,104.447,260,111v14a4,4,0,0,1-4,4v2h12.08a6.991,6.991,0,0,0,13.84,0H294ZM275,91a2.993,2.993,0,0,1,1,5.816V94h-2v2.816A2.993,2.993,0,0,1,275,91Zm0,44a5.009,5.009,0,0,1-4.9-4h2.083a2.982,2.982,0,0,0,5.632,0H279.9A5.009,5.009,0,0,1,275,135Zm-14.532-6A5.976,5.976,0,0,0,262,125V111c0-6.617,5.832-12,13-12s13,5.159,13,11.5V125a5.976,5.976,0,0,0,1.532,4Z" fill="#303033" />
+                        </g>
                       </svg>
-                      
+
                     </div>
                   </div>
                   <div id="myModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
-                   <div class="bg-white p-8 rounded shadow-lg">
-                    <span class="absolute top-2 right-2 cursor-pointer" id="closeModal">&times;</span>
-                    <p class="text-lg font-semibold">¡Notificación!</p>
-                    <?php foreach ($reporte as $notificacions) : ?>
-                    <p class="w-24 mb-3 border-b-2"><?php echo $notificacions['id'] . " " . $notificacions['reporte']?></p>
-                    <?php  endforeach ;?>
+                    <div class="bg-white p-8 rounded shadow-lg">
+                      <span class="absolute top-2 right-2 cursor-pointer" id="closeModal">&times;</span>
+                      <p class="text-lg font-semibold">¡Notificación!</p>
+                      <?php foreach ($reporte as $notificacions) : ?>
+                        <p class="w-24 mb-3 border-b-2"><?php echo $notificacions['id'] . " " . $notificacions['reporte'] ?></p>
+                      <?php endforeach; ?>
                     </div>
-                   </div>
-                   <script> document.getElementById("modal-trigger").addEventListener("click", function() {
-  document.getElementById("myModal").classList.remove("hidden");
-});
+                  </div>
+                  <script>
+                    document.getElementById("modal-trigger").addEventListener("click", function() {
+                      document.getElementById("myModal").classList.remove("hidden");
+                    });
 
-document.getElementById("closeModal").addEventListener("click", function() {
-  document.getElementById("myModal").classList.add("hidden");
-});
+                    document.getElementById("closeModal").addEventListener("click", function() {
+                      document.getElementById("myModal").classList.add("hidden");
+                    });
 
-window.addEventListener("click", function(event) {
-  if (event.target == document.getElementById("myModal")) {
-    document.getElementById("myModal").classList.add("hidden");
-  }
-}); </script>
-                  
+                    window.addEventListener("click", function(event) {
+                      if (event.target == document.getElementById("myModal")) {
+                        document.getElementById("myModal").classList.add("hidden");
+                      }
+                    });
+                  </script>
+
 
                   <div class="w-full lg:w-4/12 px-4 lg:order-1">
                     <div class="flex justify-center py-4 lg:pt-4 pt-8">
@@ -315,17 +324,17 @@ window.addEventListener("click", function(event) {
               <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"></h1>
 
               <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-
-
-                <div class="lg:flex scroll">
-                  <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $miPublicaciones["foto_path"] ?>" alt="imgPublicacion">
-                  <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                      holaaaaaaaaaaaaaaa
-                    </p>
-                    <span class="text-sm dark:text-gray-300">On: hoy</span>
+                <?php foreach ($miPublicaciones as $Publicaciones) : ?>
+                  <div class="lg:flex scroll">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo $Publicaciones["foto_path"] ?>" alt="imgPublicacion">
+                    <div class="flex flex-col justify-between py-6 lg:mx-6">
+                      <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $Publicaciones["id"] ?>"><p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
+                        <?php echo $Publicaciones["titulo"] ?>
+                      </p></a>
+                      <span class="text-sm dark:text-gray-300"><?php echo $Publicaciones["fecha_registro"] ?></span>
+                    </div>
                   </div>
-                </div>
+                <?php endforeach; ?>
                 <p></p>
               </div>
             </div>

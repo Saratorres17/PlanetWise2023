@@ -238,16 +238,16 @@ $publicaciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="scroll mt-6 md:flex space-x-6">
 
     <?php foreach ($publicaciones as $publicacion) : ?>
-      <div>
+      <div class="">
         <img src="https://img.freepik.com/foto-gratis/pollito-alimentacion-nino-tiro-completo_23-2149147879.jpg?w=360&t=st=1690494162~exp=1690494762~hmac=2a5ec1630405d13d58210f5631b518a9adba70cef59487af08e9ad54bc5e7fa3" alt="">
         <div>
           <p><?php echo $publicacion['usuarioId'] ?></p>
           <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2"><?php echo $publicacion['titulo'] ?></h1>
-          <p class="text-gray-500 mb-2"><?php echo $publicacion['descripcion'] ?></p>
-          <p class="text-gray-500 mb-2"><?php echo $publicacion['informacion'] ?></p>
+          <p class="text-gray-500 mb-2 text-clip overflow-hidden"><?php echo $publicacion['descripcion'] ?></p>
+          <p class="text-gray-500 mb-2 text-clip overflow-hidden"><?php echo $publicacion['informacion'] ?></p>
           <div class="flex justify-between mt-4">
             <span class="font-thin text-gray-400 text-sm"><?php echo $publicacion['fecha_registro'] ?></span>
-            <button class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">Leer mas</button>
+            <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion["id"] ?>"><button class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">Leer mas</button></a>
           </div>
         </div>
       </div>
