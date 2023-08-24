@@ -1,36 +1,15 @@
 <?php
-// Inclusión de 'conexion.php'
-include('../src\php\functions\conexion.php');
-
-// Inclusión de 'userClasses.php' en una ruta con espacios
-include('../src\php\functions\userClasses.php');
-
-session_start();
-
-$db = new DatabaseConnection(); // Crea una instancia de la conexión
-$conexion = $db->getConnection(); // Obtiene la conexión
-
-if (isset($_GET['id'])) {
-  $publicacion_id = $_GET['id'];
-} else {
-  echo "<script>alert('Dato nulo!');  window.location.href = '../../php/admin/curiosidades1.php' </script>";
-}
-
-$query = "SELECT * FROM registroinformacion1 WHERE id = :publicacion_id";
-$stmt = $conexion->prepare($query);
-$stmt->bindParam(":publicacion_id", $publicacion_id, PDO::PARAM_INT);
-$stmt->execute();
-$publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
-
+include("conexion.php"); // Incluye la clase de conexión
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publicacion - PlanetWise</title>
+  <title>navnuevo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" href="/dist/images/leaf.png">
   <link rel="stylesheet" href="/src/scroll.css">
@@ -40,12 +19,11 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
-
+  <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
 </head>
-
-<body class="relative">
-
+</head>
+<body>
+    
   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -73,7 +51,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
       </div>
@@ -96,7 +74,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class=" relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -174,11 +152,6 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
             Datos curiosos
           </a></li>
 
-        <li><a href="../../../../../pruebahome/blog.php" class="flex text-gray-600 hover:text-white
-                       cursor-pointer transition-colors duration-300">
-            Blog
-          </a></li>
-
         <li><a href="../../../../../pruebahome/sobre nosotros.php" class="flex text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
             Sobre nosotros
           </a></li>
@@ -209,54 +182,9 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
       </button>
 
     <?php } ?>
-  </nav><br><br><br><br><br>
+  </nav>
 
 
-  <div class="w-full md:w-2/5 mx-auto">
-    <div class="w-full text-gray-800 text-4xl px-5 font-bold leading-none">
-      <?php echo $publicacion['titulo']  ?>
-    </div>
-
-    <div class="w-full text-gray-500 px-5 pb-5 pt-2">
-      <?php echo $publicacion['descripcion']  ?>
-    </div>
-
-    <div class="mx-5">
-      <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']  ?>"> 
-      <!-- hay que arreglar la imagen xd -->
-    </div>
-
-    <div class="px-5 w-full mx-auto">
-      <p class="my-5"><?php echo $publicacion['informacion']  ?> . <br><br></p>
-    </div>
-  </div>
-
-
-  <!--footer-->
-  <footer class="degradado-footer pt-10 pb-10">
-    <div class="w-screen flex justify-center">
-      <img class="h-20 w-20" src="../dist/images/leaf.png" alt="PlanetWise Logo">
-    </div>
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row justify-center items-center">
-        <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
-          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
-          <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
-        </div>
-      </div>
-    </div>
-    <div class="container mx-auto mt-4">
-      <div class="flex justify-center items-center">
-        <a href="https://www.facebook.com/profile.php?id=100093617268110" target="_blank">
-          <img class="rounded-full w-12 h-12" src="/dist/images/facebook-gris.png" alt="Facebook Page">
-        </a>
-      </div>
-      <h4 class="pt-4 text-gray-400 text-center">Crea-J 2023</h4>
-    </div>
-  </footer>
-  <!--SCRIPT PARA EL MODO NOCTURNO-->
-  <script src="/src/js/main.js"></script>
 </body>
 
 </html>
