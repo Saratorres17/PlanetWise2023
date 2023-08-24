@@ -5,10 +5,9 @@ class DatabaseConnection {
     private $host = "localhost";
     private $db_name = "planetwiseof";
     private $username = "root";
-    private $password = "";
+    private $password = "root";
     private $conn;
     
-
     public function __construct() {
         try {
             $this->conn = new PDO("mysql:host=$this->host;dbname=$this->db_name", $this->username, $this->password);
