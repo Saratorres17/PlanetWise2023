@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-08-2023 a las 00:40:06
+-- Tiempo de generación: 24-08-2023 a las 03:14:23
 -- Versión del servidor: 8.0.34
 -- Versión de PHP: 8.1.10
 
@@ -61,7 +61,7 @@ CREATE TABLE `datoscuriosos` (
 --
 
 INSERT INTO `datoscuriosos` (`id`, `titulo`, `fuente`, `foto_path`, `informacion`) VALUES
-(15, 'BLOG PROF', 'pepito', '../../php/functions/CDB.png', 'nose');
+(15, 'BLOG PROF', 'pepito', '../../php/functions/Captura de pantalla 2023-08-22 202534.png', 'nose');
 
 -- --------------------------------------------------------
 
@@ -90,6 +90,13 @@ CREATE TABLE `notificaciones` (
   `id_usuario` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Volcado de datos para la tabla `notificaciones`
+--
+
+INSERT INTO `notificaciones` (`id`, `reporte`, `id_usuario`) VALUES
+(8, 'se dijo negro el solito', 74);
+
 -- --------------------------------------------------------
 
 --
@@ -105,6 +112,14 @@ CREATE TABLE `registroinformacion1` (
   `usuarioId` int NOT NULL,
   `fecha_registro` timestamp NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `registroinformacion1`
+--
+
+INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`, `usuarioId`, `fecha_registro`) VALUES
+(12, 'colegio don bosco', 'Pastel con forma de corazon, sabor a fresa con relleno de crema pastelera', 'ola, me gusta el qso', '../../php/functions/Captura de pantalla 2023-08-22 204324.png', 74, '2023-08-24 01:37:54'),
+(13, 'chaleco qlor', 'peperoni', 'ola, me gusta el peperoni', '../../php/functions/Captura de pantalla 2023-08-22 202233.png', 74, '2023-08-24 01:39:11');
 
 -- --------------------------------------------------------
 
@@ -198,13 +213,13 @@ ALTER TABLE `noticias destacadas`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`
