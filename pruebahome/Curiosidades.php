@@ -202,7 +202,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
   <br><br><br>
 
-  <div class=" mx-auto px-4 py-4 max-w-xl my-auto">
+  <div class="mx-auto px-4 py-4 max-w-xl my-auto">
     <?php foreach ($datoscuriosos1 as $datoss) : ?>
       <div class="md:shadow-xl rounded-lg mb-6 ">
         <div class="md:flex-shrink-0">
