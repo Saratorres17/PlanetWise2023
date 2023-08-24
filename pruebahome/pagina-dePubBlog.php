@@ -222,7 +222,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <div class="mx-5">
-      <img src="<?php echo $publicacion['foto_path']  ?>"> 
+      <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']  ?>"> 
       <!-- hay que arreglar la imagen xd -->
     </div>
 
