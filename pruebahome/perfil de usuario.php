@@ -288,7 +288,7 @@ $miPublicaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
                     <div class="flex justify-center py-4 lg:pt-4 pt-8">
 
                       <div class="lg:mr-4 p-3 text-center">
-                        <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">10</span><span class="text-sm text-blueGray-400">Publicaciones</span>
+                        <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"><?php echo count($miPublicaciones)?></span><span class="text-sm text-blueGray-400">Publicaciones</span>
                       </div>
                     </div>
                   </div>
@@ -326,11 +326,13 @@ $miPublicaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
               <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
                 <?php foreach ($miPublicaciones as $Publicaciones) : ?>
                   <div class="lg:flex scroll">
-                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo "http://localhost/src/php/functions/". $Publicaciones["foto_path"] ?>" alt="imgPublicacion">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="<?php echo "http://localhost/src/php/functions/" . $Publicaciones["foto_path"] ?>" alt="imgPublicacion">
                     <div class="flex flex-col justify-between py-6 lg:mx-6">
-                      <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $Publicaciones["id"] ?>"><p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
-                        <?php echo $Publicaciones["titulo"] ?>
-                      </p></a>
+                      <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $Publicaciones["id"] ?>">
+                        <p href="#" class="text-xl font-semibold hover:underline dark:text-white ">
+                          <?php echo $Publicaciones["titulo"] ?>
+                        </p>
+                      </a>
                       <span class="text-sm dark:text-gray-300"><?php echo $Publicaciones["fecha_registro"] ?></span>
                     </div>
                   </div>

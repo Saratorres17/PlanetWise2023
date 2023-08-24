@@ -81,7 +81,7 @@ function guardarImagen()
         }
 
         // Comprobar el tamaño máximo del archivo (500 KB)
-        if ($_FILES["foto"]["size"] > 1000000) {
+        if ($_FILES["foto"]["size"] > 10000000) {
             $uploadOk = 0;
         }
 
