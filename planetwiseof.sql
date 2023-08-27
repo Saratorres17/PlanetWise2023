@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-08-2023 a las 03:14:23
+-- Tiempo de generación: 27-08-2023 a las 06:55:37
 -- Versión del servidor: 8.0.34
 -- Versión de PHP: 8.1.10
 
@@ -87,15 +87,17 @@ CREATE TABLE `noticias destacadas` (
 CREATE TABLE `notificaciones` (
   `id` int NOT NULL,
   `reporte` varchar(500) NOT NULL,
-  `id_usuario` int NOT NULL
+  `id_usuario` int NOT NULL,
+  `accept` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `notificaciones`
 --
 
-INSERT INTO `notificaciones` (`id`, `reporte`, `id_usuario`) VALUES
-(8, 'se dijo negro el solito', 74);
+INSERT INTO `notificaciones` (`id`, `reporte`, `id_usuario`, `accept`) VALUES
+(9, 'se dijo negro el solito', 74, 0),
+(10, 'se dijo negro el solito', 74, 0);
 
 -- --------------------------------------------------------
 
@@ -119,7 +121,8 @@ CREATE TABLE `registroinformacion1` (
 
 INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`, `usuarioId`, `fecha_registro`) VALUES
 (12, 'colegio don bosco', 'Pastel con forma de corazon, sabor a fresa con relleno de crema pastelera', 'ola, me gusta el qso', '../../php/functions/Captura de pantalla 2023-08-22 204324.png', 74, '2023-08-24 01:37:54'),
-(13, 'chaleco qlor', 'peperoni', 'ola, me gusta el peperoni', '../../php/functions/Captura de pantalla 2023-08-22 202233.png', 74, '2023-08-24 01:39:11');
+(13, 'chaleco qlor', 'peperoni', 'ola, me gusta el peperoni', '../../php/functions/Captura de pantalla 2023-08-22 202233.png', 74, '2023-08-24 01:39:11'),
+(15, 'aaaa', 'ssss', 'dddd', '../../php/functions/Captura de pantalla 2023-08-25 182807.png', 74, '2023-08-27 06:24:29');
 
 -- --------------------------------------------------------
 
@@ -143,7 +146,7 @@ CREATE TABLE `registrousuario` (
 --
 
 INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
-(74, 'adrian', 'lopez', 'cocolito20006@gmail.com', 'me gusta la lucy', 'Masculino', '../../php/functions/CDB.png', 'hola123');
+(74, 'adrian', 'lopez', 'cocolito20006@gmail.com', 'me gusta la lucyaaa', 'Femenino', '', 'hola123');
 
 --
 -- Índices para tablas volcadas
@@ -213,13 +216,13 @@ ALTER TABLE `noticias destacadas`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`

@@ -3,6 +3,7 @@ include("controlador_register.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +12,42 @@ include("controlador_register.php");
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/lib/index.min.css">
 	<link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
 	<link rel="stylesheet" href="../../../src/pantallacarga.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<title>Registro de usuario</title>
 </head>
+
 <body class="bg-no-repeat oculto bg-cover bg-fixed" style="background-image: url(../../../../../dist/images/ondas.jpg);">
-  
-     <!--Pantalla de carga-->
-     <div class=" flex justify-center items-center h-screen z-10" id="onload">
-     <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-     </div>
-</div>
 
-<!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: "es",
-          includedLanguages: "fr,en,es,pt,zh-CN,ru",
-        },
-        "google_translate_element"
-      );
-    }
-  </script>
+	<!--Pantalla de carga-->
+	<div class=" flex justify-center items-center h-screen z-10" id="onload">
+		<div class="lds-ring">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
 
-        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-        <div class="md:relative md:left-5-4 z-20 top-12 " id="google_translate_element"></div>
-        <!--FIN DEL TRADUCTOR-->
+	<!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+					pageLanguage: "es",
+					includedLanguages: "fr,en,es,pt,zh-CN,ru",
+				},
+				"google_translate_element"
+			);
+		}
+	</script>
+
+	<!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+	<div class="md:relative md:left-5-4 z-20 top-12 " id="google_translate_element"></div>
+	<!--FIN DEL TRADUCTOR-->
 
 	<div class="container mx-auto">
 		<div class="flex justify-center px-6 my-12">
-			<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-    style="background-image: url('../../../../../dist/images/jirafa.jpg')"
-></div>
+			<div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg" style="background-image: url('../../../../../dist/images/jirafa.jpg')"></div>
 			<div class="w-full xl:w-3/4 lg:w-11/12 flex">
 				<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 					<h3 class="pt-4 text-2xl text-center">Crea una cuenta!</h3>
@@ -58,45 +57,52 @@ include("controlador_register.php");
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="Escribe tu primer nombre">
 									Primer nombre
 								</label>
-								<input name="firstName" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="firstName" type="text" placeholder="Escribe tu primer nombre" />
+								<input name="firstName" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="firstName" type="text" value="<?php echo $previousFirstName; ?>" placeholder="Escribe tu primer nombre" />
 							</div>
 							<div class="md:ml-2">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="lastName">
 									Apellido
 								</label>
-								<input name="lastName" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Escribe tu apellido" />
+								<input name="lastName" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Escribe tu apellido" value="<?php echo $previousLastName; ?>" />
 							</div>
 						</div>
 						<div class="mb-4">
 							<label class="block mb-2 text-sm font-bold text-gray-700" for="email">
 								Correo electronico
 							</label>
-							<input name="email" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Escribe tu correo" />
+							<input name="email" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Escribe tu correo" value="<?php echo $previousEmail; ?>" />
 						</div>
 						<div class="mb-4">
 							<label class="block mb-2 text-sm font-bold text-gray-700" for="text">
 								Ingresa datos de interes sobre ti
 							</label>
-							<input name="interests" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="text" type="text" placeholder="Escribe tus datos" />
+							<input name="interests" class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="text" type="text" placeholder="Escribe tus datos" value="<?php echo $previousInterests; ?>" />
 						</div>
 						<div class="mb-4">
 							<label class="block mb-2 text-sm font-bold text-gray-700" for="genero">Selecciona tu género</label>
-							<select name="gender" id="opciones" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
-								<option value="Femenino">Femenino</option>
-								<option value="Masculino">Masculino</option>
+							<select name="gender" id="opciones" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline ">
+								<option value="Femenino" <?php if ($previousGender === "Femenino") echo "selected"; ?>>Femenino</option>
+								<option value="Masculino" <?php if ($previousGender === "Masculino") echo "selected"; ?>>Masculino</option>
 							</select>
 						</div><br>
 
 						<!-- funcion de la foto -->
 						<div class="p-4">
-							<div class="border-4 border-dashed border-gray-300 rounded-lg p-8">
-								<label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:</label>
-								<input type="file" id="foto" name="foto" class="hidden" accept="image/*">
-								<div id="preview" class="mt-4">
-									<p class="text-gray-500">Vista previa de la foto</p>
-									<div id="imagePreview"></div>
-								</div>
+							<div class="border-4 border-dashed border-gray-300 rounded-lg p-8 cursor-pointer">
+								<label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:
+									<input type="file" id="foto" name="foto" class="hidden" accept="image/*">
+									<div id="preview" class="mt-4">
+										<p class="text-gray-500">Vista previa de la foto</p>
+										<div id="imagePreview">
+											<?php
+											if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] !== 4) {
+												echo '<input type="hidden" name="foto_previous" value="' . $previousFoto . '">';
+											}
+											?>
+										</div>
+									</div>
 							</div>
+							</label>
 						</div>
 						<!-- funcion de la foto -->
 						<br><br>
@@ -105,26 +111,26 @@ include("controlador_register.php");
 								<label class="block mb-2  text-sm font-bold text-gray-700" for="password">
 									Contraseña
 								</label>
-								<input name="password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none w-32  focus:shadow-outline" id="password" type="password" placeholder="******************" />
+								<input name="password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none w-32  focus:shadow-outline" id="password" type="password" placeholder="******************" value="<?php echo $previousPaswword; ?>" />
 							</div>
 							<img src="../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="Eye">
-									<!--ojito-->
-	                          <script>
+							<!--ojito-->
+							<script>
 								var eye = document.getElementById('Eye');
-                                var input = document.getElementById('password')
-                                eye.addEventListener("click", function() {
-                                if(input.type == "password"){
-                                    input.type = "text"
-                                    eye.style.opacity=0.8
-                                }else{
-                                    input.type = "password"
-                                    eye.style.opacity=0.2
-                                }
+								var input = document.getElementById('password')
+								eye.addEventListener("click", function() {
+									if (input.type == "password") {
+										input.type = "text"
+										eye.style.opacity = 0.8
+									} else {
+										input.type = "password"
+										eye.style.opacity = 0.2
+									}
 
-                               });
-                              </script>
+								});
+							</script>
 							<div class="md:ml-2">
-								
+
 							</div>
 						</div>
 						<div class="mb-6 text-center">
@@ -196,8 +202,8 @@ include("controlador_register.php");
 			reader.readAsDataURL(file);
 		}
 	</script>
-       <!--Script de la página de carga-->
-	   <script src="../../js/load.js"></script> 
+	<!--Script de la página de carga-->
+	<script src="../../js/load.js"></script>
 </body>
 
 </html>

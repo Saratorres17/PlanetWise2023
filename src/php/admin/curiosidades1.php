@@ -98,7 +98,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <div>
             <label for="text" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Titulo</label>
 
-            <input type="text" name="titulo" id="info" placeholder="Ingresa el titulo" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" /> <br>
+            <input type="text" name="titulo" id="info" placeholder="Ingresa el titulo" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" value="<?php echo $previousTitulo ?>" /> <br>
           </div>
 
 
@@ -108,25 +108,26 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             </div>
 
-            <input type="text" name="informacion" placeholder="Ingresa tu informacion" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 overflow-y-scroll" /><br>
+            <input type="text" name="informacion" placeholder="Ingresa tu informacion" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 overflow-y-scroll" value="<?php echo $previousInfo ?>" /><br>
           </div>
           <div>
             <label for="text" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Fuente</label>
-            <input type="text" name="fuente" id="info" placeholder="Ingresa la fuente" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="text" name="fuente" id="info" placeholder="Ingresa la fuente" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" value="<?php echo $previousFuente ?>" />
           </div>
 
 
 
           <!-- funcion de la foto -->
           <div class="p-4">
-            <div class="border-4 border-dashed border-gray-300 rounded-lg p-8">
-              <label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:</label>
-              <input type="file" id="foto" name="foto" class="hidden" accept="image/*">
-              <div id="preview" class="mt-4">
-                <p class="text-gray-500">Vista previa de la foto</p>
-                <div id="imagePreview"></div>
-              </div>
+            <div class="border-4 border-dashed border-gray-300 rounded-lg p-8 cursor-pointer">
+              <label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:
+                <input type="file" id="foto" name="foto" class="hidden" accept="image/*">
+                <div id="preview" class="mt-4">
+                  <p class="text-gray-500">Vista previa de la foto</p>
+                  <div id="imagePreview"></div>
+                </div>
             </div>
+            </label>
           </div>
           <!-- funcion de la foto -->
           <div class="mt-6">

@@ -1,6 +1,8 @@
 <?php
 
-
+$previousTitulo = isset($_POST["titulo"]) ? $_POST["titulo"] : "";
+$previousInfo = isset($_POST["informacion"]) ? $_POST["informacion"] : "";
+$previousFuente = isset($_POST["fuente"]) ? $_POST["fuente"] : "";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $db = new DatabaseConnection();
     $conexion = $db->getConnection();

@@ -5,6 +5,10 @@ session_start();
 
 $usuario_id = $_SESSION["user_id"];
 
+$previousTitulo = isset($_POST['titulo']) ? $_POST['titulo'] : "";
+$previousDesc = isset($_POST['descripcion']) ? $_POST['descripcion'] : "";
+$previousInfo = isset($_POST['informacion']) ? $_POST['informacion'] : "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $db = new DatabaseConnection();
     $conexion = $db->getConnection();

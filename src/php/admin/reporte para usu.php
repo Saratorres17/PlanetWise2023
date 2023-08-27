@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $database = new DatabaseConnection();
     $pdo = $database->getConnection();
 
-    $query = "INSERT INTO `notificaciones` (`reporte`, `id_usuario`) VALUES (:reporte, :id_usuario)";
+    $query = "INSERT INTO `notificaciones` (`reporte`, `id_usuario`, `accept`) VALUES (:reporte, :id_usuario, 0)";
     $stmt = $pdo->prepare($query);
     $stmt->bindValue(':reporte', $reporte, PDO::PARAM_STR);
     $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);

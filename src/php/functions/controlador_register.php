@@ -1,6 +1,15 @@
 <?php
 include("conexion.php"); // Incluye la clase de conexión
 
+
+$previousFirstName = isset($_POST["firstName"]) ? $_POST["firstName"] : "";
+$previousLastName = isset($_POST["lastName"]) ? $_POST["lastName"] : "";
+$previousEmail = isset($_POST["email"]) ? $_POST["email"] : "";
+$previousInterests = isset($_POST["interests"]) ? $_POST["interests"] : "";
+$previousGender = isset($_POST["gender"]) ? $_POST["gender"] : "";
+$previousFoto = isset($_POST["password"]) ? $_POST["password"] : "";
+$previousPaswword = isset($_POST["password"]) ? $_POST["password"] : "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $db = new DatabaseConnection(); // Crea una instancia de la conexión
     $conexion = $db->getConnection(); // Obtiene la conexión
@@ -42,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo '</div>';
             header("Location: login usuario.php");
         }
-
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
@@ -93,11 +101,14 @@ function guardarImagen()
             if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
                 return $target_file;
             } else {
+                echo "No se pudo subir";
                 return "";
             }
+        } else {
+            echo "Error en la validación del archivo.";
+            return "";
         }
     }
 
     return "";
 }
-?>

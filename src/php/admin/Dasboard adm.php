@@ -75,8 +75,9 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td class="py-2 px-4"><img src="<?php echo "http://localhost/src/php/functions/" . $usuario['foto_path']; ?>" alt="User" class="w-8 h-8 rounded-full"></td><br>
                                 <td class="py-2 px-4">
                                 <td class="py-2 px-4">
-                                    <a class="text-red-600 hover:text-red-800" href="../functions/deleteUser.php?id=<?php echo $usuario['id'] ?>">Eliminar</a>
-                                    <a class="text-blue-600 hover:text-blue-800" href="/src/php/admin/reporte%20para%20usu.php?id=<?php echo $usuario['id']; ?>">Notificacion</a>
+                                    <a class="text-red-600 hover:text-red-800" href="../functions/deleteUser.php?id=<?php echo $usuario['id'] ?>">Eliminar</a><br>
+                                    <a class="text-blue-600 hover:text-blue-800" href="/src/php/admin/reporte%20para%20usu.php?id=<?php echo $usuario['id']; ?>">Notificacion</a><br>
+                                    <a class="text-blue-600 hover:text-blue-800" href="/src/php/admin/verReportes.php?id=<?php echo $usuario['id']; ?>">Ver reporte</a>
                                 </td>
                                 </td>
                             </tr>
