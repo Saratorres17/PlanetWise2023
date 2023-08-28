@@ -64,8 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
     </div>
   </div>
   <header>
-
-    <body class="h-screen font-sans cursor-default">
       <!-- inicio nav -->
       <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
       <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -427,13 +425,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
                   <div id="myModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
                     <div class="bg-white p-8 rounded shadow-lg">
                       <span class="absolute top-2 right-2 cursor-pointer" id="closeModal">&times;</span>
-                      <p class="text-lg font-semibold">¡Notificación!</p>
+                      <p class="text-lg font-semibold">¡Notificaciónes!</p> <br>
                       <?php foreach ($reporte as $notificacions) : ?>
                         <?php if ($notificacions['accept'] == 0) : ?>
                           <p><?php echo $notificacions['reporte'] ?></p>
                           <form method="post" action="">
                             <input type="hidden" name="report_id" value="<?php echo $notificacions['id']; ?>">
-                            <button class="bg-green-500 text-white px-2 rounded" type="submit" name="acceptReport">Aceptar</button>
+                           <br><br> <button class="bg-green-500 text-white px-2 rounded" type="submit" name="acceptReport">Aceptar</button>
                           </form>
                         <?php endif; ?>
                       <?php endforeach; ?>
@@ -505,6 +503,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
                           <?php echo $Publicaciones["titulo"] ?>
                         </p>
                       </a>
+                      <a href="/src/php/functions/DeletPublicaciones.php?id=<?php echo $Publicaciones["id"] ?>" ><button class="px-2 py-2 font-semibold text-sm bg-green-300 text-white rounded-full shadow-sm">Eliminar publicacion</button></a> 
                       <span class="text-sm dark:text-gray-300"><?php echo $Publicaciones["fecha_registro"] ?></span>
                     </div>
                   </div>

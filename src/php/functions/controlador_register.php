@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Recuperar datos del formulario y realizar la validación
         $firstName = validarCampo($_POST["firstName"]);
         $lastName = validarCampo($_POST["lastName"]);
-        $email = validarCampo($_POST["email"]);
+        $email = validarEmail($_POST["email"]);
         $interests = validarCampo($_POST["interests"]);
         $gender = validarCampo($_POST["gender"]);
         $password = validarCampo($_POST["password"]);
@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             // Guardar la imagen en el servidor
             $foto_path = guardarImagen();
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
             // Insertar datos en la base de datos
             $query = "INSERT INTO registrousuario (firstName, lastName, email, interests, gender, foto_path, contraseña)
@@ -42,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $statement->bindParam(":interests", $interests);
             $statement->bindParam(":gender", $gender);
             $statement->bindParam(":foto_path", $foto_path);
-            $statement->bindParam(":password", $password);
+            $statement->bindParam(":password", $hashedPassword);
             $statement->execute();
 
             echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
@@ -65,6 +66,19 @@ function validarCampo($campo)
     $campo = htmlspecialchars($campo);
     return $campo;
 }
+
+function validarEmail($email)
+{
+    $email = trim($email);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
+        echo '<strong class="font-bold">¡Error!</strong>';
+        echo '<span class="block sm:inline">El formato es incorrecto, intentalo de nuevo</span>';
+        echo '</div>';
+    }
+    return $email;
+}
+
 
 // Función para guardar la imagen en el servidor y obtener la ruta
 function guardarImagen()
@@ -112,3 +126,4 @@ function guardarImagen()
 
     return "";
 }
+?>
