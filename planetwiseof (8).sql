@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 27-08-2023 a las 06:55:37
--- Versión del servidor: 8.0.34
+-- Tiempo de generación: 28-08-2023 a las 07:01:12
+-- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -56,13 +56,6 @@ CREATE TABLE `datoscuriosos` (
   `informacion` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `datoscuriosos`
---
-
-INSERT INTO `datoscuriosos` (`id`, `titulo`, `fuente`, `foto_path`, `informacion`) VALUES
-(15, 'BLOG PROF', 'pepito', '../../php/functions/Captura de pantalla 2023-08-22 202534.png', 'nose');
-
 -- --------------------------------------------------------
 
 --
@@ -96,8 +89,10 @@ CREATE TABLE `notificaciones` (
 --
 
 INSERT INTO `notificaciones` (`id`, `reporte`, `id_usuario`, `accept`) VALUES
-(9, 'se dijo negro el solito', 74, 0),
-(10, 'se dijo negro el solito', 74, 0);
+(11, 'su publicación es inadecuada ', 75, 1),
+(12, ' estas incumpliendo con las normas de las publicaciones ', 75, 0),
+(13, 'Estas incumpliendo con las normas de las publicaciones ', 75, 0),
+(14, 'su publicación es inadecuada ', 77, 0);
 
 -- --------------------------------------------------------
 
@@ -120,9 +115,7 @@ CREATE TABLE `registroinformacion1` (
 --
 
 INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`, `foto_path`, `usuarioId`, `fecha_registro`) VALUES
-(12, 'colegio don bosco', 'Pastel con forma de corazon, sabor a fresa con relleno de crema pastelera', 'ola, me gusta el qso', '../../php/functions/Captura de pantalla 2023-08-22 204324.png', 74, '2023-08-24 01:37:54'),
-(13, 'chaleco qlor', 'peperoni', 'ola, me gusta el peperoni', '../../php/functions/Captura de pantalla 2023-08-22 202233.png', 74, '2023-08-24 01:39:11'),
-(15, 'aaaa', 'ssss', 'dddd', '../../php/functions/Captura de pantalla 2023-08-25 182807.png', 74, '2023-08-27 06:24:29');
+(30, 'WAZAAAAAAAAAAAAAAAAAAAAAAA', 'AAAAAAAAAAAAAAAAAAAAAAAAAA', 'las hojas de color en el año......', '../../php/functions/china.jpg', 77, '2023-08-28 05:45:52');
 
 -- --------------------------------------------------------
 
@@ -138,7 +131,7 @@ CREATE TABLE `registrousuario` (
   `interests` varchar(4000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `gender` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `foto_path` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `contraseña` varchar(12) NOT NULL
+  `contraseña` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -146,7 +139,10 @@ CREATE TABLE `registrousuario` (
 --
 
 INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
-(74, 'adrian', 'lopez', 'cocolito20006@gmail.com', 'me gusta la lucyaaa', 'Femenino', '', 'hola123');
+(75, 'Sara Yamileth', 'aaaaaaaaaaaaaa', 'Mar12@gmail.com', 'olap', 'Femenino', '../../php/functions/uso del agua.jpg', '1234567'),
+(77, 'adrian', 'elias', 'adrian.rojas@gmail.com', 'golaaaaaaaaaaaaaaaaaaaaa', 'Masculino', '../../php/functions/fonfoppp.jpg', '123456789'),
+(78, 'aaaaa', 'aaaaaaaaaaaaaaaa', 'adrian.rojas@gmail', 'golaaaaaaaaaaaaaaaaaaaaa', 'Masculino', '../../php/functions/merino.jpg', '7878'),
+(79, 'LACTES', 'l', 'adrian.rojas@gmail.com', 'me gusta la alisson', 'Masculino', '../../php/functions/Captura de pantalla 2023-07-04 220613.png', '$2y$10$.ATjVZZIvfr2najGarTt4u6YVXZv4VoxvPbUcnvIOEF42I4yqgJNu');
 
 --
 -- Índices para tablas volcadas
@@ -216,19 +212,19 @@ ALTER TABLE `noticias destacadas`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- Restricciones para tablas volcadas
