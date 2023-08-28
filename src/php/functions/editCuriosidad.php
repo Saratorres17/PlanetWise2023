@@ -132,7 +132,7 @@ function guardarImagen()
 
                     </div>
 
-                    <input type="text" name="informacion" placeholder="Ingresa tu informacion" value="<?php echo $datocurioso['informacion']; ?>" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" /><br>
+                    <input type="text" name="informacion" placeholder="Ingresa tu informacion" value="<?php echo $datocurioso['informacion']; ?>" class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40  overflow-y-scroll resize-none" /><br>
                 </div>
                 <div>
                     <label for="text" class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Fuente</label>

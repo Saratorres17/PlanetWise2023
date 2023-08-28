@@ -212,7 +212,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
   </nav><br><br><br><br><br>
 
 
-  <div class="w-full md:w-2/5 mx-auto">
+  <div class="w-full md:w-2/5 mx-auto bg-white">
     <div class="w-full text-gray-800 text-4xl px-5 font-bold leading-none">
       <?php echo $publicacion['titulo']  ?>
     </div>

@@ -605,7 +605,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
             $stmt_usuario->execute();
             $usuario = $stmt_usuario->fetch(PDO::FETCH_ASSOC);
             ?>
-            <p>
+            <p class="mt-3 text-gray-400 text-xs font-bold my-2 truncate">
               <?php echo $usuario['firstName']; ?>
             </p>
             <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2 truncate">
