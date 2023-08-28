@@ -31,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             // Guardar la imagen en el servidor
             $foto_path = guardarImagen();
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
             // Insertar datos en la base de datos
             $query = "INSERT INTO registrousuario (firstName, lastName, email, interests, gender, foto_path, contraseña)
@@ -43,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $statement->bindParam(":interests", $interests);
             $statement->bindParam(":gender", $gender);
             $statement->bindParam(":foto_path", $foto_path);
-            $statement->bindParam(":password", $hashedPassword);
+            $statement->bindParam(":password", $password);
             $statement->execute();
 
             echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
