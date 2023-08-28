@@ -390,7 +390,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
   </div>
   <main class="py-12 md:px-20 sm:px-14 px-6">
-    <div class="flex flex-row flex-wrap flex justify-center items-center scroll mt-6 md:flex space-x-10">
+    <div class="flex flex-row-10 flex-wrap flex justify-center items-center scroll mt-6 md:flex space-x-10">
       <?php foreach ($publicaciones as $publicacion_item) : ?>
         <div class="w-1/3 ml-10 mt-10">
           <img class="text-center" src="<?php echo "http://localhost/src/php/functions/" . $publicacion_item['foto_path']; ?>" alt="">
