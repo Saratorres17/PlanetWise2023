@@ -164,6 +164,7 @@ function guardarImagen()
                     <div class="flex justify-between mb-2">
                     </div>
                 </div>
+                <a href="/src/php/admin/curiosidades1.php">Regresar</a>
             </form>
         </div>
     </div>

@@ -39,7 +39,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     <div class="flex">
         <!-- Sidebar -->
         <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
-            <div class="flex items-center mb-8">
+            <div class="flex items-center mb-8 ">
                 <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
                 <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
             </div>
@@ -56,8 +56,8 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
             <div class="scroll bg-white-200 bg-opacity-70">
                 <div class="flex flex-row flex-wrap flex justify-center items-center scroll mt-6 md:flex space-x-6">
                     <?php foreach ($publicaciones as $publicacion) : ?>
-                        <div class="w-1/3 ml-10 mt-12">
-                            <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']; ?>" alt="">
+                        <div class="w-1/3 ml-10 mt-12 rounded-lg">
+                            <img class="rounded-lg" src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']; ?>" alt="">
                             <div>
                                 <?php
                                 // Consulta para obtener el nombre de usuario
@@ -69,10 +69,11 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
                                 $stmt_usuario->execute();
                                 $usuario = $stmt_usuario->fetch(PDO::FETCH_ASSOC);
                                 ?>
-                                <b><p><?php echo $usuario['firstName']; ?></p></b>
+                                <b><p class="mt-3 text-gray-400 text-xs
+                                font-bold my-2 truncate" ><?php echo $usuario['firstName']; ?></p></b>
                                 <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2 truncate"><?php echo $publicacion['titulo'] ?></h1>
                                 <p class="text-gray-500 mb-2"><?php echo $publicacion['descripcion'] ?></p>
-                                <p class="text-gray-500 mb-2"><?php echo $publicacion['informacion'] ?></p>
+                                <p class="text-gray-500 mb-2 truncate text-clip overflow-hidden w-64"><?php echo $publicacion['informacion'] ?></p>
                                 <div class="flex justify-between mt-4">
                                     <span class="font-thin text-gray-400 text-sm"><?php echo $publicacion['fecha_registro'] ?></span><br>
                                 </div>
