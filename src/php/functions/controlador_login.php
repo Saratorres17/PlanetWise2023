@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
     $user = new User($conn);
-    $user_data = $user->login($username, $password);
+    $user_data = $user->login($username, $hashedPassword);
 
     $admin = new Admin($conn);
     $admin_data = $admin ->login($username, $password);
