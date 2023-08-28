@@ -227,7 +227,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 
     <div class="px-5 w-full mx-auto">
-      <p class="my-5"><?php echo $publicacion['informacion']  ?> . <br><br></p>
+      <p class="my-5"><?php echo $publicacion['informacion']  ?><br><br></p>
     </div>
   </div>
 
