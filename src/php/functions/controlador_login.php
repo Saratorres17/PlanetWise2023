@@ -14,6 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db = new DatabaseConnection();
     $conn = $db->getConnection();
 
+    // Hash the provided password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     
     $user = new User($conn);
     $user_data = $user->login($username, $hashedPassword);
@@ -46,4 +48,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '</div>';
     }
 }
-?>
