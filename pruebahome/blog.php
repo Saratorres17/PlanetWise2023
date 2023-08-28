@@ -390,10 +390,10 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     </div>
   </div>
   <main class="py-12 md:px-20 sm:px-14 px-6">
-    <div class="scroll mt-6 md:flex space-x-6">
+    <div class="flex flex-row flex-wrap flex justify-center items-center scroll mt-6 md:flex space-x-10">
       <?php foreach ($publicaciones as $publicacion_item) : ?>
-        <div class="">
-          <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion_item['foto_path']; ?>" alt="">
+        <div class="w-1/3 ml-10 mt-10">
+          <img class="text-center" src="<?php echo "http://localhost/src/php/functions/" . $publicacion_item['foto_path']; ?>" alt="">
           <div>
             <?php
             // Consulta para obtener el nombre de usuario
@@ -405,7 +405,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
             $usuario = $stmt_usuario->fetch(PDO::FETCH_ASSOC);
             ?>
             <p><?php echo $usuario['firstName']; ?></p>
-            <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2"><?php echo $publicacion_item['titulo'] ?></h1>
+            <h1 class="mt-3 text-gray-400 text-2xl font-bold my-2 truncate"><?php echo $publicacion_item['titulo'] ?></h1>
             <p class="text-gray-500 mb-2 text-clip overflow-hidden"><?php echo $publicacion_item['descripcion'] ?></p>
             <p class="text-gray-500 mb-2 text-clip overflow-hidden"><?php echo $publicacion_item['informacion'] ?></p>
             <div class="flex justify-between mt-4">

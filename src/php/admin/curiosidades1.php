@@ -119,12 +119,12 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
           <!-- funcion de la foto -->
           <div class="p-4">
-            <div class="border-4 border-dashed border-gray-300 rounded-lg p-8 cursor-pointer">
+            <div class="border-4 border-dashed border-gray-300 rounded-lg p-8 cursor-pointer w-3/4 h-1/3">
               <label for="foto" class=" text-sm font-bold text-gray-700">Arrastra y suelta una foto aquí:
                 <input type="file" id="foto" name="foto" class="hidden" accept="image/*">
                 <div id="preview" class="mt-4">
                   <p class="text-gray-500">Vista previa de la foto</p>
-                  <div id="imagePreview"></div>
+                  <div id="imagePreview" class="w-56"></div>
                 </div>
             </div>
             </label>
