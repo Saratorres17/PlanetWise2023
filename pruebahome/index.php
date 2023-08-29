@@ -29,19 +29,8 @@ session_start();
 
 <body class="h-screen font-sans cursor-default">
 
-  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-          pageLanguage: "es",
-          includedLanguages: "fr,en,es,pt,zh-CN,ru",
-        },
-        "google_translate_element"
-      );
-    }
-  </script>
-  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+ 
+
 
   <!-- Navbar -->
   <?php
@@ -54,6 +43,7 @@ session_start();
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
+      
         <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
           PlanetWise
         </a>
@@ -350,8 +340,9 @@ session_start();
           <span><i class="fas fa-sun"></i></span>
           <span><i class="fas fa-moon"></i></span>
         </button>
-
+      
     </nav>
+    
   <?php } ?>
 
 
@@ -591,7 +582,7 @@ session_start();
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
+          <a href="../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Home</a>
           <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
           <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
         </div>

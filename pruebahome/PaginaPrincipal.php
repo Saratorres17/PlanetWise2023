@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>pagina principal</title>
 </head>
-<body background="../dist/images/bosquechachi.jpg" class="oculto cursor-default bg-no-repeat bg-cover bg-black">
+<body class="bg-no-repeat bg-cover bg-center relative min-h-screen flex flex-col justify-between oculto cursor-default  bg-cover" style="background-image: url('/dist/images/bosque.jpg');">
 
     <link
     crossorigin="anonymous"
     href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
-    rel="stylesheet"
-  />
+    rel="stylesheet"/>
   
   <style>
     .swiper-pagination {
@@ -35,7 +34,7 @@
     }
   </style>
   
-  <div class="bg-no-repeat bg-cover bg-center relative">
+  <div class=" bg-cover bg-center relative">
 
        <!--Pantalla de carga-->
        <div class=" flex justify-center items-center h-full z-10" id="onload">
@@ -44,33 +43,13 @@
         <div></div>
         <div></div>
         <div></div>
-     </div>
+     </div><br><br>
 </div>
-
-    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {
-          pageLanguage: "es",
-          includedLanguages: "fr,en,es,pt,zh-CN,ru",
-        },
-        "google_translate_element"
-      );
-    }
-  </script>
-  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-
-        <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-        <div class="md:relative md:left-5-4 z-20 top-8 " id="google_translate_element"></div>
-        <!--FIN DEL TRADUCTOR-->
-  
     <div class="absolute inset-0 z-0"></div>
     <div>
     <div class="min-h-screen flex justify-center">
   
-      <div class="grid grid-cols-2 gap-4 items-center z-10">
+      <div class="grid grid-cols-1  md:grid-cols-2 gap-4 items-center z-10 mt-32 md:mt-0">
         <div class="max-w-lg text-center sm:text-left">
           <h2 class="text-4xl font-bold text-gray-100 tracking-tight">
             PlanetWise
@@ -118,8 +97,7 @@
                 <img
                   src="https://static.nationalgeographic.es/files/styles/image_3200/public/01-golden-snub-nosed-monkey-minden_00455438.webp?w=1450&h=816"
                   alt="aji"
-                  class="object-cover w-full mx-auto rounded-t-2xl h-60"
-                />
+                  class="object-cover w-full mx-auto rounded-t-2xl h-60"/>
                 <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                </div>
               </div>
@@ -166,38 +144,46 @@
       
      
     </div>
-    </div>
-  </div>
-  <script
+ 
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Crear una nueva instancia de Swiper
+    new Swiper('.swiper-container', {
+      // Habilitar bucle infinito
+      loop: true,
+      // Mostrar 1 diapositiva a la vez
+      slidesPerView: 1,
+      // Espacio entre las diapositivas
+      spaceBetween: 8,
+      // Configuración de reproducción automática
+      autoplay: {
+        delay: 6000, // Retardo de 6 segundos
+      },
+      // Configuración de la paginación
+      pagination: {
+        el: '.swiper-pagination', // Elemento de paginación
+        clickable: true, // Hacer clic en los puntos de paginación para cambiar de diapositiva
+      },
+      // Puntos de interrupción para ajustar la cantidad de diapositivas visibles en diferentes tamaños de pantalla
+      breakpoints: {
+        640: {
+          slidesPerView: 1, // Mostrar 1 diapositiva en pantallas pequeñas (menos de 640px)
+        },
+        1024: {
+          slidesPerView: 1, // Mostrar 1 diapositiva en pantallas medianas (menos de 1024px)
+        },
+      },
+    });
+  });
+</script>
+<script
     crossorigin="anonymous"
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"
   ></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      new Swiper('.swiper-container', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 8,
-        autoplay: {
-          delay: 6000,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 1,
-          },
-        },
-      })
-    })
-  </script>
+  
     <!--Script de la página de carga-->
-      <script src="../src/js/load.js"></script>  
-</body>
+  <script src="../src/js/load.js"></script>  
+
 </html>
