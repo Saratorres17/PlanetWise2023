@@ -136,7 +136,7 @@ session_start();
         <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="bg-black lg:hidden md:hidden flex p-4 rounded-xl">
+            <div class="lg:hidden md:hidden flex p-4 rounded-xl bg-gray-100">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 
@@ -450,27 +450,27 @@ visibility: hidden; /* Oculta el slider cuando el menú se sombree */
 <body>
   <div class="relative">
     <div class="sticky top-0 flex h-screen items-center justify-center">
-      <img alt="" src="../dist/images/fkamingos.jpg" class="h-full w-full object-cover" />
+      <img alt="" src="../dist/images/flamingos.jpg" class="h-full w-full object-cover" />
       <div class="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-2xl">
         <h2 class="text-6xl font-bold text-white" >Misión</h2>
         <p class="font-sans text-xl text-white">Educar y concientizar a las personas sobre la importancia de cuidar la naturaleza y los animales, promoviendo prácticas sostenibles y responsables que contribuyan a la conservación del medio ambiente y la biodiversidad.</p>
       </div>
     </div>
     <div class="sticky top-0 flex h-screen items-center justify-center">
-      <img alt="" src="https://img.freepik.com/foto-gratis/hermosa-foto-ciervos-sobre-hierba-verde-zoologico-dia-soleado_181624-30352.jpg?w=1380&t=st=1690569468~exp=1690570068~hmac=c888c0ca7a5d4f01733027370661316da047228986857ce0ceab37237a03451b" class="h-full w-full object-cover" />
+      <img alt="" src="../dist/images/ciervosopaco.jpg" class="h-full w-full object-cover" />
       <div class="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-2xl">
         <h2 class="text-6xl font-bold text-white">Visión </h2>
-        <p class="font-sans text-xl text-white">Buscamos ser una plataforma líder en la difusión de información y conocimiento sobre el cuidado de la naturaleza y los animales, descubrir conciencia y motivar a las personas a tomar acciones concretas para proteger y preservar nuestro planeta.
+        <p class="font-sans text-xl h-min text-white md:h-40">Buscamos ser una plataforma líder en la difusión de información y conocimiento sobre el cuidado de la naturaleza y los animales, descubrir conciencia y motivar a las personas a tomar acciones concretas para proteger y preservar nuestro planeta.
         </p>
       </div>
     </div>
     <div class="sticky top-0 flex h-screen items-center justify-center">
-      <img alt="" src="../dist/images/mataralla.jpg" class="h-full w-full object-cover" />
-      <div class="absolute left-0 right-0 m-auto flex w-2/4 flex-col items-start justify-center gap-4 p-10 backdrop-blur-10xl">
-        <h2 class="text-6xl font-bold text-white">Valores</h2><br>
-        <p class="font-sans text-xl text-white">Responsabilidad: Tomar conciencia de nuestro impacto en el medio ambiente y asumir la responsabilidad de nuestras acciones para minimizar ese impacto y promover prácticas sostenibles.</p><br>
-        <p class="font-sans text-xl text-white">Compromiso: Tomar medidas concretas para proteger y preservar nuestro planeta, ya motivar a otros a hacer lo mismo.</p><br>
-        <p class="font-sans text-xl text-white">Respeto: Respetar la biodiversidad y los ecosistemas, así como a los animales y las comunidades que dependen de ellos. Respetar a las personas que trabajan en la conservación del medio ambiente y valorar su trabajo y dedicación.</p>
+      <img alt="" src="../dist/images/manta2.jpg" class="h-full w-full object-cover" />
+      <div class="absolute left-0 right-0 m-auto flex w-96 md:w-1/2 flex-col items-start justify-center p-5 backdrop-blur-10xl">
+        <h2 class="text-6xl font-bold text-white relative">Valores</h2><br>
+        <p class="font-sans text-xl text-white h-min md:h-40"><b>Responsabilidad:</b> Tomar conciencia de nuestro impacto en el medio ambiente y asumir la responsabilidad de nuestras acciones para minimizar ese impacto y promover prácticas sostenibles.</p>
+        <p class="font-sans text-xl text-white h-min md:h-40"><b>Compromiso:</b> Tomar medidas concretas para proteger y preservar nuestro planeta, ya motivar a otros a hacer lo mismo.</p>
+        <p class="font-sans text-xl text-white h-min md:h-40"><b>Respeto:</b> Respetar la biodiversidad y los ecosistemas, así como a los animales y las comunidades que dependen de ellos. Respetar a las personas que trabajan en la conservación del medio ambiente y valorar su trabajo y dedicación.</p>
       </div>
     </div>
   </div>

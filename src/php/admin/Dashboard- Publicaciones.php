@@ -33,28 +33,61 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
 </head>
 
 <body class="bg-gray-100">
+
+                        <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+                        <script>
+                        // Crear un elemento <script> para cargar el script de traducción de Google
+                    const script = document.createElement('script');script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                    script.async = true;
+                    document.body.appendChild(script);
+                    // Función para manejar los cambios en el estilo del cuerpo
+                    const handleBodyChanges = () => {
+                    const currentTop = parseInt(document.body.style.top) || 0;
+                    if (currentTop > 0) {
+                     document.body.style.top = '0px';
+                      }
+                      };
+                      // Definir la función global googleTranslateElementInit
+                      window.googleTranslateElementInit = () => {
+                         if (!document.querySelector('.goog-te-combo')) {
+                             new window.google.translate.TranslateElement(
+                                 { pageLanguage: 'es', includedLanguages: 'fr,en,es,pt,zh-CN,ru' },
+                                  'google_translate_element'
+                                   );
+                                 }
+                                 
+                                 // Observar los cambios en el estilo del cuerpo 
+                                  const observer = new MutationObserver(handleBodyChanges);
+                                   observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });};
+                                    </script>
+                    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+
     <div class="flex">
         <!-- Sidebar -->
         <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
-            <div class="flex items-center mb-8 ">
+            <div class="flex items-center relative left-5 ">
                 <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
                 <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
             </div>
             <ul class="space-y-2">
-                <li><a href="/src/php/admin/Dasboard adm.php" class="block py-2 px-4 hover:bg-gray-700">Usuarios</a></li>
-                <li><a href="/src/php/admin/Dashboard- Publicaciones.php" class="block py-2 px-4 hover:bg-gray-700">Publicaciones</a></li>
-                <li><a href="/src/php/admin/curiosidades1.php" class="block py-2 px-4 hover:bg-gray-700">Datos curiosos</a></li>
-                <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700">Cerrar sesion</a></li>
+                <li><a href="/src/php/admin/Dasboard adm.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Usuarios</a></li>
+                <li><a href="/src/php/admin/Dashboard- Publicaciones.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Publicaciones</a></li>
+                <li><a href="/src/php/admin/curiosidades1.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Datos curiosos</a></li>
+                <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Cerrar sesion</a></li>
+                <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->               
+                <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+                 <!--FIN DEL TRADUCTOR-->
                 <!-- Sidebar -->
             </ul>
         </div>
         <div class="ml-72">
             <!-- cards adm -->
             <div class="scroll bg-white-200 bg-opacity-70">
-                <div class="flex flex-row flex-wrap flex justify-center items-center scroll mt-6 md:flex space-x-6">
+                <div class="flex flex-row flex-wrap justify-center items-center scroll mt-6 md:flex space-x-6">
                     <?php foreach ($publicaciones as $publicacion) : ?>
                         <div class="w-1/3 ml-10 mt-12 rounded-lg">
                             <img class="rounded-lg" src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']; ?>" alt="">
