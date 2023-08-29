@@ -25,7 +25,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
-  <title>Document</title>
+  <title>Curiosidades adm</title>
 </head>
 
 <body class="flex">
