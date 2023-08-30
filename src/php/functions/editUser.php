@@ -16,31 +16,29 @@ $data_usuarios->execute();
 $data_usuarios = $data_usuarios->fetch(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-   
-    
-        // Verifica si se cargó una nueva foto
-        if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
-            // Eliminar la foto existente antes de guardar la nueva
-            if (!empty($data_usuarios['foto_path']) && file_exists($data_usuarios['foto_path'])) {
-                unlink($data_usuarios['foto_path']);
-            }
-    
-            // Guardar la imagen en el servidor y obtener la ruta
-            $foto_path = guardarImagen();
-        } else {
-            // Mantener la ruta de la foto existente en la base de datos
-            $foto_path = $data_usuarios['foto_path'];
-        }
-    
     try {
-        
+
         $firstName = validarCampo($_POST["firstName"]);
         $lastName = validarCampo($_POST["lastName"]);
         $email = validarCampo($_POST["email"]);
         $interests = validarCampo($_POST["interests"]);
         $gender = validarCampo($_POST["gender"]);
-        $password = validarCampo($_POST["password"]);
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $password = $_POST["old-password"];
+        
+        $newpassword = validarCampo($_POST["new-password"]);
+
+        if (!empty($password)) {
+           
+            $samePassword = password_verify($password, $data_usuarios["contraseña"]);
+             
+            if ($samePassword) {
+               
+                $hashedPassword = password_hash($newpassword, PASSWORD_DEFAULT);
+            }
+
+        };
+
 
         if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
             // Eliminar la foto existente antes de guardar la nueva
@@ -50,32 +48,69 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             // Guardar la imagen en el servidor y obtener la ruta
             $foto_path = guardarImagen();
+    
         } else {
             // Mantener la ruta de la foto existente en la base de datos
             $foto_path = $data_usuarios['foto_path'];
         }
-        
-        if (empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender) || empty($hashedPassword) || empty($_FILES["foto"]["name"])) {
+
+        // empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender) || empty($hashedPassword)
+        if (empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender)) {
             echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
             echo '<strong class="font-bold">¡Error!</strong>';
             echo '<span class="block sm:inline"> Por favor, completa todos los campos obligatorios.</span>';
             echo '</div>';
-        } else {
-           
-            $foto_path = guardarImagen();
-          
-            $query = "UPDATE registrousuario SET firstName = :firstName, lastName = :lastName, email = :email, interests = :interests, gender = :gender, foto_path = :foto_path, contraseña = :password WHERE id = :usuario_id";
-            $statement = $conexion->prepare($query);
-            $statement->execute([
+        } 
+        
+        else if(!$samePassword){
+            echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
+            echo '<strong class="font-bold">¡Error!</strong>';
+            echo '<span class="block sm:inline"> Antigua contraseña invalida</span>';
+            echo '</div>';
+        }
+        
+        else {
+
+            $queryNormal = "UPDATE registrousuario SET firstName = :firstName, lastName = :lastName, email = :email, interests = :interests, gender = :gender ";
+
+            $camposActualizar = [
                 ":firstName" => $firstName,
                 ":lastName" => $lastName,
                 ":email" => $email,
                 ":interests" => $interests,
                 ":gender" => $gender,
-                ":foto_path" => $foto_path,
-                ":password" => $hashedPassword,
                 ":usuario_id" => $usuario_id
-            ]);
+            ];
+
+            $nuevaPasswordSQL = ",contraseña = :password";
+            $imagenSQL = ",foto_path = :foto_path";
+
+            if (isset($hashedPassword)) {
+                $queryNormal = $queryNormal . $nuevaPasswordSQL;
+                $camposActualizar = [
+                    ...$camposActualizar,
+                    ":password" => $hashedPassword
+                ];
+            }
+
+            if($foto_path){
+                $queryNormal = $queryNormal . $imagenSQL;
+                $camposActualizar = [
+                    ...$camposActualizar,
+                    ":foto_path" => $foto_path
+                ];
+            }
+
+            $queryNormal =  $queryNormal . " WHERE id = :usuario_id";
+
+            // echo $queryNormal;
+            // echo "<pre>";
+            // var_dump($camposActualizar);
+            // echo "</pre>";
+                    
+            // die();
+            $statement = $conexion->prepare($queryNormal);
+            $statement->execute($camposActualizar);
 
             echo '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">';
             echo '<strong class="font-bold">¡Actualizacion exitosa!</strong>';
@@ -103,21 +138,23 @@ function validarCampo($campo)
 function guardarImagen()
 {
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === 0) {
+        
         $target_dir = IMAGE_BASE_PATH; // Ruta relativa al directorio de destino
         $target_file = $target_dir . basename($_FILES["foto"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         // Comprobar si el archivo es una imagen válida
-        $check = getimagesize($_FILES["foto"]["tmp_name"]);
-        if ($check === false) {
-            $uploadOk = 0;
-        }
+        // $check = getimagesize($_FILES["foto"]["tmp_name"]);
+        
+        // if ($check === false) {
+        //     $uploadOk = 0;
+        // }
 
-        // Comprobar si el archivo ya existe
-        if (file_exists($target_file)) {
-            $uploadOk = 0;
-        }
+        // // Comprobar si el archivo ya existe
+        // if (file_exists($target_file)) {
+        //     $uploadOk = 0;
+        // }
 
         // Comprobar el tamaño máximo del archivo (500 KB)
         if ($_FILES["foto"]["size"] > 1000000) {
@@ -247,9 +284,9 @@ function guardarImagen()
                         <div class="mb-4 md:flex md:justify-between">
                             <div class="mb-4 md:mr-2 md:mb-0">
                                 <label class="block mb-2  text-sm font-bold text-gray-700" for="password">
-                                    Contraseña
+                                    Antigua Contraseña
                                 </label>
-                                <input name="password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none   focus:shadow-outline" id="password" type="password" placeholder="******************" value="<?= $data_usuarios["contraseña"] ?>" />
+                                <input name="old-password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none   focus:shadow-outline" id="password" type="password" placeholder="******************" />
                             </div>
                             <img src="../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="Eye">
                             <!--ojito-->
@@ -271,22 +308,49 @@ function guardarImagen()
 
                             </div>
                         </div>
-                        <div class="mb-6 text-center">
+                        <div class="mb-4 md:flex md:justify-between">
+                            <div class="mb-4 md:mr-2 md:mb-0">
+                                <label class="block mb-2  text-sm font-bold text-gray-700" for="password">
+                                    Nueva Contraseña
+                                </label>
+                                <input name="new-password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none   focus:shadow-outline" id="password" type="password" placeholder="******************" " />
+                            </div>
+                            <img src=" ../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="Eye">
+                                <!--ojito-->
+                                <script>
+                                    var eye = document.getElementById('Eye');
+                                    var input = document.getElementById('password')
+                                    eye.addEventListener("click", function() {
+                                        if (input.type == "password") {
+                                            input.type = "text"
+                                            eye.style.opacity = 0.8
+                                        } else {
+                                            input.type = "password"
+                                            eye.style.opacity = 0.2
+                                        }
 
-                            <a href="/src/php/functions/logout.php"><button class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline" type="submit">
-                                    Registra tus cambios
-                                </button></a>
+                                    });
+                                </script>
+                                <div class="md:ml-2">
 
-                        </div>
-                        <hr class="mb-6 border-t" />
-                        <div class="text-center">
-                            <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="../../../src/php/functions/login usuario.php">
-                                Ya tienes una cuenta? Ingresa!
-                            </a>
-                        </div>
-                        <div class="flex justify-between mb-2">
-                            <a href="/pruebahome/perfil de usuario.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
-                        </div>
+                                </div>
+                            </div>
+                            <div class="mb-6 text-center">
+
+                                <a href="/src/php/functions/logout.php"><button class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline" type="submit">
+                                        Registra tus cambios
+                                    </button></a>
+
+                            </div>
+                            <hr class="mb-6 border-t" />
+                            <div class="text-center">
+                                <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="../../../src/php/functions/login usuario.php">
+                                    Ya tienes una cuenta? Ingresa!
+                                </a>
+                            </div>
+                            <div class="flex justify-between mb-2">
+                                <a href="/pruebahome/perfil de usuario.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
+                            </div>
                     </form>
                 </div>
             </div>

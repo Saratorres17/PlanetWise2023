@@ -29,33 +29,40 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body class="bg-gray-100">
-                        <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-                        <script>
-                        // Crear un elemento <script> para cargar el script de traducción de Google
-                    const script = document.createElement('script');script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                    script.async = true;
-                    document.body.appendChild(script);
-                    // Función para manejar los cambios en el estilo del cuerpo
-                    const handleBodyChanges = () => {
-                    const currentTop = parseInt(document.body.style.top) || 0;
-                    if (currentTop > 0) {
-                     document.body.style.top = '0px';
-                      }
-                      };
-                      // Definir la función global googleTranslateElementInit
-                      window.googleTranslateElementInit = () => {
-                         if (!document.querySelector('.goog-te-combo')) {
-                             new window.google.translate.TranslateElement(
-                                 { pageLanguage: 'es', includedLanguages: 'fr,en,es,pt,zh-CN,ru' },
-                                  'google_translate_element'
-                                   );
-                                 }
-                                 
-                                 // Observar los cambios en el estilo del cuerpo 
-                                  const observer = new MutationObserver(handleBodyChanges);
-                                   observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });};
-                                    </script>
-                    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+    <script>
+        // Crear un elemento <script> para cargar el script de traducción de Google
+        const script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
+        // Función para manejar los cambios en el estilo del cuerpo
+        const handleBodyChanges = () => {
+            const currentTop = parseInt(document.body.style.top) || 0;
+            if (currentTop > 0) {
+                document.body.style.top = '0px';
+            }
+        };
+        // Definir la función global googleTranslateElementInit
+        window.googleTranslateElementInit = () => {
+            if (!document.querySelector('.goog-te-combo')) {
+                new window.google.translate.TranslateElement({
+                        pageLanguage: 'es',
+                        includedLanguages: 'fr,en,es,pt,zh-CN,ru'
+                    },
+                    'google_translate_element'
+                );
+            }
+
+            // Observar los cambios en el estilo del cuerpo 
+            const observer = new MutationObserver(handleBodyChanges);
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['style']
+            });
+        };
+    </script>
+    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <div class="flex">
         <div class="flex">
             <!-- Sidebar -->
@@ -69,7 +76,7 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <li><a href="/src/php/admin/Dashboard- Publicaciones.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Publicaciones</a></li>
                     <li><a href="/src/php/admin/curiosidades1.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Datos curiosos</a></li>
                     <li><a href="/src/php/functions/close_session.php" class="block py-2 px-4 hover:bg-gray-700 text-white">Cerrar sesion</a></li>
-                     <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
+                    <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
                     <div class="md:relative md:left-5-4" id="google_translate_element"></div>
                     <!--FIN DEL TRADUCTOR-->
                     <!-- Sidebar -->
