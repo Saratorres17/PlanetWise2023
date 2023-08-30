@@ -16,9 +16,24 @@ $data_usuarios->execute();
 $data_usuarios = $data_usuarios->fetch(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
+   
+    
+        // Verifica si se cargó una nueva foto
+        if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
+            // Eliminar la foto existente antes de guardar la nueva
+            if (!empty($data_usuarios['foto_path']) && file_exists($data_usuarios['foto_path'])) {
+                unlink($data_usuarios['foto_path']);
+            }
+    
+            // Guardar la imagen en el servidor y obtener la ruta
+            $foto_path = guardarImagen();
+        } else {
+            // Mantener la ruta de la foto existente en la base de datos
+            $foto_path = $data_usuarios['foto_path'];
+        }
+    
     try {
-        // Recuperar datos del formulario y realizar la validación
+        
         $firstName = validarCampo($_POST["firstName"]);
         $lastName = validarCampo($_POST["lastName"]);
         $email = validarCampo($_POST["email"]);
@@ -46,9 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             echo '<span class="block sm:inline"> Por favor, completa todos los campos obligatorios.</span>';
             echo '</div>';
         } else {
-            // Guardar la imagen en el servidor
+           
             $foto_path = guardarImagen();
-            // Insertar datos en la base de datos
+          
             $query = "UPDATE registrousuario SET firstName = :firstName, lastName = :lastName, email = :email, interests = :interests, gender = :gender, foto_path = :foto_path, contraseña = :password WHERE id = :usuario_id";
             $statement = $conexion->prepare($query);
             $statement->execute([
