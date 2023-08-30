@@ -25,15 +25,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $interests = validarCampo($_POST["interests"]);
         $gender = validarCampo($_POST["gender"]);
         $password = validarCampo($_POST["password"]);
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-         // Mantener la ruta de la foto existente si no se cambió
-         if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
+        if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
+            // Eliminar la foto existente antes de guardar la nueva
+            if (!empty($data_usuarios['foto_path']) && file_exists($data_usuarios['foto_path'])) {
+                unlink($data_usuarios['foto_path']);
+            }
+
+            // Guardar la imagen en el servidor y obtener la ruta
             $foto_path = guardarImagen();
         } else {
+            // Mantener la ruta de la foto existente en la base de datos
             $foto_path = $data_usuarios['foto_path'];
         }
-
-        if (empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender) || empty($password) || empty($_FILES["foto"]["name"])) {
+        
+        if (empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender) || empty($hashedPassword) || empty($_FILES["foto"]["name"])) {
             echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
             echo '<strong class="font-bold">¡Error!</strong>';
             echo '<span class="block sm:inline"> Por favor, completa todos los campos obligatorios.</span>';
@@ -51,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 ":interests" => $interests,
                 ":gender" => $gender,
                 ":foto_path" => $foto_path,
-                ":password" => $password,
+                ":password" => $hashedPassword,
                 ":usuario_id" => $usuario_id
             ]);
 
