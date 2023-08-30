@@ -19,7 +19,6 @@
         <button class=" text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
             Aceptar
         </button>
-
        
     </div>
 </section>

@@ -29,7 +29,19 @@ session_start();
 
 <body class="h-screen font-sans cursor-default">
 
- 
+   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
 
   <!-- Navbar -->
@@ -472,7 +484,7 @@ session_start();
       <br><br><br>
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/educacion-clave-cambio-climatico.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://cdn0.ecologiaverde.com/es/posts/4/1/6/causas_y_consecuencias_de_la_contaminacion_del_agua_614_600.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -483,7 +495,8 @@ session_start();
             </div>
           </div>
         </div>
-        <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
+        <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl ">
+         
           <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
@@ -521,7 +534,7 @@ session_start();
           </div>
         </div>
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.accioncontraelhambre.org/sites/default/files/eficiencia-agua-campo-agricola.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg/1200px-Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">

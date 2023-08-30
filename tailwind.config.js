@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -16,26 +16,28 @@ module.exports = {
         '450': '450px',
         '400': '400px',
         'lg': '1024px',
-        'lgv': {'raw'
-        : '(orientation: portrait) and (min-height: 500px)'},
-        colors: {
-          'blue': '#1fb6ff',
-          'purple': '#7e5bef',
-          'pink': '#ff49db',
-          'orange': '#ff7849',
-          'green': '#13ce66',
-          'yellow': '#ffc82c',
-          'gray-dark': '#273444',
-          'gray': '#8492a6',
-          'gray-light': '#d3dce6',
-        },
-
-            'xsm': '450px',
-         },
+        'lgv': {'raw': '(orientation: portrait) and (min-height: 500px)'},
+      },
+      colors: {
+        'blue': '#1fb6ff',
+        'purple': '#7e5bef',
+        'pink': '#ff49db',
+        'orange': '#ff7849',
+        'green': '#13ce66',
+        'yellow': '#ffc82c',
+        'gray-dark': '#273444',
+        'gray': '#8492a6',
+        'gray-light': '#d3dce6',
+      },
       fontFamily: {
         'redHat': ['"Red Hat Display"', 'sans-serif'],
+      },
+      blur: {
+        'sm': '4px', 
+        'md': '8px',
+        'lg': '12px',
       },
     },
   },
   plugins: [],
-  }
+}
