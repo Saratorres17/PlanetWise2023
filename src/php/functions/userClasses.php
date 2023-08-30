@@ -15,6 +15,7 @@ class User
         $stmt->bindParam(':firstname', $firstName);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
+        $user=$stmt->fetch();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 

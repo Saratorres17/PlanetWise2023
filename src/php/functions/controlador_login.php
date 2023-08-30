@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $admin = new Admin($conn);
     $admin_data = $admin ->login($username, $password);
 
-    if ($user_data) {
+    if ($user_data && password_verify($password, $user_data['contraseña'])) {
         $_SESSION['user_id'] = $user_data['id'];
         $_SESSION['firstName'] = $user_data['firstName'];
         $_SESSION['photo_path'] = $user_data['foto_path'];
@@ -46,3 +46,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '</div>';
     }
 }
+?>
