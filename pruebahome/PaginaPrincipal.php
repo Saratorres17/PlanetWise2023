@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../src/pantallacarga.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
-    <title>pagina principal</title>
+    <title>Página principal</title>
 </head>
-<body class="bg-no-repeat bg-cover bg-center relative min-h-screen flex flex-col justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
+<body class="bg-cover bg-center relative flex flex-col justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
 
     <link
     crossorigin="anonymous"
@@ -45,10 +45,11 @@
         <div></div>
      </div><br><br>
 </div>
-    <div class="absolute inset-0 z-0"></div>
     <div>
     <div class="min-h-screen flex justify-center">
-  
+       <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
+      <div class="" id="google_translate_element"></div>
+      <!--FIN DEL TRADUCTOR-->
       <div class="grid grid-cols-1  md:grid-cols-2 gap-4 items-center z-10 mt-32 md:mt-0">
         <div class="max-w-lg text-center sm:text-left">
           <h2 class="text-4xl font-bold text-gray-100 tracking-tight">
@@ -145,7 +146,7 @@
      
     </div>
  
-</body>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // Crear una nueva instancia de Swiper
@@ -185,5 +186,32 @@
   
     <!--Script de la página de carga-->
   <script src="../src/js/load.js"></script>  
-
+                        <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+                        <script>
+                        // Crear un elemento <script> para cargar el script de traducción de Google
+                    const script = document.createElement('script');script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                    script.async = true;
+                    document.body.appendChild(script);
+                    // Función para manejar los cambios en el estilo del cuerpo
+                    const handleBodyChanges = () => {
+                    const currentTop = parseInt(document.body.style.top) || 0;
+                    if (currentTop > 0) {
+                     document.body.style.top = '0px';
+                      }
+                      };
+                      // Definir la función global googleTranslateElementInit
+                      window.googleTranslateElementInit = () => {
+                         if (!document.querySelector('.goog-te-combo')) {
+                             new window.google.translate.TranslateElement(
+                                 { pageLanguage: 'es', includedLanguages: 'fr,en,es,pt,zh-CN,ru' },
+                                  'google_translate_element'
+                                   );
+                                 }
+                                 
+                                 // Observar los cambios en el estilo del cuerpo 
+                                  const observer = new MutationObserver(handleBodyChanges);
+                                   observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });};
+                                    </script>
+                    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  </body>
 </html>

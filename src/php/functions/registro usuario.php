@@ -111,9 +111,9 @@ include("controlador_register.php");
 								<label class="block mb-2  text-sm font-bold text-gray-700" for="password">
 									Contraseña
 								</label>
-								<input name="password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none w-32  focus:shadow-outline" id="password" type="password" placeholder="******************" value="<?php echo $previousPaswword; ?>" />
+								<input name="password" class="w-80 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none md:w-96 focus:shadow-outline" id="password" type="password" placeholder="******************" value="<?php echo $previousPaswword; ?>" />
 							</div>
-							<img src="../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="Eye">
+							<img src="../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 left-72 bottom-14 z-10 hover:opacity-50 md:left-0 md:top-8" id="Eye">
 							<!--ojito-->
 							<script>
 								var eye = document.getElementById('Eye');
