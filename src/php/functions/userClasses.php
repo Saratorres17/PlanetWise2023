@@ -10,13 +10,18 @@ class User
 
     public function login($firstName, $password)
     {
-        $query = 'SELECT * FROM registrousuario WHERE firstName = :firstname AND contraseña = :password';
+        $query = 'SELECT * FROM registrousuario WHERE firstName = :firstname';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':firstname', $firstName);
-        $stmt->bindParam(':password', $password);
         $stmt->execute();
-        $user=$stmt->fetch();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['contraseña'])) {
+            return $user;
+        }
+        else{
+            return false;
+        }
     }
 
     
