@@ -43,6 +43,15 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 
 <body class="h-screen font-sans cursor-default oculto">
+    <!--Pantalla de carga-->
+    <div class=" flex justify-center items-center h-full z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <!--Inicio header con sesion y sin sesion-->
    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

@@ -44,7 +44,16 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
 
 </head>
 
-<body class="relative">
+<body class="relative oculto h-screen">
+      <!--Pantalla de carga-->
+      <div class=" flex justify-center items-center h-full z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <!--Inicio header con sesion y sin sesion-->
    <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
@@ -357,6 +366,8 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
   </footer>
   <!--SCRIPT PARA EL MODO NOCTURNO-->
   <script src="/src/js/main.js"></script>
+     <!--Script de la página de carga-->
+     <script src="../src/js/load.js"></script>
 </body>
 
 </html>

@@ -29,8 +29,16 @@ session_start();
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
     </head>
 
-<body class="h-screen font-sans cursor-default">
-
+<body class="h-screen font-sans cursor-default oculto">
+    <!--Pantalla de carga-->
+    <div class=" flex justify-center items-center h-full z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
     <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>

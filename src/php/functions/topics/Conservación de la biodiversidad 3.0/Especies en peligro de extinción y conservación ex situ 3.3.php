@@ -26,7 +26,7 @@ if(!isset($_SESSION["user_id"])){
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
-        <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
+        <link rel="stylesheet" href="../../../../pantallacarga.css">
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
         <title>Especies en peligro de extincion y conservacion ex situ e in situ</title>
@@ -35,6 +35,15 @@ if(!isset($_SESSION["user_id"])){
     </head>
 
 <body class="cursor-default h-screen  font-sans oculto">
+    <!--Pantalla de carga-->
+    <div class=" flex justify-center items-center h-full z-10" id="onload">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
@@ -635,6 +644,6 @@ if(!isset($_SESSION["user_id"])){
     <script src="/src/js/main.js"></script>
 
        <!--Script de la página de carga-->
-       <script src="../../../../../src/js/load.js"></script>     
+       <script src="../../../../js/load.js"></script>     
 </body>
 </html>

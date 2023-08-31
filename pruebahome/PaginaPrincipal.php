@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>Página principal</title>
 </head>
-<body class="bg-cover bg-center relative flex flex-col justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
+<body class="bg-cover bg-center bg-fixed relative flex flex-col justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
 
     <link
     crossorigin="anonymous"
