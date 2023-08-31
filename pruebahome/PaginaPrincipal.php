@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>Página principal</title>
 </head>
-<body class="bg-cover bg-center bg-fixed relative flex flex-col justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
+<body class="bg-cover bg-center bg-fixed relative flex flex-col h-screen justify-between oculto cursor-default" style="background-image: url('/dist/images/bosque.jpg');">
 
     <link
     crossorigin="anonymous"
@@ -48,7 +48,7 @@
     <div>
     <div class="min-h-screen flex justify-center">
        <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
-      <div class="" id="google_translate_element"></div>
+      <div class="relative top-10" id="google_translate_element"></div>
       <!--FIN DEL TRADUCTOR-->
       <div class="grid grid-cols-1  md:grid-cols-2 gap-4 items-center z-10 mt-32 md:mt-0">
         <div class="max-w-lg text-center sm:text-left">

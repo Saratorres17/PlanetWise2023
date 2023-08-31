@@ -308,7 +308,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
                 <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
               </svg>
 
-              Inicio de sesion
+              Inicio de sesión
             </a></li>
         </div>
       </ul>
@@ -349,9 +349,9 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
+          <a href="../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Página principal</a>
           <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
-          <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
+
         </div>
       </div>
     </div>
