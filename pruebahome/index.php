@@ -235,7 +235,7 @@ session_start();
         </button>
     </nav>
       <!--Fin header con sesion y sin sesion-->
-      
+
   <?php } else { ?>
     <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
       <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
@@ -576,7 +576,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Instituciones y leyes que respaldan el cuido del medio ambiente en El Salvador.
+                <h4 class="text-2xl font-semibold text-gray-800">Instituciones y leyes que respaldan el cuidado del medio ambiente en El Salvador.
                 </h4>
                 <p class="text-gray-900">En El Salvador, existen diversas instituciones y leyes que respaldan el cuidado del medio ambiente y la conservación de los recursos naturales.</p>
               </div>

@@ -410,7 +410,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class=" inline-block shadow mt-5">
           <a href="../src/php/functions/registro de infotrmacion-blog.php"
             class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra
-            tu informacion</a>
+            tu información</a>
         </div>
       </div>
       <div class="lg:relative">

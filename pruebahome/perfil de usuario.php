@@ -414,7 +414,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div class="py-6 px-3 mt-32 sm:mt-0 ml-32" style="display: flex; align-items: center">
                       <a href="../src/php/functions/editUser.php?id=<?= $_SESSION["user_id"] ?>"><button class="bg-green-500 active:bg-green-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
-                          Editar informacion
+                          Editar información
                         </button></a>
 
                       <svg id="modal-trigger" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="-5 0 48 48" class="cursor-pointer">">
