@@ -468,6 +468,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
                   </div>
                 </div>
                 <img src="<?php echo "http://localhost/src/php/functions/" . $_SESSION['photo_path']; ?>" class="shadow-xl rounded-full align-middle border-none justify-center lg:-ml-16 w-52 h-36 felx relative left-20 top-10 lg:hidden">
+                <br>
                 <div class="text-center mt-12">
                   <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700">
                     <?php echo $_SESSION['firstName'] ?>
