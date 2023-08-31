@@ -27,8 +27,9 @@ session_start();
 </head>
     <body class="h-screen  font-sans oculto">
        
-  <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!--Inicio header con sesion y sin sesion-->
+   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -41,18 +42,20 @@ session_start();
   </script>
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
+
   <!-- Navbar -->
   <?php
   if (isset($_SESSION['firstName'])) { ?>
     <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
       <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
-      <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+      <div id="google_translate_element"></div>
       <!--FIN DEL TRADUCTOR-->
 
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+      
+        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600 relative left-7">
           PlanetWise
         </a>
       </div>
@@ -75,7 +78,7 @@ session_start();
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class="relative hidden md:flex left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class="relative hidden md:flex left-5 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -116,7 +119,7 @@ session_start();
               <path d="M80.96 60.33c1.48 0 3.03-2.08 3.03-2.08s-2.11-.35-2.6-.42c-.49-.07-3.03-.14-3.03-.14s1.44 2.64 2.6 2.64z" fill="#d57657" />
             </svg>Bienvenido <?php echo $_SESSION['firstName'] ?></a>
 
-          <li><a href="../../../../../src/php/functions/logout.php" class="relative hidden md:flex left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold  "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+          <li><a href="../../../../../src/php/functions/logout.php" class="relative hidden md:flex left-5 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold  "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                 <g id="Exit_1_">
                   <path d="M52.4501991,28.7678509l-5-4.9990005c-0.3768997-0.3770008-0.9902-0.3770008-1.3671989,0   c-0.3778992,0.3778992-0.3778992,0.9902,0,1.3671989l3.3171997,3.3164005H35.2666016v2h14.1320992l-3.3157005,3.3163986   c-0.3778992,0.377903-0.3778992,0.9902,0,1.3672028c0.1884995,0.1884995,0.4365997,0.2831993,0.6835976,0.2831993   c0.2471008,0,0.4951019-0.0946999,0.6836014-0.2831993l5-5.0010014c0.1817017-0.1816006,0.2831993-0.4277,0.2831993-0.6835995   C52.7333984,29.1946507,52.6319008,28.9495506,52.4501991,28.7678509z" />
                   <path d="M40.2666016,39.4524498c-0.5527,0-1,0.4473-1,1v10.7900009c0,1.0429993-0.8310013,2.2099991-1.9433022,2.2099991   h-6.0566998V11.2394505V9.8677502L30.0191994,9.33395L14.0765009,2.56445l-0.2606955-0.112h23.507494   c1.2168007,0,1.9433022,0.9921999,1.9433022,1.9511998v15.0487995c0,0.5527,0.4473,1,1,1c0.5527992,0,1-0.4473,1-1V4.4036498   c0-2.1786997-1.7685013-3.9511998-3.9433022-3.9511998H12.2666006c-0.5215998,0-0.9358997,0.4029-0.9822998,0.9124   L11.2666006,1.35725V1.45245V55.03405l17.1855011,7.3064003l2.8144989,1.2070999v-3.0951004v-5h6.0566998   c2.3584023,0,3.9433022-2.1767998,3.9433022-4.2099991V40.4524498   C41.2666016,39.8997498,40.8194008,39.4524498,40.2666016,39.4524498z M29.2665997,11.2394505v49.2129974l-15.999999-6.7766991   V4.4524498l15.9906988,6.7728004l0.0093002,0.0038996V11.2394505z" />
@@ -136,13 +139,13 @@ session_start();
         <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="lg:hidden md:hidden flex p-4 rounded-xl bg-gray-100">
+            <div class="lg:hidden md:hidden flex p-4 bg-gray-200 rounded-xl">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 
                   <!-- Links Section -->
 
-                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class="hover:bg-slate-700
+                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class=" left-2 relative text-gray-600 hover:text-white
                        cursor-pointer transition-colors duration-300">
                       Datos curiosos
                     </a></li>
@@ -224,132 +227,14 @@ session_start();
             });
           });
         </script>
-        <button class="switch" id="switch">
-          <span><i class="fas fa-sun"></i></span>
-          <span><i class="fas fa-moon"></i></span>
-        </button>
-    </nav>
-  <?php } else { ?>
-    <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
-      <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-      <div class="md:relative md:left-5-4" id="google_translate_element"></div>
-      <!--FIN DEL TRADUCTOR-->
-
-      <!-- Logo Container -->
-      <div class="flex items-center">
-        <!-- Logo -->
-        <a href="../../../../../pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
-          PlanetWise
-        </a>
-      </div>
-      <div></div>
-      <ul class="hidden md:flex space-x-8">
-
-        <!-- Links Section -->
-
-        <li><a href="../../../../../pruebahome/Curiosidades.php" class="hidden md:flex flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
-            Datos curiosos
-          </a></li>
-
-        <li><a href="../../../../../pruebahome/sobre nosotros.php" class="hidden md:flex text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
-            Sobre nosotros
-          </a></li>
-
-        <!-- Icon Menu Section -->
-        <div class="flex items-center space-x-5">
-        </div>
-        <!-- Icon Menu Section -->
-        <div class="flex relative right-5 items-center space-x-5">
-          <!-- Register -->
-          <li><a href="../../../../../src/php/functions/registro usuario.php" class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
-
-              <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
-              </svg> Registro</a></li>
-
-          <!-- Login -->
-          <li><a href="../../../../../src/php/functions/login usuario.php" class="relative left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold ">
-
-              <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
-              </svg>
-
-              Inicio de sesion
-            </a></li>
-        </div>
-      </ul>
-
-
-      <!--Memú desplegable responsive-->
-      <div class="relative flex">
-        <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
-          <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <!-- Menú desplegable-->
-        <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
-          <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="lg:hidden md:hidden flex p-4 bg-slate-950 rounded-xl">
-              <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
-                <ul class="space-x-8">
-
-                  <!-- Links Section -->
-
-                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class="hover:bg-slate-700
-                       cursor-pointer transition-colors duration-300">
-                      Datos curiosos
-                    </a></li>
-                  <br>
-
-                  <li><a href="../../../../../pruebahome/sobre nosotros.php" class="right-6 text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
-                      Sobre nosotros
-                    </a></li>
-                  <br>
-                  <!-- Icon Menu Section -->
-                  <div class="items-center space-x-5">
-                    <!-- Register -->
-                    <li><a href="../../../../../src/php/functions/registro usuario.php" class="relative right-7 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
-
-                        <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                          <path d="M12 0L11.34 .03L15.15 3.84L16.5 2.5C19.75 4.07 22.09 7.24 22.45 11H23.95C23.44 4.84 18.29 0 12 0M12 4C10.07 4 8.5 5.57 8.5 7.5C8.5 9.43 10.07 11 12 11C13.93 11 15.5 9.43 15.5 7.5C15.5 5.57 13.93 4 12 4M12 6C12.83 6 13.5 6.67 13.5 7.5C13.5 8.33 12.83 9 12 9C11.17 9 10.5 8.33 10.5 7.5C10.5 6.67 11.17 6 12 6M.05 13C.56 19.16 5.71 24 12 24L12.66 23.97L8.85 20.16L7.5 21.5C4.25 19.94 1.91 16.76 1.55 13H.05M12 13C8.13 13 5 14.57 5 16.5V18H19V16.5C19 14.57 15.87 13 12 13M12 15C14.11 15 15.61 15.53 16.39 16H7.61C8.39 15.53 9.89 15 12 15Z" />
-                        </svg> Registro</a></li>
-                    <br>
-                    <!-- Login -->
-                    <li><a href="../../../../../src/php/functions/login usuario.php" class="relative right-10 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold ">
-
-                        <svg class="fill-current h-5 w-5 mr-2 mt-0.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                          <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
-                        </svg>
-
-                        Inicio de sesion
-                      </a></li>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            const button = document.querySelector(".relative button");
-            const menu = document.querySelector(".absolute");
-
-            button.addEventListener("click", function() {
-              menu.classList.toggle("hidden");
-            });
-          });
-        </script>
 
 
         <button class="switch" id="switch">
           <span><i class="fas fa-sun"></i></span>
           <span><i class="fas fa-moon"></i></span>
         </button>
-
     </nav>
+            <!--Fin header con sesion y sin sesion-->
   <?php } ?>
 
 <style>

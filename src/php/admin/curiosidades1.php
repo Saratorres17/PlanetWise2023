@@ -60,7 +60,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="flex">
     <!-- Sidebar -->
-    <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
+    <div class="fixed bg-gray-800 text-white py-10 px-6 bg-sidebar-image z-50 w-max h-screen md:w-max">
       <div class="flex items-center relative left-5">
         <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
         <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
@@ -77,7 +77,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </ul>
     </div>
 
-    <div class=" transition-transform duration-300 transform translate-x-0 md:translate-x-96">
+    <div class="relative transition-transform duration-300 transform translate-x-72 md:translate-x-96">
       <div>
         <?php foreach ($datoscuriosos as $datos) : ?>
           <div class="w-full max-w-md mx-4 my-4">
@@ -120,7 +120,7 @@ $datoscuriosos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <!-- form -->
-    <div class="mt-8  ml-18 transition-transform duration-300 transform translate-x-0 md:translate-x-96">
+    <div class="mt-8  ml-18 transition-transform duration-300 transform translate-x-96 w-max md:translate-x-96">
       <div class="flex-1">
         <div class="text-center">
           <br><br>

@@ -68,7 +68,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
 
     <div class="flex">
         <!-- Sidebar -->
-        <div class="fixed bg-gray-800 text-white w-1/5 py-10 px-6 h-screen bg-sidebar-image">
+        <div class="fixed bg-gray-800 text-white w-max py-10 px-6 h-screen bg-sidebar-image">
             <div class="flex items-center relative left-5 ">
                 <img src=<?php echo $_SESSION['foto_path'] ?> alt="Admin Profile" class="w-fit h-10 rounded-full mr-2">
                 <span class="text-lg font-semibold"><?php echo $_SESSION['firstName']; ?></span>
@@ -86,7 +86,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
         </div>
         <div class="ml-72">
             <!-- cards adm -->
-            <div class="scroll bg-white-200 bg-opacity-70">
+            <div class="scroll bg-white-200 bg-opacity-70 w-screen">
                 <div class="flex flex-row flex-wrap justify-center items-center scroll mt-6 md:flex space-x-6">
                     <?php foreach ($publicaciones as $publicacion) : ?>
                         <div class="w-1/3 ml-10 mt-12 rounded-lg">
