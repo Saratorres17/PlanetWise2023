@@ -509,7 +509,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acceptReport'])) {
                           <?php echo $Publicaciones["titulo"] ?>
                         </p>
                       </a>
-                      <a href="/src/php/functions/DeletPublicaciones.php?id=<?php echo $Publicaciones["id"] ?>" ><button class="px-2 py-2 font-semibold text-sm bg-green-300 text-white rounded-full shadow-sm">Eliminar publicacion</button></a> 
+                      <a href="/src/php/functions/DeletPublicaciones.php?id=<?php echo $Publicaciones["id"] ?>" ><button class="px-2 py-2 font-semibold text-sm bg-green-300 text-white rounded-full shadow-sm">Eliminar publicación</button></a> 
                       <span class="text-sm dark:text-gray-300"><?php echo $Publicaciones["fecha_registro"] ?></span>
                     </div>
                   </div>

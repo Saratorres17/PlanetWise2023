@@ -37,8 +37,9 @@ if (!isset($_SESSION["firstName"])) {
       <div></div>
     </div>
   </div>
- <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!--Inicio header con sesion y sin sesion-->
+   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
@@ -51,18 +52,20 @@ if (!isset($_SESSION["firstName"])) {
   </script>
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
+
   <!-- Navbar -->
   <?php
   if (isset($_SESSION['firstName'])) { ?>
     <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
       <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
-      <div class="md:relative md:left-5-4" id="google_translate_element"></div>
+      <div id="google_translate_element"></div>
       <!--FIN DEL TRADUCTOR-->
 
       <!-- Logo Container -->
       <div class="flex items-center">
         <!-- Logo -->
-        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600">
+      
+        <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600 relative left-7">
           PlanetWise
         </a>
       </div>
@@ -85,7 +88,7 @@ if (!isset($_SESSION["firstName"])) {
         <!-- Icon Menu Section -->
         <div class="flex items-center   space-x-12">
 
-          <a class="relative hidden md:flex left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+          <a class="relative hidden md:flex left-5 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold " href="/pruebahome/perfil de usuario.php"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="25px" viewBox="0 0 80 120" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
               <path d="M57.1 71.88c-1.2.28-8.02.92-8.02.92s-.06 10.21 0 15.98c.07 6.9.56 11.83.49 16.12c-.08 4.58-.77 9.36-1.06 10.21s-1.55 3.45-1.34 3.94c.21.49 1.2.79 3.73.84c3.59.07 4.29-.49 4.5-1.27c.09-.34.35-17.18.63-19.92c.31-3.02.42-14.15.42-14.15l.65-12.67z" fill="#fa821b" />
               <path d="M92.36 80.68l-5.7 6.55l1.83 8.94s2.67 3.94 2.67 5.77c0 1.83-.28 6.6-.35 7.25c-.14 1.34-1.2 5.21-1.48 6.62c-.28 1.41-.63 2.82-.21 3.31s2.61.39 3.59.35c1.62-.07 2.39-.42 2.89-.7c.6-.34.63-6.9.77-10.35c.13-3.12.56-7.74.56-8.8s-1.97-3.24-2.96-5.21c-.7-1.41-1.41-3.45-1.41-4.72s-.2-9.01-.2-9.01z" fill="#fa821b" />
               <path fill="#fa821b" d="M35.04 11.67l-.23-4.83l3.19-.1l.89 4.27z" />
@@ -126,7 +129,7 @@ if (!isset($_SESSION["firstName"])) {
               <path d="M80.96 60.33c1.48 0 3.03-2.08 3.03-2.08s-2.11-.35-2.6-.42c-.49-.07-3.03-.14-3.03-.14s1.44 2.64 2.6 2.64z" fill="#d57657" />
             </svg>Bienvenido <?php echo $_SESSION['firstName'] ?></a>
 
-          <li><a href="../../../../../src/php/functions/logout.php" class="relative hidden md:flex left-5 flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold  "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+          <li><a href="../../../../../src/php/functions/logout.php" class="relative hidden md:flex left-5 text-gray-600 hover:text-white cursor-pointer transition-colors duration-300 font-semibold  "><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                 <g id="Exit_1_">
                   <path d="M52.4501991,28.7678509l-5-4.9990005c-0.3768997-0.3770008-0.9902-0.3770008-1.3671989,0   c-0.3778992,0.3778992-0.3778992,0.9902,0,1.3671989l3.3171997,3.3164005H35.2666016v2h14.1320992l-3.3157005,3.3163986   c-0.3778992,0.377903-0.3778992,0.9902,0,1.3672028c0.1884995,0.1884995,0.4365997,0.2831993,0.6835976,0.2831993   c0.2471008,0,0.4951019-0.0946999,0.6836014-0.2831993l5-5.0010014c0.1817017-0.1816006,0.2831993-0.4277,0.2831993-0.6835995   C52.7333984,29.1946507,52.6319008,28.9495506,52.4501991,28.7678509z" />
                   <path d="M40.2666016,39.4524498c-0.5527,0-1,0.4473-1,1v10.7900009c0,1.0429993-0.8310013,2.2099991-1.9433022,2.2099991   h-6.0566998V11.2394505V9.8677502L30.0191994,9.33395L14.0765009,2.56445l-0.2606955-0.112h23.507494   c1.2168007,0,1.9433022,0.9921999,1.9433022,1.9511998v15.0487995c0,0.5527,0.4473,1,1,1c0.5527992,0,1-0.4473,1-1V4.4036498   c0-2.1786997-1.7685013-3.9511998-3.9433022-3.9511998H12.2666006c-0.5215998,0-0.9358997,0.4029-0.9822998,0.9124   L11.2666006,1.35725V1.45245V55.03405l17.1855011,7.3064003l2.8144989,1.2070999v-3.0951004v-5h6.0566998   c2.3584023,0,3.9433022-2.1767998,3.9433022-4.2099991V40.4524498   C41.2666016,39.8997498,40.8194008,39.4524498,40.2666016,39.4524498z M29.2665997,11.2394505v49.2129974l-15.999999-6.7766991   V4.4524498l15.9906988,6.7728004l0.0093002,0.0038996V11.2394505z" />
@@ -146,13 +149,13 @@ if (!isset($_SESSION["firstName"])) {
         <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="lg:hidden md:hidden flex p-4 bg-black rounded-xl">
+            <div class="lg:hidden md:hidden flex p-4 bg-gray-200 rounded-xl">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 
                   <!-- Links Section -->
 
-                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class="hover:bg-slate-700
+                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class=" left-2 relative text-gray-600 hover:text-white
                        cursor-pointer transition-colors duration-300">
                       Datos curiosos
                     </a></li>
@@ -239,6 +242,8 @@ if (!isset($_SESSION["firstName"])) {
           <span><i class="fas fa-moon"></i></span>
         </button>
     </nav>
+      <!--Fin header con sesion y sin sesion-->
+
   <?php } else { ?>
     <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
       <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
@@ -257,7 +262,7 @@ if (!isset($_SESSION["firstName"])) {
 
         <!-- Links Section -->
 
-        <li><a href="../../../../../pruebahome/Curiosidades.php" class="hidden md:flex flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
+        <li><a href="../../../../../pruebahome/Curiosidades.php" class="hidden md:flex text-gray-600 hover:text-white cursor-pointer transition-colors duration-300">
             Datos curiosos
           </a></li>
 
@@ -284,16 +289,15 @@ if (!isset($_SESSION["firstName"])) {
                 <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
               </svg>
 
-              Inicio de sesion
+              Inicio de sesión
             </a></li>
         </div>
       </ul>
 
-
       <!--Memú desplegable responsive-->
       <div class="relative flex">
         <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
+        <button type="button" class="flex bg-slate-500 relative right-5 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
           <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
@@ -301,19 +305,18 @@ if (!isset($_SESSION["firstName"])) {
         <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="bg-black lg:hidden md:hidden flex p-4 rounded-xl">
+            <div class="bg-gray-200 lg:hidden md:hidden flex p-4 w-44 rounded-xl">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 
                   <!-- Links Section -->
 
-                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class="hover:bg-slate-700
-                       cursor-pointer transition-colors duration-300">
+                  <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class="left-2 text-black relative hover:text-white cursor-pointer transition-colors duration-300">
                       Datos curiosos
                     </a></li>
                   <br>
 
-                  <li><a href="../../../../../pruebahome/sobre nosotros.php" class="right-6 text-gray-600 relative hover:text-white cursor-pointer transition-colors duration-300">
+                  <li><a href="../../../../../pruebahome/sobre nosotros.php" class="right-6 text-black relative hover:text-white cursor-pointer transition-colors duration-300">
                       Sobre nosotros
                     </a></li>
                   <br>
@@ -333,7 +336,7 @@ if (!isset($_SESSION["firstName"])) {
                           <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
                         </svg>
 
-                        Inicio de sesion
+                        Inicio de sesión
                       </a></li>
                   </div>
                 </ul>
@@ -358,7 +361,7 @@ if (!isset($_SESSION["firstName"])) {
           <span><i class="fas fa-sun"></i></span>
           <span><i class="fas fa-moon"></i></span>
         </button>
-
+      
     </nav>
   <?php } ?>
 
@@ -589,7 +592,7 @@ if (!isset($_SESSION["firstName"])) {
         </p>
         <p class="pb-2">El deshielo de los glaciares es causado por el cambio climático, es una consecuencia de la enorme industrialización del planeta en los últimos 200 años. ¿Es demasiado tarde para encontrar una solución?</p>
         <a href="../Cambio climático/Derretimiento de los casquetes polares.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-          Leer mas
+          Leer más
         </a>
       </div>
 
@@ -598,7 +601,7 @@ if (!isset($_SESSION["firstName"])) {
         <p class="text-xl font-semibold pb-5">Efecto invernadero y aumento de la tamperatura global.</p>
         <p class="pb-2">El efecto invernadero es la forma en que el calor queda atrapado cerca de la superficie de la Tierra por los "gases de efecto invernadero". Se puede pensar en estos gases que atrapan el calor como una manta que envuelve a la Tierra.</p>
         <a href="../Cambio climático/Efecto invernadero y aumento de la temperatura.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-          Leer mas
+          Leer más
         </a>
       </div>
 
@@ -607,7 +610,7 @@ if (!isset($_SESSION["firstName"])) {
         <p class="text-xl font-semibold pb-5">Emisiones de gases y su efecto a la salud humana.</p>
         <p class="pb-2">La contaminación del aire doméstico causa enfermedades no transmisibles, como accidentes cerebrovasculares, cardiopatía isquémica, enfermedad pulmonar obstructiva crónica (EPOC) y cáncer de pulmón.</p>
         <a href="../Cambio climático/Emisiones de gases y su efecto contra la salud humana.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-          Leer mas
+          Leer más
         </a>
       </div>
 
@@ -616,7 +619,7 @@ if (!isset($_SESSION["firstName"])) {
         <p class="text-xl font-semibold pb-5">Impacto de los ecosistemas y la biodiversidad.</p>
         <p class="pb-2">El cambio climático tenderá a acelerar la pérdida de las especies de flora y fauna, el deterioro de los ecosistemas y la pérdida de los bienes y servicios de estos ecosistemas ¿Esto nos llevaría a una extinción masiva de las especies?</p>
         <a href="../Cambio climático/Impacto de los ecosistemas y la biodiversidad.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-          Leer mas
+          Leer más
         </a>
       </div>
 
@@ -625,7 +628,7 @@ if (!isset($_SESSION["firstName"])) {
         <p class="text-xl font-semibold pb-5">Políticas y medidas para reducir la contaminación atmosférica.</p>
         <p class="pb-2">Nuestras propias actividades en hogares, industria, transporte, comercios, servicios, así como el manejo de los residuos de todo tipo son factores que han provocado afectaciones al medio ambiente y dañinas consecuencias a la salud humana ¿Cuáles son las medidas para evitar esta contminación masiva?</p>
         <a href="../Cambio climático/Políticas y medidas para reducir la contaminación armostférica.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-          Leer mas
+          Leer más
         </a>
       </div>
 
@@ -662,9 +665,8 @@ if (!isset($_SESSION["firstName"])) {
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
-          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
-          <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
+          <a href="../../../../../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Página principal</a>
+          <a href="../../../../../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">Sobre nosotros</a>
         </div>
       </div>
     </div>

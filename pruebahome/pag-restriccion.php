@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <link rel="stylesheet" href="../src/pantallacarga.css">
+    <link rel="icon" href="../dist/images/leaf.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <title>pag-restriccion</title>
@@ -38,7 +39,7 @@
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
           <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-          <div class="md:relative md:left-5-4 bottom-64  right-64" id="google_translate_element"></div>
+          <div class="md:relative md:left-5-4 bottom-80 right-64 hidden lg:flex" id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
 
     <div class="w-full md:w-1/3">

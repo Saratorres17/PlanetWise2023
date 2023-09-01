@@ -288,7 +288,7 @@ session_start();
                 <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
               </svg>
 
-              Inicio de sesion
+              Inicio de sesión
             </a></li>
         </div>
       </ul>
@@ -335,7 +335,7 @@ session_start();
                           <path d="M10,17V14H3V10H10V7L15,12L10,17M10,2H19A2,2 0 0,1 21,4V20A2,2 0 0,1 19,22H10A2,2 0 0,1 8,20V18H10V20H19V4H10V6H8V4A2,2 0 0,1 10,2Z" />
                         </svg>
 
-                        Inicio de sesion
+                        Inicio de sesión
                       </a></li>
                   </div>
                 </ul>
@@ -548,16 +548,16 @@ session_start();
                   </p>
                   <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire</p>
                   <a href="../Contaminacion/Contaminacion del aire.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-                      Leer mas 
+                      Leer más 
                   </a>
               </div>
     
               
               <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
-                  <p class="text-xl font-semibold pb-5">Contaminacion del agua</p>
+                  <p class="text-xl font-semibold pb-5">Contaminación del agua</p>
                   <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad</p>
                   <a href="../Contaminacion/contaminacion del agua.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-                   Leer mas
+                   Leer más
                   </a>
               </div>
     
@@ -567,7 +567,7 @@ session_start();
                   <p class="text-xl font-semibold pb-5">Contaminación acústica</p>
                   <p class="pb-2">El ruido es una parte inevitable de la vida moderna, pero cuando sus niveles superan ciertos límites, puede convertirse en una forma de contaminación ambiental conocida como "contaminación acústica" o "contaminación sonora".</p>
                   <a href="../Contaminacion/contaminacion acustica.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-                      Leer mas 
+                      Leer más 
                   </a>
               </div>
     
@@ -576,7 +576,7 @@ session_start();
                   <p class="text-xl font-semibold pb-5">Contaminación química</p>
                   <p class="pb-2">Las fuentes de contaminación química son diversas y pueden provenir de actividades industriales, agrícolas, mineras, residenciales y de desechos. Productos químicos como pesticidas, herbicidas, fertilizantes, metales pesados, hidrocarburos y productos químicos industriales pueden filtrarse en el suelo, el agua y el aire, afectando la calidad y la integridad del entorno natural.</p>
                   <a href="../Contaminacion/contaminacion quimica.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-                      Leer mas 
+                      Leer más 
                   </a>
               </div>
     
@@ -585,7 +585,7 @@ session_start();
                   <p class="text-xl font-semibold pb-5">Contaminación del suelo</p>
                   <p class="pb-2">La contaminación del suelo se produce cuando sustancias tóxicas, químicas o materiales peligrosos se introducen en el suelo, alterando su composición y capacidad para sustentar la vida. Estas sustancias pueden provenir de actividades humanas, como vertidos de productos químicos industriales, derrames de hidrocarburos, el uso excesivo de pesticidas y fertilizantes agrícolas, así como la disposición inadecuada de residuos sólidos y líquidos.</p>
                   <a href="../Contaminacion/contaminacion del suelo.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
-                      Leer mas 
+                      Leer más 
                   </a>
               </div>
 
@@ -623,9 +623,8 @@ session_start();
     <div class="container mx-auto">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
-          <a href="../pruebahome/index.php" class="text-base px-4 py-2">Home</a>
-          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
-          <a href="../pruebahome/blog.php" class="text-base px-4 py-2">Blog</a>
+          <a href="../../../../../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Página principal</a>
+          <a href="../../../../../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">Sobre nosotros</a>
         </div>
       </div>
     </div>

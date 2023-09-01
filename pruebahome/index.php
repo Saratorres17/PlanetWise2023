@@ -497,7 +497,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Tipos de contaminacion</h4>
+                <h4 class="text-2xl font-semibold text-gray-800">Tipos de contaminación.</h4>
                 <p class="text-gray-900"> la actividad humana ha generado diversas formas de contaminación que impactan negativamente en el aire, el agua, el suelo y la biodiversidad.</p>
               </div>
               <a href="../src/php/functions/topics/Contaminacion/Contaminacion1.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
@@ -510,7 +510,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Reduccion de emisiones</h4>
+                <h4 class="text-2xl font-semibold text-gray-800">Reducción de emisiones.</h4>
                 <p class="text-gray-900">Estas emisiones, conocidas como gases de efecto invernadero (GEI) y contaminantes atmosféricos, están asociadas con el cambio climático y la contaminación del aire, lo que tiene efectos negativos en el medio ambiente y la salud humana.</p>
               </div>
               <a href="../src/php/functions/topics/Reducción de emisiones 1.0/Redución de emisiones 1.0.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>
@@ -534,7 +534,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Conservación de biodiversidad
+                <h4 class="text-2xl font-semibold text-gray-800">Conservación de biodiversidad.
                 </h4>
                 <p class="text-gray-900"> Protección y preservación de la variedad de formas de vida en la Tierra, incluyendo todas las especies de plantas, animales, hongos y microorganismos, así como los ecosistemas naturales en los que habitan.</p>
               </div>
@@ -547,7 +547,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800">Uso sostenible de recursos naturales
+                <h4 class="text-2xl font-semibold text-gray-800">Uso sostenible de recursos naturales.
                 </h4>
                 <p class="text-gray-900">El uso sostenible de recursos naturales es una estrategia que busca aprovechar los recursos del planeta de manera responsable y equitativa, garantizando su disponibilidad a largo plazo sin comprometer la capacidad de las generaciones futuras para satisfacer sus necesidades.</p>
               </div>
@@ -572,7 +572,7 @@ session_start();
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
-                <h4 class="text-2xl font-semibold text-gray-800"> Cambio climático</h4>
+                <h4 class="text-2xl font-semibold text-gray-800"> Cambio climático.</h4>
                 <p class="text-gray-900">Caracterizado por aumentos significativos de la temperatura promedio global. Esta transformación es atribuida a actividades humanas que han liberado grandes cantidades de gases de efecto invernadero (GEI) a la atmósfera, principalmente debido a la quema de combustibles fósiles, la deforestación y la agricultura intensiva.</p>
               </div>
               <a href="/src/php/functions/topics/Cambio climático/Cambio climático.php" class="block w-max text-cyan-600 hover:text-green-400">Leer más</a>

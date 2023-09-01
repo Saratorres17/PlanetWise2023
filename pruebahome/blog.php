@@ -418,7 +418,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
         </p>
         <div class=" inline-block shadow mt-5">
           <a href="../src/php/functions/registro de infotrmacion-blog.php"
-            class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Registra
+            class="inline-block py-3 px-4 bg-white hover:bg-indigo-100 text-indigo-500 font-medium border border-transparent rounded-md">Regístra
             tu información</a>
         </div>
       </div>
@@ -466,7 +466,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
               <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion_item["id"] ?>">
                 <button
                   class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  data-ripple-light="true">Leer mas</button>
+                  data-ripple-light="true">Leer más</button>
               </a>
             </div>
           </div>

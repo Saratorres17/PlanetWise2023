@@ -48,7 +48,7 @@
     <div>
     <div class="min-h-screen flex justify-center">
        <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
-      <div class="relative top-10" id="google_translate_element"></div>
+      <div class="absolute -z-50 top-5 md:top-5 md:relative" id="google_translate_element"></div>
       <!--FIN DEL TRADUCTOR-->
       <div class="grid grid-cols-1  md:grid-cols-2 gap-4 items-center z-10 mt-32 md:mt-0">
         <div class="max-w-lg text-center sm:text-left">
