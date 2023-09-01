@@ -17,7 +17,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-    <title>Contaminacion del agua</title>
+    <title>Contaminación del agua</title>
     <link rel="stylesheet" href="/src/scroll.css">
     <link rel="icon" href="/dist/images/leaf.png">
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
@@ -463,7 +463,7 @@ session_start();
 <section class="hero relative">
   <div class="overlay absolute inset-0"></div>
   <div class="hero-content">
-    <h2 class="hero-title">Contaminacion del agua</h2>
+    <h2 class="hero-title">Contaminación del agua</h2>
    
   </div>
 </section><br> <br>
@@ -546,7 +546,7 @@ session_start();
       <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
                   <p class="text-xl font-semibold pb-5">Contaminación del aire
                   </p>
-                  <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire</p>
+                  <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire.</p>
                   <a href="../Contaminacion/Contaminacion del aire.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                       Leer más 
                   </a>
@@ -555,7 +555,7 @@ session_start();
               
               <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
                   <p class="text-xl font-semibold pb-5">Contaminación del agua</p>
-                  <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad</p>
+                  <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad.</p>
                   <a href="../Contaminacion/contaminacion del agua.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                    Leer más
                   </a>

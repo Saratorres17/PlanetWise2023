@@ -511,7 +511,7 @@ if(!isset($_SESSION["user_id"])){
                         <p>
                             Las ONG desarrollan un papel esencial para informar y sensibilizar a la sociedad sobre problemas que afectan al mundo global como la pobreza, la desigualdad, la injusticia, las crisis humanitarias, los desplazamientos de la población o el cambio climático. Estos desafíos requieren la sensibilización y participación ciudadana, por lo que la labor de las ONG como agentes movilizadores de la sociedad actual es imprescindible. <br><br>
 
-                            La mayoría de los proyectos que impulsam las organizaciones de cooperación al desarrollo en los países subdesarrollados se llevan a cabo con la implicación de las personas que apoyamos.
+                            La mayoría de los proyectos que impulsan las organizaciones de cooperación al desarrollo en los países subdesarrollados se llevan a cabo con la implicación de las personas que apoyamos.
                             Este es el modelo de trabajo de Ayuda en Acción. Trabajan vinculando a las personas a los proyectos desde el principio para para garantizar que les puedan dar continuidad una vez que nuestra organización se retira del territorio. Esto es clave para evitar la dependencia de los beneficiarios y también para asegurar la sostenibilidad de los proyectos.
                         </p>
                   </div>

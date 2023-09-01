@@ -472,7 +472,7 @@ if(!isset($_SESSION["user_id"])){
       <section class="hero relative">
         <div class="overlay absolute inset-0"></div>
         <div class="hero-content">
-          <h2 class="hero-title">Especies en peligro de extincion y conservacion ex situ e in situ.</h2>
+          <h2 class="hero-title">Especies en peligro de extinción y conservación ex situ e in situ.</h2>
           
         </div>
       </section>
@@ -489,7 +489,7 @@ if(!isset($_SESSION["user_id"])){
             </p>
             <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
         
-                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué son las especies en peligro de extincion y conservacion ex situ?</p>
+                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué son las especies en peligro de extinción y conservación ex situ?</p>
                                                    
                 <p class="pb-6">Las especies en peligro de extinción son aquellas que se encuentran en un riesgo muy alto de desaparecer completamente de la Tierra en un futuro cercano. Esto puede deberse a diversas amenazas, como la pérdida de hábitat, la caza ilegal, la introducción de especies invasoras, la contaminación y el cambio climático. Cuando una especie está en peligro de extinción, significa que su población ha disminuido significativamente y que su supervivencia está en peligro. <br><br>
 
@@ -566,7 +566,7 @@ if(!isset($_SESSION["user_id"])){
   
         
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-            <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad bilógica.</p>
+            <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad biológica.</p>
             <p class="pb-2">La fragmentación de hábitats es el proceso por el cual un hábitat continuo y extenso se divide en fragmentos más pequeños y aislados debido a la actividad humana, como la urbanización, la agricultura, la construcción de infraestructuras y la deforestación.</p>
             <a href="../Conservación de la biodiversidad 3.0/Fragmentación de hábitats y sus efectos en la diversidad biológica 3.9.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
              Leer más
@@ -587,7 +587,7 @@ if(!isset($_SESSION["user_id"])){
     </head>
            
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-                <p class="text-xl font-semibold pb-5">Restauracion ecológica</p>
+                <p class="text-xl font-semibold pb-5">Restauración ecológica</p>
                 <p class="pb-2">
                   La restauración ecológica consiste en un proceso de rehabilitación y recuperación de ecosistemas que han sido dañados anteriormente por actividades humanas o acontecimientos naturales. Es un enfoque proactivo y estratégico de cara a mejorar la biodiversidad y salud del medio ambiente.</p>
                 <a href="../Conservación de la biodiversidad 3.0/Restauración ecológica en El Salvador 3.5.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">

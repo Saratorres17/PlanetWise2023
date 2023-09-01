@@ -509,7 +509,7 @@ if (!isset($_SESSION["user_id"])) {
         <article class="flex flex-col my-4">
           <!-- Article Image -->
 
-          <p class="text-3xl scroll text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center"> fragmentación de hábitats</p>
+          <p class="text-3xl scroll text-gray-400 font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Fragmentación de hábitats</p>
           <a href="#" class="hover:opacity-75 scroll flex justify-center items-center ">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/_5zPpY8b0Nc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </a><br>
@@ -522,7 +522,7 @@ if (!isset($_SESSION["user_id"])) {
               <li>Actualmente se estima que el 20% de las especies de animales se encuentran en peligro de extinción, siendo los peces y anfibios las clases de animales más amenazadas. Las causas que conllevan a la extinción de especies son múltiples, pero en resumidas cuentas la pérdida de hábitats debido a cambios en el uso del suelo contribuye severamente a la extinción de especies. En tanto, los procesos de fragmentación de hábitats colaboran en la pérdida de hábitats y, como consecuencia, no solo las especies animales se ven vulneradas, sino también las especies vegetales.</li><br><br>
               <li>Los efectos de la fragmentación de hábitats en la biodiversidad, dependen fundamentalmente de la forma del fragmento y de las distancias existentes con otros fragmentos. En tanto, aquellos fragmentos que se encuentran aislados de otros fragmentos y cuya forma presenta una gran proporción borde/área, aumentan considerablemente el riesgo de extinción de las especies puesto que altera sus procesos ecológicos, como la interacción con otros ejemplares, búsqueda de alimento, apareamiento, etcétera.</li><br><br>
               <li>Un ejemplo de fragmentación de hábitat sucede en el Bosque Chaqueño en Argentina, en el cual el ecosistema está profundamente fragmentado producto de cambios en el uso del suelo para llevar a cabo actividades antrópicas. Estudios sugieren que la fragmentación del Bosque Chaqueño ha disminuido la riqueza de insectos polinizadores nativos que polinizan precisamente a las especies vegetales nativas, mientras que las abejas exóticas se han visto favorecidas por los efectos de la fragmentación.</li><br><br>
-              <li>Otro ejemplo ocurre en la Cordillera Cantábrica en España, donde los hábitats se ven fragmentados por la construcción de carreteras y aperturas de pistas forestales. El oso pardo cantábrico (Ursus arctos arctos) está particularmente afectado por este proceso de pérdida de hábitat ya que requieren extensas áreas para vivir</li><br><br>
+              <li>Otro ejemplo ocurre en la Cordillera Cantábrica en España, donde los hábitats se ven fragmentados por la construcción de carreteras y aperturas de pistas forestales. El oso pardo cantábrico (Ursus arctos arctos) está particularmente afectado por este proceso de pérdida de hábitat ya que requieren extensas áreas para vivir.</li><br><br>
             </p>
 
           </div>
@@ -536,19 +536,19 @@ if (!isset($_SESSION["user_id"])) {
             <img class="scroll" src="https://img.freepik.com/foto-gratis/gente-plantando-arboles-campo_23-2149401187.jpg?w=826&t=st=1690933518~exp=1690934118~hmac=b94429af4720e8363767fc6480d5912f99cd35fb74dcde8a6b230196275a35dc">
           </a>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-2xl flex flex-col justify-start p-6 scroll">
-            <p class="text-3xl font-bold hover:text-gray-700 pb-4">Efectos en la diversidad biologica</p><br>
+            <p class="text-3xl font-bold hover:text-gray-700 pb-4">Efectos en la diversidad biológica</p><br>
 
             <li>Aumenta la resiliencia de los ecosistemas <br>
 
               La biodiversidad permite que los ecosistemas se adapten a los cambios ambientales, como las sequías, las inundaciones y el cambio climático, al proporcionar una mayor diversidad genética y funcional que permite a los ecosistemas responder de manera más efectiva a estos cambios.</li><br><br>
 
             <li>Efectos de la pérdida de la biodiversidad <br>
-              a biodiversidad del planeta está determinada por la constante interacción de los seres vivos con su entorno y la variedad de condiciones naturales. Por ello, la desaparición de una sola especie puede afectar de forma negativa la supervivencia de otras. <br><br>
+              la biodiversidad del planeta está determinada por la constante interacción de los seres vivos con su entorno y la variedad de condiciones naturales. Por ello, la desaparición de una sola especie puede afectar de forma negativa la supervivencia de otras. <br><br>
 
               Una sola variación entre las complejas relaciones entre organismos y su hábitat es suficiente para desencadenar una serie de alteraciones que pueden conducir a la pérdida de la diversidad biológica. <br><br>
 
 
-              Como consecuencia de la explotación de los recursos naturales, el equilibrio ecológico se ha visto alterado resultando en la extinción acelerada de gran cantidad de especies <br><br>
+              Como consecuencia de la explotación de los recursos naturales, el equilibrio ecológico se ha visto alterado, lo que resulta en la extinción acelerada de gran cantidad de especies<br><br>
 
               La disminución de la diversidad biológica afecta la disponibilidad de medios de subsistencia; por lo tanto podemos afirmar que esto equivale a decir que se pone en peligro la supervivencia de la raza humana y del resto de las especies.</li><br><br>
 
@@ -566,8 +566,8 @@ if (!isset($_SESSION["user_id"])) {
 
             <li>2. Aumento de los gases de efecto invernadero <br>
               El incremento en las emisiones de gases de efecto invernadero (GEI) ha traído como resultado el cambio climático global que afecta la diversidad biológica de diferentes maneras: ciclos de reproducción, aumento o disminución de del número de individuos de una especie y su rol en los ecosistemas</li><br><br>
-            <div class=" pb-4 flex justify-center items-center">
               <li>3. Introducción de especies exóticas</li>
+            <div class=" pb-4 flex justify-center items-center">
             </div><br>
 
             <div class="flex justify-center items-center h-800">
@@ -605,7 +605,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-          <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad bilógica.</p>
+          <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad biológica.</p>
           <p class="pb-2">La fragmentación de hábitats es el proceso por el cual un hábitat continuo y extenso se divide en fragmentos más pequeños y aislados debido a la actividad humana, como la urbanización, la agricultura, la construcción de infraestructuras y la deforestación.</p>
           <a href="../Conservación de la biodiversidad 3.0/Fragmentación de hábitats y sus efectos en la diversidad biológica 3.9.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
             Leer más
@@ -623,7 +623,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>
 
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-          <p class="text-xl font-semibold pb-5">Restauracion ecológica</p>
+          <p class="text-xl font-semibold pb-5">Restauración ecológica</p>
           <p class="pb-2">
             La restauración ecológica consiste en un proceso de rehabilitación y recuperación de ecosistemas que han sido dañados anteriormente por actividades humanas o acontecimientos naturales. Es un enfoque proactivo y estratégico de cara a mejorar la biodiversidad y salud del medio ambiente.</p>
           <a href="../Conservación de la biodiversidad 3.0/Restauración ecológica en El Salvador 3.5.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">

@@ -489,9 +489,9 @@ if(!isset($_SESSION["user_id"])){
             </a>
             <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
         
-                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Por que es importante?</p>
+                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Por qué es importante?</p>
                                                    
-                <p class="pb-6">El valor esencial y fundamental de la biodiversidad reside en que es resultado de un proceso histórico natural de gran antigüedad. Por esta sola razón, la diversidad biológica tiene el inalienable derecho de continuar su existencia. El hombre y su cultura, como producto y parte de esta diversidad, debe velar por protegerla.<br><br>
+                <p class="pb-6">El valor esencial y fundamental de la biodiversidad reside en que es resultado de un proceso histórico natural de gran antigüedad. Por esta única razón, la diversidad biológica tiene el inalienable derecho de continuar su existencia. El hombre y su cultura, como producto y parte de esta diversidad, debe velar por protegerla.<br><br>
                   Además la biodiversidad es garante de bienestar y equilibrio en la biosfera. Los elementos diversos que componen la biodiversidad conforman verdaderas unidades funcionales, que aportan y aseguran muchos de los “servicios” básicos para nuestra supervivencia.
                 </p><br>
                
@@ -563,7 +563,7 @@ if(!isset($_SESSION["user_id"])){
   
         
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-            <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad bilógica.</p>
+            <p class="text-xl font-semibold pb-5">Fragmentación de hábitats y sus efectos en la diversidad biológica.</p>
             <p class="pb-2">La fragmentación de hábitats es el proceso por el cual un hábitat continuo y extenso se divide en fragmentos más pequeños y aislados debido a la actividad humana, como la urbanización, la agricultura, la construcción de infraestructuras y la deforestación.</p>
             <a href="../Conservación de la biodiversidad 3.0/Fragmentación de hábitats y sus efectos en la diversidad biológica 3.9.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
              Leer más
@@ -581,7 +581,7 @@ if(!isset($_SESSION["user_id"])){
         </div>
   
         <div class="bg-white bg-opacity-10 text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6 scroll">
-                <p class="text-xl font-semibold pb-5">Restauracion ecológica</p>
+                <p class="text-xl font-semibold pb-5">Restauración ecológica</p>
                 <p class="pb-2">
                   La restauración ecológica consiste en un proceso de rehabilitación y recuperación de ecosistemas que han sido dañados anteriormente por actividades humanas o acontecimientos naturales. Es un enfoque proactivo y estratégico de cara a mejorar la biodiversidad y salud del medio ambiente.</p>
                 <a href="../Conservación de la biodiversidad 3.0/Restauración ecológica en El Salvador 3.5.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">

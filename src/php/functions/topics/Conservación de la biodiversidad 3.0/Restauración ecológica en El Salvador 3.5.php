@@ -470,7 +470,7 @@ if(!isset($_SESSION["user_id"])){
       <section class="hero relative">
         <div class="overlay absolute inset-0"></div>
         <div class="hero-content">
-          <h2 class="hero-title">Restauracion ecologica en El Salvador</h2>
+          <h2 class="hero-title">Restauración ecológica en El Salvador</h2>
           
          
         </div>
@@ -488,7 +488,7 @@ if(!isset($_SESSION["user_id"])){
             </a>
             <div class="bg-white bg-opacity-10 scroll text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start">
               <br>
-                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la restauracion ecologica?</p>
+                <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la restauracion ecológica?</p>
                                                    
                 <p class="pb-6">La restauración ecológica consiste en un proceso de rehabilitación y recuperación de ecosistemas que han sido dañados anteriormente por actividades humanas o acontecimientos naturales. Es un enfoque proactivo y estratégico de cara a mejorar la biodiversidad y salud del medio ambiente.</p> <br>             
             </div>

@@ -490,7 +490,7 @@ session_start();
           </a>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-2xl flex flex-col justify-start p-6 scroll">
 
-            <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la gestión de residuos toxicos?</p>
+            <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la gestión de residuos tóxicos?</p>
 
             <p class="pb-6">Se refiere a la planificación, implementación y control de las actividades relacionadas con el manejo seguro y adecuado de los residuos que presentan características peligrosas para la salud humana y el medio ambiente. Estos residuos contienen sustancias tóxicas, inflamables, corrosivas o reactivas que representan un riesgo significativo si no se manejan de manera adecuada. </p>
           </div>

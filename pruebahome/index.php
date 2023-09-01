@@ -596,6 +596,7 @@ session_start();
     </div>
   </div>
   <br>
+
   <!--footer-->
   <footer class="degradado-footer pt-10 pb-10">
     <div class="w-screen flex justify-center">
@@ -605,7 +606,7 @@ session_start();
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
           <a href="../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Página principal</a>
-          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
+          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">Sobre nosotros</a>
         </div>
       </div>
     </div>

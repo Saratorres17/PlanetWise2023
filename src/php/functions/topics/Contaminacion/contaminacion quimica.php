@@ -459,7 +459,7 @@ session_start();
     <section class="hero relative">
       <div class="overlay absolute inset-0"></div>
       <div class="hero-content">
-        <h2 class="hero-title">Contaminacion quimica</h2>
+        <h2 class="hero-title">Contaminación química</h2>
        
       </div>
     </section><br> <br>
@@ -476,7 +476,7 @@ session_start();
                   </a>
                   <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-xl rounded-2xl flex flex-col justify-start p-6">
               
-                      <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la contaminación quimica?</p>
+                      <p class="text-3xl font-bold hover:text-gray-700 pb-4">¿Qué es la contaminación química?</p>
                                                          
                       <p class="pb-6">La contaminación química es un tipo de contaminación que se debe a la introducción de un agente externo, totalmente ajeno, en un ecosistema. Los daños que causa dependen de la naturaleza del agente químico, de la cantidad de contaminante y de la resiliencia del medio que tengamos en cuenta. Las causas son variadas, aunque en general se deben siempre a la actividad antrópica, y las consecuencias pueden llegar a ser altamente dañinas, tanto para la salud de las personas como para el medio ambiente.
 
@@ -541,7 +541,7 @@ session_start();
           <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
                   <p class="text-xl font-semibold pb-5">Contaminación del aire
                   </p>
-                  <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire</p>
+                  <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire.</p>
                   <a href="../Contaminacion/Contaminacion del aire.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                       Leer más 
                   </a>
@@ -550,7 +550,7 @@ session_start();
               
               <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
                   <p class="text-xl font-semibold pb-5">Contaminación del agua</p>
-                  <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad</p>
+                  <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad.</p>
                   <a href="../Contaminacion/contaminacion del agua.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
                    Leer más
                   </a>

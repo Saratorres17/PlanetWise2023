@@ -39,7 +39,7 @@
   <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
 
           <!--DIV DEL TRADUCTOR (Menú de idiomas)-->
-          <div class="md:relative md:left-5-4 bottom-80 right-64 hidden lg:flex" id="google_translate_element"></div>
+          <div class="absolute md:relative md:bottom-80 bottom-full right-64" id="google_translate_element"></div>
         <!--FIN DEL TRADUCTOR-->
 
     <div class="w-full md:w-1/3">

@@ -526,9 +526,9 @@ session_start();
 
           <li>Utiliza el transporte público. Nos hemos acostumbrado a utilizar el coche para todo, pero es hora de pensar en el planeta y en nuestro futuro y de usar medios de transporte más sostenibles y respetuosos con el medioambiente. El transporte público es una buena solución, más barata y menos contaminante que el coche.</li> <br><br>
           <li>Consume productos ecológicos. Para la producción de productos ecológicos se evita el uso de elementos químicos que puedan perjudicar al medioambiente. No solo los puedes encontrar en alimentación, también en limpieza, moda o cosmética.</li><br><br>
-          <li>Reduce el consumo de plásticos. Utilizamos mucho plástico y la mayoría es de un solo uso. Se estima que el tiempo medio de uso de una bolsa de plástico es de 10 minutos y tarda unos 400 años en degradarse. Como consecuencia de lo anterior, es fundamental evitar el consumo de plástico y para lograrlo puedes hacer varias cosas:</li><br><br>
+          <li>Reduce el consumo de plásticos. Utilizamos mucho plástico y la mayoría es de un solo uso. Se estima que el tiempo medio de uso de una bolsa de plástico es de 10 minutos y tarda unos 400 años en degradarse. Como consecuencia de lo anterior, es fundamental evitar el consumo de plástico y para lograrlo puedes hacer varias cosas.</li><br><br>
           <li>Disminuye el uso del agua y de la energía eléctrica. El agua es un recurso que se puede agotar por lo que es fundamental cuidar su uso. Esto lo podemos lograr con pequeños gestos como cerrar el grifo cuando te laves los dientes, ducharte en lugar de bañarte, reciclar el agua. En el caso de la energía eléctrica es fundamental reducir el uso optando por electrodomésticos de bajo consumo, utilizando bombillas tipo led, apagando las luces de casa cuando no estemos o evitando los aparatos eléctricos en stand by.</li><br><br>
-          <li>Elige energías renovables. Las energías renovables son aquellas que se obtienen de fuentes naturales que producen energía de manera inagotable como pueden ser el sol, el aire o el mar. Además de ser inagotables no tienen impacto en el medioambiente. Para utilizarlas, puedes colocar paneles solares en tu casa, de forma que recibas energía eléctrica para calentar el agua y tu vivienda</li><br><br>
+          <li>Elige energías renovables. Las energías renovables son aquellas que se obtienen de fuentes naturales que producen energía de manera inagotable como pueden ser el sol, el aire o el mar. Además de ser inagotables no tienen impacto en el medioambiente. Para utilizarlas, puedes colocar paneles solares en tu casa, de forma que recibas energía eléctrica para calentar el agua y tu vivienda.</li><br><br>
         </div>
       </article>
 
@@ -540,7 +540,7 @@ session_start();
       <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
         <p class="text-xl font-semibold pb-5">Contaminación del aire
         </p>
-        <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire</p>
+        <p class="pb-2">El aire que respiramos es un recurso esencial para la vida en nuestro planeta. Sin embargo, en las últimas décadas, la calidad del aire se ha visto amenazada por un fenómeno preocupante: la contaminación del aire.</p>
         <a href="../Contaminacion/Contaminacion del aire.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
           Leer más
         </a>
@@ -549,7 +549,7 @@ session_start();
 
       <div class="bg-white bg-opacity-10 scroll text-gray-500 lg:shadow-2xl w-full flex flex-col my-4 p-6">
         <p class="text-xl font-semibold pb-5">Contaminación del agua</p>
-        <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad</p>
+        <p class="pb-2">La contaminación del agua no solo afecta la disponibilidad de agua dulce para el consumo humano, sino que también tiene un impacto devastador en los ecosistemas acuáticos y en la biodiversidad.</p>
         <a href="../Contaminacion/contaminacion del agua.php" class="w-full bg-green-800 text-white font-bold text-sm uppercase rounded hover:bg-green-500 flex items-center justify-center px-2 py-3 mt-4">
           Leer más
         </a>

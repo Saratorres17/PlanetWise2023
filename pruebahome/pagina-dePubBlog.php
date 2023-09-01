@@ -350,7 +350,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="flex items-center justify-center md:justify-between mt-4 md:mt-0">
           <a href="../pruebahome/PaginaPrincipal.php" class="text-base px-4 py-2">Página principal</a>
-          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">sobre nosotros</a>
+          <a href="../pruebahome/sobre nosotros.php" class="text-base px-4 py-2">Sobre nosotros</a>
 
         </div>
       </div>
