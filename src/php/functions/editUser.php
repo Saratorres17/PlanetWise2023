@@ -288,7 +288,7 @@ function guardarImagen()
                                 </label>
                                 <input name="old-password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none   focus:shadow-outline" id="old" type="password" placeholder="******************" />
                             </div>
-                            <img src="../../../dist/images/ojito2.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="eyen">
+                            <img src="../../../dist/images/ojito2.png" alt="ojito" class="relative h-5 w-5 ml-96 right-8 bottom-14 md:right-96 md:-bottom-9 z-10 hover:opacity-50" id="eyen">
                             <!--ojito-->
                             <script>
                                 var eye = document.getElementById('eyen');
@@ -315,7 +315,7 @@ function guardarImagen()
                                 </label>
                                 <input name="new-password" class=" w-96 px- py-2 mb-3 text-sm leading-tight text-gray-700 border border-white-500 rounded shadow appearance-none focus:outline-none   focus:shadow-outline" id="new" type="password" placeholder="******************"/>
                             </div>
-                            <img src=" ../../../dist/images/ojito.png" alt="ojito" class="absolute h-5 w-5 ml-96 mt-9 z-10 hover:opacity-50" id="ojite">
+                            <img src=" ../../../dist/images/ojito.png" alt="ojito" class="relative h-5 w-5 ml-96 right-8 bottom-14 md:right-96 md:-bottom-9 z-10 hover:opacity-50" id="ojite">
                                 <!--ojito-->
                                 <script>
                                     var eye1 = document.getElementById('ojite');
