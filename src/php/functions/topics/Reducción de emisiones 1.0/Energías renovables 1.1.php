@@ -568,7 +568,9 @@ session_start();
              
   
                <li>La transición hacia un sistema energético basado en tecnologías renovables tendrá asimismo efectos económicos muy positivos para la economía global y el desarrollo. Según estudios de IRENA (Agencia Internacional de Energías Renovables) y la IEA (Agencia Internacional de la Energía), alcanzar los Acuerdos de París exige triplicar la cuota de renovables en la generación eléctrica de 2022 hasta situarla en el 90% a nivel mundial en 2030. Ello requiere elevar las inversiones anuales en energía renovable desde los 1,3 billones de dólares actuales hasta los 5 billones en 2050, con el consiguiente impulso a la creación de empleo y al crecimiento vinculados a la economía verde.</li>
-             </div>
+             </div> <br><br>
+             <iframe style="max-width:100%" src="https://wordwall.net/es/embed/c24b7ea5cca54073805ffa621b463007?themeId=21&templateId=69&fontStackId=0" width="850" height="380" frameborder="0" allowfullscreen></iframe>
+              <p class="font-bold hover:text-gray-700 pb-4">Hecho por: wordwall.net</p>
         </article>
   
     

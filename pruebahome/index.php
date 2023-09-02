@@ -488,7 +488,7 @@ session_start();
   <div class="py-10">
     <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
       <div class="mb-12 space-y-2 text-center">
-        <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Temas de interés</h2>
+        <h2 class="scroll text-2xl text-gray-500 font-bold md:text-4xl">Contenidos de interés</h2>
       </div>
       <br><br><br>
       <div class="grid gap-12 lg:grid-cols-2">
