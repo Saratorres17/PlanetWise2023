@@ -112,7 +112,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                             <div class="flex justify-evenly">
-                                <a href="/pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion["id"] ?>"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" width="30px" height="60px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                <a href="../admin/PublicacionesADM.php?id=<?php echo $publicacion["id"] ?>"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" id="Layer_1" width="30px" height="60px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                                         <g>
                                             <path fill="#231F20" d="M24.008,32.038L9.541,27.904c-0.527-0.146-1.084,0.155-1.236,0.688c-0.151,0.53,0.156,1.084,0.688,1.236   l14.467,4.134C23.551,33.987,23.643,34,23.734,34c0.435,0,0.835-0.286,0.961-0.726C24.847,32.744,24.539,32.19,24.008,32.038z" />
                                             <path fill="#231F20" d="M24.008,39.038L9.541,34.905c-0.527-0.146-1.084,0.155-1.236,0.688c-0.151,0.531,0.156,1.084,0.688,1.236   l14.467,4.133C23.551,40.987,23.643,41,23.734,41c0.435,0,0.835-0.286,0.961-0.726C24.847,39.743,24.539,39.19,24.008,39.038z" />
