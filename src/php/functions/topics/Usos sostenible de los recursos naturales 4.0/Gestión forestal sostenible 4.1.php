@@ -21,7 +21,7 @@ if(!isset($_SESSION["firstName"])){
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Gestión forestal sostenible</title>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -479,7 +479,7 @@ if(!isset($_SESSION["firstName"])){
   
         <article class="flex flex-col shadow my-4">
             <!-- Article Image -->
-            <a href="#" class="hover:opacity-90">
+            <a href="#" class="hover:blur-sm">
                 <img  class="rounded-t-2xl w-full h-full" src="https://img.freepik.com/foto-gratis/arboleda-verano_1398-333.jpg?w=740&t=st=1690952102~exp=1690952702~hmac=10c7cf245facaab32b94d084b03d78d0661a00b0b9d940704b79c03b112bc7db">
             </a>
             <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6 scroll">
@@ -507,7 +507,7 @@ if(!isset($_SESSION["firstName"])){
             <!-- Article Image -->
             <p class="text-3xl scroll font-bold hover:text-gray-700 text-gray-400 pb-4 flex justify-center items-center">Consejos para llevar a cabo una mejor gestión forestal sostenible:
             </p>
-            <a class="hover:opacity-75">
+            <a class="hover:blur-sm">
               <img class="scroll rounded-t-2xl w-full h-full" src="https://ecoinventos.com/wp-content/uploads/2019/03/Gestion-forestal-sostenible.jpg">
           </a>
               

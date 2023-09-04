@@ -16,7 +16,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/dist/images/leaf.png">
   <link rel="stylesheet" href="/src/scroll.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Contaminacion</title>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -517,8 +517,8 @@ session_start();
 
       <article class="flex flex-col my-4">
         <!-- Article Image -->
-        <a class="hover:opacity-75 ">
-          <img alt="" class="scroll rounded-t-2xl w-full" src="https://img.freepik.com/foto-gratis/campana-contaminacion-oceano-bolsas-plastico-botellas-usadas-flotando_53876-104850.jpg?w=740&t=st=1690857701~exp=1690858301~hmac=d903599130638ce048c25a24e2c33ca5158e33380df162a96d6764fdd8c07013">
+        <a class="hover:blur-sm">
+          <img alt="" class="scroll rounded-t-2xl w-full hover:blur-sm" src="https://img.freepik.com/foto-gratis/campana-contaminacion-oceano-bolsas-plastico-botellas-usadas-flotando_53876-104850.jpg?w=740&t=st=1690857701~exp=1690858301~hmac=d903599130638ce048c25a24e2c33ca5158e33380df162a96d6764fdd8c07013">
         </a>
         <div class="scroll bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-b-2xl flex flex-col justify-start p-6">
 

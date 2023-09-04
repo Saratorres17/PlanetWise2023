@@ -21,7 +21,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
   <link rel="stylesheet" href="/src/tailwind.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Planificación urbana sostenible</title>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -530,7 +530,7 @@ session_start();
 
       <article class="flex flex-col my-4 scroll">
         <!-- Article Image -->
-        <p class="hover:opacity-75 ">
+        <p class="hover:blur-sm ">
           <img class="rounded-t-2xl w-full" src="https://img.freepik.com/vector-gratis/concepto-ecologia-papel_23-2148417810.jpg?w=740&t=st=1690912420~exp=1690913020~hmac=927e317ba0ffd31ef0100a21ecabcbd87c981a3c948813093a771d0b00e92f6d">
         </p>
         <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

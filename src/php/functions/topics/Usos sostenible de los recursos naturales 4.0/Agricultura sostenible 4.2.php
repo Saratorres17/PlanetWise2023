@@ -25,7 +25,7 @@ if(!isset($_SESSION["user_id"])){
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Agricultura sostenible</title>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../../../../pantallacarga.css">
@@ -481,7 +481,7 @@ if(!isset($_SESSION["user_id"])){
   
         <article class="flex flex-col my-4">
             <!-- Article Image -->
-            <a href="#" class="hover:opacity-75">
+            <a href="#" class="hover:blur-sm">
                 <img alt="" class="scroll rounded-t-2xl block w-full h-full" src="/dist/images/agri soste.jpg">
             </a>
             <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
@@ -505,7 +505,7 @@ if(!isset($_SESSION["user_id"])){
             <!-- Article Image -->
             <p class="text-3xl text-gray-400 font-bold scroll hover:text-gray-700 pb-4 flex justify-center items-center">Un mundo agrícola
             </p><br>
-            <a href="#" class="hover:opacity-75">
+            <a href="#" class="hover:scale-105 ease-in duration-300">
               <img alt="" class="scroll rounded-t-2xl w-full h-full" src="https://img.freepik.com/foto-gratis/hombre-cuidando-su-granja-close-up_23-2148580028.jpg?w=1060&t=st=1690948012~exp=1690948612~hmac=a58831d6877096a17b5a645d495144200d203fe9042e92906ae0d517ac4a7ed5">
           </a>
 

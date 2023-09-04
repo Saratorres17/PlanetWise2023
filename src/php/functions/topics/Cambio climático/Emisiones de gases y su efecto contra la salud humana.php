@@ -19,7 +19,7 @@ if (!isset($_SESSION["firstName"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/dist/images/leaf.png">
   <link rel="stylesheet" href="/src/scroll.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Emisiones de gases y su efecto en la salud</title>
   <link rel="stylesheet" href="../../../../pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -549,7 +549,7 @@ if (!isset($_SESSION["firstName"])) {
 
       <article class="scroll flex flex-col my-4">
         <!-- Article Image -->
-        <a class="hover:opacity-75 ">
+        <a class="hover:blur-sm ">
           <img class=" rounded-t-2xl w-full" src="/dist/images/C02.jpg">
         </a>
         <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-xl rounded-b-2xl flex flex-col justify-start p-6">

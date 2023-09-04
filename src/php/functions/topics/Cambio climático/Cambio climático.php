@@ -20,7 +20,7 @@ if(!isset($_SESSION["user_id"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/dist/images/leaf.png">
     <link rel="stylesheet" href="/src/scroll.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Cambio climático.</title>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../../pantallacarga.css">

@@ -13,7 +13,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>contaminacion quimica</title>
     <link rel="icon" href="/dist/images/leaf.png">
     <link rel="stylesheet" href="/src/scroll.css">
@@ -514,7 +514,7 @@ session_start();
     
               <article class="flex flex-col my-4">
                   <!-- Article Image -->
-                  <a class="hover:opacity-75">
+                  <a class="hover:scale-105 ease-in duration-300">
                       <img alt="" class="scroll rounded-t-2xl w-full" src="/dist/images/contaquimi.jpg">
                   </a>
                   <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

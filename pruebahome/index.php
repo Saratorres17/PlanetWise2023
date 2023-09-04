@@ -20,7 +20,7 @@ session_start();
   <link rel="stylesheet" href="/src/scroll.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -467,7 +467,7 @@ session_start();
   <div class="scroll container mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2">
       <div class="max-h-96 md:h-screen">
-        <img class="w-30 h-50 object-cover object-top rounded-3xl " src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
+        <img class="w-30 h-50 object-cover object-top rounded-3xl hover:blur-sm" src="https://cdn-pro.elsalvador.com/wp-content/uploads/2022/05/eclipse-lunar-mayo-2022_luna-de-sangre-10.jpg" alt="Eclipse Lunar">
       </div>
       <div class="shadow-xl flex bg-gray-200 bg-opacity-60 p-10 mt-5 mb-12 rounded-r-xl scroll">
         <div class="mt-4 h-min">
@@ -493,7 +493,7 @@ session_start();
       <br><br><br>
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://cdn0.ecologiaverde.com/es/posts/4/1/6/causas_y_consecuencias_de_la_contaminacion_del_agua_614_600.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://cdn0.ecologiaverde.com/es/posts/4/1/6/causas_y_consecuencias_de_la_contaminacion_del_agua_614_600.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -506,7 +506,7 @@ session_start();
         </div>
         <div class=" scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl ">
          
-          <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://www.defensa.gob.es/medioambiente/Galerias/cambioclimatico/reduccionemisiones/img/Alternative_Energies_380.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -530,7 +530,7 @@ session_start();
 
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="../dist/images/Biodiversidad index.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -543,7 +543,7 @@ session_start();
           </div>
         </div>
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg/1200px-Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg/1200px-Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -568,7 +568,7 @@ session_start();
 
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="../dist/images/cambio-climatico ind.jpg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">
@@ -580,7 +580,7 @@ session_start();
           </div>
         </div>
         <div class="scroll p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-60 shadow-xl hover:rounded-2xl">
-          <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500 group-hover:rounded-xl">
+          <img src="https://www.presidencia.gob.sv/wp-content/uploads/2022/02/photo_2022-02-03-15.54.11.jpeg" alt="art cover" loading="lazy" width="1000" height="667" class="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition group-hover:rounded-xl hover:scale-110 ease-in duration-300">
           <div class="sm:w-7/12 pl-0 p-5">
             <div class="space-y-2">
               <div class="space-y-4">

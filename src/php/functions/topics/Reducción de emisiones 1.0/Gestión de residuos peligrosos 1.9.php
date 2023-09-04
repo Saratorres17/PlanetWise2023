@@ -21,7 +21,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
   <link rel="stylesheet" href="/src/tailwind.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Gestión de residuos peligrosos</title>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -542,7 +542,7 @@ session_start();
 
         <article class="flex flex-col my-4 scroll">
           <!-- Article Image -->
-          <p class="hover:opacity-75 ">
+          <p class="hover:scale-105 ease-in duration-300">
             <img class="rounded-t-2xl w-full" src="https://th.bing.com/th/id/R.927c3cd0d7492ec879a3f9e8c4efd78c?rik=KLzCB5BbyXK%2fkA&riu=http%3a%2f%2fwww.rdsanjuan.com%2fwp-content%2fuploads%2f2015%2f08%2fgestor-residuos-peligrosos.jpg&ehk=OGzZrhmgjXSOZq695PHJ7z6DR3H394SytaSlB7DvrfE%3d&risl=&pid=ImgRaw&r=0">
           </p>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

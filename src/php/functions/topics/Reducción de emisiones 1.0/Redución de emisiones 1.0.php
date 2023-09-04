@@ -13,7 +13,7 @@ session_start();
 <html lang="es">
   <head>
   <meta charset = "UTF-8">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="/dist/images/leaf.png">
   <link rel="stylesheet" href="/src/scroll.css">
   <title>Reduccion de emisiones</title>
@@ -475,8 +475,8 @@ session_start();
 
       <article class="flex flex-col my-4 scroll">
           <!-- Article Image -->
-          <p class="hover:opacity-75">
-              <img class="rounded-t-2xl scroll" src="https://img.freepik.com/foto-gratis/vista-planta-energia-que-emite-co2-cerca-bosque_23-2149675042.jpg?w=1380&t=st=1690866886~exp=1690867486~hmac=2100558f34982625d31edc36c52c5d451d9b4e639475349256391e51761f0842">
+          <p class="hover:blur-sm">
+              <img class="rounded-t-2xl scroll w-full" src="https://img.freepik.com/fotos-premium/vista-planta-energia-que-emite-co2-cerca-bosque_23-2149675036.jpg">
           </p>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
       
@@ -518,7 +518,7 @@ session_start();
 
       <article class="flex flex-col my-4 scroll">
           <!-- Article Image -->
-          <p class="hover:opacity-75 ">
+          <p class="hover:blur-sm ">
             <img class="rounded-t-2xl w-full" src="https://www.bbvaopenmind.com/wp-content/uploads/2021/01/BBVA-OpenMind-emisiones-de-carbono.jpg">
           </p>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

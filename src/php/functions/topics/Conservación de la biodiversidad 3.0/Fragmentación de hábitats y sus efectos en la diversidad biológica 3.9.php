@@ -25,7 +25,7 @@ if (!isset($_SESSION["user_id"])) {
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
   <link rel="stylesheet" href="/src/tailwind.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="/dist/images/leaf.png">
   <title>Fragmentación de hábitats y sus efectos en la diversidad bilógica</title>
   <link rel="stylesheet" href="../../../../pantallacarga.css">
@@ -492,7 +492,7 @@ if (!isset($_SESSION["user_id"])) {
 
         <article class="flex flex-col my-4">
           <!-- Article Image -->
-          <p class="hover:opacity-75">
+          <p class="hover:blur-sm">
             <img class="scroll rounded-t-2xl block w-full h-full" src="https://geoinnova.org/wp-content/uploads/2021/08/fragmentacion-habitats-humedales.jpg">
           </p>
           <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6 scroll">
@@ -570,8 +570,8 @@ if (!isset($_SESSION["user_id"])) {
             <div class=" pb-4 flex justify-center items-center">
             </div><br>
 
-            <div class="flex justify-center items-center h-800">
-              <img class="scroll rounded-2xl hover:opacity-75" src="https://img.freepik.com/foto-gratis/pajaro-plumas-color-naranja-brillante-cabeza-negra-que-dice-pajaro-es-pajaro_1340-41345.jpg?w=360&t=st=1690945110~exp=1690945710~hmac=fc9516b255ce0e15945b207a1e8bef33ccd47f23ab063b72f36fc4e706b73057" alt="">
+            <div class="flex justify-center items-center h-800  hover:blur-sm">
+              <img class="scroll rounded-2xl" src="https://img.freepik.com/foto-gratis/pajaro-plumas-color-naranja-brillante-cabeza-negra-que-dice-pajaro-es-pajaro_1340-41345.jpg?w=360&t=st=1690945110~exp=1690945710~hmac=fc9516b255ce0e15945b207a1e8bef33ccd47f23ab063b72f36fc4e706b73057" alt="">
             </div> <br><br>
 
             Las especies exóticas invasoras pueden ingresar en una región de forma accidental a través del transporte marítimo o aéreo de mercancías. Variedades de insectos o roedores pueden colarse en los contenedores y pasar desapercibidos. <br><br>

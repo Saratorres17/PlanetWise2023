@@ -13,7 +13,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>contaminación acustica</title>
     <link rel="stylesheet" href="/src/scroll.css">
     <link rel="icon" href="/dist/images/leaf.png">
@@ -517,7 +517,7 @@ session_start();
     
               <article class="flex flex-col my-4">
                   <!-- Article Image -->
-                  <a class="hover:opacity-75 ">
+                  <a class="hover:blur-sm">
                       <img alt="" class="rounded-t-2xl w-full" src="https://www.fundacionaquae.org/wp-content/uploads/2021/04/contaminacion-acustica-1024x625.jpg.webp">
                   </a>
                   <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

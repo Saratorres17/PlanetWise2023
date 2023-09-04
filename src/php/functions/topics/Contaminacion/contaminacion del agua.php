@@ -16,7 +16,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Contaminación del agua</title>
     <link rel="stylesheet" href="/src/scroll.css">
     <link rel="icon" href="/dist/images/leaf.png">
@@ -520,7 +520,7 @@ session_start();
 
           <article class="flex flex-col my-4">
               <!-- Article Image -->
-              <a class="hover:opacity-75 ">
+              <a class="hover:blur-sm">
                   <img alt="" class="rounded-t-2xl scroll w-full" src="https://img.freepik.com/foto-gratis/ola-rompiendo-playa_1160-39.jpg?1&w=1380&t=st=1690861644~exp=1690862244~hmac=d13dfef453fad8c373677f92675cc6f0696ba1b8159589ab88639211a20b3ac2">
               </a>
               <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

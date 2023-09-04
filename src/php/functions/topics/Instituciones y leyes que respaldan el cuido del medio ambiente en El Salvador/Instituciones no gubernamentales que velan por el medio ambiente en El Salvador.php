@@ -20,7 +20,7 @@ if(!isset($_SESSION["user_id"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/dist/images/leaf.png">
     <link rel="stylesheet" href="/src/scroll.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Instituciones no gubernamentales que velan por el medio ambiente en El Salvador</title>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../../pantallacarga.css">
@@ -519,7 +519,7 @@ if(!isset($_SESSION["user_id"])){
     
               <article class="flex flex-col my-4">
                   <!-- Article Image -->
-                  <a class="hover:opacity-75 ">
+                  <a class="hover:blur-sm">
                       <img alt="" class="rounded-t-2xl scroll w-full" src="/dist/images/cooperandoONG's.jpg">
                   </a>
                   <div class="bg-white bg-opacity-10 text-gray-500 shadow-xl rounded-b-2xl flex flex-col justify-start p-6">

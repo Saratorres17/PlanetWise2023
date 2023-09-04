@@ -19,7 +19,7 @@ if (!isset($_SESSION["firstName"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/dist/images/leaf.png">
   <link rel="stylesheet" href="/src/scroll.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Políticas y medidas para reducir la contaminación atmostférica</title>
   <link rel="stylesheet" href="../../../../pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

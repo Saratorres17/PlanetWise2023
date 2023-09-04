@@ -21,7 +21,7 @@ session_start();
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link rel="stylesheet" href="/src/scroll.css">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Captura y almacenamiento del carbono </title>
         <link rel="stylesheet" href="../../../../../src/pantallacarga.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -477,7 +477,7 @@ session_start();
   
         <article class="flex flex-col my-4 scroll">
             <!-- Article Image -->
-            <p class="hover:opacity-75">
+            <p class="hover:blur-sm">
                 <img  class="rounded-t-2xl w-full h-full scroll" src="https://img.freepik.com/foto-gratis/fondo-paisaje-cielo-nublado_23-2149134093.jpg?w=740&t=st=1690921961~exp=1690922561~hmac=ddded34422a647043e0bbce7ecc5e03983ea17d59304ec50f901f9686a8a6fed">
             </p>
             <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

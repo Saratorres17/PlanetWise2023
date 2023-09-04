@@ -20,7 +20,7 @@ session_start();
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Reducción de emisiones</title>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -477,7 +477,7 @@ session_start();
   
         <article class="flex flex-col my-4 scroll">
             <!-- Article Image -->
-            <p class="hover:opacity-75">
+            <p class="hover:blur-sm">
               <img class="rounded-t-2xl" src="/dist/images/energiarenovable.png">
             </p>
             <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
@@ -554,7 +554,7 @@ session_start();
   
         <article class="flex flex-col my-4 scroll">
             <!-- Article Image -->
-            <p class="hover:opacity-75 ">
+            <p class="hover:blur-sm">
                 <img class="rounded-t-2xl scroll w-full" src="https://img.freepik.com/foto-gratis/toma-aerea-increible-lago-rodeado-bosques-verdes-isla-antiguo-castillo_181624-47265.jpg?w=1380&t=st=1690914853~exp=1690915453~hmac=beb62c768ef9e3eaa9531c0794c817e8cf760ef09a966b4434aa5fcff6e27b0a">
             </p>
             <div class="bg-white bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

@@ -24,7 +24,7 @@ if(!isset($_SESSION["user_id"])){
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/pruebahome/static/tailwind/tailwind.min.css">
         <link rel="stylesheet" href="/src/tailwind.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Importancia de la biodiversidad</title>
         <link rel="stylesheet" href="../../../../pantallacarga.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -484,7 +484,7 @@ if(!isset($_SESSION["user_id"])){
   
         <article class="flex flex-col my-4">
             <!-- Article Image -->
-            <a class="hover:opacity-75 scroll">
+            <a class="hover:blur-sm">
                 <img  class="scroll rounded-t-2xl block w-full h-full" src="/dist/images/impobio2.jpg">
             </a>
             <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">

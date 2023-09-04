@@ -28,7 +28,7 @@ if(!isset($_SESSION["user_id"])){
         <link rel="stylesheet" href="/src/tailwind.min.css">
         <link rel="stylesheet" href="../../../../pantallacarga.css">
        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+       <script src="https://cdn.tailwindcss.com"></script>
         <title>Especies en peligro de extincion y conservacion ex situ e in situ</title>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/src/css modo oscuro/estilos.css">
@@ -484,7 +484,7 @@ if(!isset($_SESSION["user_id"])){
   
         <article class="flex flex-col my-4">
             <!-- Article Image -->
-            <p class="hover:opacity-75">
+            <p class="hover:blur-sm">
                 <img  class="rounded-t-2xl scroll block w-full h-full" src="https://www.cienciamx.com/images/aic/A_Mau/voca-head-92217.jpg">
             </p>
             <div class="bg-white scroll bg-opacity-10 text-gray-500 shadow-2xl rounded-b-2xl flex flex-col justify-start p-6">
@@ -505,8 +505,8 @@ if(!isset($_SESSION["user_id"])){
             
             <p class="text-3xl scroll font-bold hover:text-gray-700 pb-4 flex justify-center items-center">Algunas de las razones y objetivos principales de la conservación ex situ son:
             </p> 
-            <a href="#" class="scroll hover:opacity-75">
-              <img  class="block w-full h-full" src="https://animalesenpeligrodeextincion.eu/wp-content/uploads/image015-1024x576.jpg">
+            <a href="#" class="scroll">
+              <img  class="block w-full h-full hover:blur-sm" src="https://animalesenpeligrodeextincion.eu/wp-content/uploads/image015-1024x576.jpg">
           </a><br>
               
           <p> La conservación ex situ proporciona un refugio seguro para las especies en peligro de extinción, evitando su desaparición mientras se abordan las amenazas que enfrentan en la naturaleza. <br><br>
