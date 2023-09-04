@@ -7,7 +7,7 @@
     <title>cookies</title>
 </head>
 <body >
-<section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
+<section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl cookies-section">
 
 
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪Nuestas cookies!</h2>
@@ -18,9 +18,9 @@
     
     
     <div class="grid grid-cols-2 gap-4 mt-4 shrink-0">
-        <button class=" text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
-            Aceptar
-        </button>
+    <button class="text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none accept-button">
+  Aceptar
+</button>
         <a class="flex justify-end" href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -31,5 +31,28 @@
        
     </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cookieSection = document.querySelector(".cookies-section");
+    const acceptButton = document.querySelector(".accept-button");
+
+    // Verifica si la cookie de aceptación ya se ha establecido
+    const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+    if (!cookiesAccepted) {
+      // Si la cookie de aceptación no existe, muestra la sección de cookies
+      cookieSection.style.display = "block";
+    }
+
+    // Agrega un manejador de eventos al botón "Aceptar" para establecer la cookie de aceptación
+    acceptButton.addEventListener("click", function () {
+      // Establece la cookie de aceptación
+      localStorage.setItem("cookiesAccepted", "true");
+      // Oculta la sección de cookies
+      cookieSection.style.display = "none";
+    });
+  });
+</script>
 </body>
+
 </html>
