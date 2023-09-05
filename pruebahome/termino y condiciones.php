@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../dist/images/leaf.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Página con Caja Centrada</title>
 </head>
@@ -22,7 +23,7 @@
             <div class="flex items-center w-full max-w-md px-6 lg:w-2/6">
                 <div class="flex-1">
                     <div class="text-center">
-                        <h2 class="text-4xl font-bold text-center">Terminos y condiciones</h2>
+                        <h2 class="text-4xl font-bold text-center">Términos y condiciones</h2>
                     </div>
                     <div class="mt-8">
                        <li>Este blog proporciona información sobre temas relacionados con el medio ambiente, sostenibilidad y conservación. La información se ofrece con fines informativos</li><br>
