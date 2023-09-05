@@ -36,7 +36,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="/src/scroll.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -330,7 +330,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
       <?php echo $publicacion['descripcion']  ?>
     </div>
 
-    <div class="mx-5">
+    <div class="mx-5 rounded-2xl hover:scale-105 ease-in duration-300">
       <img src="<?php echo "http://localhost/src/php/functions/" . $publicacion['foto_path']  ?>">
     </div>
 
