@@ -34,7 +34,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="stylesheet" href="/src/scroll.css">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Blog</title>
   <link rel="stylesheet" href="../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -433,7 +433,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
       <?php foreach ($publicaciones as $publicacion_item): ?>
         <div class="w-96 ml-32 ">
           <div class="w-fit">
-            <img class="text-center rounded-lg"
+            <img class="text-center rounded-lg hover:scale-110 ease-in duration-300"
               src="<?php echo "http://localhost/src/php/functions/" . $publicacion_item['foto_path']; ?>" alt="">
           </div>
           <div>
@@ -465,7 +465,7 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
               </span>
               <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion_item["id"] ?>">
                 <button
-                  class="middle none center mr-4 rounded-lg bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  class="middle none center mr-4 rounded-lg hover:bg-green bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   data-ripple-light="true">Leer más</button>
               </a>
             </div>

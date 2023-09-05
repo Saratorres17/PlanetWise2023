@@ -28,7 +28,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
   <link rel="stylesheet" href="/src/scroll.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../src/pantallacarga.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -379,7 +379,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($datoscuriosos1 as $datoss) : ?>
       <div class="md:shadow-xl rounded-lg mb-6 ">
         <div class="md:flex-shrink-0">
-          <img src="<?php echo "http://localhost/src/php/functions/" . $datoss['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none">
+          <img src="<?php echo "http://localhost/src/php/functions/" . $datoss['foto_path'] ?>" alt="botellas" class="object-cover h-full w-full rounded-lg rounded-b-none hover:blur-sm">
         </div>
         <div class="p-4  bg-white bg-opacity-50 rounded-b-lg">
           <p class="font-normal">
