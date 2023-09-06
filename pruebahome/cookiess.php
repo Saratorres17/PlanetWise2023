@@ -36,19 +36,17 @@
     const cookieSection = document.querySelector(".cookies-section");
     const acceptButton = document.querySelector(".accept-button");
 
-    // Verifica si la cookie de aceptación ya se ha establecido
+   
     const cookiesAccepted = localStorage.getItem("cookiesAccepted");
 
     if (!cookiesAccepted) {
-      // Si la cookie de aceptación no existe, muestra la sección de cookies
+
       cookieSection.style.display = "block";
     }
 
-    // Agrega un manejador de eventos al botón "Aceptar" para establecer la cookie de aceptación
+
     acceptButton.addEventListener("click", function () {
-      // Establece la cookie de aceptación
       localStorage.setItem("cookiesAccepted", "true");
-      // Oculta la sección de cookies
       cookieSection.style.display = "none";
     });
   });
