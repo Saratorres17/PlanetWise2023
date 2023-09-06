@@ -460,15 +460,31 @@ $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
               <?php echo $publicacion_item['informacion'] ?>
             </p>
             <div class="flex justify-between mt-4">
-              <span class="font-thin text-gray-400 text-sm">
+              <span class="font-thin text-gray-400 text-sm flex items-center">
                 <?php echo $publicacion_item['fecha_registro'] ?>
               </span>
-              <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion_item["id"] ?>">
-                <button
-                  class="middle none center mr-4 rounded-lg hover:bg-green bg-green-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  data-ripple-light="true">Leer más</button>
-              </a>
+              <a href="../pruebahome/pagina-dePubBlog.php?id=<?php echo $publicacion_item["id"] ?>"><br><br>
+  
             </div>
+            <div class="flex items-center">
+                <button
+                  class="middle none center mr-2 rounded-lg hover:bg-green bg-green-500 py-3 px-10 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  data-ripple-light="true">Leer más</button> </a>
+
+
+
+
+                  <a href="/pruebahome/REPOpub.php" id="openModalBtn" class="flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-700 rounded-full">
+        <svg class="w-8 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M12.75 7C12.75 6.58579 12.4142 6.25 12 6.25C11.5858 6.25 11.25 6.58579 11.25 7H12.75ZM11.25 14C11.25 14.4142 11.5858 14.75 12 14.75C12.4142 14.75 12.75 14.4142 12.75 14H11.25ZM12.75 16.99C12.75 16.5758 12.4142 16.24 12 16.24C11.5858 16.24 11.25 16.5758 11.25 16.99H12.75ZM11.25 17C11.25 17.4142 11.5858 17.75 12 17.75C12.4142 17.75 12.75 17.4142 12.75 17H11.25ZM11.25 7V14H12.75V7H11.25ZM11.25 16.99V17H12.75V16.99H11.25ZM20.25 12C20.25 16.5563 16.5563 20.25 12 20.25V21.75C17.3848 21.75 21.75 17.3848 21.75 12H20.25ZM12 20.25C7.44365 20.25 3.75 16.5563 3.75 12H2.25C2.25 17.3848 6.61522 21.75 12 21.75V20.25ZM3.75 12C3.75 7.44365 7.44365 3.75 12 3.75V2.25C6.61522 2.25 2.25 6.61522 2.25 12H3.75ZM12 3.75C16.5563 3.75 20.25 7.44365 20.25 12H21.75C21.75 6.61522 17.3848 2.25 12 2.25V3.75Z" fill="#ffffff"></path>
+            </g>
+        </svg></a></div>
+                
+                  
+             
           </div>
         </div>
       <?php endforeach; ?>
