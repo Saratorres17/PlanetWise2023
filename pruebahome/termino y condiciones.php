@@ -32,7 +32,7 @@
                        <li>Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios se publicarán en esta página. El uso continuado del sitio después de los cambios constituye tu aceptación de los nuevos términos.</li><br>
                        <li>Al utilizar este sitio, aceptas estos términos y condiciones en su totalidad. Si no estás de acuerdo, por favor, no uses el sitio.</li><br>
 
-                    <button type="button"class="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline  ">Aceptar</button>
+                
 
                     <a href="/pruebahome/index.php"><button type="button"class="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline">Regresar</button></div></a>
                 </div>
