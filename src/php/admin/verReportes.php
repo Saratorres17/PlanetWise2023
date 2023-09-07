@@ -26,6 +26,13 @@ $stmt2->bindParam(':userId', $userId, PDO::PARAM_INT);
 $stmt2->execute();
 $notificaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
+$usuario_id = $userId;
+$sql = "SELECT r.*, p.titulo AS titulo_publicacion
+        FROM feedreports r
+        INNER JOIN registroinformacion1 p ON r.postId = p.id
+        WHERE r.usuarioReport = $usuario_id";
+$result = $pdo->query($sql);
+
 
 ?>
 
@@ -116,18 +123,18 @@ $notificaciones = $stmt2->fetchAll(PDO::FETCH_ASSOC);
     <div class="max-w-md mx-auto bg-white p-6 rounded shadow-md">
         <h1 class="text-center">Reportes hechos a mis publicaciones</h1>
 
-        <?php foreach ($notificaciones as $noti) : ?>
-            <?php
-            // Consulta para obtener el nombre de usuario
-            $publicacionId = $noti['postId'];
-            $query_post = "SELECT titulo FROM registroinformacion1 WHERE id = :publicacionId";
-            $stmt_post = $pdo->prepare($query_post);
-            $stmt_post->bindParam(":publicacionId", $publicacionId, PDO::PARAM_INT);
-            $stmt_post->execute();
-            $post = $stmt_post->fetch(PDO::FETCH_ASSOC); ?>
-            <p class="font-bold text-lg"><?php echo $post['titulo'] ?></p>
-            <li class="mt-4"><?php echo $noti['reporte'] ?></li>
-        <?php endforeach; ?>
+        <?php
+        if ($result->rowCount() > 0) {
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                echo "Título de la publicación: " . $row["titulo_publicacion"] . "<br>";
+                echo "Reporte: " . $row["reporte"] . "<br>";
+                echo "<hr>";
+            }
+        } else {
+            echo "No se encontraron publicaciones ni reportes para este usuario.";
+        }
+        ?>
+
         <br>
         <div class="flex justify-between mb-2">
             <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
