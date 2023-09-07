@@ -49,7 +49,7 @@ $result = $pdo->query($sql);
 </head>
 
 <body class="flex items-center justify-center h-screen bg-red-100">
-
+<div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('/dist/images/fondoRepo.jpg');">
     <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <script>
         // Crear un elemento <script> para cargar el script de traducción de Google
@@ -89,20 +89,23 @@ $result = $pdo->query($sql);
     <div class="md:relative md:left-5-4 left-10 bottom-60" id="google_translate_element"></div>
     <!--FIN DEL TRADUCTOR-->
 
-    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-md">
-        <h1 class="text-center">Reportes del usuario</h1>
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-center text-2xl font-semibold mb-6">Reportes del usuario</h1>
 
+    <ul>
         <?php foreach ($reportes as $reporte) : ?>
-            <li class="mt-4"><?php echo $reporte['reporte'] ?></li>
+            <li class="mb-2"><?php echo $reporte['reporte'] ?></li>
         <?php endforeach; ?>
-        <br>
-        <div class="flex justify-between mb-2">
-            <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
-        </div>
-    </div>
-    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-md">
-        <h1 class="text-center">Reportes a publicaciones</h1>
+    </ul>
 
+    <div class="mt-6 flex justify-center">
+        <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-blue-500 hover:underline">Regresar</a>
+    </div>
+</div>
+<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-center text-2xl font-semibold mb-6">Reportes a publicaciones</h1>
+
+    <ul>
         <?php foreach ($notificaciones as $noti) : ?>
             <?php
             // Consulta para obtener el nombre de usuario
@@ -112,34 +115,40 @@ $result = $pdo->query($sql);
             $stmt_post->bindParam(":publicacionId", $publicacionId, PDO::PARAM_INT);
             $stmt_post->execute();
             $post = $stmt_post->fetch(PDO::FETCH_ASSOC); ?>
-            <p class="font-bold text-lg"><?php echo $post['titulo'] ?></p>
-            <li class="mt-4"><?php echo $noti['reporte'] ?></li>
+            <p class="font-semibold text-lg mb-2"><?php echo $post['titulo'] ?></p>
+            <li class="mb-2"><?php echo $noti['reporte'] ?></li>
         <?php endforeach; ?>
-        <br>
-        <div class="flex justify-between mb-2">
-            <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
-        </div>
-    </div>
-    <div class="max-w-md mx-auto bg-white p-6 rounded shadow-md">
-        <h1 class="text-center">Reportes hechos a mis publicaciones</h1>
+    </ul>
 
-        <?php
-        if ($result->rowCount() > 0) {
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo "Título de la publicación: " . $row["titulo_publicacion"] . "<br>";
-                echo "Reporte: " . $row["reporte"] . "<br>";
-                echo "<hr>";
-            }
-        } else {
-            echo "No se encontraron publicaciones ni reportes para este usuario.";
-        }
-        ?>
-
-        <br>
-        <div class="flex justify-between mb-2">
-            <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
-        </div>
+    <div class="mt-6 flex justify-center">
+        <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-blue-500 hover:underline">Regresar</a>
     </div>
+</div>
+
+<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-center text-2xl font-semibold mb-6">Reportes hechos a mis publicaciones</h1>
+
+    <ul>
+        <?php foreach ($notificaciones as $noti) : ?>
+            <?php
+            // Consulta para obtener el nombre de usuario
+            $publicacionId = $noti['postId'];
+            $query_post = "SELECT titulo FROM registroinformacion1 WHERE id = :publicacionId";
+            $stmt_post = $pdo->prepare($query_post);
+            $stmt_post->bindParam(":publicacionId", $publicacionId, PDO::PARAM_INT);
+            $stmt_post->execute();
+            $post = $stmt_post->fetch(PDO::FETCH_ASSOC); ?>
+            <p class="font-semibold text-lg mb-2"><?php echo $post['titulo'] ?></p>
+            <li class="mb-2"><?php echo $noti['reporte'] ?></li>
+        <?php endforeach; ?>
+    </ul>
+
+    <div class="mt-6 flex justify-center">
+        <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-blue-500 hover:underline">Regresar</a>
+    </div>
+</div>
+</div>
+
 </body>
 
 </html>
