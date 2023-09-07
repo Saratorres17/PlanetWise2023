@@ -5,7 +5,7 @@ class DatabaseConnection {
     private $host = "localhost";
     private $db_name = "planetwiseof";
     private $username = "root";
-    private $password = "root";
+    private $password = "";
     private $conn;
     
     public function __construct() {

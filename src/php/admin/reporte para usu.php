@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>Formulario de Reporte</title>
 </head>
 
-<body class="flex items-center justify-center h-screen bg-red-100">
-
+<body class="flex items-center justify-center h-screen">
+<div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('/dist/images/fondoReportar.jpg');">
                         <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
                         <script>
                         // Crear un elemento <script> para cargar el script de traducción de Google
@@ -83,6 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="flex justify-between mb-2">
       <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
     </div>
+  </div>
   </div>
 </body>
 
