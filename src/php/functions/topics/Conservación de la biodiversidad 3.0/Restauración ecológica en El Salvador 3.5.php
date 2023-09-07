@@ -1,9 +1,5 @@
 <?php
-
-// Inclusión de 'conexion.php'
 include("../../conexion.php");
-
-// Inclusión de 'userClasses.php' en una ruta con espacios
 include('../..\..\functions\userClasses.php');
 
 session_start();
@@ -144,22 +140,19 @@ if(!isset($_SESSION["user_id"])){
 
         </div>
       </ul>
-      <!--Memú desplegable responsive-->
       <div class="relative flex">
-        <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
+        <button type="button" class="flex relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
           <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
         </button>
-        <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
             <div class="lg:hidden md:hidden flex p-4 bg-gray-200 rounded-xl">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 
-                  <!-- Links Section -->
+             
 
                   <li class="text-black"><a href="../../../../../pruebahome/Curiosidades.php" class=" left-2 relative text-gray-600 hover:text-white
                        cursor-pointer transition-colors duration-300">
@@ -303,7 +296,7 @@ if(!isset($_SESSION["user_id"])){
       <!--Memú desplegable responsive-->
       <div class="relative flex">
         <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-5 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
+        <button type="button" class="flex  relative right-5 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
           <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>

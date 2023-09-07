@@ -4,11 +4,11 @@ include("../src/php/functions/adminClasses.php");
 include("../src/php/admin/controladorRblogADM.php");
 session_start();
 
-// Crear una instancia de DatabaseConnection
+
 $database = new DatabaseConnection();
 $pdo = $database->getConnection();
 
-// Consulta para obtener los datos de los usuarios
+
 $query = "SELECT * FROM datoscuriosos";
 $stmt1 = $pdo->prepare($query);
 $stmt1->execute();
@@ -36,7 +36,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body class="h-screen  font-sans bg-white cursor-default oculto">
-    <!--Pantalla de carga-->
+   
     <div class=" flex justify-center items-center h-full z-10" id="onload">
     <div class="lds-ring">
       <div></div>
@@ -45,8 +45,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
       <div></div>
     </div>
   </div>
-  <!--Inicio header con sesion y sin sesion-->
-   <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+
    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>
     function googleTranslateElementInit() {
@@ -58,20 +57,16 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
       );
     }
   </script>
-  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
-
-
-  <!-- Navbar -->
   <?php
   if (isset($_SESSION['firstName'])) { ?>
     <nav class="justify-around py-4 shadow-md w-full fixed top-0 left-0 right-0 z-10">
-      <!--DIV DEL TRADUCTOR (Menú de idi+omas)-->
+     
       <div id="google_translate_element"></div>
-      <!--FIN DEL TRADUCTOR-->
+    
 
-      <!-- Logo Container -->
+    
       <div class="flex items-center">
-        <!-- Logo -->
+
       
         <a href="/pruebahome/index.php" id="PlanetWise" class="text-2xl cursor-pointer text-gray-600 relative left-7">
           PlanetWise
@@ -149,7 +144,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
       <!--Memú desplegable responsive-->
       <div class="relative flex">
         <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
+        <button type="button" class="flex relative right-10 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
           <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
@@ -305,7 +300,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
       <!--Memú desplegable responsive-->
       <div class="relative flex">
         <!--Botón de menú desplegable responsive-->
-        <button type="button" class="flex bg-slate-500 relative right-5 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
+        <button type="button" class="flex relative right-5 top-1 cursor-pointer transition-colors duration-300" aria-expanded="false">
           <svg class="h-5 w-5 lg:hidden md:hidden flex" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
           </svg>
@@ -313,7 +308,7 @@ $datoscuriosos1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
         <!-- Menú desplegable-->
         <div class="absolute hidden z-10 mt-5 -translate-x-1/2 px-4 h-80 top-8 right-1 ">
           <div class="w-44 rounded-xl lg:hidden md:hidden flex flex-auto overflow-hidden rounded-3x text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
-            <div class="bg-gray-200 lg:hidden md:hidden flex p-4 w-44 rounded-xl">
+            <div class=" lg:hidden md:hidden flex p-4 w-44 rounded-xl">
               <div class="group relative rounded-xl p-4 lg:hidden md:hidden flex ">
                 <ul class="space-x-8">
 

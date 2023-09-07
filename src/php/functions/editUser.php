@@ -4,10 +4,9 @@ include("conexion.php");
 
 session_start();
 
-$db = new DatabaseConnection(); // Crea una instancia de la conexión
-$conexion = $db->getConnection(); // Obtiene la conexión
+$db = new DatabaseConnection();
+$conexion = $db->getConnection();
 
-// obtener el id dentro de una variable
 $usuario_id = $_SESSION["user_id"];
 
 $data_usuarios = $conexion->prepare("SELECT * FROM registrousuario WHERE id = :usuario_id");
@@ -40,21 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         };
 
 
-        if ($_FILES["foto"]["error"] !== 4) {  // 4 = UPLOAD_ERR_NO_FILE
-            // Eliminar la foto existente antes de guardar la nueva
+        if ($_FILES["foto"]["error"] !== 4) { 
+       
             if (!empty($data_usuarios['foto_path']) && file_exists($data_usuarios['foto_path'])) {
                 unlink($data_usuarios['foto_path']);
             }
 
-            // Guardar la imagen en el servidor y obtener la ruta
+          
             $foto_path = guardarImagen();
     
         } else {
-            // Mantener la ruta de la foto existente en la base de datos
+          
             $foto_path = $data_usuarios['foto_path'];
         }
 
-        // empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender) || empty($hashedPassword)
+      
         if (empty($firstName) || empty($lastName) || empty($email) || empty($interests) || empty($gender)) {
             echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
             echo '<strong class="font-bold">¡Error!</strong>';
@@ -103,12 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $queryNormal =  $queryNormal . " WHERE id = :usuario_id";
 
-            // echo $queryNormal;
-            // echo "<pre>";
-            // var_dump($camposActualizar);
-            // echo "</pre>";
-                    
-            // die();
             $statement = $conexion->prepare($queryNormal);
             $statement->execute($camposActualizar);
 
@@ -124,49 +117,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-// Función para validar un campo
+
 function validarCampo($campo)
 {
-    // Eliminar espacios en blanco al inicio y final
+    
     $campo = trim($campo);
-    // Escapar caracteres especiales para prevenir ataques SQL
+
     $campo = htmlspecialchars($campo);
     return $campo;
 }
 
-// Función para guardar la imagen en el servidor y obtener la ruta
+
 function guardarImagen()
 {
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === 0) {
         
-        $target_dir = IMAGE_BASE_PATH; // Ruta relativa al directorio de destino
+        $target_dir = IMAGE_BASE_PATH; 
         $target_file = $target_dir . basename($_FILES["foto"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-        // Comprobar si el archivo es una imagen válida
-        // $check = getimagesize($_FILES["foto"]["tmp_name"]);
-        
-        // if ($check === false) {
-        //     $uploadOk = 0;
-        // }
-
-        // // Comprobar si el archivo ya existe
-        // if (file_exists($target_file)) {
-        //     $uploadOk = 0;
-        // }
-
-        // Comprobar el tamaño máximo del archivo (500 KB)
+       
         if ($_FILES["foto"]["size"] > 1000000) {
             $uploadOk = 0;
         }
 
-        // Permitir solo ciertos formatos de imagen
+        
         if ($imageFileType !== "jpg" && $imageFileType !== "jpeg" && $imageFileType !== "png" && $imageFileType !== "gif") {
             $uploadOk = 0;
         }
 
-        // Si no hubo errores, intentar subir el archivo
+       
         if ($uploadOk === 1) {
             if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
                 return $target_file;
