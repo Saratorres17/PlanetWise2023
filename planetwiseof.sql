@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-08-2023 a las 22:03:04
--- Versión del servidor: 8.0.30
+-- Tiempo de generación: 07-09-2023 a las 04:25:54
+-- Versión del servidor: 8.0.34
 -- Versión de PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -67,6 +67,33 @@ INSERT INTO `datoscuriosos` (`id`, `titulo`, `fuente`, `foto_path`, `informacion
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `feedreports`
+--
+
+CREATE TABLE `feedreports` (
+  `id` int NOT NULL,
+  `postId` int NOT NULL,
+  `reporte` varchar(500) NOT NULL,
+  `usuarioReport` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `feedreports`
+--
+
+INSERT INTO `feedreports` (`id`, `postId`, `reporte`, `usuarioReport`) VALUES
+(5, 41, 'aaaa', 85),
+(6, 40, 'aaaa', 85),
+(7, 40, 'aaaa', 85),
+(8, 40, 'no se', 85),
+(9, 37, 'jsjkasjka', 85),
+(10, 34, 'esta feo\r\n', 85),
+(11, 42, 'asdasd', 85),
+(12, 34, 'no tiene imagen', 87);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `noticias destacadas`
 --
 
@@ -91,6 +118,14 @@ CREATE TABLE `notificaciones` (
   `id_usuario` int NOT NULL,
   `accept` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `notificaciones`
+--
+
+INSERT INTO `notificaciones` (`id`, `reporte`, `id_usuario`, `accept`) VALUES
+(15, 'es loco', 80, 0),
+(16, 'sex', 85, 1);
 
 -- --------------------------------------------------------
 
@@ -118,7 +153,9 @@ INSERT INTO `registroinformacion1` (`id`, `titulo`, `descripcion`, `informacion`
 (38, 'Descubri arboles de colores..', 'Otoño o otras temporadas...?', 'Durante el otoño, muchos árboles caducifolios cambian de color, pasando de verde a tonos de amarillo, naranja, rojo o incluso púrpura. Esto ocurre debido a que las hojas dejan de producir clorofila y otros pigmentos presentes en las hojas, como los carotenoides y antocianinas, se vuelven más visibles.', '../../php/functions/arbol de colores.jpg', 81, '2023-08-28 15:46:08'),
 (39, 'Las ballenas..', 'sabias que....', 'Las ballenas varían en tamaño desde las más pequeñas, como la ballena franca pigmea, que mide alrededor de 2,7 metros, hasta las más grandes, como la ballena azul, que puede superar los 30 metros de longitud y ser el animal más grande que haya existido en la Tierra. A lo largo de la historia, las ballenas han sido cazadas por su carne, aceite y otros productos, lo que llevó a la disminución de muchas poblaciones. Sin embargo, en la segunda mitad del siglo XX, se implementaron regulaciones internacionales para proteger a las ballenas, como la moratoria sobre la caza comercial de ballenas en 1986. Aunque algunas poblaciones se están recuperando, todavía enfrentan amenazas como la colisión con barcos, la contaminación y el cambio climático.', '../../php/functions/ballenas.jpg', 80, '2023-08-28 16:20:24'),
 (40, 'Hoy conocí los koalas...', 'Osos de peluches?', 'A pesar de que parecen verdaderos osos de peluche, este adorable animal es un marsupial emparentado con los canguros que nada tiene que ver con los osos. Este animal icónico de Australia, que no está incluido entre los símbolos nacionales del país, se alimenta a base de hojas de eucalipto y es capaz de dormir hasta tres cuartas partes del día. Pero, pese a la falta de reconocimiento oficial, su imagen está estrechamente ligada a la del país oceánico.  Como la mayoría de los marsupiales tienen bolsas donde se desarrollan los recién nacidos, y en el caso de los koalas, las hembras - que suelen dar a luz a una única cría cada vez - llevan a los recién nacidos en la bolsa durante seis meses aproximadamente.  Un koala recién nacido es del tamaño de una gominola. Llamado joey, el bebé nace ciego y sin orejas. Tan pronto como nace, esta pequeña criatura se abre camino desde el canal de parto hasta la bolsa de su madre. Usando dos sentidos con los que nace bien desarrollados, el olfato y el tacto, junto con sus fuertes patas delanteras y un instinto que le dice en qué dirección dirigirse, el bebé koala llega hasta la bolsa.   Cuando la cría ha estado en la bolsa durante unos seis meses, su madre comienza a producir una sustancia especial llamada papilla. El joey se alimenta de ella además de la leche que ya está recibiendo. La papilla proviene de los intestinos de la madre y contiene bacterias que el joey necesita tener en su interior para poder digerir una dieta adulta de hojas de eucalipto.', '../../php/functions/leandro koala.jpg', 83, '2023-08-28 19:45:57'),
-(41, 'Este collar de 9000 años es extraordinario, pero su dueño lo es aun más', 'conoci el collar mas viejo en la historia de la naturaleza..', 'Los arqueólogos han hallado otros adornos corporales en las antiguas tumbas de niños y adultos en Ba&#039;ja y otros yacimientos de Oriente Próximo, como Siria y Turquía. Pero Alarashi dice que nunca había encontrado uno tan elaborado y complejo. Los distintos tipos de cuentas (tubulares, planas o en forma de disco) son casi idénticos en tamaño y forma, lo que sugiere que una persona o un grupo de personas altamente cualificadas utilizaron herramientas especializadas para crearlas, afirma.  Algunas de las cuentas están hechas con materiales locales, mientras que otras proceden de lugares lejanos, como las conchas del Mar Rojo, a unos 100 km al sur, y la turquesa, probablemente de la península del Sinaí, a 240 km. Y puesto que la comunidad de Ba&#039;ja habitaba en un lugar remoto y escarpado en las montañas cercanas a Petra, esto plantea interrogantes sobre cómo y por qué el grupo habría obtenido tales materiales, dice Alarashi, que está afiliada al Consejo Superior de Investigaciones Científicas (CSIC) y a la Universidad de la Costa Azul (Francia). &quot;Es un misterio&quot;, afirma. &quot;A pesar de su aislamiento geográfico y topográfico, están muy bien conectados&quot;.  Las cuentas también presentan otros enigmas. Por ejemplo, algunas parecen recién hechas en el momento del enterramiento, mientras que otras ya estaban muy desgastadas. &quot;Estas diferencias significan algo, pero aún no sabemos qué&quot;, dice Alarashi. &quot;¿Quién le dio las cuentas usadas a este niño? Tal vez, con motivo de la muerte, el mayor de este niño dio o participó en la creación del collar dando sus propias cuentas viejas. O tal vez le dieron las cuentas a la niña al nacer&quot;.', '../../php/functions/collar viejo.jpg', 83, '2023-08-28 19:49:23');
+(41, 'Este collar de 9000 años es extraordinario, pero su dueño lo es aun más', 'conoci el collar mas viejo en la historia de la naturaleza..', 'Los arqueólogos han hallado otros adornos corporales en las antiguas tumbas de niños y adultos en Ba&#039;ja y otros yacimientos de Oriente Próximo, como Siria y Turquía. Pero Alarashi dice que nunca había encontrado uno tan elaborado y complejo. Los distintos tipos de cuentas (tubulares, planas o en forma de disco) son casi idénticos en tamaño y forma, lo que sugiere que una persona o un grupo de personas altamente cualificadas utilizaron herramientas especializadas para crearlas, afirma.  Algunas de las cuentas están hechas con materiales locales, mientras que otras proceden de lugares lejanos, como las conchas del Mar Rojo, a unos 100 km al sur, y la turquesa, probablemente de la península del Sinaí, a 240 km. Y puesto que la comunidad de Ba&#039;ja habitaba en un lugar remoto y escarpado en las montañas cercanas a Petra, esto plantea interrogantes sobre cómo y por qué el grupo habría obtenido tales materiales, dice Alarashi, que está afiliada al Consejo Superior de Investigaciones Científicas (CSIC) y a la Universidad de la Costa Azul (Francia). &quot;Es un misterio&quot;, afirma. &quot;A pesar de su aislamiento geográfico y topográfico, están muy bien conectados&quot;.  Las cuentas también presentan otros enigmas. Por ejemplo, algunas parecen recién hechas en el momento del enterramiento, mientras que otras ya estaban muy desgastadas. &quot;Estas diferencias significan algo, pero aún no sabemos qué&quot;, dice Alarashi. &quot;¿Quién le dio las cuentas usadas a este niño? Tal vez, con motivo de la muerte, el mayor de este niño dio o participó en la creación del collar dando sus propias cuentas viejas. O tal vez le dieron las cuentas a la niña al nacer&quot;.', '../../php/functions/collar viejo.jpg', 83, '2023-08-28 19:49:23'),
+(42, 'Areas naturales de El Salvador', 'Esta limpio', 'El agua esta hecha con H2O', '../../php/functions/Captura de pantalla 2023-09-02 111549.png', 85, '2023-09-07 02:07:45'),
+(43, 'affdsf', 'Pastel con forma de corazon, sabor a fresa con relleno de crema pastelera', 'ola, me gusta el qso', '../../php/functions/Captura de pantalla 2023-09-02 115207.png', 87, '2023-09-07 03:54:41');
 
 -- --------------------------------------------------------
 
@@ -144,7 +181,11 @@ CREATE TABLE `registrousuario` (
 INSERT INTO `registrousuario` (`id`, `firstName`, `lastName`, `email`, `interests`, `gender`, `foto_path`, `contraseña`) VALUES
 (80, 'Christopher Tommy', 'Nu;ez Pineda', 'Christopher.tommy@gmail.com', 'Me gustan los animales, el reciclaje, y plantar flores.', 'Masculino', '../../php/functions/tommy.png', 'hola123'),
 (81, 'Jason Steven', 'Rodriguez Iraheta', 'Jason.Steven@gmail.com', 'Me gustan los gatos, las plantas y conocer sobre los animales maritimos', 'Masculino', '../../php/functions/jason.jpg', 'hola1234'),
-(83, 'Leandro Alberto', 'Valencia Escobar', 'Leandro.Escobar@gmail.com', 'Me gustan los pajaros y conocer la diversidad de los animales.', 'Masculino', '../../php/functions/lenadro11.jpg', 'hola12345');
+(83, 'Leandro Alberto', 'Valencia Escobar', 'Leandro.Escobar@gmail.com', 'Me gustan los pajaros y conocer la diversidad de los animales.', 'Masculino', '../../php/functions/lenadro11.jpg', 'hola12345'),
+(84, 'adrian', 'lopez', 'sapo123@gmail.com', 'soy loco', 'Masculino', '', '$2y$10$pZA522MC.1hB4LXIn0LwfOWZiq/B5ivROOCeyxFzJ6vEfiZ1TykMS'),
+(85, 'jose', 'medina', 'hola@gmail.com', 'nose', 'Masculino', '../../php/functions/Captura de pantalla 2023-09-01 212233.png', '$2y$10$VEsV6rOddjkJM8ZPA/nvqOUrxc0.qFQ4Q2kGq7Je7FipY6twmBm8W'),
+(86, 'chepea', 'adsad', 'cdb123@cdb.edu.sv', 'me gusta el pollo frito', 'Masculino', '../../php/functions/Captura de pantalla 2023-09-05 204642.png', '$2y$10$aiS09w1JsbLA5TIKORcSFOgE3YbWGZ5qJKkUahCZPKaCN/.2Vc8jW'),
+(87, 'aaa', 'aaa', 'cocolito20006@gmail.com', 'me gusta la lucyaaa', 'Masculino', '../../php/functions/Captura de pantalla 2023-09-01 214609.png', '$2y$10$.NphMgkhoOI3RKBiRmje6e.o8.lkrqiNWHurslhorzFjrLDKTWZZe');
 
 --
 -- Índices para tablas volcadas
@@ -161,6 +202,14 @@ ALTER TABLE `administrador`
 --
 ALTER TABLE `datoscuriosos`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `feedreports`
+--
+ALTER TABLE `feedreports`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_posts` (`postId`),
+  ADD KEY `fk_users` (`usuarioReport`);
 
 --
 -- Indices de la tabla `noticias destacadas`
@@ -205,6 +254,12 @@ ALTER TABLE `datoscuriosos`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT de la tabla `feedreports`
+--
+ALTER TABLE `feedreports`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT de la tabla `noticias destacadas`
 --
 ALTER TABLE `noticias destacadas`
@@ -214,23 +269,30 @@ ALTER TABLE `noticias destacadas`
 -- AUTO_INCREMENT de la tabla `notificaciones`
 --
 ALTER TABLE `notificaciones`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `registroinformacion1`
 --
 ALTER TABLE `registroinformacion1`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `registrousuario`
 --
 ALTER TABLE `registrousuario`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `feedreports`
+--
+ALTER TABLE `feedreports`
+  ADD CONSTRAINT `fk_posts` FOREIGN KEY (`postId`) REFERENCES `registroinformacion1` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_users` FOREIGN KEY (`usuarioReport`) REFERENCES `registrousuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `notificaciones`
