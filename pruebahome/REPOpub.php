@@ -38,11 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reporte'])) {
 
 <body>
     <!-- Modal -->
-    <div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('https://img.freepik.com/foto-gratis/nado-tortugas-marinas-peligro-extincion-maui-generado-ia_188544-37157.jpg?w=1380&t=st=1693976148~exp=1693976748~hmac=1021c889c37a107fc1b9c0aeb52077b94a53fbb793c42b27004aba1b3f96e6f4');">
-        <form action="" method="post" class="modal-content bg-white w-1/3 p-4 rounded shadow-lg">
+    <div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('https://share.america.gov/wp-content/uploads/2020/06/shutterstock_341379554.jpg');">
+        <form action="" method="post" class="modal-content bg-white w-1/3 p-4 rounded shadow-lg opacity-90">
             <input type="hidden" name="id" value="<?php echo $postID ?>">
-            <h2 class="text-2xl font-semibold mb-4">Reportar publicacion </h2>
-            <textarea id="reportReason" name="reporte" class="w-full h-32 border rounded p-2 focus:outline-none focus:ring focus:border-blue-500" placeholder="Indique el motivo de su reporte"></textarea>
+            <h2 class="text-2xl font-semibold mb-4">Reportar publicación: </h2>
+            <textarea id="reportReason" name="reporte" class="w-full h-32 border rounded p-2 focus:outline-none focus:ring focus:border-blue-500" placeholder="Indique el motivo de su reporte:"></textarea>
             <div class="mt-4">
                 <button type="submit" id="submitReportBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Enviar Reporte</button>
             </div>
