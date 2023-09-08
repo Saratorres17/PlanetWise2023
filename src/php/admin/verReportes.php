@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
 } else {
     echo "dato nulo";
 }
-// Asegúrate de ajustar esto según cómo obtengas el ID del usuario en tu sesión
+
 
 $query = "SELECT * FROM notificaciones WHERE id_usuario = :userId";
 $stmt = $pdo->prepare($query);
@@ -125,27 +125,6 @@ $result = $pdo->query($sql);
     </div>
 </div>
 
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h1 class="text-center text-2xl font-semibold mb-6">Reportes hechos a mis publicaciones</h1>
-
-    <ul>
-        <?php foreach ($notificaciones as $noti) : ?>
-            <?php
-            // Consulta para obtener el nombre de usuario
-            $publicacionId = $noti['postId'];
-            $query_post = "SELECT titulo FROM registroinformacion1 WHERE id = :publicacionId";
-            $stmt_post = $pdo->prepare($query_post);
-            $stmt_post->bindParam(":publicacionId", $publicacionId, PDO::PARAM_INT);
-            $stmt_post->execute();
-            $post = $stmt_post->fetch(PDO::FETCH_ASSOC); ?>
-            <p class="font-semibold text-lg mb-2"><?php echo $post['titulo'] ?></p>
-            <li class="mb-2"><?php echo $noti['reporte'] ?></li>
-        <?php endforeach; ?>
-    </ul>
-
-    <div class="mt-6 flex justify-center">
-        <a href="/src/php/admin/Dasboard adm.php" class="text-sm text-blue-500 hover:underline">Regresar</a>
-    </div>
 </div>
 </div>
 

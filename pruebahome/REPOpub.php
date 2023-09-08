@@ -34,23 +34,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reporte'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal de Reporte</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../src/css modo oscuro/estilos.css">
 </head>
 
 <body>
+       <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+          pageLanguage: "es",
+          includedLanguages: "fr,en,es,pt,zh-CN,ru",
+        },
+        "google_translate_element"
+      );
+    }
+  </script>
+  <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+  	<!--DIV DEL TRADUCTOR (Menú de idiomas)-->
+	<div class="" id="google_translate_element"></div>
+	<!--FIN DEL TRADUCTOR-->
     <!-- Modal -->
-    <div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('https://share.america.gov/wp-content/uploads/2020/06/shutterstock_341379554.jpg');">
-        <form action="" method="post" class="modal-content bg-white w-1/3 p-4 rounded shadow-lg opacity-90">
+    <div id="reportModal" class="modal bg-cover bg-center fixed inset-0 flex items-center justify-center z-50" style="background-image: url('/dist/images/fondoRepo.jpg');">
+        <form action="" method="post" class="modal-content bg-white w-1/3 p-4 rounded shadow-lg">
             <input type="hidden" name="id" value="<?php echo $postID ?>">
             <h2 class="text-2xl font-semibold mb-4">Reportar publicación: </h2>
             <textarea id="reportReason" name="reporte" class="w-full h-32 border rounded p-2 focus:outline-none focus:ring focus:border-blue-500" placeholder="Indique el motivo de su reporte:"></textarea>
             <div class="mt-4">
                 <button type="submit" id="submitReportBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Enviar Reporte</button>
             </div>
+            <div class="flex justify-between mb-2">
+      <a href="/pruebahome/blog.php" class="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline">Regresar</a>
+    </div>
         </form>
     </div>
 
     <script>
-        // JavaScript para mostrar el modal automáticamente
+ 
         const reportModal = document.getElementById("reportModal");
 
 

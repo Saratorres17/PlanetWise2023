@@ -4,7 +4,7 @@ include("../functions/adminClasses.php");
 session_start();
 
 $db = new DatabaseConnection(); // Crea una instancia de la conexión
-$conexion = $db->getConnection(); // Obtiene la conexión
+$conexion = $db->getConnection(); // Obtiene conexión
 
 if (isset($_GET['id'])) {
   $publicacion_id = $_GET['id'];
