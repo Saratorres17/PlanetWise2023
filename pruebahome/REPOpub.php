@@ -17,11 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reporte'])) {
     $stmt->bindParam(':reporte', $reporte, PDO::PARAM_STR);
     $stmt->bindParam(':usuarioReportante', $usuarioReportante, PDO::PARAM_INT);
     $stmt->execute();
+    
 
-    if ($stmt === true) {
-        header('Location: ../pruebahome/blog.php');
+    if (!$stmt) {
+        header('Location: ../pruebahome/404.php');
     }
 }
+
 ?>
 
 
