@@ -11,16 +11,22 @@ $db = new DatabaseConnection(); // Crea una instancia de la conexión
 $conexion = $db->getConnection(); // Obtiene la conexión
 
 if (isset($_GET['id'])) {
-  $publicacion_id = $_GET['id'];
+  $publicacion_id = intval($_GET['id']);
+  $query = "SELECT * FROM registroinformacion1 WHERE id = :publicacion_id";
+  $stmt = $conexion->prepare($query);
+  $stmt->bindParam(":publicacion_id", $publicacion_id, PDO::PARAM_INT);
+  $stmt->execute();
+  $publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
+
+  if (!$publicacion) {
+    header('Location: /pruebahome/404.php');
+    exit;
+  }
 } else {
-  echo "<script>alert('Dato nulo!');  window.location.href = '../../php/admin/curiosidades1.php' </script>";
+  header('Location: /pruebahome/404.php');
+  exit;
 }
 
-$query = "SELECT * FROM registroinformacion1 WHERE id = :publicacion_id";
-$stmt = $conexion->prepare($query);
-$stmt->bindParam(":publicacion_id", $publicacion_id, PDO::PARAM_INT);
-$stmt->execute();
-$publicacion = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 ?>
