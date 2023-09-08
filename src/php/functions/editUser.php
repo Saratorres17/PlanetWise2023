@@ -210,7 +210,7 @@ function guardarImagen()
             <div class="w-full xl:w-3/4 lg:w-11/12 flex">
                 <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
                     <h3 class="pt-4 text-2xl text-center">Actualiza tu informacion!</h3>
-                    <form method="post" action="" class="px-8 pt-6 pb-8 mb-4 bg-white rounded" enctype="multipart/form-data">
+                    <form method="post" name="registro" class="px-8 pt-6 pb-8 mb-4 bg-white rounded" enctype="multipart/form-data" onsubmit="return validarPassword();">
                         <div class="mb-4 md:flex md:justify-between">
                             <div class="mb-4 md:mr-2 md:mb-0">
                                 <label class="block mb-2 text-sm font-bold text-gray-700" for="Escribe tu primer nombre">
@@ -318,10 +318,23 @@ function guardarImagen()
                             </div>
                             <div class="mb-6 text-center">
 
-                                <a href="/src/php/functions/logout.php"><button class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline" type="submit">
+                                <a href="/src/php/functions/logout.php"><button class="w-full px-4 py-2 font-bold text-white bg-green-500 rounded-full hover:bg-green-700 focus:outline-none focus:shadow-outline" type="submit" onclick="validarPassword()">
                                         Registra tus cambios
                                     </button></a>
-
+                                    <script>
+                      function validarPassword() {
+                        const password = document.registro.new.value;
+                           const decimal = /^.{8,20}$/;
+               
+                             if (!password.match(decimal)) {
+                              alert("Su contraseña debe tener entre 8 y 20 caracteres.");
+                                return false; // Evita que el formulario se envíe
+                                 } else {
+                                     // La contraseña es válida, permite que el formulario se envíe
+                                  return true;
+                                  }
+                                  }
+	 						</script>
                             </div>
                             <hr class="mb-6 border-t" />
                             <div class="text-center">
