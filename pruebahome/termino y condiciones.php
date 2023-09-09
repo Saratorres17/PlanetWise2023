@@ -5,9 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../dist/images/leaf.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/css modo oscuro/estilos.css">
     <title>Página con Caja Centrada</title>
 </head>
 <body>
+        <!--INICIO DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
+        <script>
+        // Crear un elemento <script> para cargar el script de traducción de Google
+        const script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        document.body.appendChild(script);
+        // Función para manejar los cambios en el estilo del cuerpo
+        const handleBodyChanges = () => {
+            const currentTop = parseInt(document.body.style.top) || 0;
+            if (currentTop > 0) {
+                document.body.style.top = '0px';
+            }
+        };
+        // Definir la función global googleTranslateElementInit
+        window.googleTranslateElementInit = () => {
+            if (!document.querySelector('.goog-te-combo')) {
+                new window.google.translate.TranslateElement({
+                        pageLanguage: 'es',
+                        includedLanguages: 'fr,en,es,pt,zh-CN,ru'
+                    },
+                    'google_translate_element'
+                );
+            }
+
+            // Observar los cambios en el estilo del cuerpo 
+            const observer = new MutationObserver(handleBodyChanges);
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['style']
+            });
+        };
+    </script>
+    <!--FIN DEL SCRIPT DEL TRADUCTOR DE GOOGLE-->
     <div class="h-screen">
         <div class="flex justify-center">
             <div class="hidden bg-cover lg:block lg:w-2/3 h-[900px]" style="background-image: url(https://services.meteored.com/img/article/rios-que-desaparecen-en-un-abrir-y-cerrar-de-ojos-magia-glaciar-333021-1_1280.jpeg)">
